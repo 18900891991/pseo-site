@@ -1,0 +1,4 @@
+baseURL = 'https://linktoo.tech/'
+languageCode = 'zh-cn'
+title = 'Cloudata AI'
+theme = 'hugo-book'
