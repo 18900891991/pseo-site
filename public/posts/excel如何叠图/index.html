@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 叠图（Overlay Charts）教程  在数据可视化中，叠图（Overlay Chart）可以让你把多组数据放在同一坐标系里，便于直接比较或展示两种不同尺度的数据。本文将从为何需要叠图讲起，给出三种常用解决方案，并回答最常见的疑问，帮助你在 Excel 中">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%8F%A0%E5%9B%BE/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何叠图">
+  <meta property="og:description" content="Excel 叠图（Overlay Charts）教程  在数据可视化中，叠图（Overlay Chart）可以让你把多组数据放在同一坐标系里，便于直接比较或展示两种不同尺度的数据。本文将从为何需要叠图讲起，给出三种常用解决方案，并回答最常见的疑问，帮助你在 Excel 中">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何叠图">
+  <meta itemprop="description" content="Excel 叠图（Overlay Charts）教程  在数据可视化中，叠图（Overlay Chart）可以让你把多组数据放在同一坐标系里，便于直接比较或展示两种不同尺度的数据。本文将从为何需要叠图讲起，给出三种常用解决方案，并回答最常见的疑问，帮助你在 Excel 中">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="246">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何叠图 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%8F%A0%E5%9B%BE/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何叠图</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为什么要做叠图">1. 为什么要做叠图？</a></li>
+    <li><a href="#2-方案一组合图combination-chart">2. 方案一：组合图（Combination Chart）</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二叠加系列overlay-series">3. 方案二：叠加系列（Overlay Series）</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用图层与透明度layered-charts-with-opacity">4. 方案三：使用图层与透明度（Layered Charts with Opacity）</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答faq">5. 常见问题解答（FAQ）</a></li>
+    <li><a href="#6-小结">6. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何叠图
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-叠图overlay-charts教程">Excel 叠图（Overlay Charts）教程<a class="anchor" href="#excel-%e5%8f%a0%e5%9b%beoverlay-charts%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在数据可视化中，叠图（Overlay Chart）可以让你把多组数据放在同一坐标系里，便于直接比较或展示两种不同尺度的数据。本文将从<strong>为何需要叠图</strong>讲起，给出<strong>三种常用解决方案</strong>，并回答<strong>最常见的疑问</strong>，帮助你在 Excel 中轻松实现叠图。</p>
+<hr>
+<h2 id="1-为什么要做叠图">1. 为什么要做叠图？<a class="anchor" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%81%9a%e5%8f%a0%e5%9b%be">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求</th>
+          <th>叠图的优势</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>销售与利润</td>
+          <td>同时展示销量与利润，销量大、利润小</td>
+          <td>直接对比，节省空间</td>
+      </tr>
+      <tr>
+          <td>预算与实际</td>
+          <td>同时查看预算与实际支出</td>
+          <td>直观发现偏差</td>
+      </tr>
+      <tr>
+          <td>目标与达成</td>
+          <td>目标值与实际值</td>
+          <td>及时评估进度</td>
+      </tr>
+      <tr>
+          <td>多维度</td>
+          <td>同时展示不同指标</td>
+          <td>统一视图，减少图表数</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小贴士</strong>：叠图不等于“堆叠图”。堆叠图是把各系列的值相加，叠图是把系列放在同一坐标轴上，彼此叠加。</p>
+</blockquote><hr>
+<h2 id="2-方案一组合图combination-chart">2. 方案一：组合图（Combination Chart）<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e7%bb%84%e5%90%88%e5%9b%becombination-chart">#</a></h2>
+<p>组合图是最常用的叠图方式，允许你把柱形图、折线图、面积图等多种图形叠加在同一坐标轴。</p>
+<h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>准备数据</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>月份</th>
+          <th>销售额</th>
+          <th>利润率</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1月</td>
+          <td>12000</td>
+          <td>8%</td>
+      </tr>
+      <tr>
+          <td>2月</td>
+          <td>15000</td>
+          <td>10%</td>
+      </tr>
+      <tr>
+          <td>3月</td>
+          <td>11000</td>
+          <td>7%</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p><strong>插入图表</strong></p>
+<ul>
+<li>选中整个数据区域</li>
+<li><code>插入</code> → <code>图表</code> → <code>柱形图</code>（先选一个柱形图）</li>
+</ul>
+</li>
+<li>
+<p><strong>设置组合图</strong></p>
+<ul>
+<li>选中图表，右键 → <code>更改图表类型</code></li>
+<li>在左侧选择 <code>组合</code>，为不同系列分配图表类型（如：销售额 → 柱形，利润率 → 折线）</li>
+<li>确认 <code>主轴</code> 和 <code>次轴</code> 的选择（如利润率使用次轴，以便比例匹配）</li>
+</ul>
+</li>
+<li>
+<p><strong>调整格式</strong></p>
+<ul>
+<li>右键系列 → <code>设置系列格式</code> → <code>填充</code>，为柱形设置透明度（如 50%），让折线能清晰可见</li>
+<li>调整轴标签、图例、标题等</li>
+</ul>
+</li>
+<li>
+<p><strong>完成</strong></p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果系列数较多，建议把不需要的系列隐藏，以避免图表过于拥挤。</p>
+</blockquote><hr>
+<h2 id="3-方案二叠加系列overlay-series">3. 方案二：叠加系列（Overlay Series）<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e5%8f%a0%e5%8a%a0%e7%b3%bb%e5%88%97overlay-series">#</a></h2>
+<p>如果你想把 <em>同一数据类型</em> 的多组数据叠加在同一图表里（如多条折线），可采用“叠加系列”方法。</p>
+<h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li>
+<p><strong>准备数据</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>日期</th>
+          <th>方案A</th>
+          <th>方案B</th>
+          <th>方案C</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1/1</td>
+          <td>20</td>
+          <td>25</td>
+          <td>18</td>
+      </tr>
+      <tr>
+          <td>1/2</td>
+          <td>30</td>
+          <td>28</td>
+          <td>24</td>
+      </tr>
+      <tr>
+          <td>1/3</td>
+          <td>25</td>
+          <td>35</td>
+          <td>22</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p><strong>插入折线图</strong></p>
+<ul>
+<li>选中所有列</li>
+<li><code>插入</code> → <code>折线图</code> → <code>折线</code></li>
+</ul>
+</li>
+<li>
+<p><strong>同轴叠加</strong></p>
+<ul>
+<li>默认所有系列已在同一坐标轴；如果不想显示所有图例，可以右键系列 → <code>设置系列格式</code> → <code>系列选项</code> → <code>系列在同一图表</code>（保持默认）</li>
+</ul>
+</li>
+<li>
+<p><strong>美化</strong></p>
+<ul>
+<li>通过图表工具 <code>格式</code> → <code>系列</code> → <code>颜色</code> 或 <code>线条样式</code> 区分各方案</li>
+<li>为每条线添加数据标签（可选）</li>
+</ul>
+</li>
+<li>
+<p><strong>完成</strong></p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：如果你想让某条线更突出，可将其线宽设大或使用不同的标记形状。</p>
+</blockquote><hr>
+<h2 id="4-方案三使用图层与透明度layered-charts-with-opacity">4. 方案三：使用图层与透明度（Layered Charts with Opacity）<a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8%e5%9b%be%e5%b1%82%e4%b8%8e%e9%80%8f%e6%98%8e%e5%ba%a6layered-charts-with-opacity">#</a></h2>
+<p>当你需要将两种完全不同的图表（如柱形+面积）叠加在同一坐标轴时，可以通过图层和透明度实现。</p>
+<h3 id="步骤-2">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2">#</a></h3>
+<ol>
+<li>
+<p><strong>准备两套数据</strong></p>
+<ul>
+<li>数据A（柱形）</li>
+<li>数据B（面积）</li>
+</ul>
+</li>
+<li>
+<p><strong>插入第一个图表</strong></p>
+<ul>
+<li>选中数据A → <code>插入</code> → <code>柱形图</code></li>
+</ul>
+</li>
+<li>
+<p><strong>复制第二套数据并粘贴为图表</strong></p>
+<ul>
+<li>选中数据B → <code>插入</code> → <code>面积图</code></li>
+<li>复制得到的面积图</li>
+</ul>
+</li>
+<li>
+<p><strong>叠加图表</strong></p>
+<ul>
+<li>将第二个图表直接拖放到第一个图表上方，使两者位置完全重合</li>
+<li>右键第二个图表 → <code>复制到同一工作表</code> → <code>粘贴为图表</code></li>
+<li>Excel 会自动把两张图表合并为一个组合图</li>
+</ul>
+</li>
+<li>
+<p><strong>调整透明度</strong></p>
+<ul>
+<li>对柱形图系列 → <code>设置系列格式</code> → <code>填充</code> → <code>填充透明度</code>（例如 30%）</li>
+<li>对面积图系列 → <code>设置系列格式</code> → <code>填充透明度</code>（例如 70%）</li>
+</ul>
+</li>
+<li>
+<p><strong>同步坐标轴</strong></p>
+<ul>
+<li>如果两组数据尺度不同，右键系列 → <code>设置系列格式</code> → <code>次坐标轴</code>，并根据需要调整轴范围</li>
+</ul>
+</li>
+<li>
+<p><strong>完成</strong></p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>建议</strong>：在叠加前，先在 Excel 里预览两张图表单独显示，确保颜色、线型不会混淆。</p>
+</blockquote><hr>
+<h2 id="5-常见问题解答faq">5. 常见问题解答（FAQ）<a class="anchor" href="#5-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1. 叠图后数据标签重叠怎么办？</strong></td>
+          <td>1）打开 <code>图表工具</code> → <code>布局</code> → <code>数据标签</code> → <code>更多标签选项</code>；<!-- raw HTML omitted -->2）调整 <code>标签位置</code> 为 <code>外侧</code> 或 <code>内部左侧</code>；<!-- raw HTML omitted -->3）对冲突的标签手动拖动。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2. 如何在叠图中显示两种不同单位的轴？</strong></td>
+          <td>1）在 <code>更改图表类型</code> 里为某系列选择 <code>次坐标轴</code>；<!-- raw HTML omitted -->2）右键次轴 → <code>设置坐标轴格式</code> → 选择合适的刻度与单位。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3. 叠图后图例显示不完整？</strong></td>
+          <td>1）确保所有系列都在图表内；<!-- raw HTML omitted -->2）右键图例 → <code>设置图例格式</code> → 调整 <code>图例框</code> 的尺寸；<!-- raw HTML omitted -->3）若仍不行，可手动添加文本框作为图例。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4. 叠图后某系列不显示，怎么办？</strong></td>
+          <td>1）检查该系列是否被错误地设置为 <code>隐藏</code>；<!-- raw HTML omitted -->2）右键图表 → <code>选择数据</code> → 确认该系列已勾选；<!-- raw HTML omitted -->3）检查系列颜色与背景是否冲突。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5. 如何在叠图中保留原始数据的趋势线？</strong></td>
+          <td>1）右键系列 → <code>添加趋势线</code>；<!-- raw HTML omitted -->2）在 <code>趋势线选项</code> 中选择 <code>线性/指数/多项式</code>；<!-- raw HTML omitted -->3）调节颜色与线宽。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="6-小结">6. 小结<a class="anchor" href="#6-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>叠图</strong>是将多组数据放在同一坐标轴上的有效手段。</li>
+<li><strong>组合图</strong>、<strong>叠加系列</strong>、<strong>图层透明度</strong>是三种最常用的实现方式，适用于不同类型的数据。</li>
+<li>通过合理的轴设置、透明度、图例和数据标签，你可以让叠图清晰、易读。</li>
+</ul>
+<p>祝你在 Excel 中玩得开心，绘制出既美观又信息量大的叠图！如果还有其他疑问，欢迎随时提问。</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8F%96%E4%BB%A3/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何取代</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5/" class="flex align-center">
+      <span>excel如何合併</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为什么要做叠图">1. 为什么要做叠图？</a></li>
+    <li><a href="#2-方案一组合图combination-chart">2. 方案一：组合图（Combination Chart）</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二叠加系列overlay-series">3. 方案二：叠加系列（Overlay Series）</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用图层与透明度layered-charts-with-opacity">4. 方案三：使用图层与透明度（Layered Charts with Opacity）</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答faq">5. 常见问题解答（FAQ）</a></li>
+    <li><a href="#6-小结">6. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何取消隱藏（Unhide）——完整指南  在日常使用 Excel 的過程中，常會遇到「隱藏」行、列、工作表或工作簿的情況。隱藏功能既方便快速整理資料，也可能在不小心操作後讓你找不到想要的資料。本文將從原因分析說明為何需要取消隱藏，接著提供三種分步驟的解決方案，最後整">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E9%9A%B1%E8%97%8F/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何取消隱藏">
+  <meta property="og:description" content="Excel 如何取消隱藏（Unhide）——完整指南  在日常使用 Excel 的過程中，常會遇到「隱藏」行、列、工作表或工作簿的情況。隱藏功能既方便快速整理資料，也可能在不小心操作後讓你找不到想要的資料。本文將從原因分析說明為何需要取消隱藏，接著提供三種分步驟的解決方案，最後整">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何取消隱藏">
+  <meta itemprop="description" content="Excel 如何取消隱藏（Unhide）——完整指南  在日常使用 Excel 的過程中，常會遇到「隱藏」行、列、工作表或工作簿的情況。隱藏功能既方便快速整理資料，也可能在不小心操作後讓你找不到想要的資料。本文將從原因分析說明為何需要取消隱藏，接著提供三種分步驟的解決方案，最後整">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="188">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何取消隱藏 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E9%9A%B1%E8%97%8F/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何取消隱藏</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1️⃣ 原因分析</a></li>
+    <li><a href="#2-3種分步驟的解決方案">2️⃣ 3種分步驟的解決方案</a>
+      <ul>
+        <li><a href="#方案-a使用-excel-內建的取消隱藏功能">方案 A：使用 Excel 內建的「取消隱藏」功能</a></li>
+        <li><a href="#方案-b使用選擇性顯示功能-showhide">方案 B：使用「選擇性顯示」功能 (Show/Hide)</a></li>
+        <li><a href="#方案-c使用vba-宏快速取消隱藏">方案 C：使用「VBA 宏」快速取消隱藏</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常見問題解答faq">3️⃣ 常見問題解答（FAQ）</a></li>
+    <li><a href="#小結">小結</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何取消隱藏
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何取消隱藏unhide完整指南">Excel 如何取消隱藏（Unhide）——完整指南<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%8f%96%e6%b6%88%e9%9a%b1%e8%97%8funhide%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97">#</a></h1>
+<p>在日常使用 Excel 的過程中，常會遇到「隱藏」行、列、工作表或工作簿的情況。隱藏功能既方便快速整理資料，也可能在不小心操作後讓你找不到想要的資料。本文將從<strong>原因分析</strong>說明為何需要取消隱藏，接著提供<strong>三種分步驟的解決方案</strong>，最後整理常見問題（FAQ）供你快速查詢。</p>
+<blockquote class='book-hint '>
+<p><strong>備註</strong>：本文使用的是 Excel 365/Excel 2019 版的常見操作；在其他版本中，功能位置略有不同，請依實際介面調整。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1️⃣ 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>隱藏類型</th>
+          <th>典型場景</th>
+          <th>為何需要取消隱藏</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>行/列</td>
+          <td>數據過多、臨時排除測試值</td>
+          <td>需要查看完整表格、進行計算</td>
+      </tr>
+      <tr>
+          <td>工作表</td>
+          <td>工作簿多個工作表、組織結構需要隱藏</td>
+          <td>想查看或編輯被隱藏的工作表</td>
+      </tr>
+      <tr>
+          <td>數據範圍</td>
+          <td>範圍內存在被隱藏的關鍵數據</td>
+          <td>需要把隱藏數據納入分析範圍</td>
+      </tr>
+      <tr>
+          <td>整個工作簿</td>
+          <td>需要將整個文件隱藏（如保密）</td>
+          <td>需要恢復全部工作簿內容</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：當你不確定為何某行列被隱藏，可以先使用「所有列/行」顯示方式 (<code>Ctrl+Shift+*</code>) 或「工作表層級」檢查。</p>
+</blockquote><hr>
+<h2 id="2-3種分步驟的解決方案">2️⃣ 3種分步驟的解決方案<a class="anchor" href="#2-3%e7%a8%ae%e5%88%86%e6%ad%a5%e9%a9%9f%e7%9a%84%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案-a使用-excel-內建的取消隱藏功能">方案 A：使用 Excel 內建的「取消隱藏」功能<a class="anchor" href="#%e6%96%b9%e6%a1%88-a%e4%bd%bf%e7%94%a8-excel-%e5%85%a7%e5%bb%ba%e7%9a%84%e5%8f%96%e6%b6%88%e9%9a%b1%e8%97%8f%e5%8a%9f%e8%83%bd">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>步驟</th>
+          <th>操作說明</th>
+          <th>參考快捷鍵</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>選擇</strong>要取消隱藏的範圍。若是隱藏整個行列，點選其相鄰的行/列標題；若是工作表，右鍵點擊工作表標籤。</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>點擊</strong>「開始」選單 → 「格式」 → 「隱藏與取消隱藏」 → 「取消隱藏行」或「取消隱藏列」。對於工作表則選「取消隱藏工作表」。</td>
+          <td><code>Alt + H + O + I</code>（隱藏列）<!-- raw HTML omitted --><code>Alt + H + O + R</code>（隱藏行）<!-- raw HTML omitted --><code>Alt + H + O + U</code>（隱藏工作表）</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>確認</strong>所有隱藏項目已顯示。若仍有隱藏，重複上述步驟或檢查是否有「隱藏列寬」&gt;0 的特殊情況。</td>
+          <td>-</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：若你想一次取消隱藏整個工作表中的所有行列，請在「開始」→「選擇」→「全選」後再執行「取消隱藏」命令。</p>
+</blockquote><hr>
+<h3 id="方案-b使用選擇性顯示功能-showhide">方案 B：使用「選擇性顯示」功能 (Show/Hide)<a class="anchor" href="#%e6%96%b9%e6%a1%88-b%e4%bd%bf%e7%94%a8%e9%81%b8%e6%93%87%e6%80%a7%e9%a1%af%e7%a4%ba%e5%8a%9f%e8%83%bd-showhide">#</a></h3>
+<ol>
+<li><strong>點擊</strong>「開始」→「格式」→「隱藏與取消隱藏」→「顯示整個工作表」。</li>
+<li>在彈出的「隱藏列/行」對話框中，選擇「顯示所有列」或「顯示所有行」。</li>
+<li>若你想一次性取消隱藏所有工作表，請在「工作表」選項卡中，選擇「顯示工作表」按鈕，將所有被隱藏的工作表打開。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>備註</strong>：這種方法可以一次性恢復整個工作簿中所有隱藏項目，省去逐項操作的麻煩。</p>
+</blockquote><hr>
+<h3 id="方案-c使用vba-宏快速取消隱藏">方案 C：使用「VBA 宏」快速取消隱藏<a class="anchor" href="#%e6%96%b9%e6%a1%88-c%e4%bd%bf%e7%94%a8vba-%e5%ae%8f%e5%bf%ab%e9%80%9f%e5%8f%96%e6%b6%88%e9%9a%b1%e8%97%8f">#</a></h3>
+<p>如果你經常需要取消多個工作表或大量隱藏行/列，建議使用簡單的 VBA 宏來自動化：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">UnhideAll</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 取消所有工作表隱藏
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> ws <span style="color:#f92672">As</span> Worksheet
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> ws <span style="color:#f92672">In</span> ThisWorkbook.Worksheets
+</span></span><span style="display:flex;"><span>        ws.Visible <span style="color:#f92672">=</span> xlSheetVisible
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> ws
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 取消所有行列隱藏
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> rng <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> ws <span style="color:#f92672">In</span> ThisWorkbook.Worksheets
+</span></span><span style="display:flex;"><span>        ws.Cells.EntireRow.Hidden <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        ws.Cells.EntireColumn.Hidden <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> ws
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span></span></span></code></pre></div><p><strong>操作說明</strong>：</p>
+<ol>
+<li>按 <code>Alt + F11</code> 打開 VBA 編輯器。</li>
+<li>插入一個新模組 (<code>Insert &gt; Module</code>)。</li>
+<li>將上述程式碼貼入，保存並關閉編輯器。</li>
+<li>回到 Excel，按 <code>Alt + F8</code>，選擇 <code>UnhideAll</code> 執行即可。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：使用宏前請先確認工作簿未被保護，並且 VBA 宏安全設定允許執行。</p>
+</blockquote><hr>
+<h2 id="3-常見問題解答faq">3️⃣ 常見問題解答（FAQ）<a class="anchor" href="#3-%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1</strong>：我點了「取消隱藏」後，仍然看不到行列。</td>
+          <td>這可能是因為行列寬度被設置為 0。請先選擇相鄰的行/列，右鍵 → 「列寬」或「行高」→ 輸入非零值。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2</strong>：工作簿被隱藏，怎麼才能重新打開？</td>
+          <td>右鍵點擊任何已顯示的工作表標籤 → 「工作簿保護」→ 「取消保護工作簿」或「顯示工作簿」(若已被隱藏)。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3</strong>：能否一次性取消所有工作表的隱藏？</td>
+          <td>在「開始」→「選擇」→「全選」後，點擊「格式」→「隱藏與取消隱藏」→「取消隱藏工作表」即可。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4</strong>：隱藏的行列在某些公式中仍被計算。</td>
+          <td>隱藏並不會影響公式計算，請確認公式未使用 <code>SUBTOTAL</code> 或 <code>AGGREGATE</code> 這類忽略隱藏行列的函數。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5</strong>：為什麼我無法取消隱藏某些工作表？</td>
+          <td>可能是工作表被「保護」或「工作簿保護」設定。請先取消保護。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6</strong>：Excel 2016 的操作位置和 Excel 365 不同，如何在舊版本中取消隱藏？</td>
+          <td>在舊版本中，通常在「開始」→「格式」→「隱藏與取消隱藏」選單中找到相同選項。若找不到，請在「視圖」→「工作表選項」中檢查。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小結">小結<a class="anchor" href="#%e5%b0%8f%e7%b5%90">#</a></h2>
+<ul>
+<li><strong>隱藏</strong>是 Excel 的一個便利功能，卻也可能讓你臨時找不到關鍵數據。</li>
+<li>通過上述三種方案，你可以快速、靈活地取消隱藏行列、工作表或整個工作簿。</li>
+<li>若你需要頻繁處理大量隱藏項目，VBA 宏是最省時的選擇。</li>
+</ul>
+<p>希望本教程能幫你快速解決「excel如何取消隱藏」的問題，讓工作更高效！如果還有其他疑問，歡迎隨時提問。</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8F%96%E6%B6%88%E9%9A%90%E8%97%8F/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何取消隐藏</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E6%A0%8F%E4%BD%8D/" class="flex align-center">
+      <span>excel如何合并栏位</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1️⃣ 原因分析</a></li>
+    <li><a href="#2-3種分步驟的解決方案">2️⃣ 3種分步驟的解決方案</a>
+      <ul>
+        <li><a href="#方案-a使用-excel-內建的取消隱藏功能">方案 A：使用 Excel 內建的「取消隱藏」功能</a></li>
+        <li><a href="#方案-b使用選擇性顯示功能-showhide">方案 B：使用「選擇性顯示」功能 (Show/Hide)</a></li>
+        <li><a href="#方案-c使用vba-宏快速取消隱藏">方案 C：使用「VBA 宏」快速取消隱藏</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常見問題解答faq">3️⃣ 常見問題解答（FAQ）</a></li>
+    <li><a href="#小結">小結</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

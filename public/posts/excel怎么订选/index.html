@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 怎么订选（排序） - 详细教程   注：这里的“订选”指的是 数据排序（也可理解为“排位”）。如果你想要的是 筛选 或 下拉列表，请在本教程后面查看相应章节。  ---   原因分析  | 场景 | 为什么需要排序 | 解决不了排序会出现什么问题">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E8%AE%A2%E9%80%89/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么订选">
+  <meta property="og:description" content="Excel 怎么订选（排序） - 详细教程   注：这里的“订选”指的是 数据排序（也可理解为“排位”）。如果你想要的是 筛选 或 下拉列表，请在本教程后面查看相应章节。  ---   原因分析  | 场景 | 为什么需要排序 | 解决不了排序会出现什么问题">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel怎么订选">
+  <meta itemprop="description" content="Excel 怎么订选（排序） - 详细教程   注：这里的“订选”指的是 数据排序（也可理解为“排位”）。如果你想要的是 筛选 或 下拉列表，请在本教程后面查看相应章节。  ---   原因分析  | 场景 | 为什么需要排序 | 解决不了排序会出现什么问题">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="190">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么订选 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E8%AE%A2%E9%80%89/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么订选</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-排序-功能单列排序">方案一：使用 <strong>“排序”</strong> 功能（单列排序）</a></li>
+    <li><a href="#方案二多列自定义排序按多个字段排序">方案二：<strong>多列自定义排序</strong>（按多个字段排序）</a></li>
+    <li><a href="#方案三使用-高级筛选--排序适用于复杂条件和大数据">方案三：使用 <strong>“高级筛选 + 排序”</strong>（适用于复杂条件和大数据）</a></li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么订选
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-怎么订选排序---详细教程">Excel 怎么订选（排序） - 详细教程<a class="anchor" href="#excel-%e6%80%8e%e4%b9%88%e8%ae%a2%e9%80%89%e6%8e%92%e5%ba%8f---%e8%af%a6%e7%bb%86%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>注</strong>：这里的“订选”指的是 <strong>数据排序</strong>（也可理解为“排位”）。如果你想要的是 <strong>筛选</strong> 或 <strong>下拉列表</strong>，请在本教程后面查看相应章节。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>为什么需要排序</th>
+          <th>解决不了排序会出现什么问题</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>财务报表</td>
+          <td>快速定位最高/最低值</td>
+          <td>统计错误、报表难读</td>
+      </tr>
+      <tr>
+          <td>客户名单</td>
+          <td>按地区/销售额归档</td>
+          <td>同一地区客户散乱，无法快速找到</td>
+      </tr>
+      <tr>
+          <td>数据分析</td>
+          <td>为后续分析做准备</td>
+          <td>统计、图表可能基于错误顺序</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>核心</strong>：排序是让数据以某种逻辑（升序/降序/自定义）排列的工具，直接影响后续的分析、汇总与展示。</p>
+</blockquote><hr>
+<h2 id="方案一使用-排序-功能单列排序">方案一：使用 <strong>“排序”</strong> 功能（单列排序）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-%e6%8e%92%e5%ba%8f-%e5%8a%9f%e8%83%bd%e5%8d%95%e5%88%97%e6%8e%92%e5%ba%8f">#</a></h2>
+<ol>
+<li>
+<p><strong>选中</strong>需要排序的列或单元格区域。</p>
+<ul>
+<li>如果包含标题行，确保标题不被选中，或勾选 <em>“我的数据有标题”</em>。</li>
+</ul>
+</li>
+<li>
+<p>在 <strong>“数据”</strong> 选项卡中点击 <strong>“排序”</strong>（或按快捷键 <code>Alt+D+S</code>）。</p>
+</li>
+<li>
+<p>在弹出的 <strong>排序对话框</strong>：</p>
+<ul>
+<li><strong>列</strong>：选择要排序的列。</li>
+<li><strong>排序方式</strong>：升序（A→Z / 低→高）或降序（Z→A / 高→低）。</li>
+<li><strong>添加级别</strong>：如需先按 A 列，再按 B 列，点击 <em>“添加级别”</em>。</li>
+</ul>
+</li>
+<li>
+<p>点击 <strong>“确定”</strong>，即可完成排序。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：</p>
+<ul>
+<li>若想保持原始顺序，可在排序前复制一份数据。</li>
+<li>排序后若需要恢复，可使用 <em>“撤销”</em> (Ctrl+Z) 或 <em>“历史记录”</em>。</li>
+</ul>
+</blockquote><hr>
+<h2 id="方案二多列自定义排序按多个字段排序">方案二：<strong>多列自定义排序</strong>（按多个字段排序）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e5%a4%9a%e5%88%97%e8%87%aa%e5%ae%9a%e4%b9%89%e6%8e%92%e5%ba%8f%e6%8c%89%e5%a4%9a%e4%b8%aa%e5%ad%97%e6%ae%b5%e6%8e%92%e5%ba%8f">#</a></h2>
+<ol>
+<li>
+<p>选中包含 <strong>标题行</strong> 的完整数据范围。</p>
+</li>
+<li>
+<p>打开 <strong>“排序”</strong> 对话框。</p>
+</li>
+<li>
+<p>点击 <strong>“添加级别”</strong>，按所需优先级依次设置：</p>
+<ul>
+<li>第一级：区域 → 升序</li>
+<li>第二级：销售额 → 降序</li>
+<li>第三级：日期 → 升序</li>
+</ul>
+</li>
+<li>
+<p>若要修改某一级别的排序方向，单击相应 <strong>“升序/降序”</strong> 图标。</p>
+</li>
+<li>
+<p>完成后点击 <strong>“确定”</strong>。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>案例</strong>：</p>
+<ul>
+<li>先按 <strong>“部门”</strong> 排序，再按 <strong>“工号”</strong> 重新排列同一部门内的数据。</li>
+</ul>
+</blockquote><hr>
+<h2 id="方案三使用-高级筛选--排序适用于复杂条件和大数据">方案三：使用 <strong>“高级筛选 + 排序”</strong>（适用于复杂条件和大数据）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-%e9%ab%98%e7%ba%a7%e7%ad%9b%e9%80%89--%e6%8e%92%e5%ba%8f%e9%80%82%e7%94%a8%e4%ba%8e%e5%a4%8d%e6%9d%82%e6%9d%a1%e4%bb%b6%e5%92%8c%e5%a4%a7%e6%95%b0%e6%8d%ae">#</a></h2>
+<ol>
+<li>
+<p><strong>准备数据</strong>：</p>
+<ul>
+<li>在表格上方新建一行作为 <strong>筛选条件</strong>。</li>
+<li>输入要筛选的字段名与对应条件。</li>
+</ul>
+</li>
+<li>
+<p>选中整个数据区域（含标题）。</p>
+</li>
+<li>
+<p>在 <strong>“数据”</strong> 选项卡，点击 <strong>“高级”</strong>（或 <code>Alt+D+L</code>）。</p>
+</li>
+<li>
+<p>在弹窗中：</p>
+<ul>
+<li><strong>列表区域</strong>：已自动填入。</li>
+<li><strong>条件区域</strong>：选择你刚才放置条件的单元格。</li>
+<li><strong>复制到其他位置</strong>：若想保留原表，勾选此项并指定目标单元格。</li>
+</ul>
+</li>
+<li>
+<p>点击 <strong>“确定”</strong>，得到符合条件的子集。</p>
+</li>
+<li>
+<p>对该子集再次使用 <strong>方案一</strong> 或 <strong>方案二</strong> 进行排序。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>为什么使用高级筛选</strong>：</p>
+<ul>
+<li>可以一次性实现多条件（如“部门=销售 AND 销售额&gt;1,000,000”）。</li>
+<li>适合需要将结果输出到其他工作表的场景。</li>
+</ul>
+</blockquote><hr>
+<h2 id="常见问题解答">常见问题解答<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>排序后数据丢失或错误</td>
+          <td>确认 <strong>“我的数据有标题”</strong> 是否被勾选，避免标题被排序。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>排序后公式引用错误</td>
+          <td>公式使用 <strong>相对引用</strong> 时会跟随排序；若不想跟随，请改为 <strong>绝对引用</strong> 或使用 <strong><code>INDEX</code></strong> 结合 <strong><code>MATCH</code></strong>。</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>如何在排序过程中保留原始顺序？</td>
+          <td>在排序前添加一列 <strong>“序号”</strong>（1、2、3…），排序后再按此列恢复。</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>如何一次性对多列进行升序/降序？</td>
+          <td>在 “排序” 对话框中一次添加所有级别，分别设定方向。</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>当数据中有空行或合并单元格时，排序会失效</td>
+          <td>先 <strong>拆分合并单元格</strong>，并删除空行，再执行排序。</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>如何在排序后保留筛选器状态？</td>
+          <td>排序后，筛选器会保持，只需重新点击 <strong>“筛选”</strong> 按钮即可。</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>如何在 VBA 中实现自动排序？</td>
+          <td>```vba</td>
+      </tr>
+      <tr>
+          <td>&rsquo; 示例：按列 A 升序</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Sub AutoSort()</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>With Worksheets(&ldquo;Sheet1&rdquo;)</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>.Sort.SortFields.Clear</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>.Sort.SortFields.Add Key:=.Range(&ldquo;A1:A100&rdquo;), SortOn:=xlSortOnValues, Order:=xlAscending</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>.Sort.SetRange .Range(&ldquo;A1:C100&rdquo;)</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>.Sort.Apply</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>End With</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>End Sub</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<pre tabindex="0"><code class="language-|" data-lang="|">
+---
+
+### 小结
+
+- **基本排序**：适合单列快速升降。  
+- **多列排序**：满足层级需求，常见于报表。  
+- **高级筛选+排序**：对复杂数据集进行精准提取与排序。
+
+掌握这三种方案后，你就能在任何 Excel 数据处理中自如应对“订选”需求。祝你使用愉快！</code></pre></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E8%87%AA%E5%8A%A8%E5%8A%A0%E6%80%BB/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么自动加总</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E8%BD%ACpdf%E6%A1%A3/" class="flex align-center">
+      <span>excel怎么转pdf档</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-排序-功能单列排序">方案一：使用 <strong>“排序”</strong> 功能（单列排序）</a></li>
+    <li><a href="#方案二多列自定义排序按多个字段排序">方案二：<strong>多列自定义排序</strong>（按多个字段排序）</a></li>
+    <li><a href="#方案三使用-高级筛选--排序适用于复杂条件和大数据">方案三：使用 <strong>“高级筛选 + 排序”</strong>（适用于复杂条件和大数据）</a></li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

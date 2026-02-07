@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何連動：從概念到實作的完整指南  在現代辦公環境中，Excel 的資料往往分佈在多個工作簿、工作表或外部系統中。連動（Link） 讓我們能夠在一個位置匯總、分析或同步其他資料來源，避免重複輸入、降低錯誤率，並實現即時更新。本文將從原因分析、三種常見連動方法以及常見問題解答三">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E9%80%A3%E5%8B%95/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何連動">
+  <meta property="og:description" content="Excel 如何連動：從概念到實作的完整指南  在現代辦公環境中，Excel 的資料往往分佈在多個工作簿、工作表或外部系統中。連動（Link） 讓我們能夠在一個位置匯總、分析或同步其他資料來源，避免重複輸入、降低錯誤率，並實現即時更新。本文將從原因分析、三種常見連動方法以及常見問題解答三">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何連動">
+  <meta itemprop="description" content="Excel 如何連動：從概念到實作的完整指南  在現代辦公環境中，Excel 的資料往往分佈在多個工作簿、工作表或外部系統中。連動（Link） 讓我們能夠在一個位置匯總、分析或同步其他資料來源，避免重複輸入、降低錯誤率，並實現即時更新。本文將從原因分析、三種常見連動方法以及常見問題解答三">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="223">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何連動 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E9%80%A3%E5%8B%95/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何連動</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#一原因分析為什麼需要-excel-連動">一、原因分析：為什麼需要 Excel 連動？</a></li>
+    <li><a href="#二三种分步骤的解决方案">二、三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案一單元格引用內部與外部">方案一：單元格引用（內部與外部）</a></li>
+        <li><a href="#方案二使用名稱管理器--indirect-函式動態連結">方案二：使用名稱管理器 + <code>INDIRECT</code> 函式（動態連結）</a></li>
+        <li><a href="#方案三power-query資料匯入與自動刷新">方案三：Power Query（資料匯入與自動刷新）</a></li>
+      </ul>
+    </li>
+    <li><a href="#三常见问题解答faq">三、常见问题解答（FAQ）</a></li>
+    <li><a href="#四結語">四、結語</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何連動
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何連動從概念到實作的完整指南">Excel 如何連動：從概念到實作的完整指南<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e9%80%a3%e5%8b%95%e5%be%9e%e6%a6%82%e5%bf%b5%e5%88%b0%e5%af%a6%e4%bd%9c%e7%9a%84%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97">#</a></h1>
+<p>在現代辦公環境中，Excel 的資料往往分佈在多個工作簿、工作表或外部系統中。<strong>連動（Link）</strong> 讓我們能夠在一個位置匯總、分析或同步其他資料來源，避免重複輸入、降低錯誤率，並實現即時更新。本文將從原因分析、三種常見連動方法以及常見問題解答三大面向，帶你一步步掌握 Excel 連動技巧。</p>
+<hr>
+<h2 id="一原因分析為什麼需要-excel-連動">一、原因分析：為什麼需要 Excel 連動？<a class="anchor" href="#%e4%b8%80%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90%e7%82%ba%e4%bb%80%e9%ba%bc%e9%9c%80%e8%a6%81-excel-%e9%80%a3%e5%8b%95">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>典型場景</th>
+          <th>連動帶來的好處</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>資料統一</strong></td>
+          <td>多個部門各自維護同一份報表的子集</td>
+          <td>只需在一處更新，即可同步至所有相關表格</td>
+      </tr>
+      <tr>
+          <td><strong>即時更新</strong></td>
+          <td>業務數據每天更新，需在分析報表中即時反映</td>
+          <td>省去手動複製粘貼，減少延遲</td>
+      </tr>
+      <tr>
+          <td><strong>資料保護</strong></td>
+          <td>只允許特定用戶編輯原始數據，其他人只能查看</td>
+          <td>透過外部引用或 Power Query 授權限制</td>
+      </tr>
+      <tr>
+          <td><strong>跨工作簿協作</strong></td>
+          <td>大型項目分布在不同工作簿</td>
+          <td>透過連動保持一致性，避免多版本衝突</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>關鍵點</strong>：連動不是「複製貼上」而是「動態連結」；任何源頭的改動都能即時反映到目標位置。</p>
+</blockquote><hr>
+<h2 id="二三种分步骤的解决方案">二、三种分步骤的解决方案<a class="anchor" href="#%e4%ba%8c%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<p>下面提供三种常用的 Excel 連動方法，針對不同需求與複雜度做分步說明。</p>
+<blockquote class='book-hint '>
+<p><strong>前置條件</strong></p>
+<ul>
+<li>Excel 2016 或更新版本</li>
+<li>具備基本公式操作經驗</li>
+<li>若使用 Power Query，請確保已安裝「資料」功能表</li>
+</ul>
+</blockquote><h3 id="方案一單元格引用內部與外部">方案一：單元格引用（內部與外部）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e5%96%ae%e5%85%83%e6%a0%bc%e5%bc%95%e7%94%a8%e5%85%a7%e9%83%a8%e8%88%87%e5%a4%96%e9%83%a8">#</a></h3>
+<blockquote class='book-hint '>
+<p>這是最簡單、最直觀的連動方式，適用於同一工作簿或不同工作簿的單元格/範圍同步。</p>
+</blockquote><h4 id="步驟">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f">#</a></h4>
+<ol>
+<li>
+<p><strong>定位源數據</strong></p>
+<ul>
+<li>在工作簿 A（<code>Data.xlsx</code>）中，選擇你想要連動的單元格或範圍，例如 <code>Sheet1!A1:A10</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>打開目標工作簿</strong></p>
+<ul>
+<li>在工作簿 B（<code>Report.xlsx</code>）中，選擇你想放置連動結果的單元格，例如 <code>Sheet2!B1</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>輸入公式</strong></p>
+<ul>
+<li>在目標單元格輸入：
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=[Data.xlsx]Sheet1!$A$1</code></pre></li>
+<li>若想連動整個範圍，可直接拖曳或使用：
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=[Data.xlsx]Sheet1!$A$1:$A$10</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>保存並刷新</strong></p>
+<ul>
+<li>Excel 會自動建立“外部連結”並提示刷新。按下 <strong>「是」</strong> 或 <strong>「刷新」</strong> 即可即時同步。</li>
+</ul>
+</li>
+</ol>
+<h4 id="注意事項">注意事項<a class="anchor" href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85">#</a></h4>
+<ul>
+<li><strong>相對路徑</strong>：若兩個工作簿存於同一資料夾，路徑可簡化為 <code>[Data.xlsx]Sheet1!$A$1</code>。若不在同一資料夾，必須使用完整路徑，例如 <code>C:\Users\John\Documents\[Data.xlsx]Sheet1!$A$1</code>。</li>
+<li><strong>關閉源工作簿</strong>：即使源工作簿已關閉，Excel 仍能透過公式取得最近一次保存的值。若想保持實時更新，請保持源工作簿開啟或在目標工作簿中手動刷新。</li>
+<li><strong>錯誤處理</strong>：若源文件被移動或名稱更改，公式會顯示 <code>#REF!</code>。需要重新更新路徑。</li>
+</ul>
+<hr>
+<h3 id="方案二使用名稱管理器--indirect-函式動態連結">方案二：使用名稱管理器 + <code>INDIRECT</code> 函式（動態連結）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%90%8d%e7%a8%b1%e7%ae%a1%e7%90%86%e5%99%a8--indirect-%e5%87%bd%e5%bc%8f%e5%8b%95%e6%85%8b%e9%80%a3%e7%b5%90">#</a></h3>
+<blockquote class='book-hint '>
+<p>這種方法允許你在名稱中指定路徑或工作簿名稱，並可根據需求動態改變連結目標。</p>
+</blockquote><h4 id="步驟-1">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1">#</a></h4>
+<ol>
+<li>
+<p><strong>定義名稱</strong></p>
+<ul>
+<li>打開「公式」→「名稱管理器」→「新建」。</li>
+<li>名稱：<code>DataSource</code></li>
+<li>參照值：<code>='C:\Users\John\Documents\[Data.xlsx]Sheet1'!$A$1:$A$10</code></li>
+</ul>
+</li>
+<li>
+<p><strong>使用 <code>INDIRECT</code> 公式</strong></p>
+<ul>
+<li>在目標工作簿的任意單元格輸入：
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=INDIRECT(DataSource)</code></pre></li>
+<li>這會返回 <code>DataSource</code> 指定的範圍內的數值。</li>
+</ul>
+</li>
+<li>
+<p><strong>動態改變來源</strong></p>
+<ul>
+<li>若要改變連結的工作簿或工作表，只需在「名稱管理器」中修改 <code>DataSource</code> 的參照值即可。</li>
+</ul>
+</li>
+</ol>
+<h4 id="優點">優點<a class="anchor" href="#%e5%84%aa%e9%bb%9e">#</a></h4>
+<ul>
+<li><strong>集中管理</strong>：所有連結路徑集中於名稱管理器，易於維護。</li>
+<li><strong>動態更新</strong>：可使用 <code>INDIRECT</code> 與 <code>IF</code>、<code>VLOOKUP</code> 等函式配合，實現條件式連結。</li>
+</ul>
+<h4 id="缺點">缺點<a class="anchor" href="#%e7%bc%ba%e9%bb%9e">#</a></h4>
+<ul>
+<li><strong>性能問題</strong>：大量 <code>INDIRECT</code> 會降低工作簿計算速度，因其每次計算都需重新解析路徑。</li>
+<li><strong>安全性</strong>：如果路徑包含敏感資料，需確保工作簿存取權限。</li>
+</ul>
+<hr>
+<h3 id="方案三power-query資料匯入與自動刷新">方案三：Power Query（資料匯入與自動刷新）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89power-query%e8%b3%87%e6%96%99%e5%8c%af%e5%85%a5%e8%88%87%e8%87%aa%e5%8b%95%e5%88%b7%e6%96%b0">#</a></h3>
+<blockquote class='book-hint '>
+<p>適用於需要匯入大量資料、進行資料清洗以及跨工作簿/資料庫的連動。</p>
+</blockquote><h4 id="步驟-2">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2">#</a></h4>
+<ol>
+<li>
+<p><strong>啟用 Power Query</strong></p>
+<ul>
+<li>在 Excel 2016 以上已內建；在 2010/2013 需安裝「Power Query」插件。</li>
+</ul>
+</li>
+<li>
+<p><strong>匯入外部資料</strong></p>
+<ul>
+<li>「資料」→「取得資料」→「從檔案」→「從工作簿」</li>
+<li>選擇源工作簿 <code>Data.xlsx</code>，勾選需要的工作表或範圍。</li>
+</ul>
+</li>
+<li>
+<p><strong>編輯查詢</strong></p>
+<ul>
+<li>在 Power Query 編輯器中，可進行資料轉換（篩選、合併、轉置等）。</li>
+<li>完成後，點擊「關閉並載入」將結果載入目標工作簿的新工作表。</li>
+</ul>
+</li>
+<li>
+<p><strong>自動刷新</strong></p>
+<ul>
+<li>右鍵點擊載入後的表格，選擇「查詢屬性」→「刷新」選項。</li>
+<li>可設定「每次打開工作簿時刷新」或「每隔 X 分鐘刷新」。</li>
+</ul>
+</li>
+</ol>
+<h4 id="優點-1">優點<a class="anchor" href="#%e5%84%aa%e9%bb%9e-1">#</a></h4>
+<ul>
+<li><strong>高效處理大資料集</strong>：Power Query 在後台使用 Power Query M 語言，計算速度快。</li>
+<li><strong>資料清洗</strong>：可在載入前進行複雜轉換，避免在 Excel 內部手動處理。</li>
+<li><strong>跨資料來源</strong>：不僅能連結工作簿，還能連結 CSV、Web、SQL、SharePoint 等。</li>
+</ul>
+<h4 id="缺點-1">缺點<a class="anchor" href="#%e7%bc%ba%e9%bb%9e-1">#</a></h4>
+<ul>
+<li><strong>學習曲線</strong>：需要熟悉 Power Query UI 或 M 語言。</li>
+<li><strong>版本限制</strong>：舊版 Excel 可能缺少部分功能。</li>
+</ul>
+<hr>
+<h2 id="三常见问题解答faq">三、常见问题解答（FAQ）<a class="anchor" href="#%e4%b8%89%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>1. 連結檔案被移動後，公式顯示 <code>#REF!</code> 如何修復？</strong></td>
+          <td>重新打開源工作簿，使用「查找與取代」或「編輯連結」功能更新路徑。或在名稱管理器中手動更改參照值。</td>
+      </tr>
+      <tr>
+          <td><strong>2. 如何在工作簿關閉時仍保持連動更新？</strong></td>
+          <td>若使用外部引用，Excel 只能在再次打開時刷新。若需即時更新，請使用 Power Query 並在「查詢屬性」中勾選「每次打開工作簿時刷新」。</td>
+      </tr>
+      <tr>
+          <td><strong>3. 連結的工作表被隱藏或被保護，公式會失效嗎？</strong></td>
+          <td>隱藏不影響連結；但保護層級較高時，如果設定「保護工作簿」不允許「編輯外部連結」，則需要調整保護設定。</td>
+      </tr>
+      <tr>
+          <td><strong>4. 連結多個工作表時，如何避免重複計算？</strong></td>
+          <td>用 Power Query 或 VBA 把多個來源合併為一次載入；或在 Excel 內使用 <code>SUMIFS</code>、<code>INDEX/MATCH</code> 等聚合函式，避免多次引用同一單元格。</td>
+      </tr>
+      <tr>
+          <td><strong>5. 為什麼使用 <code>INDIRECT</code> 會降低效能？</strong></td>
+          <td><code>INDIRECT</code> 在每次計算時都必須解析文字路徑，導致計算量增加。若資料量大，建議改用直接引用或 Power Query。</td>
+      </tr>
+      <tr>
+          <td><strong>6. 如何設定「只讀」連結，防止用戶意外修改源資料？</strong></td>
+          <td>在目標工作簿中，將連結結果置於只讀工作表，或使用「資料」→「保護工作簿」→「限制編輯」功能。</td>
+      </tr>
+      <tr>
+          <td><strong>7. 連結的工作簿被鎖定或加密，該怎麼辦？</strong></td>
+          <td>需要先解鎖或輸入密碼，或使用「資料」→「從工作簿」的「取得資料」功能，Excel 會提示輸入密碼。</td>
+      </tr>
+      <tr>
+          <td><strong>8. 連結的資料量很大，載入速度慢，如何優化？</strong></td>
+          <td>先在源工作簿做篩選、刪除不必要欄位；在 Power Query 中使用「減少列」或「只載入資料列」；或將資料拆分成多個小範圍。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="四結語">四、結語<a class="anchor" href="#%e5%9b%9b%e7%b5%90%e8%aa%9e">#</a></h2>
+<p>Excel 的連動功能不僅能提升工作效率，還能確保資料的一致性與即時性。根據實際需求，選擇最合適的連動方法：</p>
+<ul>
+<li><strong>簡單引用</strong>：適合小型、靜態資料。</li>
+<li><strong>名稱 + INDIRECT</strong>：適合需要動態改變源的場景。</li>
+<li><strong>Power Query</strong>：適合大數據、跨系統整合。</li>
+</ul>
+<p>熟練掌握上述三種方案，並結合常見問題解決技巧，你就能在 Excel 中輕鬆實現資料連動，讓報表更可靠、更省時。祝你使用愉快！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%BF%9E%E7%BB%93/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何连结</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E9%80%A3%E7%B5%90/" class="flex align-center">
+      <span>excel如何連結</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#一原因分析為什麼需要-excel-連動">一、原因分析：為什麼需要 Excel 連動？</a></li>
+    <li><a href="#二三种分步骤的解决方案">二、三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案一單元格引用內部與外部">方案一：單元格引用（內部與外部）</a></li>
+        <li><a href="#方案二使用名稱管理器--indirect-函式動態連結">方案二：使用名稱管理器 + <code>INDIRECT</code> 函式（動態連結）</a></li>
+        <li><a href="#方案三power-query資料匯入與自動刷新">方案三：Power Query（資料匯入與自動刷新）</a></li>
+      </ul>
+    </li>
+    <li><a href="#三常见问题解答faq">三、常见问题解答（FAQ）</a></li>
+    <li><a href="#四結語">四、結語</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

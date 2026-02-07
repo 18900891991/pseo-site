@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 中的日期处理全攻略  在日常工作中，日期往往是最常见的数据类型之一。无论是项目进度、财务报表、还是日程安排，Excel 都提供了丰富的日期功能。然而，许多用户在使用时会遇到“日期显示为序列号”“无法识别日期格式”等问题。本文将从原因分析、三种常用解决方案以及常见问题解答三个层面，帮你">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E6%97%A5%E6%9C%9F/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么用日期">
+  <meta property="og:description" content="Excel 中的日期处理全攻略  在日常工作中，日期往往是最常见的数据类型之一。无论是项目进度、财务报表、还是日程安排，Excel 都提供了丰富的日期功能。然而，许多用户在使用时会遇到“日期显示为序列号”“无法识别日期格式”等问题。本文将从原因分析、三种常用解决方案以及常见问题解答三个层面，帮你">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel怎么用日期">
+  <meta itemprop="description" content="Excel 中的日期处理全攻略  在日常工作中，日期往往是最常见的数据类型之一。无论是项目进度、财务报表、还是日程安排，Excel 都提供了丰富的日期功能。然而，许多用户在使用时会遇到“日期显示为序列号”“无法识别日期格式”等问题。本文将从原因分析、三种常用解决方案以及常见问题解答三个层面，帮你">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="310">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么用日期 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E6%97%A5%E6%9C%9F/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么用日期</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1️⃣ 原因分析</a></li>
+    <li><a href="#2-三种分步骤的解决方案">2️⃣ 三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#21-方案一直接输入并格式化为日期">2.1 方案一：直接输入并格式化为日期</a></li>
+        <li><a href="#22-方案二使用-datetodaynow-等函数">2.2 方案二：使用 DATE、TODAY、NOW 等函数</a></li>
+        <li><a href="#23-方案三日期计算与差值">2.3 方案三：日期计算与差值</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答-faq">3️⃣ 常见问题解答 (FAQ)</a></li>
+    <li><a href="#4-小结">4️⃣ 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么用日期
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-中的日期处理全攻略">Excel 中的日期处理全攻略<a class="anchor" href="#excel-%e4%b8%ad%e7%9a%84%e6%97%a5%e6%9c%9f%e5%a4%84%e7%90%86%e5%85%a8%e6%94%bb%e7%95%a5">#</a></h1>
+<p>在日常工作中，日期往往是最常见的数据类型之一。无论是项目进度、财务报表、还是日程安排，Excel 都提供了丰富的日期功能。然而，许多用户在使用时会遇到“日期显示为序列号”“无法识别日期格式”等问题。本文将从原因分析、三种常用解决方案以及常见问题解答三个层面，帮你快速掌握 Excel 日期的使用技巧。</p>
+<hr>
+<h2 id="1-原因分析">1️⃣ 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>现象</th>
+          <th>可能原因</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>日期显示为数字序列（如 44562）</td>
+          <td>Excel 内部将日期存储为 <strong>序列号</strong>（从 1900-01-01 开始计数）</td>
+          <td>需要格式化单元格为日期</td>
+      </tr>
+      <tr>
+          <td>输入日期后变成文本</td>
+          <td>电脑/Excel 的 <strong>区域设置</strong> 与输入格式不匹配</td>
+          <td>例如输入 <code>2024/02/07</code> 在系统默认 <code>DD/MM/YYYY</code> 时会被识别为文本</td>
+      </tr>
+      <tr>
+          <td>公式返回 <code>#VALUE!</code></td>
+          <td>日期单元格未被正确识别为日期</td>
+          <td>需要使用 <code>DATEVALUE</code> 或 <code>DATE</code> 将文本转换为日期</td>
+      </tr>
+      <tr>
+          <td>计算结果不符合预期</td>
+          <td>使用了错误的日期函数或未考虑 <strong>时区</strong></td>
+          <td>例如 <code>DATEDIF</code> 与 <code>NETWORKDAYS</code> 的用法差异</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：在 Excel 里，<strong>日期</strong>是 <strong>数值</strong>，时间是 <strong>小数</strong>（0.5 = 12:00 PM）。这也是为什么在公式里需要注意 <code>=A1+B1</code> 可能得到 1.5（即 1 天 12 小时）。</p>
+</blockquote><hr>
+<h2 id="2-三种分步骤的解决方案">2️⃣ 三种分步骤的解决方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="21-方案一直接输入并格式化为日期">2.1 方案一：直接输入并格式化为日期<a class="anchor" href="#21-%e6%96%b9%e6%a1%88%e4%b8%80%e7%9b%b4%e6%8e%a5%e8%be%93%e5%85%a5%e5%b9%b6%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%b8%ba%e6%97%a5%e6%9c%9f">#</a></h3>
+<ol>
+<li>
+<p><strong>在单元格中输入</strong></p>
+<ul>
+<li>采用系统默认格式（如 <code>yyyy-mm-dd</code> 或 <code>dd/mm/yyyy</code>）</li>
+<li>也可使用快捷键 <code>Ctrl + ;</code> 插入今天的日期</li>
+</ul>
+</li>
+<li>
+<p><strong>格式化单元格</strong></p>
+<ul>
+<li>选中单元格 → 右键 → <strong>设置单元格格式</strong> → <strong>日期</strong> → 选择所需格式</li>
+<li>或使用快捷键 <code>Ctrl + 1</code> 打开格式设置窗口</li>
+</ul>
+</li>
+<li>
+<p><strong>验证</strong></p>
+<ul>
+<li>在同一行输入 <code>=A1+1</code>，如果显示为 <code>2024-02-08</code>，说明已正确识别为日期。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果你想要显示时间，可以在“自定义”里输入 <code>yyyy-mm-dd hh:mm:ss</code>。</p>
+</blockquote><hr>
+<h3 id="22-方案二使用-datetodaynow-等函数">2.2 方案二：使用 DATE、TODAY、NOW 等函数<a class="anchor" href="#22-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-datetodaynow-%e7%ad%89%e5%87%bd%e6%95%b0">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>函数</th>
+          <th>用法</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>DATE(year, month, day)</code></td>
+          <td>构造日期</td>
+          <td><code>=DATE(2024, 2, 7)</code> → 2024-02-07</td>
+      </tr>
+      <tr>
+          <td><code>TODAY()</code></td>
+          <td>返回今天的日期</td>
+          <td><code>=TODAY()</code></td>
+      </tr>
+      <tr>
+          <td><code>NOW()</code></td>
+          <td>返回当前日期+时间</td>
+          <td><code>=NOW()</code></td>
+      </tr>
+      <tr>
+          <td><code>DATEVALUE(text)</code></td>
+          <td>把文本转成日期</td>
+          <td><code>=DATEVALUE(&quot;2024-02-07&quot;)</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>
+<p><strong>输入公式</strong></p>
+<ul>
+<li>例如 <code>=DATE(2024, 2, 7)</code> → 2024-02-07</li>
+</ul>
+</li>
+<li>
+<p><strong>设置单元格格式</strong></p>
+<ul>
+<li>同上，确保显示为日期格式。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用动态日期</strong></p>
+<ul>
+<li><code>=TODAY()</code> 自动更新，适合预算/进度表。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：<code>=TODAY()-7</code> 可快速得到一周前的日期。</p>
+</blockquote><hr>
+<h3 id="23-方案三日期计算与差值">2.3 方案三：日期计算与差值<a class="anchor" href="#23-%e6%96%b9%e6%a1%88%e4%b8%89%e6%97%a5%e6%9c%9f%e8%ae%a1%e7%ae%97%e4%b8%8e%e5%b7%ae%e5%80%bc">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>函数</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>两个日期之间相差天数</td>
+          <td><code>DATEDIF(start_date, end_date, &quot;d&quot;)</code></td>
+          <td><code>=DATEDIF(A1, B1, &quot;d&quot;)</code></td>
+      </tr>
+      <tr>
+          <td>计算工作日差</td>
+          <td><code>NETWORKDAYS(start_date, end_date, [holidays])</code></td>
+          <td><code>=NETWORKDAYS(A1, B1, C1:C5)</code></td>
+      </tr>
+      <tr>
+          <td>计算某个日期后 N 天</td>
+          <td><code>=A1 + N</code></td>
+          <td><code>=A1 + 30</code></td>
+      </tr>
+      <tr>
+          <td>计算某个日期前 N 天</td>
+          <td><code>=A1 - N</code></td>
+          <td><code>=A1 - 30</code></td>
+      </tr>
+      <tr>
+          <td>获取星期几</td>
+          <td><code>WEEKDAY(date, [return_type])</code></td>
+          <td><code>=WEEKDAY(A1, 2)</code>（返回 1-7）</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li>
+<p><strong>准备日期单元格</strong></p>
+<ul>
+<li>A1: 开始日期</li>
+<li>B1: 结束日期</li>
+</ul>
+</li>
+<li>
+<p><strong>输入公式</strong></p>
+<ul>
+<li>计算天数：<code>=DATEDIF(A1, B1, &quot;d&quot;)</code></li>
+<li>计算工作日：<code>=NETWORKDAYS(A1, B1, C1:C5)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>格式化结果</strong></p>
+<ul>
+<li>对于 <code>NETWORKDAYS</code> 返回的是整数，直接显示即可。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：如果你想得到 <em>“下一个工作日”</em>，可使用 <code>=WORKDAY(A1, 1)</code>。</p>
+</blockquote><hr>
+<h2 id="3-常见问题解答-faq">3️⃣ 常见问题解答 (FAQ)<a class="anchor" href="#3-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94-faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：Excel 显示日期为 44562 而不是 2024-02-07</strong></td>
+          <td>选中单元格 → <code>Ctrl + 1</code> → 选择 <strong>日期</strong></td>
+          <td>这是 Excel 的默认序列号表现</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：输入 2024/02/07 后变成文本，公式报错</strong></td>
+          <td>用 <code>DATEVALUE(&quot;2024/02/07&quot;)</code> 或 <code>=DATE(2024,2,7)</code></td>
+          <td>确保单元格已转为日期格式</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：<code>=A1-B1</code> 结果为负数</strong></td>
+          <td>检查 A1、B1 是否为日期，且 A1 是否在 B1 之后</td>
+          <td>函数默认不按日期顺序计算</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：在不同地区使用 Excel，日期格式不一致</strong></td>
+          <td>通过“文件 → 选项 → 语言”或“文件 → 选项 → 高级”调整“使用系统分隔符”</td>
+          <td>或使用 <code>DATE</code> 函数手动构造</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：<code>DATEDIF</code> 函数在某些版本里不可用</strong></td>
+          <td>使用 <code>=INT((B1-A1))</code> 或 <code>=DATEDIF(A1,B1,&quot;d&quot;)</code></td>
+          <td>旧版 Excel 可能隐藏此函数</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：如何在单元格里显示日期+时间</strong></td>
+          <td>设置单元格为 <code>yyyy-mm-dd hh:mm:ss</code></td>
+          <td><code>NOW()</code> 可返回当前时间</td>
+      </tr>
+      <tr>
+          <td><strong>Q7：Excel 里如何判断一个单元格是否为日期</strong></td>
+          <td><code>=ISNUMBER(A1)</code> 并结合 <code>=TEXT(A1,&quot;yyyy-mm-dd&quot;)</code></td>
+          <td>如果返回文本则不是日期</td>
+      </tr>
+      <tr>
+          <td><strong>Q8：如何将日期从 24 小时制转换为 12 小时制</strong></td>
+          <td>通过自定义格式 <code>hh:mm AM/PM</code> 或 <code>=TEXT(A1,&quot;hh:mm AM/PM&quot;)</code></td>
+          <td>适用于报表显示</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>温馨提示</strong>：在涉及到时区或夏令时等复杂情况时，建议使用 <code>=DATEVALUE</code> 或 <code>=VALUE</code> 将字符串先转为数值，再根据需求做加减运算。</p>
+</blockquote><hr>
+<h2 id="4-小结">4️⃣ 小结<a class="anchor" href="#4-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>日期是数值</strong>：了解 Excel 内部的序列号系统能避免许多格式问题。</li>
+<li><strong>格式化是关键</strong>：无论输入还是计算，最终要将单元格格式设为日期或自定义日期时间。</li>
+<li><strong>函数多样</strong>：使用 <code>DATE</code>, <code>TODAY</code>, <code>NETWORKDAYS</code> 等可以让日期计算变得非常高效。</li>
+<li><strong>常见错误</strong>：及时识别文本与日期的区别，避免 <code>#VALUE!</code> 等错误。</li>
+</ul>
+<p>通过上述三种方案，你可以在 Excel 里灵活处理日期，无论是日常报表还是复杂的项目管理。祝你使用愉快 🚀！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E6%96%9C%E7%BA%BF/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么用斜线</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E8%A1%A8%E6%A0%BC/" class="flex align-center">
+      <span>excel怎么用表格</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1️⃣ 原因分析</a></li>
+    <li><a href="#2-三种分步骤的解决方案">2️⃣ 三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#21-方案一直接输入并格式化为日期">2.1 方案一：直接输入并格式化为日期</a></li>
+        <li><a href="#22-方案二使用-datetodaynow-等函数">2.2 方案二：使用 DATE、TODAY、NOW 等函数</a></li>
+        <li><a href="#23-方案三日期计算与差值">2.3 方案三：日期计算与差值</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答-faq">3️⃣ 常见问题解答 (FAQ)</a></li>
+    <li><a href="#4-小结">4️⃣ 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

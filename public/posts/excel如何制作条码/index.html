@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 制作条码完整教程   目标    通过 Excel 轻松生成多种条码（Code‑128、EAN13、QR 等），适用于库存管理、标签打印、资产跟踪等场景。  ---   原因分析  | 需求 | 可能的做法 | 主要难点 | |------|------------|">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E6%9D%A1%E7%A0%81/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何制作条码">
+  <meta property="og:description" content="Excel 制作条码完整教程   目标    通过 Excel 轻松生成多种条码（Code‑128、EAN13、QR 等），适用于库存管理、标签打印、资产跟踪等场景。  ---   原因分析  | 需求 | 可能的做法 | 主要难点 | |------|------------|">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何制作条码">
+  <meta itemprop="description" content="Excel 制作条码完整教程   目标    通过 Excel 轻松生成多种条码（Code‑128、EAN13、QR 等），适用于库存管理、标签打印、资产跟踪等场景。  ---   原因分析  | 需求 | 可能的做法 | 主要难点 | |------|------------|">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="362">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何制作条码 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E6%9D%A1%E7%A0%81/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何制作条码</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用条码字体">方案一：使用条码字体</a>
+      <ul>
+        <li><a href="#步骤-1下载并安装条码字体">步骤 1：下载并安装条码字体</a></li>
+        <li><a href="#步骤-2准备数据">步骤 2：准备数据</a></li>
+        <li><a href="#步骤-3添加条码前后缀">步骤 3：添加条码前后缀</a></li>
+        <li><a href="#步骤-4设置字体">步骤 4：设置字体</a></li>
+        <li><a href="#步骤-5打印">步骤 5：打印</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-excel-插件免费付费">方案二：使用 Excel 插件（免费/付费）</a>
+      <ul>
+        <li><a href="#方案二-1使用-barcode-add-in-for-excel免费版">方案二-1：使用 <strong>Barcode Add-in for Excel</strong>（免费版）</a></li>
+        <li><a href="#方案二-2使用-vba-调用在线-api">方案二-2：使用 <strong>VBA 调用在线 API</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-power-query--条码生成器如-bwip-js-或-zint">方案三：使用 Power Query + 条码生成器（如 <code>bwip-js</code> 或 <code>Zint</code>）</a>
+      <ul>
+        <li><a href="#步骤-1导入数据">步骤 1：导入数据</a></li>
+        <li><a href="#步骤-2添加列生成条码-url">步骤 2：添加列生成条码 URL</a></li>
+        <li><a href="#步骤-3下载图片">步骤 3：下载图片</a></li>
+        <li><a href="#步骤-4完成">步骤 4：完成</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何制作条码
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-制作条码完整教程">Excel 制作条码完整教程<a class="anchor" href="#excel-%e5%88%b6%e4%bd%9c%e6%9d%a1%e7%a0%81%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目标</strong><br>
+通过 Excel 轻松生成多种条码（Code‑128、EAN13、QR 等），适用于库存管理、标签打印、资产跟踪等场景。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>可能的做法</th>
+          <th>主要难点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>只需在表格中显示条码符号</td>
+          <td>直接使用条码字体（如 <strong>IDAutomationHC39M</strong>、<strong>Code 128</strong> 等）</td>
+          <td>① 需要下载并安装条码字体<!-- raw HTML omitted -->② 需要在单元格前后加上对应的 <strong>起始/结束符</strong>（如 <code>*</code>、<code>+</code>）</td>
+      </tr>
+      <tr>
+          <td>需要生成图片条码</td>
+          <td>用插件或 VBA 调用外部 API 生成 PNG/JPG 并插入</td>
+          <td>① 插件收费或功能有限<!-- raw HTML omitted -->② VBA 需要一定编码经验</td>
+      </tr>
+      <tr>
+          <td>高度可定制（颜色、尺寸、二维码）</td>
+          <td>使用在线 API 或第三方库</td>
+          <td>① 需要网络环境<!-- raw HTML omitted -->② 需要将图片导入表格</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>结论</strong></p>
+<ol>
+<li><strong>条码字体</strong> 是最快捷、最轻量的方案，适合单次打印。</li>
+<li><strong>插件/VBA</strong> 适合需要批量生成、自动化或需在 Excel 里直接预览。</li>
+<li><strong>在线生成 + 插件</strong> 适合需要多种条码类型（如二维码、条形码混排）且对图像质量要求高。</li>
+</ol>
+</blockquote><hr>
+<h2 id="方案一使用条码字体">方案一：使用条码字体<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e6%9d%a1%e7%a0%81%e5%ad%97%e4%bd%93">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：需要快速在表格中显示条码，打印时即可使用，且条码类型为常见的 1D 条码（Code‑128、Code‑39、EAN13 等）。</p>
+</blockquote><h3 id="步骤-1下载并安装条码字体">步骤 1：下载并安装条码字体<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e4%b8%8b%e8%bd%bd%e5%b9%b6%e5%ae%89%e8%a3%85%e6%9d%a1%e7%a0%81%e5%ad%97%e4%bd%93">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>字体</th>
+          <th>说明</th>
+          <th>下载地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>IDAutomationHC39M</td>
+          <td>Code‑39（含起止符 <code>*</code>）</td>
+          <td><a href="https://www.idautomation.com/barcode-fonts/">https://www.idautomation.com/barcode-fonts/</a></td>
+      </tr>
+      <tr>
+          <td>IDAutomationCode128M</td>
+          <td>Code‑128</td>
+          <td>同上</td>
+      </tr>
+      <tr>
+          <td>IDAutomationEAN13</td>
+          <td>EAN‑13</td>
+          <td>同上</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>安装</strong>：双击 <code>.ttf</code> 文件，点击“安装”。安装完后重启 Excel。</p>
+</blockquote><h3 id="步骤-2准备数据">步骤 2：准备数据<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e5%87%86%e5%a4%87%e6%95%b0%e6%8d%ae">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>列</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>A</td>
+          <td>商品编号</td>
+          <td>123456789012</td>
+      </tr>
+      <tr>
+          <td>B</td>
+          <td>条码格式</td>
+          <td>Code‑128</td>
+      </tr>
+      <tr>
+          <td>C</td>
+          <td>备注</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：若使用 Code‑39，需在每个条码前后加上 <code>*</code>（如 <code>*123456*</code>）。</p>
+</blockquote><h3 id="步骤-3添加条码前后缀">步骤 3：添加条码前后缀<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e6%b7%bb%e5%8a%a0%e6%9d%a1%e7%a0%81%e5%89%8d%e5%90%8e%e7%bc%80">#</a></h3>
+<p>在 <strong>D 列</strong>（条码列）使用公式：</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=IF(B2=&#34;Code-39&#34;, &#34;*&#34; &amp; A2 &amp; &#34;*&#34;, A2)</code></pre><blockquote class='book-hint '>
+<p>① 对 Code‑39 需要 <code>*</code> 作为起止符。<!-- raw HTML omitted -->② 对 Code‑128 不需要。</p>
+</blockquote><h3 id="步骤-4设置字体">步骤 4：设置字体<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-4%e8%ae%be%e7%bd%ae%e5%ad%97%e4%bd%93">#</a></h3>
+<ol>
+<li>选中 <strong>D 列</strong>，右键 → “设置单元格格式” → “字体” → 选择已安装的条码字体（如 <code>IDAutomationHC39M</code>）。<!-- raw HTML omitted --></li>
+<li>如需调整条码大小，修改“字体大小”即可。</li>
+</ol>
+<h3 id="步骤-5打印">步骤 5：打印<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-5%e6%89%93%e5%8d%b0">#</a></h3>
+<blockquote class='book-hint '>
+<p>打印前请先在“页面布局”中检查页边距，确保条码完整。</p>
+</blockquote><hr>
+<h2 id="方案二使用-excel-插件免费付费">方案二：使用 Excel 插件（免费/付费）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-excel-%e6%8f%92%e4%bb%b6%e5%85%8d%e8%b4%b9%e4%bb%98%e8%b4%b9">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：需要图像条码（二维码、条形码混排）或批量生成。</p>
+</blockquote><h3 id="方案二-1使用-barcode-add-in-for-excel免费版">方案二-1：使用 <strong>Barcode Add-in for Excel</strong>（免费版）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c-1%e4%bd%bf%e7%94%a8-barcode-add-in-for-excel%e5%85%8d%e8%b4%b9%e7%89%88">#</a></h3>
+<ol>
+<li>打开 Excel → 插件市场 → 搜索 “Barcode” → 安装“Barcode by Templafy”或“Barcode for Excel”。</li>
+<li>选中需要生成条码的单元格，点击插件 → 选择条码类型 → 输入数据 → 生成。</li>
+<li>生成后可将条码图像插入单元格或直接复制到打印模板。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：图像质量高，支持多种编码。<!-- raw HTML omitted --><strong>缺点</strong>：免费版功能有限，需付费解锁。</p>
+</blockquote><h3 id="方案二-2使用-vba-调用在线-api">方案二-2：使用 <strong>VBA 调用在线 API</strong><a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c-2%e4%bd%bf%e7%94%a8-vba-%e8%b0%83%e7%94%a8%e5%9c%a8%e7%ba%bf-api">#</a></h3>
+<blockquote class='book-hint '>
+<p>例如 <code>https://api.qrserver.com/v1/create-qr-code/</code>（二维码）或 <code>https://bwipjs-api.metafloor.com/</code>（1D 条码）。</p>
+</blockquote><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">InsertBarcode</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> ws <span style="color:#f92672">As</span> Worksheet
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> cell <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> barcodeURL <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> pic <span style="color:#f92672">As</span> Picture
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> ws <span style="color:#f92672">=</span> ThisWorkbook.Sheets(<span style="color:#e6db74">&#34;Sheet1&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> cell <span style="color:#f92672">In</span> ws.Range(<span style="color:#e6db74">&#34;A2:A10&#34;</span>) <span style="color:#75715e">&#39; 假设 A 列是数据
+</span></span></span><span style="display:flex;"><span>        barcodeURL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://bwipjs-api.metafloor.com/?bcid=code128&amp;text=&#34;</span> <span style="color:#f92672">&amp;</span> cell.Value
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Set</span> pic <span style="color:#f92672">=</span> ws.Pictures.Insert(barcodeURL)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">With</span> pic
+</span></span><span style="display:flex;"><span>            .Left <span style="color:#f92672">=</span> cell.Offset(0, 1).Left
+</span></span><span style="display:flex;"><span>            .Top <span style="color:#f92672">=</span> cell.Offset(0, 1).Top
+</span></span><span style="display:flex;"><span>            .ShapeRange.LockAspectRatio <span style="color:#f92672">=</span> msoTrue
+</span></span><span style="display:flex;"><span>            .ShapeRange.Height <span style="color:#f92672">=</span> 30
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> cell
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span></span></span></code></pre></div><blockquote class='book-hint '>
+<p><strong>步骤说明</strong>：</p>
+<ol>
+<li>读取数据列。</li>
+<li>通过 HTTP 生成条码图片链接。</li>
+<li>插入图片并对齐。</li>
+</ol>
+</blockquote><blockquote class='book-hint '>
+<p><strong>注意</strong>：需要网络连接，且 API 调用频率有限。</p>
+</blockquote><hr>
+<h2 id="方案三使用-power-query--条码生成器如-bwip-js-或-zint">方案三：使用 Power Query + 条码生成器（如 <code>bwip-js</code> 或 <code>Zint</code>）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-power-query--%e6%9d%a1%e7%a0%81%e7%94%9f%e6%88%90%e5%99%a8%e5%a6%82-bwip-js-%e6%88%96-zint">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：大批量数据，需要在 Excel 内部完成所有步骤，且不想安装插件。</p>
+</blockquote><h3 id="步骤-1导入数据">步骤 1：导入数据<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e5%af%bc%e5%85%a5%e6%95%b0%e6%8d%ae">#</a></h3>
+<ol>
+<li>在 <strong>Power Query</strong>（数据 → 获取外部数据）中导入数据表。</li>
+</ol>
+<h3 id="步骤-2添加列生成条码-url">步骤 2：添加列生成条码 URL<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e6%b7%bb%e5%8a%a0%e5%88%97%e7%94%9f%e6%88%90%e6%9d%a1%e7%a0%81-url">#</a></h3>
+<p>在查询编辑器中，使用自定义列：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-m" data-lang="m"><span style="display:flex;"><span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://bwipjs-api.metafloor.com/?bcid=code128&amp;text=&#34;</span> <span style="color:#f92672">&amp;</span> [<span style="color:#960050;background-color:#1e0010">商品编号</span>]</span></span></code></pre></div><h3 id="步骤-3下载图片">步骤 3：下载图片<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e4%b8%8b%e8%bd%bd%e5%9b%be%e7%89%87">#</a></h3>
+<p>在 Power Query 中无法直接下载图片，但可以导出 URL 列到 Excel，然后使用 VBA 或者 <strong>Office 365</strong> 的 <code>IMAGE()</code> 函数：</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=IMAGE(D2, 1, 30, 100)   &#39; D2 为 URL</code></pre><blockquote class='book-hint '>
+<p><strong>说明</strong>：<code>IMAGE</code> 函数在 Excel 365/2021 可用，支持从 URL 直接渲染图像。</p>
+</blockquote><h3 id="步骤-4完成">步骤 4：完成<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-4%e5%ae%8c%e6%88%90">#</a></h3>
+<p>将生成的图片列放置在打印模板中即可。</p>
+<hr>
+<h2 id="常见问题解答">常见问题解答<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+          <th>备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>条码字体安装后不生效</strong></td>
+          <td>重新启动 Excel，或在单元格里先敲入空格再删除；检查字体是否被锁定</td>
+          <td>某些旧版本 Excel 需要重启</td>
+      </tr>
+      <tr>
+          <td><strong>条码显示不完整</strong></td>
+          <td>调整列宽或单元格高度；设置字体大小；打印预览检查边距</td>
+          <td>也可使用 <code>图片</code> 方案</td>
+      </tr>
+      <tr>
+          <td><strong>条码不被扫码机识别</strong></td>
+          <td>确认使用的编码类型与扫描设备匹配；检查是否缺少起止符；尝试调整条码宽度</td>
+          <td>例如 Code‑39 需要 <code>*</code>，EAN13 则不</td>
+      </tr>
+      <tr>
+          <td><strong>图片条码无法打印</strong></td>
+          <td>确认打印机支持图像打印；调整图片分辨率；使用高 DPI 生成</td>
+          <td>若使用在线 API，建议下载 PNG 再插入</td>
+      </tr>
+      <tr>
+          <td><strong>插件太占用资源</strong></td>
+          <td>关闭不必要的插件；使用 VBA 方案</td>
+          <td>付费插件可按需开启</td>
+      </tr>
+      <tr>
+          <td><strong>需要多种条码类型（如二维码+条形码）</strong></td>
+          <td>组合使用方案二的 VBA 或方案三的 <code>IMAGE</code></td>
+          <td>也可考虑第三方软件如 <strong>BarCode Studio</strong></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>条码字体</strong> 是最轻量、最易操作的方案，适合单次打印。</li>
+<li><strong>插件 / VBA</strong> 适合需要图像条码、批量生成或自动化的场景。</li>
+<li><strong>Power Query + IMAGE</strong> 适合 Office 365 用户，完全在 Excel 内完成。</li>
+</ul>
+<p>根据实际需求、Excel 版本、条码类型，任选其一即可实现高效的条码生成。祝你使用愉快！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E9%87%8D%E8%A4%87%E8%B3%87%E6%96%99/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何刪除重複資料</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E5%87%8F/" class="flex align-center">
+      <span>excel如何加减</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用条码字体">方案一：使用条码字体</a>
+      <ul>
+        <li><a href="#步骤-1下载并安装条码字体">步骤 1：下载并安装条码字体</a></li>
+        <li><a href="#步骤-2准备数据">步骤 2：准备数据</a></li>
+        <li><a href="#步骤-3添加条码前后缀">步骤 3：添加条码前后缀</a></li>
+        <li><a href="#步骤-4设置字体">步骤 4：设置字体</a></li>
+        <li><a href="#步骤-5打印">步骤 5：打印</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-excel-插件免费付费">方案二：使用 Excel 插件（免费/付费）</a>
+      <ul>
+        <li><a href="#方案二-1使用-barcode-add-in-for-excel免费版">方案二-1：使用 <strong>Barcode Add-in for Excel</strong>（免费版）</a></li>
+        <li><a href="#方案二-2使用-vba-调用在线-api">方案二-2：使用 <strong>VBA 调用在线 API</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-power-query--条码生成器如-bwip-js-或-zint">方案三：使用 Power Query + 条码生成器（如 <code>bwip-js</code> 或 <code>Zint</code>）</a>
+      <ul>
+        <li><a href="#步骤-1导入数据">步骤 1：导入数据</a></li>
+        <li><a href="#步骤-2添加列生成条码-url">步骤 2：添加列生成条码 URL</a></li>
+        <li><a href="#步骤-3下载图片">步骤 3：下载图片</a></li>
+        <li><a href="#步骤-4完成">步骤 4：完成</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

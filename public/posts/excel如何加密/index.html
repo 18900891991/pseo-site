@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 文件加密与保护完整教程   主题：如何在 Microsoft Excel 里为工作簿或工作表添加密码或加密，使内容不被未授权用户查看、修改或复制。    目标读者：Excel 初学者、办公自动化人员、数据安全管理员。    ---   原因分析  | 场景 |">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E5%AF%86/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何加密">
+  <meta property="og:description" content="Excel 文件加密与保护完整教程   主题：如何在 Microsoft Excel 里为工作簿或工作表添加密码或加密，使内容不被未授权用户查看、修改或复制。    目标读者：Excel 初学者、办公自动化人员、数据安全管理员。    ---   原因分析  | 场景 |">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何加密">
+  <meta itemprop="description" content="Excel 文件加密与保护完整教程   主题：如何在 Microsoft Excel 里为工作簿或工作表添加密码或加密，使内容不被未授权用户查看、修改或复制。    目标读者：Excel 初学者、办公自动化人员、数据安全管理员。    ---   原因分析  | 场景 |">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="212">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何加密 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E5%AF%86/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何加密</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一为整个工作簿设置打开密码适用于较旧的-excel-版本">方案一：为整个工作簿设置打开密码（适用于较旧的 Excel 版本）</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-excel-2010xlsxxlsm设置密码并加密文件">方案二：使用 Excel 2010+（.xlsx/.xlsm）设置密码并加密文件</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三工作表级别的密码保护防止复制格式化等操作">方案三：工作表级别的密码保护（防止复制、格式化等操作）</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答faq">常见问题解答（FAQ）</a>
+      <ul>
+        <li><a href="#1-忘记了打开密码怎么办">1. 忘记了打开密码怎么办？</a></li>
+        <li><a href="#2-是否可以将密码写在文档里">2. 是否可以将密码写在文档里？</a></li>
+        <li><a href="#3-加密后还能打开文件吗">3. 加密后还能打开文件吗？</a></li>
+        <li><a href="#4-如何在-mac-上加密工作簿">4. 如何在 Mac 上加密工作簿？</a></li>
+        <li><a href="#5-加密的文件还能复制到其他电脑吗">5. 加密的文件还能复制到其他电脑吗？</a></li>
+        <li><a href="#6-何时使用工作表级别保护而不是文件级别">6. 何时使用工作表级别保护而不是文件级别？</a></li>
+        <li><a href="#7-excel-的加密算法多安全">7. Excel 的加密算法多安全？</a></li>
+        <li><a href="#8-能否对单元格内容单独加密">8. 能否对单元格内容单独加密？</a></li>
+        <li><a href="#9-如何撤销密码">9. 如何撤销密码？</a></li>
+        <li><a href="#10-是否有第三方工具可以更强加密">10. 是否有第三方工具可以更强加密？</a></li>
+      </ul>
+    </li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何加密
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-文件加密与保护完整教程">Excel 文件加密与保护完整教程<a class="anchor" href="#excel-%e6%96%87%e4%bb%b6%e5%8a%a0%e5%af%86%e4%b8%8e%e4%bf%9d%e6%8a%a4%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>主题</strong>：如何在 Microsoft Excel 里为工作簿或工作表添加密码或加密，使内容不被未授权用户查看、修改或复制。<br>
+<strong>目标读者</strong>：Excel 初学者、办公自动化人员、数据安全管理员。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要加密的目的</th>
+          <th>典型风险</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>共享敏感数据</strong></td>
+          <td>防止同事/客户在未授权情况下查看个人信息、财务报表</td>
+          <td>泄露个人隐私、商业机密</td>
+      </tr>
+      <tr>
+          <td><strong>公司内部分发</strong></td>
+          <td>只允许特定人员编辑，避免误删或篡改</td>
+          <td>数据完整性受损</td>
+      </tr>
+      <tr>
+          <td><strong>备份文件</strong></td>
+          <td>防止备份文件被他人篡改或窃取</td>
+          <td>机密文件泄漏、合规问题</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：Excel 的加密功能不等同于加密算法强度极高的硬盘加密或文件系统加密，主要是防止“粗略的”访问。若需更高安全级别，建议结合 <strong>BitLocker</strong>、<strong>VeraCrypt</strong> 或 <strong>文件加密</strong>（如 7‑Zip）等工具。</p>
+</blockquote><hr>
+<h2 id="方案一为整个工作簿设置打开密码适用于较旧的-excel-版本">方案一：为整个工作簿设置打开密码（适用于较旧的 Excel 版本）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%b8%ba%e6%95%b4%e4%b8%aa%e5%b7%a5%e4%bd%9c%e7%b0%bf%e8%ae%be%e7%bd%ae%e6%89%93%e5%bc%80%e5%af%86%e7%a0%81%e9%80%82%e7%94%a8%e4%ba%8e%e8%be%83%e6%97%a7%e7%9a%84-excel-%e7%89%88%e6%9c%ac">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用版本</strong>：Excel 2003 及更早的 .xls 文件<br>
+<strong>优点</strong>：简单、直接，所有用户必须先输入密码才能打开文件<br>
+<strong>缺点</strong>：只保护文件打开，无法防止复制或打印</p>
+</blockquote><h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>打开目标工作簿。</li>
+<li>依次点击 <code>工具</code> → <code>选项</code> → <code>安全</code> 选项卡。</li>
+<li>在 <strong>打开工作簿时要求密码</strong> 区域输入密码，确认后点击 <strong>确定</strong>。</li>
+<li>保存文件后，下次打开时会弹出密码输入框。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果忘记密码，Excel 2003 及以前版本无法恢复，务必妥善保存密码。</p>
+</blockquote><hr>
+<h2 id="方案二使用-excel-2010xlsxxlsm设置密码并加密文件">方案二：使用 Excel 2010+（.xlsx/.xlsm）设置密码并加密文件<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-excel-2010xlsxxlsm%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81%e5%b9%b6%e5%8a%a0%e5%af%86%e6%96%87%e4%bb%b6">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用版本</strong>：Excel 2010 及以后，支持 AES‑128/256 加密算法<br>
+<strong>优点</strong>：更强的安全性，支持打开密码和修改密码两种<br>
+<strong>缺点</strong>：需要较新版本 Excel，且仅能在 Windows 上实现</p>
+</blockquote><h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li>打开工作簿，点击 <code>文件</code> → <code>信息</code>。</li>
+<li>选择 <strong>保护工作簿</strong> → <strong>用密码加密</strong>。</li>
+<li>在弹出的对话框里输入 <strong>打开密码</strong>，再次确认后点击 <strong>确定</strong>。</li>
+<li>若想限制编辑，选择 <strong>保护工作簿</strong> → <strong>用密码加密</strong> → <strong>编辑密码</strong>，输入后确认。</li>
+<li>点击 <strong>保存</strong>，关闭文件。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：在 Mac 上操作略有不同，路径为 <code>文件</code> → <code>信息</code> → <code>加密</code>。<br>
+<strong>安全建议</strong>：使用长度至少 12 位、包含大小写、数字与符号的强密码。</p>
+</blockquote><hr>
+<h2 id="方案三工作表级别的密码保护防止复制格式化等操作">方案三：工作表级别的密码保护（防止复制、格式化等操作）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e5%b7%a5%e4%bd%9c%e8%a1%a8%e7%ba%a7%e5%88%ab%e7%9a%84%e5%af%86%e7%a0%81%e4%bf%9d%e6%8a%a4%e9%98%b2%e6%ad%a2%e5%a4%8d%e5%88%b6%e6%a0%bc%e5%bc%8f%e5%8c%96%e7%ad%89%e6%93%8d%e4%bd%9c">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用版本</strong>：Excel 2007 及以后<br>
+<strong>优点</strong>：可单独保护工作表，允许其他工作表不加密<br>
+<strong>缺点</strong>：无法防止整个文件被打开，但可限制对特定内容的编辑</p>
+</blockquote><h3 id="步骤-2">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2">#</a></h3>
+<ol>
+<li>右键点击想要保护的工作表标签，选择 <strong>保护工作表</strong>。</li>
+<li>在弹窗中输入 <strong>密码</strong>（可选），并勾选你想允许的操作（如 <code>格式化列</code>、<code>插入行</code> 等）。</li>
+<li>点击 <strong>确定</strong>，再次输入密码以确认。</li>
+<li>若需移除保护，重复步骤并在弹窗中输入密码即可。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果你想让某些单元格可编辑，先 <strong>选中</strong> 这些单元格，右键 → <code>格式单元格</code> → <code>保护</code>，取消勾选；随后再保护工作表。</p>
+</blockquote><hr>
+<h2 id="常见问题解答faq">常见问题解答（FAQ）<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<h3 id="1-忘记了打开密码怎么办">1. 忘记了打开密码怎么办？<a class="anchor" href="#1-%e5%bf%98%e8%ae%b0%e4%ba%86%e6%89%93%e5%bc%80%e5%af%86%e7%a0%81%e6%80%8e%e4%b9%88%e5%8a%9e">#</a></h3>
+<ul>
+<li><strong>Excel 2003 及以前</strong>：无法恢复，除非使用第三方破解工具（风险高，建议重新生成文件）。</li>
+<li><strong>Excel 2010+</strong>：同样无法恢复。建议使用 <strong>密码管理器</strong> 或安全备份。</li>
+</ul>
+<h3 id="2-是否可以将密码写在文档里">2. 是否可以将密码写在文档里？<a class="anchor" href="#2-%e6%98%af%e5%90%a6%e5%8f%af%e4%bb%a5%e5%b0%86%e5%af%86%e7%a0%81%e5%86%99%e5%9c%a8%e6%96%87%e6%a1%a3%e9%87%8c">#</a></h3>
+<ul>
+<li>绝不建议。可以使用 <strong>VBA</strong> 或 <strong>宏</strong> 记录密码，但会被轻易查看。最佳做法是使用 <strong>密码管理工具</strong>（如 LastPass、1Password）或写在安全笔记中。</li>
+</ul>
+<h3 id="3-加密后还能打开文件吗">3. 加密后还能打开文件吗？<a class="anchor" href="#3-%e5%8a%a0%e5%af%86%e5%90%8e%e8%bf%98%e8%83%bd%e6%89%93%e5%bc%80%e6%96%87%e4%bb%b6%e5%90%97">#</a></h3>
+<ul>
+<li>需要输入 <strong>打开密码</strong>。如果没有，文件会弹出“密码错误”提示。</li>
+</ul>
+<h3 id="4-如何在-mac-上加密工作簿">4. 如何在 Mac 上加密工作簿？<a class="anchor" href="#4-%e5%a6%82%e4%bd%95%e5%9c%a8-mac-%e4%b8%8a%e5%8a%a0%e5%af%86%e5%b7%a5%e4%bd%9c%e7%b0%bf">#</a></h3>
+<ul>
+<li>打开 <code>文件</code> → <code>信息</code> → <code>加密</code>，输入密码即可。</li>
+</ul>
+<h3 id="5-加密的文件还能复制到其他电脑吗">5. 加密的文件还能复制到其他电脑吗？<a class="anchor" href="#5-%e5%8a%a0%e5%af%86%e7%9a%84%e6%96%87%e4%bb%b6%e8%bf%98%e8%83%bd%e5%a4%8d%e5%88%b6%e5%88%b0%e5%85%b6%e4%bb%96%e7%94%b5%e8%84%91%e5%90%97">#</a></h3>
+<ul>
+<li>可以，但在目标电脑上打开时仍需输入密码。若未保存密码，文件会被直接打开。</li>
+</ul>
+<h3 id="6-何时使用工作表级别保护而不是文件级别">6. 何时使用工作表级别保护而不是文件级别？<a class="anchor" href="#6-%e4%bd%95%e6%97%b6%e4%bd%bf%e7%94%a8%e5%b7%a5%e4%bd%9c%e8%a1%a8%e7%ba%a7%e5%88%ab%e4%bf%9d%e6%8a%a4%e8%80%8c%e4%b8%8d%e6%98%af%e6%96%87%e4%bb%b6%e7%ba%a7%e5%88%ab">#</a></h3>
+<ul>
+<li>当你需要共享大工作簿但只想限制某些工作表的编辑时。</li>
+<li>或者你想让部分数据对外开放但保持敏感列不被修改。</li>
+</ul>
+<h3 id="7-excel-的加密算法多安全">7. Excel 的加密算法多安全？<a class="anchor" href="#7-excel-%e7%9a%84%e5%8a%a0%e5%af%86%e7%ae%97%e6%b3%95%e5%a4%9a%e5%ae%89%e5%85%a8">#</a></h3>
+<ul>
+<li>Excel 2010+ 使用 <strong>AES‑128/256</strong>。对于日常办公来说足够安全，但若有极高安全需求，建议使用专门的加密存储方案。</li>
+</ul>
+<h3 id="8-能否对单元格内容单独加密">8. 能否对单元格内容单独加密？<a class="anchor" href="#8-%e8%83%bd%e5%90%a6%e5%af%b9%e5%8d%95%e5%85%83%e6%a0%bc%e5%86%85%e5%ae%b9%e5%8d%95%e7%8b%ac%e5%8a%a0%e5%af%86">#</a></h3>
+<ul>
+<li>Excel 本身不支持单元格级别加密。可通过隐藏列、保护工作表或使用 <strong>VBA</strong> 进行加密/解密。</li>
+</ul>
+<h3 id="9-如何撤销密码">9. 如何撤销密码？<a class="anchor" href="#9-%e5%a6%82%e4%bd%95%e6%92%a4%e9%94%80%e5%af%86%e7%a0%81">#</a></h3>
+<ul>
+<li>对于文件密码：<code>文件</code> → <code>信息</code> → <code>保护工作簿</code> → <code>用密码加密</code> → 取消密码。</li>
+<li>对于工作表密码：右键工作表 → <code>取消工作表保护</code>，输入密码。</li>
+</ul>
+<h3 id="10-是否有第三方工具可以更强加密">10. 是否有第三方工具可以更强加密？<a class="anchor" href="#10-%e6%98%af%e5%90%a6%e6%9c%89%e7%ac%ac%e4%b8%89%e6%96%b9%e5%b7%a5%e5%85%b7%e5%8f%af%e4%bb%a5%e6%9b%b4%e5%bc%ba%e5%8a%a0%e5%af%86">#</a></h3>
+<ul>
+<li>可以使用 <code>VeraCrypt</code>、<code>7‑Zip</code> 等工具对 Excel 文件做外部加密。</li>
+<li>也可以使用 <strong>SharePoint</strong> 或 <strong>OneDrive</strong> 的“加密”功能，结合 <strong>Azure Rights Management</strong>（RMS）实现更高级别的权限控制。</li>
+</ul>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>工作簿密码</strong>：适合全文件加密，最为简单。</li>
+<li><strong>工作表级加密</strong>：细粒度控制，保护特定内容。</li>
+<li><strong>外部文件加密</strong>：针对极高安全需求的场景。</li>
+</ul>
+<blockquote class='book-hint '>
+<p>记住：加密是防护链条的一环，配合 <strong>权限管理</strong>、<strong>备份</strong> 与 <strong>监控</strong> 能更好地保障数据安全。祝你使用愉快，数据安全无忧！</p>
+</blockquote></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%86%E5%89%B2%E5%84%B2%E5%AD%98%E6%A0%BC/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何分割儲存格</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E6%80%BB/" class="flex align-center">
+      <span>excel如何加总</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一为整个工作簿设置打开密码适用于较旧的-excel-版本">方案一：为整个工作簿设置打开密码（适用于较旧的 Excel 版本）</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-excel-2010xlsxxlsm设置密码并加密文件">方案二：使用 Excel 2010+（.xlsx/.xlsm）设置密码并加密文件</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三工作表级别的密码保护防止复制格式化等操作">方案三：工作表级别的密码保护（防止复制、格式化等操作）</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答faq">常见问题解答（FAQ）</a>
+      <ul>
+        <li><a href="#1-忘记了打开密码怎么办">1. 忘记了打开密码怎么办？</a></li>
+        <li><a href="#2-是否可以将密码写在文档里">2. 是否可以将密码写在文档里？</a></li>
+        <li><a href="#3-加密后还能打开文件吗">3. 加密后还能打开文件吗？</a></li>
+        <li><a href="#4-如何在-mac-上加密工作簿">4. 如何在 Mac 上加密工作簿？</a></li>
+        <li><a href="#5-加密的文件还能复制到其他电脑吗">5. 加密的文件还能复制到其他电脑吗？</a></li>
+        <li><a href="#6-何时使用工作表级别保护而不是文件级别">6. 何时使用工作表级别保护而不是文件级别？</a></li>
+        <li><a href="#7-excel-的加密算法多安全">7. Excel 的加密算法多安全？</a></li>
+        <li><a href="#8-能否对单元格内容单独加密">8. 能否对单元格内容单独加密？</a></li>
+        <li><a href="#9-如何撤销密码">9. 如何撤销密码？</a></li>
+        <li><a href="#10-是否有第三方工具可以更强加密">10. 是否有第三方工具可以更强加密？</a></li>
+      </ul>
+    </li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

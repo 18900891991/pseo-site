@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何导入资料（Excel 如何带入资料）  在日常工作中，往往需要把来自不同来源（文本文件、数据库、网页、其他 Excel 文件、API 等）的数据导入到 Excel。虽然 Excel 自带了多种导入方式，但如果不熟悉，可能会遇到路径错误、格式不匹配、数据过大导致卡顿等常见问题。本文">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%B8%A6%E5%85%A5%E8%B5%84%E6%96%99/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何带入资料">
+  <meta property="og:description" content="Excel 如何导入资料（Excel 如何带入资料）  在日常工作中，往往需要把来自不同来源（文本文件、数据库、网页、其他 Excel 文件、API 等）的数据导入到 Excel。虽然 Excel 自带了多种导入方式，但如果不熟悉，可能会遇到路径错误、格式不匹配、数据过大导致卡顿等常见问题。本文">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何带入资料">
+  <meta itemprop="description" content="Excel 如何导入资料（Excel 如何带入资料）  在日常工作中，往往需要把来自不同来源（文本文件、数据库、网页、其他 Excel 文件、API 等）的数据导入到 Excel。虽然 Excel 自带了多种导入方式，但如果不熟悉，可能会遇到路径错误、格式不匹配、数据过大导致卡顿等常见问题。本文">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="312">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何带入资料 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%B8%A6%E5%85%A5%E8%B5%84%E6%96%99/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何带入资料</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-excel-内置的-获取--转换power-query-导入">方案一：使用 Excel 内置的 “获取 &amp; 转换（Power Query）” 导入</a>
+      <ul>
+        <li><a href="#步骤-1打开-power-query">步骤 1：打开 Power Query</a></li>
+        <li><a href="#步骤-2预览--变换">步骤 2：预览 &amp; 变换</a></li>
+        <li><a href="#步骤-3加载到工作表">步骤 3：加载到工作表</a></li>
+        <li><a href="#适用场景">适用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-外部数据导入-直接连接数据库或-olap">方案二：使用 “外部数据导入” 直接连接数据库或 OLAP</a>
+      <ul>
+        <li><a href="#步骤-1创建数据连接">步骤 1：创建数据连接</a></li>
+        <li><a href="#步骤-2查询--预览">步骤 2：查询 &amp; 预览</a></li>
+        <li><a href="#步骤-3加载--刷新">步骤 3：加载 &amp; 刷新</a></li>
+        <li><a href="#适用场景-1">适用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-vba-或-office-scripts-自动化导入">方案三：使用 VBA 或 Office Scripts 自动化导入</a>
+      <ul>
+        <li><a href="#步骤-1打开-vba-编辑器">步骤 1：打开 VBA 编辑器</a></li>
+        <li><a href="#步骤-2编写导入脚本">步骤 2：编写导入脚本</a></li>
+        <li><a href="#步骤-3运行--处理异常">步骤 3：运行 &amp; 处理异常</a></li>
+        <li><a href="#适用场景-2">适用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何带入资料
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何导入资料excel-如何带入资料">Excel 如何导入资料（Excel 如何带入资料）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%af%bc%e5%85%a5%e8%b5%84%e6%96%99excel-%e5%a6%82%e4%bd%95%e5%b8%a6%e5%85%a5%e8%b5%84%e6%96%99">#</a></h1>
+<p>在日常工作中，往往需要把来自不同来源（文本文件、数据库、网页、其他 Excel 文件、API 等）的数据导入到 Excel。虽然 Excel 自带了多种导入方式，但如果不熟悉，可能会遇到路径错误、格式不匹配、数据过大导致卡顿等常见问题。本文将先从“为什么需要导入资料”出发，分析常见原因；随后给出 <strong>三种典型的分步骤解决方案</strong>；最后整理常见问题的解答，帮助你快速、准确地把数据带入 Excel。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>导入需求</th>
+          <th>可能遇到的痛点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>从 CSV/文本文件导入</strong></td>
+          <td>需要将日志、服务器输出或系统导出的表格导入</td>
+          <td>文件编码错误、字段分隔符不一致、行数过多导致 Excel 处理慢</td>
+      </tr>
+      <tr>
+          <td><strong>从数据库或 OLAP 导入</strong></td>
+          <td>把业务报表、监控数据实时拉取</td>
+          <td>需要正确配置连接、权限、查询语句；网络延迟导致导入慢</td>
+      </tr>
+      <tr>
+          <td><strong>从网页抓取</strong></td>
+          <td>把公开数据或企业内部网页数据导入</td>
+          <td>HTML 结构变化、分页、异步加载</td>
+      </tr>
+      <tr>
+          <td><strong>从另一个 Excel 文件或工作簿</strong></td>
+          <td>合并多份报表、对比数据</td>
+          <td>版本兼容、文件锁、路径变化</td>
+      </tr>
+      <tr>
+          <td><strong>从 API（JSON/XML）</strong></td>
+          <td>把实时接口数据导入</td>
+          <td>需要解析结构、处理分页、鉴权问题</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>核心痛点</strong>：文件路径不确定、数据格式不匹配、导入工具选择不当、网络/权限限制。<br>
+<strong>解决思路</strong>：先确定数据来源与格式，再选择最适合的导入工具（如 Power Query、VBA、数据透视表、外部链接等），最后验证数据完整性与性能。</p>
+</blockquote><hr>
+<h2 id="方案一使用-excel-内置的-获取--转换power-query-导入">方案一：使用 Excel 内置的 “获取 &amp; 转换（Power Query）” 导入<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-excel-%e5%86%85%e7%bd%ae%e7%9a%84-%e8%8e%b7%e5%8f%96--%e8%bd%ac%e6%8d%a2power-query-%e5%af%bc%e5%85%a5">#</a></h2>
+<p>Power Query 是 Excel 2016+ 以及 Office 365 内置的强大数据连接工具，支持多种数据源，且可自动刷新。</p>
+<h3 id="步骤-1打开-power-query">步骤 1：打开 Power Query<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e6%89%93%e5%bc%80-power-query">#</a></h3>
+<ol>
+<li>在工作簿中选中 <strong>数据</strong> 选项卡。</li>
+<li>选择 <strong>获取数据</strong> → <strong>来自文件</strong> → <strong>来自文本/CSV</strong>（或其他相应来源）。</li>
+<li>浏览文件，点击 <strong>导入</strong>。</li>
+</ol>
+<h3 id="步骤-2预览--变换">步骤 2：预览 &amp; 变换<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e9%a2%84%e8%a7%88--%e5%8f%98%e6%8d%a2">#</a></h3>
+<ol>
+<li>在弹出的 <strong>Power Query 编辑器</strong> 中，先预览数据。</li>
+<li>如需处理编码或分隔符，点击 <strong>高级选项</strong>。</li>
+<li>利用 <strong>转换</strong> 面板完成分列、合并、格式转换、缺失值填充等操作。</li>
+</ol>
+<h3 id="步骤-3加载到工作表">步骤 3：加载到工作表<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e5%8a%a0%e8%bd%bd%e5%88%b0%e5%b7%a5%e4%bd%9c%e8%a1%a8">#</a></h3>
+<ol>
+<li>完成后点击 <strong>关闭并加载</strong>。</li>
+<li>选择 <strong>仅创建连接</strong> 或 <strong>加载到表格</strong>。</li>
+<li>若需要定时刷新，右键查询 → <strong>属性</strong> → <strong>定期刷新</strong>。</li>
+</ol>
+<h3 id="适用场景">适用场景<a class="anchor" href="#%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af">#</a></h3>
+<ul>
+<li>大量数据，支持后续自动刷新。</li>
+<li>需要转换或清洗数据。</li>
+<li>多个文件或分区数据。</li>
+</ul>
+<hr>
+<h2 id="方案二使用-外部数据导入-直接连接数据库或-olap">方案二：使用 “外部数据导入” 直接连接数据库或 OLAP<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-%e5%a4%96%e9%83%a8%e6%95%b0%e6%8d%ae%e5%af%bc%e5%85%a5-%e7%9b%b4%e6%8e%a5%e8%bf%9e%e6%8e%a5%e6%95%b0%e6%8d%ae%e5%ba%93%e6%88%96-olap">#</a></h2>
+<p>如果你需要从 SQL Server、Oracle、MySQL、PostgreSQL 或 OLAP 立刻拉取数据，可按以下步骤操作。</p>
+<h3 id="步骤-1创建数据连接">步骤 1：创建数据连接<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e8%bf%9e%e6%8e%a5">#</a></h3>
+<ol>
+<li>在 <strong>数据</strong> 选项卡，选择 <strong>获取数据</strong> → <strong>来自数据库</strong> → 选择对应数据库。</li>
+<li>输入服务器地址、数据库名称、用户名/密码。</li>
+<li>选择 <strong>SQL Server</strong> 时可直接粘贴查询语句。</li>
+</ol>
+<h3 id="步骤-2查询--预览">步骤 2：查询 &amp; 预览<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e6%9f%a5%e8%af%a2--%e9%a2%84%e8%a7%88">#</a></h3>
+<ol>
+<li>在 <strong>查询编辑器</strong> 中，你可以直接编写或粘贴 SQL。</li>
+<li>预览查询结果，检查字段类型与缺失值。</li>
+</ol>
+<h3 id="步骤-3加载--刷新">步骤 3：加载 &amp; 刷新<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e5%8a%a0%e8%bd%bd--%e5%88%b7%e6%96%b0">#</a></h3>
+<ol>
+<li>点击 <strong>关闭并加载</strong>。</li>
+<li>若需要后续刷新，右键表格 → <strong>属性</strong> → 配置刷新间隔。</li>
+</ol>
+<h3 id="适用场景-1">适用场景<a class="anchor" href="#%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af-1">#</a></h3>
+<ul>
+<li>需要实时或周期性更新数据。</li>
+<li>数据量大、结构固定。</li>
+</ul>
+<hr>
+<h2 id="方案三使用-vba-或-office-scripts-自动化导入">方案三：使用 VBA 或 Office Scripts 自动化导入<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-vba-%e6%88%96-office-scripts-%e8%87%aa%e5%8a%a8%e5%8c%96%e5%af%bc%e5%85%a5">#</a></h2>
+<p>当数据来源很复杂、路径经常变化，或需要批量处理多个文件时，脚本化导入是最稳妥的方案。</p>
+<h3 id="步骤-1打开-vba-编辑器">步骤 1：打开 VBA 编辑器<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e6%89%93%e5%bc%80-vba-%e7%bc%96%e8%be%91%e5%99%a8">#</a></h3>
+<ol>
+<li>按 <strong>Alt + F11</strong> 打开 <strong>Visual Basic for Applications</strong>。</li>
+<li>新建模块 <code>Insert &gt; Module</code>。</li>
+</ol>
+<h3 id="步骤-2编写导入脚本">步骤 2：编写导入脚本<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e7%bc%96%e5%86%99%e5%af%bc%e5%85%a5%e8%84%9a%e6%9c%ac">#</a></h3>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub ImportCSV()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets(&#34;Sheet1&#34;)
+    
+    &#39; 设定文件路径
+    Dim filePath As String
+    filePath = &#34;C:\Data\example.csv&#34;
+    
+    &#39; 采用 TextFile import 方法
+    With ws.QueryTables.Add(Connection:=&#34;TEXT;&#34; &amp; filePath, Destination:=ws.Range(&#34;A1&#34;))
+        .TextFileParseType = xlDelimited
+        .TextFileCommaDelimiter = True
+        .Refresh
+    End With
+End Sub</code></pre><blockquote class='book-hint '>
+<p><strong>提示</strong>：可结合 <code>FileDialog</code> 或循环读取文件夹下所有 CSV。</p>
+</blockquote><h3 id="步骤-3运行--处理异常">步骤 3：运行 &amp; 处理异常<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e8%bf%90%e8%a1%8c--%e5%a4%84%e7%90%86%e5%bc%82%e5%b8%b8">#</a></h3>
+<ol>
+<li>在 VBA 窗口按 <strong>F5</strong> 运行 <code>ImportCSV</code>。</li>
+<li>若出现错误，检查文件路径、编码、权限等。</li>
+</ol>
+<h3 id="适用场景-2">适用场景<a class="anchor" href="#%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af-2">#</a></h3>
+<ul>
+<li>需要批量导入、自动化流程。</li>
+<li>需要在导入过程中做自定义处理（如合并列、数据校验）。</li>
+</ul>
+<hr>
+<h2 id="常见问题解答">常见问题解答<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>说明</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>导入后数据缺失或乱码</strong></td>
+          <td>文件编码与 Excel 期望不一致。</td>
+          <td>在 Power Query 预览窗口的 <strong>高级选项</strong> 中选择正确编码（如 UTF-8、GBK）。</td>
+      </tr>
+      <tr>
+          <td><strong>导入后报表刷新失败</strong></td>
+          <td>数据源已被移动或网络不通。</td>
+          <td>确认文件路径或数据库连接信息，更新查询路径或重建连接。</td>
+      </tr>
+      <tr>
+          <td><strong>导入大文件导致 Excel 卡顿</strong></td>
+          <td>Excel 默认行数限制 1048576 行。</td>
+          <td>使用 Power Query 的 <strong>分区</strong> 或 <strong>分页</strong>；或使用数据库导入。</td>
+      </tr>
+      <tr>
+          <td><strong>VBA 导入时出现权限错误</strong></td>
+          <td>文件在受限文件夹或被其它程序占用。</td>
+          <td>关闭占用程序，给账户写入权限。</td>
+      </tr>
+      <tr>
+          <td><strong>网页数据分页无法一次性导入</strong></td>
+          <td>页面使用 JavaScript 动态加载。</td>
+          <td>使用 Power Query 的 <strong>Web</strong> 连接，或通过 API（JSON/XML）抓取。</td>
+      </tr>
+      <tr>
+          <td><strong>不同文件字段不一致导致合并错误</strong></td>
+          <td>字段顺序或名称不统一。</td>
+          <td>在 Power Query 中使用 <strong>合并查询</strong> 或 <strong>追加查询</strong> 前先统一列名。</td>
+      </tr>
+      <tr>
+          <td><strong>导入后出现重复列名</strong></td>
+          <td>数据源里有同名列。</td>
+          <td>在 Power Query 编辑器中手动重命名或合并列。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>Power Query</strong>：最推荐的现代化导入工具，支持多种数据源、刷新、清洗。</li>
+<li><strong>数据库连接</strong>：实时、可靠，适用于需要频繁更新的数据。</li>
+<li><strong>VBA / Office Scripts</strong>：适合批量自动化或自定义处理。</li>
+</ul>
+<p>掌握上述三种方案，你就能根据不同数据来源、规模与业务需求，选择最合适的方式把资料带入 Excel，并保持数据的完整性与可维护性。祝你使用愉快！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%A5%97%E5%8D%B0/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何套印</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%BD%B1%E5%8D%B0/" class="flex align-center">
+      <span>excel如何影印</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-excel-内置的-获取--转换power-query-导入">方案一：使用 Excel 内置的 “获取 &amp; 转换（Power Query）” 导入</a>
+      <ul>
+        <li><a href="#步骤-1打开-power-query">步骤 1：打开 Power Query</a></li>
+        <li><a href="#步骤-2预览--变换">步骤 2：预览 &amp; 变换</a></li>
+        <li><a href="#步骤-3加载到工作表">步骤 3：加载到工作表</a></li>
+        <li><a href="#适用场景">适用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-外部数据导入-直接连接数据库或-olap">方案二：使用 “外部数据导入” 直接连接数据库或 OLAP</a>
+      <ul>
+        <li><a href="#步骤-1创建数据连接">步骤 1：创建数据连接</a></li>
+        <li><a href="#步骤-2查询--预览">步骤 2：查询 &amp; 预览</a></li>
+        <li><a href="#步骤-3加载--刷新">步骤 3：加载 &amp; 刷新</a></li>
+        <li><a href="#适用场景-1">适用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-vba-或-office-scripts-自动化导入">方案三：使用 VBA 或 Office Scripts 自动化导入</a>
+      <ul>
+        <li><a href="#步骤-1打开-vba-编辑器">步骤 1：打开 VBA 编辑器</a></li>
+        <li><a href="#步骤-2编写导入脚本">步骤 2：编写导入脚本</a></li>
+        <li><a href="#步骤-3运行--处理异常">步骤 3：运行 &amp; 处理异常</a></li>
+        <li><a href="#适用场景-2">适用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

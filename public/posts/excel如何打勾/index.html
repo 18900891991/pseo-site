@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何打勾？  在日常的数据录入、项目进度表、清单管理等场景中，往往需要用“✓”“√”“✔︎”等符号来表示已完成或已选中。虽然 Excel 原生并没有直接的“打勾”键，但可以通过多种方式轻松实现。下面给你一份完整的 Markdown 教程，帮你快速掌握三种常用的打勾方法，并回答常见问题">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E6%89%93%E5%8B%BE/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何打勾">
+  <meta property="og:description" content="Excel 如何打勾？  在日常的数据录入、项目进度表、清单管理等场景中，往往需要用“✓”“√”“✔︎”等符号来表示已完成或已选中。虽然 Excel 原生并没有直接的“打勾”键，但可以通过多种方式轻松实现。下面给你一份完整的 Markdown 教程，帮你快速掌握三种常用的打勾方法，并回答常见问题">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何打勾">
+  <meta itemprop="description" content="Excel 如何打勾？  在日常的数据录入、项目进度表、清单管理等场景中，往往需要用“✓”“√”“✔︎”等符号来表示已完成或已选中。虽然 Excel 原生并没有直接的“打勾”键，但可以通过多种方式轻松实现。下面给你一份完整的 Markdown 教程，帮你快速掌握三种常用的打勾方法，并回答常见问题">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="246">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何打勾 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E6%89%93%E5%8B%BE/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何打勾</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-unicode-符号-等">方案一：使用 Unicode 符号（✓、✔︎、√ 等）</a>
+      <ul>
+        <li><a href="#步骤-1打开-excel-并定位到目标单元格">步骤 1：打开 Excel 并定位到目标单元格</a></li>
+        <li><a href="#步骤-2插入符号">步骤 2：插入符号</a></li>
+        <li><a href="#步骤-3调整大小与颜色">步骤 3：调整大小与颜色</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-wingdings-字体快速插入勾">方案二：使用 Wingdings 字体快速插入勾</a>
+      <ul>
+        <li><a href="#步骤-1选中单元格并切换字体">步骤 1：选中单元格并切换字体</a></li>
+        <li><a href="#步骤-2输入对应字符">步骤 2：输入对应字符</a></li>
+        <li><a href="#步骤-3调整单元格对齐与颜色">步骤 3：调整单元格对齐与颜色</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三插入复选框控件表单控件或-activex">方案三：插入复选框控件（表单控件或 ActiveX）</a>
+      <ul>
+        <li><a href="#方案三-1使用表单控件复选框">方案三-1：使用“表单控件”复选框</a></li>
+        <li><a href="#方案三-2使用activex-控件复选框">方案三-2：使用“ActiveX 控件”复选框</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何打勾
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何打勾">Excel 如何打勾？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e6%89%93%e5%8b%be">#</a></h1>
+<p>在日常的数据录入、项目进度表、清单管理等场景中，往往需要用“✓”“√”“✔︎”等符号来表示已完成或已选中。虽然 Excel 原生并没有直接的“打勾”键，但可以通过多种方式轻松实现。下面给你一份完整的 Markdown 教程，帮你快速掌握三种常用的打勾方法，并回答常见问题。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求</th>
+          <th>适用方法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>进度表</td>
+          <td>记录任务完成情况</td>
+          <td>复选框控件 / Unicode</td>
+      </tr>
+      <tr>
+          <td>选项卡</td>
+          <td>表示已选择的项目</td>
+          <td>Wingdings / 复选框</td>
+      </tr>
+      <tr>
+          <td>表格美化</td>
+          <td>视觉化状态</td>
+          <td>条件格式图标</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li><strong>Unicode 符号</strong>：最简单、兼容性好，适合快速手动输入或复制粘贴。</li>
+<li><strong>Wingdings 字体</strong>：可在多种字体中快速转换，适合需要统一样式的场景。</li>
+<li><strong>复选框控件</strong>：可与单元格直接绑定，支持勾选/取消，适合表单或交互式模板。</li>
+</ul>
+<hr>
+<h2 id="方案一使用-unicode-符号-等">方案一：使用 Unicode 符号（✓、✔︎、√ 等）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-unicode-%e7%ac%a6%e5%8f%b7-%e7%ad%89">#</a></h2>
+<h3 id="步骤-1打开-excel-并定位到目标单元格">步骤 1：打开 Excel 并定位到目标单元格<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e6%89%93%e5%bc%80-excel-%e5%b9%b6%e5%ae%9a%e4%bd%8d%e5%88%b0%e7%9b%ae%e6%a0%87%e5%8d%95%e5%85%83%e6%a0%bc">#</a></h3>
+<ol>
+<li>选中你想放置勾的单元格或列。</li>
+<li>确保单元格的 <strong>对齐方式</strong> 为“左对齐”或“居中”，以便符号显示正常。</li>
+</ol>
+<h3 id="步骤-2插入符号">步骤 2：插入符号<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e6%8f%92%e5%85%a5%e7%ac%a6%e5%8f%b7">#</a></h3>
+<ul>
+<li>
+<p><strong>方法 A：Alt 代码</strong></p>
+<ol>
+<li>选中单元格，按住 <code>Alt</code> 键。</li>
+<li>在数字键盘上输入 <code>0252</code>（✓）或 <code>0254</code>（√），然后松开 <code>Alt</code>。</li>
+<li>你会看到对应的勾号出现在单元格中。</li>
+</ol>
+</li>
+<li>
+<p><strong>方法 B：符号对话框</strong></p>
+<ol>
+<li>单击 <code>插入 → 符号</code>。</li>
+<li>在弹出的对话框中，选择 <code>Unicode (十六进制)</code>，然后输入 <code>2713</code>（✓）或 <code>2714</code>（✔︎）。</li>
+<li>点击 <code>插入</code>，关闭对话框。</li>
+</ol>
+</li>
+<li>
+<p><strong>方法 C：直接复制粘贴</strong></p>
+<ul>
+<li>复制 <code>✓</code>、<code>✔︎</code>、<code>√</code> 等字符，粘贴到单元格。</li>
+</ul>
+</li>
+</ul>
+<h3 id="步骤-3调整大小与颜色">步骤 3：调整大小与颜色<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e8%b0%83%e6%95%b4%e5%a4%a7%e5%b0%8f%e4%b8%8e%e9%a2%9c%e8%89%b2">#</a></h3>
+<ul>
+<li><strong>字体</strong>：可以选择 <code>Calibri</code>、<code>Arial</code>、<code>宋体</code> 等通用字体。</li>
+<li><strong>颜色</strong>：右键单元格 → <code>设置单元格格式</code> → <code>字体</code> → 选择你想要的颜色。</li>
+</ul>
+<hr>
+<h2 id="方案二使用-wingdings-字体快速插入勾">方案二：使用 Wingdings 字体快速插入勾<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-wingdings-%e5%ad%97%e4%bd%93%e5%bf%ab%e9%80%9f%e6%8f%92%e5%85%a5%e5%8b%be">#</a></h2>
+<h3 id="步骤-1选中单元格并切换字体">步骤 1：选中单元格并切换字体<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e9%80%89%e4%b8%ad%e5%8d%95%e5%85%83%e6%a0%bc%e5%b9%b6%e5%88%87%e6%8d%a2%e5%ad%97%e4%bd%93">#</a></h3>
+<ol>
+<li>选中目标单元格。</li>
+<li>在“开始”选项卡中将字体切换到 <code>Wingdings</code>。</li>
+</ol>
+<h3 id="步骤-2输入对应字符">步骤 2：输入对应字符<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e8%be%93%e5%85%a5%e5%af%b9%e5%ba%94%e5%ad%97%e7%ac%a6">#</a></h3>
+<ul>
+<li><code>√</code>（√）对应 Wingdings 的 <code>k</code>。</li>
+<li><code>x</code>（×）对应 Wingdings 的 <code>l</code>。</li>
+<li><code>✓</code> 对应 Wingdings 的 <code>P</code>。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：如果你想在同一列中混用普通文本和勾号，记得在输入完字符后再次切换回标准字体，否则文字会被渲染成符号。</p>
+</blockquote><h3 id="步骤-3调整单元格对齐与颜色">步骤 3：调整单元格对齐与颜色<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e8%b0%83%e6%95%b4%e5%8d%95%e5%85%83%e6%a0%bc%e5%af%b9%e9%bd%90%e4%b8%8e%e9%a2%9c%e8%89%b2">#</a></h3>
+<ul>
+<li>同方案一的调整方式即可。</li>
+</ul>
+<hr>
+<h2 id="方案三插入复选框控件表单控件或-activex">方案三：插入复选框控件（表单控件或 ActiveX）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e6%8f%92%e5%85%a5%e5%a4%8d%e9%80%89%e6%a1%86%e6%8e%a7%e4%bb%b6%e8%a1%a8%e5%8d%95%e6%8e%a7%e4%bb%b6%e6%88%96-activex">#</a></h2>
+<h3 id="方案三-1使用表单控件复选框">方案三-1：使用“表单控件”复选框<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89-1%e4%bd%bf%e7%94%a8%e8%a1%a8%e5%8d%95%e6%8e%a7%e4%bb%b6%e5%a4%8d%e9%80%89%e6%a1%86">#</a></h3>
+<ol>
+<li>
+<p><strong>启用开发工具栏</strong></p>
+<ul>
+<li><code>文件 → 选项 → 自定义功能区</code> → 勾选 <code>开发工具</code> → 确认。</li>
+</ul>
+</li>
+<li>
+<p><strong>插入复选框</strong></p>
+<ul>
+<li><code>开发工具 → 插入 → 表单控件 → 复选框</code>。</li>
+<li>在工作表上点击或拖拽绘制复选框，放置到你想要的位置。</li>
+</ul>
+</li>
+<li>
+<p><strong>链接到单元格</strong></p>
+<ul>
+<li>右键单击复选框 → <code>控件格式</code> → <code>控制</code> → 在 <code>单元格链接</code> 输入框中填写你想关联的单元格地址（如 <code>A1</code>）。</li>
+<li>复选框被选中时，链接单元格会显示 <code>TRUE</code>，未选中则为 <code>FALSE</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>复制到其他单元格</strong></p>
+<ul>
+<li>选中已设置好的复选框，右键复制 → 粘贴到其他需要的单元格。</li>
+<li>Excel 会自动更新链接地址。</li>
+</ul>
+</li>
+<li>
+<p><strong>美化</strong></p>
+<ul>
+<li>右键单击复选框 → <code>设置单元格格式</code> → <code>字体</code> → 调整大小或颜色，或隐藏默认文字。</li>
+</ul>
+</li>
+</ol>
+<h3 id="方案三-2使用activex-控件复选框">方案三-2：使用“ActiveX 控件”复选框<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89-2%e4%bd%bf%e7%94%a8activex-%e6%8e%a7%e4%bb%b6%e5%a4%8d%e9%80%89%e6%a1%86">#</a></h3>
+<ul>
+<li>与方案三-1 类似，只是插入的控件类型不同。</li>
+<li>适合需要更高交互性的 VBA 方案，例如自动隐藏、启用/禁用等。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果你只需要在打印时显示勾号，建议使用方案一或二；如果需要用户勾选并实时更新数据，方案三更合适。</p>
+</blockquote><hr>
+<h2 id="常见问题解答">常见问题解答<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>答案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>1. 如何在同一单元格中既显示文字又有勾号？</strong></td>
+          <td>- 方案一：在单元格中输入文字后再输入勾号，或者使用 <code>=CHAR(10004)</code> 等公式。<!-- raw HTML omitted -->- 方案二：先输入文字，切换字体为 Wingdings 后输入勾号，再切回标准字体。</td>
+      </tr>
+      <tr>
+          <td><strong>2. 打印时勾号会变成乱码怎么办？</strong></td>
+          <td>确保使用的字体支持对应符号，例如 <code>Calibri</code>、<code>Arial</code>、<code>宋体</code> 等。若使用 Wingdings，打印前可将字体改回常规。</td>
+      </tr>
+      <tr>
+          <td><strong>3. 如何批量插入勾号？</strong></td>
+          <td>- 方案一：使用 <code>填充柄</code> 或 <code>Ctrl + D</code> 复制单元格内容。<!-- raw HTML omitted -->- 方案三：复制已配置好的复选框到其他单元格。</td>
+      </tr>
+      <tr>
+          <td><strong>4. 如何让勾号与单元格内容垂直居中？</strong></td>
+          <td>选中单元格 → <code>开始 → 对齐方式 → 垂直居中</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>5. 复选框的勾号在 Excel 365 里会自动变成符号吗？</strong></td>
+          <td>默认不会，复选框本身是一个控件，显示为勾号；如果你把它复制到纯文本单元格，则会变成 <code>TRUE/FALSE</code>，你可以使用 <code>IF</code> 函数将其转换为符号：<code>=IF(A1=TRUE, &quot;✓&quot;, &quot;&quot;)</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>6. 如何在数据验证中使用勾号？</strong></td>
+          <td>在“数据 → 数据验证”中选择“列表”，输入 <code>✓,×</code> 或 <code>TRUE,FALSE</code>，即可在单元格中下拉选择勾号。</td>
+      </tr>
+      <tr>
+          <td><strong>7. 需要多行单元格显示多行勾号，怎么办？</strong></td>
+          <td>1. 选中单元格，设置 <code>换行</code> 或 <code>自动换行</code>。<!-- raw HTML omitted -->2. 在单元格中按 <code>Alt+Enter</code> 换行后输入勾号。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>Unicode 符号</strong>：快捷、无控件，适合快速标记。</li>
+<li><strong>Wingdings</strong>：通过字体切换实现，可快速填充大量勾号。</li>
+<li><strong>复选框控件</strong>：交互式、可绑定单元格，适合表单与自动化。</li>
+</ul>
+<p>根据你实际的使用场景（静态标记 vs. 动态交互），选择最合适的方法即可。祝你玩得开心，Excel 打勾不再是难题！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%B8%A6%E5%85%A5%E5%85%AC%E5%BC%8F/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何带入公式</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E6%89%93%E5%AD%97/" class="flex align-center">
+      <span>excel如何打字</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-unicode-符号-等">方案一：使用 Unicode 符号（✓、✔︎、√ 等）</a>
+      <ul>
+        <li><a href="#步骤-1打开-excel-并定位到目标单元格">步骤 1：打开 Excel 并定位到目标单元格</a></li>
+        <li><a href="#步骤-2插入符号">步骤 2：插入符号</a></li>
+        <li><a href="#步骤-3调整大小与颜色">步骤 3：调整大小与颜色</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-wingdings-字体快速插入勾">方案二：使用 Wingdings 字体快速插入勾</a>
+      <ul>
+        <li><a href="#步骤-1选中单元格并切换字体">步骤 1：选中单元格并切换字体</a></li>
+        <li><a href="#步骤-2输入对应字符">步骤 2：输入对应字符</a></li>
+        <li><a href="#步骤-3调整单元格对齐与颜色">步骤 3：调整单元格对齐与颜色</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三插入复选框控件表单控件或-activex">方案三：插入复选框控件（表单控件或 ActiveX）</a>
+      <ul>
+        <li><a href="#方案三-1使用表单控件复选框">方案三-1：使用“表单控件”复选框</a></li>
+        <li><a href="#方案三-2使用activex-控件复选框">方案三-2：使用“ActiveX 控件”复选框</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

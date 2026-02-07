@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 怎么比对？    一份系统化的教程，帮助你快速掌握 Excel 中的“比对”技巧    在日常工作里，往往需要把两份表格或两列数据做对比，找出相同、不同、缺失或重复的记录。   下面先从“为什么需要比对”说起，然后给出 三种常用的分步骤解决方案，最后列出常见问题及答">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E6%AF%94%E5%AF%B9/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么比对">
+  <meta property="og:description" content="Excel 怎么比对？    一份系统化的教程，帮助你快速掌握 Excel 中的“比对”技巧    在日常工作里，往往需要把两份表格或两列数据做对比，找出相同、不同、缺失或重复的记录。   下面先从“为什么需要比对”说起，然后给出 三种常用的分步骤解决方案，最后列出常见问题及答">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel怎么比对">
+  <meta itemprop="description" content="Excel 怎么比对？    一份系统化的教程，帮助你快速掌握 Excel 中的“比对”技巧    在日常工作里，往往需要把两份表格或两列数据做对比，找出相同、不同、缺失或重复的记录。   下面先从“为什么需要比对”说起，然后给出 三种常用的分步骤解决方案，最后列出常见问题及答">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="265">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么比对 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E6%AF%94%E5%AF%B9/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么比对</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为什么要在-excel-中做比对">1. 为什么要在 Excel 中做比对？</a></li>
+    <li><a href="#2-三种常用的分步骤解决方案">2. 三种常用的分步骤解决方案</a>
+      <ul>
+        <li><a href="#方案一使用-if--vlookup-公式进行行级比对">方案一：使用 <code>IF</code> / <code>VLOOKUP</code> 公式进行行级比对</a></li>
+        <li><a href="#方案二使用-条件格式-高亮差异">方案二：使用 <strong>条件格式</strong> 高亮差异</a></li>
+        <li><a href="#方案三使用-power-querypower-bi做高级比对">方案三：使用 Power Query（Power BI）做高级比对</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么比对
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-怎么比对">Excel 怎么比对？<a class="anchor" href="#excel-%e6%80%8e%e4%b9%88%e6%af%94%e5%af%b9">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>一份系统化的教程，帮助你快速掌握 Excel 中的“比对”技巧</strong></p>
+</blockquote><p>在日常工作里，往往需要把两份表格或两列数据做对比，找出相同、不同、缺失或重复的记录。<br>
+下面先从“为什么需要比对”说起，然后给出 <strong>三种常用的分步骤解决方案</strong>，最后列出常见问题及答案，帮助你彻底掌握这项技能。</p>
+<hr>
+<h2 id="1-为什么要在-excel-中做比对">1. 为什么要在 Excel 中做比对？<a class="anchor" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%9c%a8-excel-%e4%b8%ad%e5%81%9a%e6%af%94%e5%af%b9">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>典型需求</th>
+          <th>可能出现的问题</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>财务报表核对</strong></td>
+          <td>对比预算与实际支出</td>
+          <td>发现漏报或多报</td>
+      </tr>
+      <tr>
+          <td><strong>数据清洗</strong></td>
+          <td>找到重复或缺失记录</td>
+          <td>影响后续分析</td>
+      </tr>
+      <tr>
+          <td><strong>供应链管理</strong></td>
+          <td>比对订单与发货单</td>
+          <td>发现发货差异</td>
+      </tr>
+      <tr>
+          <td><strong>代码审核</strong></td>
+          <td>对比版本差异</td>
+          <td>发现错误或改动</td>
+      </tr>
+      <tr>
+          <td><strong>客户信息同步</strong></td>
+          <td>比对 CRM 与邮件列表</td>
+          <td>同步错误</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>核心痛点</strong></p>
+<ol>
+<li>手工检查容易出错、耗时。</li>
+<li>数据量大时，找不到差异非常困难。</li>
+<li>需要快速定位到差异所在单元格或行。</li>
+</ol>
+</blockquote><hr>
+<h2 id="2-三种常用的分步骤解决方案">2. 三种常用的分步骤解决方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%b8%b8%e7%94%a8%e7%9a%84%e5%88%86%e6%ad%a5%e9%aa%a4%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>下面的示例假设：</strong></p>
+<ul>
+<li><code>Sheet1</code> 的 A 列是“参考数据”。</li>
+<li><code>Sheet2</code> 的 A 列是“待比对数据”。</li>
+</ul>
+</blockquote><h3 id="方案一使用-if--vlookup-公式进行行级比对">方案一：使用 <code>IF</code> / <code>VLOOKUP</code> 公式进行行级比对<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-if--vlookup-%e5%85%ac%e5%bc%8f%e8%bf%9b%e8%a1%8c%e8%a1%8c%e7%ba%a7%e6%af%94%e5%af%b9">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>步骤</th>
+          <th>操作</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1️⃣</td>
+          <td>在 <code>Sheet2</code> 的 B 列输入公式：<code>=IF(ISNUMBER(MATCH(A2,Sheet1!$A:$A,0)),&quot;存在&quot;,&quot;不存在&quot;)</code></td>
+          <td>MATCH 找到匹配行，ISNUMBER 判断是否找到</td>
+      </tr>
+      <tr>
+          <td>2️⃣</td>
+          <td>向下填充公式</td>
+          <td>自动检查每一行</td>
+      </tr>
+      <tr>
+          <td>3️⃣</td>
+          <td>可选：使用 <strong>条件格式</strong> 将“不存在”高亮</td>
+          <td>视觉上快速定位</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="代码示例">代码示例<a class="anchor" href="#%e4%bb%a3%e7%a0%81%e7%a4%ba%e4%be%8b">#</a></h4>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">B2: =IF(ISNUMBER(MATCH(A2, Sheet1!$A:$A, 0)), &#34;存在&#34;, &#34;不存在&#34;)</code></pre><blockquote class='book-hint '>
+<p><strong>优点</strong>：简单直观，适合小规模数据。<br>
+<strong>缺点</strong>：每次数据变动需手动刷新公式，匹配速度慢。</p>
+</blockquote><hr>
+<h3 id="方案二使用-条件格式-高亮差异">方案二：使用 <strong>条件格式</strong> 高亮差异<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-%e6%9d%a1%e4%bb%b6%e6%a0%bc%e5%bc%8f-%e9%ab%98%e4%ba%ae%e5%b7%ae%e5%bc%82">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>步骤</th>
+          <th>操作</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1️⃣</td>
+          <td>选中 <code>Sheet2</code> 的 A 列</td>
+          <td>目标列</td>
+      </tr>
+      <tr>
+          <td>2️⃣</td>
+          <td><code>开始</code> → <code>条件格式</code> → <code>新建规则</code> → <code>使用公式确定要设置格式的单元格</code></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>3️⃣</td>
+          <td>输入公式：<code>=ISERROR(MATCH(A1, Sheet1!$A:$A, 0))</code></td>
+          <td><code>A1</code> 代表当前单元格，匹配不存在时返回错误</td>
+      </tr>
+      <tr>
+          <td>4️⃣</td>
+          <td>设置填充色（如橙色）</td>
+          <td>匹配失败的单元格会被高亮</td>
+      </tr>
+      <tr>
+          <td>5️⃣</td>
+          <td>点击确定</td>
+          <td>完成</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：无需额外列，直接在原表中可视化差异。<br>
+<strong>缺点</strong>：只能高亮单元格，无法快速列出完整差异清单。</p>
+</blockquote><hr>
+<h3 id="方案三使用-power-querypower-bi做高级比对">方案三：使用 Power Query（Power BI）做高级比对<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-power-querypower-bi%e5%81%9a%e9%ab%98%e7%ba%a7%e6%af%94%e5%af%b9">#</a></h3>
+<blockquote class='book-hint '>
+<p><strong>适用于</strong>：大数据量、需要生成差异报告或同步数据。</p>
+</blockquote><table>
+  <thead>
+      <tr>
+          <th>步骤</th>
+          <th>操作</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1️⃣</td>
+          <td><code>数据</code> → <code>获取和转换数据</code> → <code>从表/范围</code></td>
+          <td>选中 <code>Sheet1</code> 的数据范围</td>
+      </tr>
+      <tr>
+          <td>2️⃣</td>
+          <td>在 Power Query 编辑器中，选择 <code>合并查询</code></td>
+          <td>选择 <code>Sheet1</code> 与 <code>Sheet2</code></td>
+      </tr>
+      <tr>
+          <td>3️⃣</td>
+          <td>设定合并类型：<code>左外连接</code> 或 <code>反向外连接</code></td>
+          <td>取决于你想找“缺失”还是“多余”</td>
+      </tr>
+      <tr>
+          <td>4️⃣</td>
+          <td>选择匹配列（A列）</td>
+          <td>用作键</td>
+      </tr>
+      <tr>
+          <td>5️⃣</td>
+          <td>展开合并后的列，保留 <code>null</code> 标识</td>
+          <td>表示未匹配</td>
+      </tr>
+      <tr>
+          <td>6️⃣</td>
+          <td>加载到工作簿</td>
+          <td>生成比对报告</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：支持多种合并方式、可视化、自动刷新。<br>
+<strong>缺点</strong>：需要一定的 Power Query 基础，首次配置稍显复杂。</p>
+</blockquote><hr>
+<h2 id="3-常见问题解答faq">3. 常见问题解答（FAQ）<a class="anchor" href="#3-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>公式比对时出现 <code>#N/A</code>，但我确认数据一致</strong></td>
+          <td>检查是否存在空格、大小写差异；可使用 <code>TRIM</code>、<code>UPPER</code> 预处理；或使用 <code>EXACT</code> 而非 <code>=A1=B1</code>。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>条件格式高亮后，数值格式不一样导致匹配失败</strong></td>
+          <td>先统一格式：<code>数据</code> → <code>文本到列</code> → <code>分隔符</code>；或将公式改为 <code>=TRIM(TEXT(A1,&quot;0.00&quot;))</code>。</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>Power Query 报 <code>无法访问的列</code></strong></td>
+          <td>确认两张表的列名没有空格、特殊字符，且列已被正确识别为表格。</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>我想找出两列的差异并输出到新表</strong></td>
+          <td>在 Power Query 中使用 <code>合并查询</code> 并筛选 <code>null</code>，或使用 <code>VLOOKUP</code> 生成差异列并复制粘贴为值。</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>比对后想在原表中标记差异行号</strong></td>
+          <td>在公式中使用 <code>ROW()</code>，或在 Power Query 中添加 <code>Index</code> 列。</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>Excel 2021 不能使用 <code>XLOOKUP</code></strong></td>
+          <td><code>XLOOKUP</code> 只在 365/2019 及以上版本；可以用 <code>VLOOKUP</code> 或 <code>INDEX+MATCH</code> 替代。</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td><strong>大数据量导致比对速度慢</strong></td>
+          <td>1. 将数据先转为表格（<code>Ctrl+T</code>）再使用 <code>FILTER</code>/<code>UNIQUE</code>。<!-- raw HTML omitted -->2. 在 Power Query 中使用 <code>Fast Join</code>。<!-- raw HTML omitted -->3. 关闭自动计算，手动刷新。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4-小结">4. 小结<a class="anchor" href="#4-%e5%b0%8f%e7%bb%93">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>方法</th>
+          <th>适用场景</th>
+          <th>关键点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>IF/VLOOKUP</code></td>
+          <td>小表格、需要快速标记</td>
+          <td>公式要锁定范围，确保无空格</td>
+      </tr>
+      <tr>
+          <td>条件格式</td>
+          <td>在原表中可视化差异</td>
+          <td>公式与单元格相对引用</td>
+      </tr>
+      <tr>
+          <td>Power Query</td>
+          <td>大量数据、自动化报表</td>
+          <td>需要学习合并、筛选、刷新</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>建议</strong></p>
+<ol>
+<li><strong>先做可视化</strong>：先用条件格式快速定位差异。</li>
+<li><strong>再做清单</strong>：用公式或 Power Query 生成差异清单。</li>
+<li><strong>持续维护</strong>：将比对步骤封装为宏或 Power Query 查询，后续数据更新时一键刷新。</li>
+</ol>
+</blockquote><p>祝你在 Excel 中比对数据顺利、精准！如果还有更复杂的需求（如多表多列比对、差异统计等），欢迎继续提问。</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E6%90%9C%E5%AF%BB/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么搜寻</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8/" class="flex align-center">
+      <span>excel怎么用</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为什么要在-excel-中做比对">1. 为什么要在 Excel 中做比对？</a></li>
+    <li><a href="#2-三种常用的分步骤解决方案">2. 三种常用的分步骤解决方案</a>
+      <ul>
+        <li><a href="#方案一使用-if--vlookup-公式进行行级比对">方案一：使用 <code>IF</code> / <code>VLOOKUP</code> 公式进行行级比对</a></li>
+        <li><a href="#方案二使用-条件格式-高亮差异">方案二：使用 <strong>条件格式</strong> 高亮差异</a></li>
+        <li><a href="#方案三使用-power-querypower-bi做高级比对">方案三：使用 Power Query（Power BI）做高级比对</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="Posts">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="Posts">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+
+<title>Posts | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="Cloudata AI" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Posts</h3>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%81%9A%E9%95%BF%E6%9D%A1%E5%9B%BE/">excel怎么做长条图</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-长条图bar-chart完整教程">Excel 长条图（Bar Chart）完整教程<a class="anchor" href="#excel-%e9%95%bf%e6%9d%a1%e5%9b%bebar-chart%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>长条图（Bar Chart）是最常用的数据可视化工具之一，尤其在展示“类别对比”时，比折线图更直观。本文将帮你从<strong>原因分析</strong>到<strong>三种实现方案</strong>，再到<strong>常见问题解答</strong>，一步步完成 Excel 里的长条图。</p>
+</blockquote><hr>
+<h2 id="1-为什么要用长条图">1. 为什么要用长条图？<a class="anchor" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e7%94%a8%e9%95%bf%e6%9d%a1%e5%9b%be">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>长条图优势</th>
+          <th>适用数据类型</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>类别对比</td>
+          <td>水平条形更易阅读长文本 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%82%A8%E5%AD%98/">excel怎么储存</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel怎么储存">Excel怎么储存？<a class="anchor" href="#excel%e6%80%8e%e4%b9%88%e5%82%a8%e5%ad%98">#</a></h1>
+<blockquote class='book-hint '>
+<p>在日常工作与项目管理中，<strong>存储</strong> Excel 文件往往是最基础却最关键的环节。无论是将数据保存在本地磁盘、云端，还是将工作簿与数据库同步，合理的存储方案都能提升文件的可访问性、版本管理与安全性。<br>
+本教程将从<strong>原因分析</strong>出发，提供 <strong>三种分步骤的解决方案</strong>（本地存储、云端存储、数据库/网络存储），并在最后回答常见问题，帮助你快速选择最合适的存储方式。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>典型存储方式</th>
+          <th>优势 …</th></tr></thead></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%88%97%E5%8D%B0/">excel怎么列印</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-列印完整指南">Excel 列印完整指南<a class="anchor" href="#excel-%e5%88%97%e5%8d%b0%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97">#</a></h1>
+<blockquote class='book-hint '>
+<p>本教程面向想要在 Excel 中实现高效、精准列印的用户。无论你是刚接触列印功能，还是想优化打印设置，本文都将为你提供清晰的思路与实用的步骤。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<p>在 Excel 中列印时常遇到的问题，往往源于以下几个原因：</p>
+<table>
+  <thead>
+      <tr>
+          <th>常见问题</th>
+          <th>可能原因</th>
+          <th>影响</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>页面内容被截断</strong></td>
+          <td>未正确设置打印区域、页面边距过大 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%8A%A0bullet-point/">excel怎么加bullet point</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-怎么加-bullet-point子弹点">Excel 怎么加 Bullet Point（子弹点）？<a class="anchor" href="#excel-%e6%80%8e%e4%b9%88%e5%8a%a0-bullet-point%e5%ad%90%e5%bc%b9%e7%82%b9">#</a></h1>
+<p>在 Excel 中，虽然不像 Word 那样有专门的“项目符号”工具，但我们依旧可以通过多种方式在单元格里添加 <strong>Bullet Point</strong>（子弹点）。下面提供 <strong>原因分析</strong>、<strong>三种分步骤的解决方案</strong>，以及 <strong>常见问题解答</strong>，帮助你快速掌握。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要子弹点的原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>列表展示</td>
+          <td>让多项内容一目了然，提升可读性 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%8A%A0%E4%B8%80%E8%A1%8C/">excel怎么加一行</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-怎么加一行完整教程">Excel 怎么加一行？——完整教程<a class="anchor" href="#excel-%e6%80%8e%e4%b9%88%e5%8a%a0%e4%b8%80%e8%a1%8c%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在日常使用 Excel 时，往往需要在已有表格中插入新行。无论是手动录入数据、整理报表还是导入外部数据，正确地插入行都能让工作更高效、表格更有条理。下面从<strong>原因分析</strong>、<strong>三种常用解决方案</strong>以及<strong>常见问题解答</strong>三部分为你详细讲解。</p>
+<hr>
+<h2 id="1-原因分析">1️⃣ 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求场景</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>更新数据</strong></td>
+          <td>需要在表格中间添加新的记录，而不是在最后追加。 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%8F%A0%E5%9B%BE/">excel怎么叠图</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-叠图stacked-chart完整教程">Excel 叠图（Stacked Chart）完整教程<a class="anchor" href="#excel-%e5%8f%a0%e5%9b%bestacked-chart%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>叠图（Stacked Chart）是把若干系列的数据“叠加”在一起的图表，常见于柱形、条形、面积或折线图。它可以帮助你直观展示各部分占整体的比例或随时间的累积变化。</p>
+</blockquote><hr>
+<h2 id="一原因分析">一、原因分析<a class="anchor" href="#%e4%b8%80%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>目的</th>
+          <th>叠图的优势</th>
+          <th>适用场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>展示整体与部分关系</strong></td>
+          <td>每个柱/线/面积从底部到顶部依次堆叠，能一眼看出各部 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%90%88%E5%B9%B6%E5%82%A8%E5%AD%98%E6%A0%BC/">excel怎么合并储存格</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-里合并单元格的完整教程">Excel 里合并单元格的完整教程<a class="anchor" href="#excel-%e9%87%8c%e5%90%88%e5%b9%b6%e5%8d%95%e5%85%83%e6%a0%bc%e7%9a%84%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目标</strong>：帮助你快速掌握在 Excel 中合并单元格的原因、方法以及常见问题的解决方案。<br>
+<strong>适用人群</strong>：从初学者到中级用户，想要在工作表中整齐排版、制作标题、创建表头或生成报表的任何人。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<p>合并单元格（Merge Cells）是 Excel 中常用的排版工具，但它并不是万能的。以下是你可能需要合并单元格的典型场景及其背后的原因：</p>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>目的</th>
+          <th>需要注意的陷阱 …</th></tr></thead></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%90%88%E5%B9%B6%E6%A1%A3%E6%A1%88/">excel怎么合并档案</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-合并档案完整教程">Excel 合并档案完整教程<a class="anchor" href="#excel-%e5%90%88%e5%b9%b6%e6%a1%a3%e6%a1%88%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目的</strong>：快速、准确地把多个 Excel 工作簿或工作表合并为一个文件，适用于数据汇总、报表生成、数据清洗等场景。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1️⃣ 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<p>合并 Excel 档案时常见的问题根源主要有：</p>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>产生原因</th>
+          <th>影响</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>表头不一致</strong></td>
+          <td>不是所有文件的列名称相同、顺序混乱</td>
+          <td>导致数据错位、合并错误 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%AD%98pdf/">excel怎么存pdf</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何导出-pdf">Excel 如何导出 PDF？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%af%bc%e5%87%ba-pdf">#</a></h1>
+<p>在日常工作中，往往需要把 Excel 工作表或整个工作簿以 <strong>PDF</strong> 格式保存，方便共享、打印或归档。Excel 原生支持直接导出 PDF，但在实际使用时也会遇到排版、大小、页面设置等问题。本文将从<strong>原因分析</strong>入手，给出三种常见的分步骤解决方案，并列出常见问题的解答，帮助你轻松完成 Excel 到 PDF 的转换。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要导出 PDF 的原因</th>
+          <th>常见痛点 …</th></tr></thead></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%AD%98%E6%A1%A3/">excel怎么存档</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何存档save--save-as完整教程">Excel 如何存档（Save &amp; Save As）完整教程<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%ad%98%e6%a1%a3save--save-as%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在日常使用 Excel 的过程中，<strong>存档</strong>（保存）是最基本、最重要的操作之一。本文将从原因分析入手，介绍三种常见的存档方法，并回答用户最常见的疑惑，帮助你高效、无忧地管理工作簿。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要存档的原因</th>
+          <th>典型问题</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>处理重要数据</td>
+          <td>防止数据丢失</td>
+          <td>电脑 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <span>
+    <a href="/posts/page/13/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+    </a>
+  
+  </span>
+  
+  <span class="flex gap"><a href="/posts/page/12/">12</a><a href="/posts/page/13/">13</a><a >14</a><a href="/posts/page/15/">15</a><a href="/posts/page/16/">16</a></span>
+  
+  <span>
+    <a href="/posts/page/15/" class="flex align-center">
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </span>
+</div>
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <a>Categories</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+          <span>160</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Tags</a>
+      <ul>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </div>
+</aside>
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何钉选（冻结窗格）    钉选（或“冻结窗格”）是指在 Excel 中锁定某一行、列或区域，使其在滚动时始终保持可见。    这在处理大型表格、对照多列信息或需要保持标题行/列可读性时尤为重要。  ---   1️⃣  为什么要使用钉选？  | 场景 | 需求 |">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E9%92%89%E9%80%89/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何钉选">
+  <meta property="og:description" content="Excel 如何钉选（冻结窗格）    钉选（或“冻结窗格”）是指在 Excel 中锁定某一行、列或区域，使其在滚动时始终保持可见。    这在处理大型表格、对照多列信息或需要保持标题行/列可读性时尤为重要。  ---   1️⃣  为什么要使用钉选？  | 场景 | 需求 |">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何钉选">
+  <meta itemprop="description" content="Excel 如何钉选（冻结窗格）    钉选（或“冻结窗格”）是指在 Excel 中锁定某一行、列或区域，使其在滚动时始终保持可见。    这在处理大型表格、对照多列信息或需要保持标题行/列可读性时尤为重要。  ---   1️⃣  为什么要使用钉选？  | 场景 | 需求 |">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="174">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何钉选 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E9%92%89%E9%80%89/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何钉选</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1--为什么要使用钉选">1️⃣  为什么要使用钉选？</a></li>
+    <li><a href="#2--三种分步骤的解决方案">2️⃣  三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案一使用视图菜单最常用">方案一：使用“视图”菜单（最常用）</a></li>
+        <li><a href="#方案二使用快捷键适合快速操作">方案二：使用快捷键（适合快速操作）</a></li>
+        <li><a href="#方案三使用-vba-自动化批量冻结">方案三：使用 VBA 自动化（批量冻结）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3--常见问题解答">3️⃣  常见问题解答</a></li>
+    <li><a href="#4--小结">4️⃣  小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何钉选
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何钉选冻结窗格">Excel 如何钉选（冻结窗格）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e9%92%89%e9%80%89%e5%86%bb%e7%bb%93%e7%aa%97%e6%a0%bc">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>钉选</strong>（或“冻结窗格”）是指在 Excel 中锁定某一行、列或区域，使其在滚动时始终保持可见。<br>
+这在处理大型表格、对照多列信息或需要保持标题行/列可读性时尤为重要。</p>
+</blockquote><hr>
+<h2 id="1--为什么要使用钉选">1️⃣  为什么要使用钉选？<a class="anchor" href="#1--%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e4%bd%bf%e7%94%a8%e9%92%89%e9%80%89">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求</th>
+          <th>如何解决</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>大量数据</td>
+          <td>需要在滚动时仍能看到表头</td>
+          <td>冻结首行</td>
+      </tr>
+      <tr>
+          <td>行列对照</td>
+          <td>同时查看左侧索引和右侧内容</td>
+          <td>冻结首列与首行</td>
+      </tr>
+      <tr>
+          <td>多工作表对比</td>
+          <td>需要同时查看不同工作表的相同列</td>
+          <td>分块冻结</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>常见问题</strong><br>
+<em>“冻结后，滚动时会出现空白条”</em><br>
+这通常是因冻结的行/列未对齐导致的，检查是否在正确的单元格（如 B2）执行冻结。</p>
+</blockquote><hr>
+<h2 id="2--三种分步骤的解决方案">2️⃣  三种分步骤的解决方案<a class="anchor" href="#2--%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案一使用视图菜单最常用">方案一：使用“视图”菜单（最常用）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e8%a7%86%e5%9b%be%e8%8f%9c%e5%8d%95%e6%9c%80%e5%b8%b8%e7%94%a8">#</a></h3>
+<ol>
+<li><strong>打开工作簿</strong>，定位到需要冻结的单元格（例如 <strong>B2</strong>，表示冻结第一行和第一列）。</li>
+<li>在 <strong>“视图”</strong> 选项卡中，点击 <strong>“冻结窗格”</strong>。</li>
+<li>选择 <strong>“冻结首行”</strong>、<strong>“冻结首列”</strong> 或 <strong>“冻结窗格”</strong>（自定义位置）。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：</p>
+<ul>
+<li><strong>冻结首行</strong>：仅保持第一行可见。</li>
+<li><strong>冻结首列</strong>：仅保持第一列可见。</li>
+<li><strong>冻结窗格</strong>：在选定单元格左侧和上方的区域将被锁定。</li>
+</ul>
+</blockquote><h3 id="方案二使用快捷键适合快速操作">方案二：使用快捷键（适合快速操作）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%bf%ab%e6%8d%b7%e9%94%ae%e9%80%82%e5%90%88%e5%bf%ab%e9%80%9f%e6%93%8d%e4%bd%9c">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>快捷键</th>
+          <th>适用情境</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Alt + W + F + F</code></td>
+          <td>冻结首行</td>
+          <td>通过键盘完成全部步骤</td>
+      </tr>
+      <tr>
+          <td><code>Alt + W + F + C</code></td>
+          <td>冻结首列</td>
+          <td>适用于列索引始终可见</td>
+      </tr>
+      <tr>
+          <td><code>Alt + W + F + R</code></td>
+          <td>冻结当前选区</td>
+          <td>自定义行/列</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>操作步骤</strong></p>
+<ol>
+<li>选中目标单元格（比如 <code>C3</code>）。</li>
+<li>按下 <code>Alt</code>，随后 <code>W</code> → <code>F</code> → <code>R</code>（冻结当前选择）。</li>
+</ol>
+</blockquote><h3 id="方案三使用-vba-自动化批量冻结">方案三：使用 VBA 自动化（批量冻结）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-vba-%e8%87%aa%e5%8a%a8%e5%8c%96%e6%89%b9%e9%87%8f%e5%86%bb%e7%bb%93">#</a></h3>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub AutoFreeze()
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+
+    With ws
+        .FreezePanes = False          &#39; 先取消再设置
+        .Range(&#34;D5&#34;).Select          &#39; 选择冻结点（左上角）
+        .Application.ActiveWindow.FreezePanes = True
+    End With
+End Sub</code></pre><blockquote class='book-hint '>
+<p><strong>使用方式</strong></p>
+<ol>
+<li>按 <code>Alt + F11</code> 打开 VBA 编辑器。</li>
+<li>插入 <code>新建模块</code>，粘贴上述代码。</li>
+<li>关闭编辑器，按 <code>Alt + F8</code> 运行 <code>AutoFreeze</code>。</li>
+</ol>
+</blockquote><blockquote class='book-hint '>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>适用于大量工作表一次性设置。</li>
+<li>可在宏中嵌入自定义逻辑，自动识别需要冻结的位置。</li>
+</ul>
+</blockquote><hr>
+<h2 id="3--常见问题解答">3️⃣  常见问题解答<a class="anchor" href="#3--%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>回答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：为什么冻结后只能看到一部分内容？</strong></td>
+          <td>可能是因为冻结点选择不当。确保冻结点位于你想锁定区域<strong>右下角</strong>的单元格。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：冻结后如何取消？</strong></td>
+          <td>在 <strong>“视图”</strong> → <strong>“冻结窗格”</strong> → <strong>“取消冻结窗格”</strong> 或使用 <code>Alt + W + F + C</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：冻结后出现滚动条被遮挡的情况</strong></td>
+          <td>检查是否在冻结行列前有合并单元格，合并单元格会导致冻结失效。可先拆分再冻结。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：可以在同一工作表上多重冻结吗？</strong></td>
+          <td>不能多重冻结；只能在一个位置冻结。若需要多区域可使用 <strong>“拆分窗格”</strong>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：冻结后打印时会影响分页吗？</strong></td>
+          <td>打印时仍保持冻结状态，若想取消打印冻结，只需取消冻结即可。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4--小结">4️⃣  小结<a class="anchor" href="#4--%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>冻结窗格</strong> 是提高 Excel 大量数据处理效率的关键技巧。</li>
+<li>通过 <strong>菜单</strong>、<strong>快捷键</strong> 或 <strong>VBA</strong> 三种方式，用户可根据习惯灵活选择。</li>
+<li>常见错误如合并单元格、错误的冻结点导致效果不佳，需注意排查。</li>
+</ul>
+<blockquote class='book-hint '>
+<p>祝你在 Excel 中轻松“钉选”，让数据分析更高效！</p>
+</blockquote></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%BD%89pdf%E6%AA%94/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何轉pdf檔</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E9%9A%B1%E8%97%8F/" class="flex align-center">
+      <span>excel如何隱藏</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1--为什么要使用钉选">1️⃣  为什么要使用钉选？</a></li>
+    <li><a href="#2--三种分步骤的解决方案">2️⃣  三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案一使用视图菜单最常用">方案一：使用“视图”菜单（最常用）</a></li>
+        <li><a href="#方案二使用快捷键适合快速操作">方案二：使用快捷键（适合快速操作）</a></li>
+        <li><a href="#方案三使用-vba-自动化批量冻结">方案三：使用 VBA 自动化（批量冻结）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3--常见问题解答">3️⃣  常见问题解答</a></li>
+    <li><a href="#4--小结">4️⃣  小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何合并资料（Merge Data）  在日常工作中，你往往会遇到需要把来自不同工作表、文件或列的数据汇总到一起的情况。Excel 提供了多种合并（Merge）方法，既可以在单列、行内进行简单拼接，也可以在多列、跨表格中做复杂合并。下面我们先从“为什么需要合并”说起，再给出三种常用的">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E8%B5%84%E6%96%99/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何合并资料">
+  <meta property="og:description" content="Excel 如何合并资料（Merge Data）  在日常工作中，你往往会遇到需要把来自不同工作表、文件或列的数据汇总到一起的情况。Excel 提供了多种合并（Merge）方法，既可以在单列、行内进行简单拼接，也可以在多列、跨表格中做复杂合并。下面我们先从“为什么需要合并”说起，再给出三种常用的">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何合并资料">
+  <meta itemprop="description" content="Excel 如何合并资料（Merge Data）  在日常工作中，你往往会遇到需要把来自不同工作表、文件或列的数据汇总到一起的情况。Excel 提供了多种合并（Merge）方法，既可以在单列、行内进行简单拼接，也可以在多列、跨表格中做复杂合并。下面我们先从“为什么需要合并”说起，再给出三种常用的">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="292">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何合并资料 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E8%B5%84%E6%96%99/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何合并资料</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-三种分步骤的解决方案">2. 三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案-a使用-函数concatenatetextjoin">方案 A：使用 <strong>函数</strong>（<code>&amp;</code>、<code>CONCATENATE</code>、<code>TEXTJOIN</code>）</a></li>
+        <li><a href="#方案-b使用-power-query获取--变换数据">方案 B：使用 <strong>Power Query</strong>（获取 &amp; 变换数据）</a></li>
+        <li><a href="#方案-c使用-vlookup--index-match-或-xlookup按键值合并">方案 C：使用 <strong>VLOOKUP / INDEX-MATCH</strong> 或 <strong>XLOOKUP</strong>（按键值合并）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答">3. 常见问题解答</a></li>
+    <li><a href="#4-小贴士">4. 小贴士</a></li>
+    <li><a href="#5-结语">5. 结语</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何合并资料
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何合并资料merge-data">Excel 如何合并资料（Merge Data）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e5%b9%b6%e8%b5%84%e6%96%99merge-data">#</a></h1>
+<p>在日常工作中，你往往会遇到需要把来自不同工作表、文件或列的数据汇总到一起的情况。Excel 提供了多种合并（Merge）方法，既可以在单列、行内进行简单拼接，也可以在多列、跨表格中做复杂合并。下面我们先从“为什么需要合并”说起，再给出三种常用的分步骤解决方案，最后整理常见问题与答案。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要合并的原因</th>
+          <th>合并的目的</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>单列拼接</strong></td>
+          <td>多个单元格中分散的文字或数字需要形成完整文本</td>
+          <td>生成统一的 ID、地址、姓名等</td>
+      </tr>
+      <tr>
+          <td><strong>多列合并</strong></td>
+          <td>同一对象在不同列存放属性</td>
+          <td>形成完整的记录（如姓名+性别+年龄）</td>
+      </tr>
+      <tr>
+          <td><strong>跨工作表/文件</strong></td>
+          <td>数据来源分散、需要统一报表</td>
+          <td>便于汇总、分析、报表制作</td>
+      </tr>
+      <tr>
+          <td><strong>去重合并</strong></td>
+          <td>同一数据集的重复记录</td>
+          <td>生成唯一的数据列表</td>
+      </tr>
+      <tr>
+          <td><strong>多表合并</strong></td>
+          <td>把不同业务表中的相同字段合并</td>
+          <td>统一管理、生成大表</td>
+      </tr>
+  </tbody>
+</table>
+<p>不同需求对应不同的合并方式：拼接、合并、去重、关联查询等。</p>
+<hr>
+<h2 id="2-三种分步骤的解决方案">2. 三种分步骤的解决方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案-a使用-函数concatenatetextjoin">方案 A：使用 <strong>函数</strong>（<code>&amp;</code>、<code>CONCATENATE</code>、<code>TEXTJOIN</code>）<a class="anchor" href="#%e6%96%b9%e6%a1%88-a%e4%bd%bf%e7%94%a8-%e5%87%bd%e6%95%b0concatenatetextjoin">#</a></h3>
+<p>适用于单表内部列或行的文本拼接。</p>
+<h4 id="步骤-1确定拼接字段">步骤 1：确定拼接字段<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e7%a1%ae%e5%ae%9a%e6%8b%bc%e6%8e%a5%e5%ad%97%e6%ae%b5">#</a></h4>
+<p>假设你有列 A（姓），列 B（名），需要合并成列 C（全名）。</p>
+<h4 id="步骤-2在目标单元格输入公式">步骤 2：在目标单元格输入公式<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e5%9c%a8%e7%9b%ae%e6%a0%87%e5%8d%95%e5%85%83%e6%a0%bc%e8%be%93%e5%85%a5%e5%85%ac%e5%bc%8f">#</a></h4>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">= A2 &amp; &#34; &#34; &amp; B2</code></pre><p>或者使用 <code>CONCATENATE</code>：</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=CONCATENATE(A2, &#34; &#34;, B2)</code></pre><p>若需要对多列拼接，建议使用 <code>TEXTJOIN</code>（Excel 2016+）：</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=TEXTJOIN(&#34; &#34;, TRUE, A2, B2, C2)</code></pre><p><code>TRUE</code> 参数表示忽略空值。</p>
+<h4 id="步骤-3向下填充">步骤 3：向下填充<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e5%90%91%e4%b8%8b%e5%a1%ab%e5%85%85">#</a></h4>
+<p>把公式向下拖拽或复制，完成所有行的拼接。</p>
+<h4 id="关键提示">关键提示<a class="anchor" href="#%e5%85%b3%e9%94%ae%e6%8f%90%e7%a4%ba">#</a></h4>
+<ul>
+<li>使用 <code>TRIM</code> 去除多余空格：<code>=TRIM(A2 &amp; &quot; &quot; &amp; B2)</code></li>
+<li>对数字或日期格式化：<code>=TEXT(A2, &quot;yyyy-mm-dd&quot;)</code></li>
+</ul>
+<hr>
+<h3 id="方案-b使用-power-query获取--变换数据">方案 B：使用 <strong>Power Query</strong>（获取 &amp; 变换数据）<a class="anchor" href="#%e6%96%b9%e6%a1%88-b%e4%bd%bf%e7%94%a8-power-query%e8%8e%b7%e5%8f%96--%e5%8f%98%e6%8d%a2%e6%95%b0%e6%8d%ae">#</a></h3>
+<p>适用于跨工作表、文件、甚至数据库的合并。支持去重、合并、追加、交叉等。</p>
+<h4 id="步骤-1准备数据">步骤 1：准备数据<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e5%87%86%e5%a4%87%e6%95%b0%e6%8d%ae">#</a></h4>
+<p>确保每个表格都有列标题且格式一致。</p>
+<h4 id="步骤-2打开-power-query">步骤 2：打开 Power Query<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e6%89%93%e5%bc%80-power-query">#</a></h4>
+<pre tabindex="0"><code>数据 -&gt; 从表/范围</code></pre><p>选择第一个表格，创建查询。</p>
+<h4 id="步骤-3追加或合并查询">步骤 3：追加或合并查询<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e8%bf%bd%e5%8a%a0%e6%88%96%e5%90%88%e5%b9%b6%e6%9f%a5%e8%af%a2">#</a></h4>
+<ul>
+<li><strong>追加</strong>（Append）：将两张表的行合并为一张大表。<br>
+在查询编辑器中点击 <code>主页 &gt; 追加查询</code>，选择要追加的表格。</li>
+<li><strong>合并</strong>（Merge）：按键值将两张表的列合并为一行。<br>
+先在查询编辑器中打开主表，点击 <code>主页 &gt; 合并查询</code>，选择对应键列。</li>
+</ul>
+<h4 id="步骤-4处理重复--过滤">步骤 4：处理重复 / 过滤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-4%e5%a4%84%e7%90%86%e9%87%8d%e5%a4%8d--%e8%bf%87%e6%bb%a4">#</a></h4>
+<p>使用 <code>删除重复项</code> 或 <code>按列过滤</code>。</p>
+<h4 id="步骤-5加载结果">步骤 5：加载结果<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-5%e5%8a%a0%e8%bd%bd%e7%bb%93%e6%9e%9c">#</a></h4>
+<p>点击 <code>关闭并加载</code>，将合并后的结果写回工作簿。</p>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：可以一次性处理多张表、自动化、支持刷新。<br>
+<strong>缺点</strong>：对新手稍显复杂。</p>
+</blockquote><hr>
+<h3 id="方案-c使用-vlookup--index-match-或-xlookup按键值合并">方案 C：使用 <strong>VLOOKUP / INDEX-MATCH</strong> 或 <strong>XLOOKUP</strong>（按键值合并）<a class="anchor" href="#%e6%96%b9%e6%a1%88-c%e4%bd%bf%e7%94%a8-vlookup--index-match-%e6%88%96-xlookup%e6%8c%89%e9%94%ae%e5%80%bc%e5%90%88%e5%b9%b6">#</a></h3>
+<p>适合需要在一张表中提取另一张表数据，形成完整记录。</p>
+<h4 id="步骤-1确定主键">步骤 1：确定主键<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e7%a1%ae%e5%ae%9a%e4%b8%bb%e9%94%ae">#</a></h4>
+<p>假设表 A 有 <code>CustomerID</code>，表 B 有相同的 <code>CustomerID</code>，你想把表 B 的 <code>Address</code> 合并到表 A。</p>
+<h4 id="步骤-2在表-a-的新列中使用公式">步骤 2：在表 A 的新列中使用公式<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e5%9c%a8%e8%a1%a8-a-%e7%9a%84%e6%96%b0%e5%88%97%e4%b8%ad%e4%bd%bf%e7%94%a8%e5%85%ac%e5%bc%8f">#</a></h4>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=VLOOKUP(A2, SheetB!$A$2:$B$1000, 2, FALSE)</code></pre><p>或使用 <code>XLOOKUP</code>（Excel 365+）:</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=XLOOKUP(A2, SheetB!$A$2:$A$1000, SheetB!$B$2:$B$1000, &#34;未找到&#34;)</code></pre><h4 id="步骤-3向下填充-1">步骤 3：向下填充<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e5%90%91%e4%b8%8b%e5%a1%ab%e5%85%85-1">#</a></h4>
+<p>复制公式到所有行。</p>
+<h4 id="关键提示-1">关键提示<a class="anchor" href="#%e5%85%b3%e9%94%ae%e6%8f%90%e7%a4%ba-1">#</a></h4>
+<ul>
+<li>对多列提取可使用 <code>INDEX-MATCH</code> 组合。</li>
+<li>若主键可能出现缺失，使用 <code>IFERROR</code> 包装：<code>=IFERROR(VLOOKUP(...), &quot;&quot;)</code></li>
+</ul>
+<hr>
+<h2 id="3-常见问题解答">3. 常见问题解答<a class="anchor" href="#3-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>说明</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>1. 合并后出现 #VALUE! 或 #REF!</strong></td>
+          <td>可能是引用的单元格为空、范围错误或函数使用不当。</td>
+          <td>检查公式中的单元格引用；使用 <code>IFERROR</code> 处理错误；确保列标题一致。</td>
+      </tr>
+      <tr>
+          <td><strong>2. 合并后数据出现多余空格</strong></td>
+          <td><code>&amp;</code> 拼接会保留原单元格中的空格。</td>
+          <td>在公式中使用 <code>TRIM</code> 或 <code>CLEAN</code> 去除空格。</td>
+      </tr>
+      <tr>
+          <td><strong>3. Power Query 追加后出现列不匹配</strong></td>
+          <td>两张表的列数或列名不一致。</td>
+          <td>在查询编辑器中先统一列名、使用 <code>添加列</code> 或 <code>删除列</code> 处理差异。</td>
+      </tr>
+      <tr>
+          <td><strong>4. 需要合并的文件在不同文件夹</strong></td>
+          <td>Power Query 可以从文件夹批量读取。</td>
+          <td><code>数据 &gt; 获取数据 &gt; 从文件 &gt; 从文件夹</code>，然后按需追加。</td>
+      </tr>
+      <tr>
+          <td><strong>5. 如何在合并过程中去重</strong></td>
+          <td><code>VLOOKUP</code> 只返回第一条匹配；Power Query 可直接删除重复。</td>
+          <td>在 Power Query 中使用 <code>删除重复项</code>；在公式中使用 <code>UNIQUE</code>（Excel 365+）。</td>
+      </tr>
+      <tr>
+          <td><strong>6. 合并后的数据量太大导致运行缓慢</strong></td>
+          <td>Excel 的公式会在每个单元格计算，Power Query 更高效。</td>
+          <td>尽量使用 Power Query 或 VBA 批处理；减少不必要的列。</td>
+      </tr>
+      <tr>
+          <td><strong>7. 如何合并包含数值和文本的列并保持格式</strong></td>
+          <td>直接拼接会变成文本。</td>
+          <td>使用 <code>TEXT</code> 函数对数值进行格式化，或在 Power Query 中设置列类型。</td>
+      </tr>
+      <tr>
+          <td><strong>8. 如何在合并后保持原始数据不被覆盖</strong></td>
+          <td>直接在原列写公式会覆盖原数据。</td>
+          <td>在新列插入合并结果，或使用 <code>复制 → 仅粘贴值</code> 方式保留合并后数据。</td>
+      </tr>
+      <tr>
+          <td><strong>9. 合并后想要按某列排序</strong></td>
+          <td>需要先完成合并再排序。</td>
+          <td>在 Power Query 的“排序”功能中排，或在 Excel 表格中使用“排序”按钮。</td>
+      </tr>
+      <tr>
+          <td><strong>10. 合并后出现重复行，如何保留唯一记录</strong></td>
+          <td>需要去重。</td>
+          <td>在 Power Query 中“删除重复项”，或在结果表中使用 <code>UNIQUE</code> 函数。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4-小贴士">4. 小贴士<a class="anchor" href="#4-%e5%b0%8f%e8%b4%b4%e5%a3%ab">#</a></h2>
+<ul>
+<li><strong>使用表格（<code>Ctrl+T</code>）</strong> 可让公式自动扩展，保持引用准确。</li>
+<li><strong>多种方法组合使用</strong>：先使用 Power Query 合并，再用 <code>XLOOKUP</code> 进行细粒度填充。</li>
+<li><strong>自定义 VBA</strong>：若合并逻辑非常特殊，可写宏一次性完成，提升效率。</li>
+<li><strong>保持数据清洁</strong>：合并前先去重、去空格、统一大小写，避免后续错误。</li>
+</ul>
+<hr>
+<h2 id="5-结语">5. 结语<a class="anchor" href="#5-%e7%bb%93%e8%af%ad">#</a></h2>
+<p>合并资料是 Excel 中最常见、最实用的操作之一。根据不同的业务需求，你可以选择简单的拼接函数、强大的 Power Query，或精准的 VLOOKUP/XLOOKUP。掌握这三种方案后，你就能轻松处理从单列拼接到跨文件汇总的各种合并任务。祝你使用愉快 🚀!</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E6%A1%A3%E6%A1%88/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何合并档案</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%9B%BA%E5%AE%9A%E6%A0%BC%E5%BC%8F/" class="flex align-center">
+      <span>excel如何固定格式</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-三种分步骤的解决方案">2. 三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案-a使用-函数concatenatetextjoin">方案 A：使用 <strong>函数</strong>（<code>&amp;</code>、<code>CONCATENATE</code>、<code>TEXTJOIN</code>）</a></li>
+        <li><a href="#方案-b使用-power-query获取--变换数据">方案 B：使用 <strong>Power Query</strong>（获取 &amp; 变换数据）</a></li>
+        <li><a href="#方案-c使用-vlookup--index-match-或-xlookup按键值合并">方案 C：使用 <strong>VLOOKUP / INDEX-MATCH</strong> 或 <strong>XLOOKUP</strong>（按键值合并）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答">3. 常见问题解答</a></li>
+    <li><a href="#4-小贴士">4. 小贴士</a></li>
+    <li><a href="#5-结语">5. 结语</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

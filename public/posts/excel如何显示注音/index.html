@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何显示注音（拼音）    目的：在 Excel 中把中文字符自动或手动转换为拼音，或让单元格直接显示含声调的注音。    读者：需要在数据表格里做文字处理、教学、或分析中文文本的用户。    ---   1. 原因分析    | 现象 | 可能原因 | 说明">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E6%98%BE%E7%A4%BA%E6%B3%A8%E9%9F%B3/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何显示注音">
+  <meta property="og:description" content="Excel 如何显示注音（拼音）    目的：在 Excel 中把中文字符自动或手动转换为拼音，或让单元格直接显示含声调的注音。    读者：需要在数据表格里做文字处理、教学、或分析中文文本的用户。    ---   1. 原因分析    | 现象 | 可能原因 | 说明">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何显示注音">
+  <meta itemprop="description" content="Excel 如何显示注音（拼音）    目的：在 Excel 中把中文字符自动或手动转换为拼音，或让单元格直接显示含声调的注音。    读者：需要在数据表格里做文字处理、教学、或分析中文文本的用户。    ---   1. 原因分析    | 现象 | 可能原因 | 说明">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="481">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何显示注音 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E6%98%BE%E7%A4%BA%E6%B3%A8%E9%9F%B3/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何显示注音</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-方案一使用-office-365-自带的-phonetic-函数">2. 方案一：使用 Office 365 自带的 <code>PHONETIC()</code> 函数</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#小技巧">小技巧</a></li>
+        <li><a href="#常见问题">常见问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二利用-vba-自定义拼音函数">3. 方案二：利用 VBA 自定义拼音函数</a>
+      <ul>
+        <li><a href="#31-准备工作">3.1 准备工作</a></li>
+        <li><a href="#32-编写-vba-代码">3.2 编写 VBA 代码</a></li>
+        <li><a href="#33-优化建议">3.3 优化建议</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用第三方插件或在线服务">4. 方案三：使用第三方插件或在线服务</a>
+      <ul>
+        <li><a href="#41-power-query-调用在线-api">4.1 Power Query 调用在线 API</a></li>
+        <li><a href="#42-插件使用">4.2 插件使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答faq">5. 常见问题解答（FAQ）</a></li>
+    <li><a href="#6-小结">6. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何显示注音
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何显示注音拼音">Excel 如何显示注音（拼音）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e6%98%be%e7%a4%ba%e6%b3%a8%e9%9f%b3%e6%8b%bc%e9%9f%b3">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目的</strong>：在 Excel 中把中文字符自动或手动转换为拼音，或让单元格直接显示含声调的注音。<br>
+<strong>读者</strong>：需要在数据表格里做文字处理、教学、或分析中文文本的用户。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>现象</th>
+          <th>可能原因</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>直接输入中文后无拼音显示</td>
+          <td>Excel 默认不解析文字</td>
+          <td>Excel 只处理数值、公式、格式等，文字本身不带拼音信息</td>
+      </tr>
+      <tr>
+          <td>使用 <code>=PHONETIC()</code> 但返回错误</td>
+          <td>公式未启用</td>
+          <td>该公式为 Office 365 专属，旧版本或非英文系统无效</td>
+      </tr>
+      <tr>
+          <td>公式返回空白</td>
+          <td>字符不是汉字</td>
+          <td>只对汉字有效，英文、符号会返回空</td>
+      </tr>
+      <tr>
+          <td>拼音缺少声调</td>
+          <td>公式返回无声调</td>
+          <td>大多数公式默认返回不带声调的拼音，需手动添加或使用更高级函数</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p>综上：Excel 本身不具备完整的“显示注音”功能，需要借助公式、VBA 或第三方插件。</p>
+</blockquote><hr>
+<h2 id="2-方案一使用-office-365-自带的-phonetic-函数">2. 方案一：使用 Office 365 自带的 <code>PHONETIC()</code> 函数<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-office-365-%e8%87%aa%e5%b8%a6%e7%9a%84-phonetic-%e5%87%bd%e6%95%b0">#</a></h2>
+<blockquote class='book-hint '>
+<p>仅适用于 <strong>Office 365</strong> 或 <strong>Excel 2019+</strong>，并且系统必须是 <strong>中文</strong> 语言环境。</p>
+</blockquote><h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>确认版本</strong></p>
+<ul>
+<li>在 Excel 中选择 <code>文件 → 帮助</code>，查看 “Microsoft 365” 或 “Office 2019” 之类的标识。</li>
+</ul>
+</li>
+<li>
+<p><strong>输入中文</strong></p>
+<ul>
+<li>在 A 列输入需要转换的中文，例如 <code>我爱中国</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用公式</strong></p>
+<ul>
+<li>在 B1 单元格输入公式：
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=PHONETIC(A1)</code></pre></li>
+<li>按 <code>Enter</code>，即可得到 <code>wǒ ài zhōngguó</code>（含声调）。</li>
+</ul>
+</li>
+<li>
+<p><strong>向下填充</strong></p>
+<ul>
+<li>将 B1 的右下角拖至需要的行即可自动转换。</li>
+</ul>
+</li>
+</ol>
+<h3 id="小技巧">小技巧<a class="anchor" href="#%e5%b0%8f%e6%8a%80%e5%b7%a7">#</a></h3>
+<ul>
+<li>若只想得到无声调拼音，可使用 <code>=PHONETIC(A1, TRUE)</code></li>
+<li>若需要单字拼音，先拆分字符（见方案二）再使用 <code>PHONETIC</code>。</li>
+</ul>
+<h3 id="常见问题">常见问题<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>公式返回 <code>#N/A</code></td>
+          <td>检查单元格是否为汉字并且系统语言为中文。</td>
+      </tr>
+      <tr>
+          <td>公式返回空白</td>
+          <td>确认 Office 版本支持 <code>PHONETIC</code>。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="3-方案二利用-vba-自定义拼音函数">3. 方案二：利用 VBA 自定义拼音函数<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e5%88%a9%e7%94%a8-vba-%e8%87%aa%e5%ae%9a%e4%b9%89%e6%8b%bc%e9%9f%b3%e5%87%bd%e6%95%b0">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于所有 Excel 版本（含旧版），可返回带声调或不带声调的拼音。</p>
+</blockquote><h3 id="31-准备工作">3.1 准备工作<a class="anchor" href="#31-%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c">#</a></h3>
+<ul>
+<li>需要一个<strong>中文拼音词典</strong>。可使用开源 <code>Pinyin4j</code> 或 <code>OpenCC</code> 的简体拼音 CSV。</li>
+<li>这里提供一个简易示例：将 <code>拼音词典.xlsx</code> 放在同一目录，第一列为汉字，第二列为拼音。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：若不想手动维护词典，可直接把词典嵌入 VBA 代码。</p>
+</blockquote><h3 id="32-编写-vba-代码">3.2 编写 VBA 代码<a class="anchor" href="#32-%e7%bc%96%e5%86%99-vba-%e4%bb%a3%e7%a0%81">#</a></h3>
+<ol>
+<li><strong>打开 VBA 编辑器</strong>
+<ul>
+<li><code>Alt + F11</code></li>
+</ul>
+</li>
+<li><strong>插入模块</strong>
+<ul>
+<li><code>插入 → 模块</code></li>
+</ul>
+</li>
+<li><strong>粘贴代码</strong>（示例仅演示基础逻辑，未包含完整词典）</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; 字典存放在工作簿的 &#34;PinyinDict&#34; 工作表
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">GetPinyin</span>(str <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">Optional</span> WithTone <span style="color:#f92672">As</span> <span style="color:#66d9ef">Boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, j <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> dict <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>, key <span style="color:#f92672">As</span> <span style="color:#66d9ef">Variant</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> ws <span style="color:#f92672">As</span> Worksheet, cell <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> result <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> dict <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;Scripting.Dictionary&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> ws <span style="color:#f92672">=</span> ThisWorkbook.Worksheets(<span style="color:#e6db74">&#34;PinyinDict&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 读取词典
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> cell <span style="color:#f92672">In</span> ws.Range(<span style="color:#e6db74">&#34;A1:A&#34;</span> <span style="color:#f92672">&amp;</span> ws.Cells(ws.Rows.Count, <span style="color:#e6db74">&#34;A&#34;</span>).End(xlUp).Row)
+</span></span><span style="display:flex;"><span>        key <span style="color:#f92672">=</span> cell.Value
+</span></span><span style="display:flex;"><span>        dict(key) <span style="color:#f92672">=</span> cell.Offset(0, 1).Value
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> cell
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 对每个字符进行拆分
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> Len(str)
+</span></span><span style="display:flex;"><span>        key <span style="color:#f92672">=</span> Mid(str, i, 1)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> dict.Exists(key) <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> result <span style="color:#f92672">&amp;</span> dict(key) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; &#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> result <span style="color:#f92672">&amp;</span> key <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; &#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> <span style="color:#66d9ef">Not</span> WithTone <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39; 去除声调示例：仅保留拼音字母
+</span></span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> Replace(result, <span style="color:#e6db74">&#34;ā&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> Replace(result, <span style="color:#e6db74">&#34;á&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> Replace(result, <span style="color:#e6db74">&#34;ǎ&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> Replace(result, <span style="color:#e6db74">&#34;à&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39; 继续添加其它声调字母
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    GetPinyin <span style="color:#f92672">=</span> Trim(result)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span></span></span></code></pre></div><ol start="4">
+<li>
+<p><strong>使用公式</strong></p>
+<ul>
+<li>在 Excel 单元格中输入：
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=GetPinyin(A1, TRUE)   &#39; 带声调
+=GetPinyin(A1, FALSE)  &#39; 不带声调</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>向下填充</strong></p>
+</li>
+</ol>
+<h3 id="33-优化建议">3.3 优化建议<a class="anchor" href="#33-%e4%bc%98%e5%8c%96%e5%bb%ba%e8%ae%ae">#</a></h3>
+<ul>
+<li>将词典直接嵌入到 VBA 整个 <code>Dictionary</code> 对象中，避免每次读取文件。</li>
+<li>若需要支持多音字，可让词典返回 <strong>数组</strong>，手动或使用 <code>IFERROR</code> 选择对应读音。</li>
+</ul>
+<hr>
+<h2 id="4-方案三使用第三方插件或在线服务">4. 方案三：使用第三方插件或在线服务<a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8%e7%ac%ac%e4%b8%89%e6%96%b9%e6%8f%92%e4%bb%b6%e6%88%96%e5%9c%a8%e7%ba%bf%e6%9c%8d%e5%8a%a1">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>插件 / 服务</th>
+          <th>适用版本</th>
+          <th>特色</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>拼音插件</strong>（如 <code>pinyin-excel</code>）</td>
+          <td>任何</td>
+          <td>直接在单元格右键菜单中添加「拼音」选项</td>
+      </tr>
+      <tr>
+          <td><strong>Power Query + API</strong></td>
+          <td>2016+</td>
+          <td>调用在线拼音 API（如百度、腾讯）</td>
+      </tr>
+      <tr>
+          <td><strong>Google Sheets</strong></td>
+          <td>Web</td>
+          <td>通过 <code>GOOGLEPARSING</code> 等自带函数实现</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="41-power-query-调用在线-api">4.1 Power Query 调用在线 API<a class="anchor" href="#41-power-query-%e8%b0%83%e7%94%a8%e5%9c%a8%e7%ba%bf-api">#</a></h3>
+<ol>
+<li><strong>打开 Power Query</strong>
+<ul>
+<li><code>数据 → 获取 &amp; 转换数据 → 从其他源 → 空白查询</code></li>
+</ul>
+</li>
+<li><strong>输入 M 代码</strong>（示例使用百度拼音 API，需先申请 API key）</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-m" data-lang="m"><span style="display:flex;"><span>let
+</span></span><span style="display:flex;"><span>    Source <span style="color:#f92672">=</span> Excel<span style="color:#960050;background-color:#1e0010">.</span>CurrentWorkbook(){[Name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Sheet1&#34;</span>]}[Content],
+</span></span><span style="display:flex;"><span>    AddPinyin <span style="color:#f92672">=</span> Table<span style="color:#960050;background-color:#1e0010">.</span>AddColumn(Source, <span style="color:#e6db74">&#34;Pinyin&#34;</span>, each 
+</span></span><span style="display:flex;"><span>        let
+</span></span><span style="display:flex;"><span>            word <span style="color:#f92672">=</span> [<span style="color:#960050;background-color:#1e0010">中文</span>],
+</span></span><span style="display:flex;"><span>            url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://api.baidu.com/api?query=&#34;</span> <span style="color:#f92672">&amp;</span> Text<span style="color:#960050;background-color:#1e0010">.</span>EncodeUrl(word) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&amp;key=YOUR_KEY&#34;</span>,
+</span></span><span style="display:flex;"><span>            json <span style="color:#f92672">=</span> Json<span style="color:#960050;background-color:#1e0010">.</span>Document(Web<span style="color:#960050;background-color:#1e0010">.</span>Contents(url)),
+</span></span><span style="display:flex;"><span>            pinyin <span style="color:#f92672">=</span> json[<span style="color:#960050;background-color:#1e0010">拼音</span>] <span style="color:#f92672">//</span> <span style="color:#960050;background-color:#1e0010">根据返回结构调整</span>
+</span></span><span style="display:flex;"><span>        in
+</span></span><span style="display:flex;"><span>            pinyin
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>in
+</span></span><span style="display:flex;"><span>    AddPinyin</span></span></code></pre></div><ol start="3">
+<li><strong>加载结果</strong>
+<ul>
+<li><code>关闭并加载到工作表</code></li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：网络延迟会影响转换速度，且需要 API 额度。</p>
+</blockquote><h3 id="42-插件使用">4.2 插件使用<a class="anchor" href="#42-%e6%8f%92%e4%bb%b6%e4%bd%bf%e7%94%a8">#</a></h3>
+<ul>
+<li>在 Office Store 搜索 “Pinyin” 或 “拼音”</li>
+<li>安装后即可在单元格右键菜单或功能区中看到 “拼音” 选项</li>
+<li>直接选中单元格，点击插件即可生成拼音</li>
+</ul>
+<hr>
+<h2 id="5-常见问题解答faq">5. 常见问题解答（FAQ）<a class="anchor" href="#5-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>题目</th>
+          <th>说明</th>
+          <th>解决思路</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1: 为什么 <code>PHONETIC()</code> 函数返回空白？</strong></td>
+          <td>可能是单元格包含非汉字、Office 版本不足或语言设置错误。</td>
+          <td>先检查单元格内容；升级 Office；确认系统语言为中文。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2: 如何在 Excel 中显示声调？</strong></td>
+          <td>默认 <code>PHONETIC()</code> 和大多数插件返回不带声调的拼音。</td>
+          <td>在 <code>PHONETIC()</code> 后加 <code>, TRUE</code>；或使用自定义 VBA 代码处理声调。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3: 处理多音字时应如何选择读音？</strong></td>
+          <td>拼音词典中多音字可返回数组。</td>
+          <td>在 VBA 里用 <code>IFERROR</code> 或 <code>CHOOSE</code> 取首个读音；或手动标注。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4: 对大量文本进行拼音转换，速度慢怎么办？</strong></td>
+          <td>公式或插件会逐行处理，性能受限。</td>
+          <td>使用 VBA 批量处理；或将数据导入 Power Query 调用批量 API。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5: 能否在单元格中同时显示原文和拼音？</strong></td>
+          <td>可以使用 <code>&amp;</code> 连接。</td>
+          <td><code>=A1 &amp; &quot; (&quot; &amp; GetPinyin(A1, TRUE) &amp; &quot;)&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="6-小结">6. 小结<a class="anchor" href="#6-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>Office 365</strong> 用户可直接使用 <code>PHONETIC()</code> 公式；</li>
+<li><strong>旧版</strong> 或需要自定义词典时，建议使用 <strong>VBA</strong>；</li>
+<li>对于更复杂需求（多音字、批量转换），可使用 <strong>Power Query + API</strong> 或 <strong>第三方插件</strong>。</li>
+</ul>
+<p>根据自己的 Excel 版本、工作量与对声调的需求，选择最合适的方案即可轻松在 Excel 中实现“显示注音”。祝你使用愉快!</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E6%93%8D%E4%BD%9C/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何操作</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E6%B1%87%E5%87%BA/" class="flex align-center">
+      <span>excel如何汇出</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-方案一使用-office-365-自带的-phonetic-函数">2. 方案一：使用 Office 365 自带的 <code>PHONETIC()</code> 函数</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#小技巧">小技巧</a></li>
+        <li><a href="#常见问题">常见问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二利用-vba-自定义拼音函数">3. 方案二：利用 VBA 自定义拼音函数</a>
+      <ul>
+        <li><a href="#31-准备工作">3.1 准备工作</a></li>
+        <li><a href="#32-编写-vba-代码">3.2 编写 VBA 代码</a></li>
+        <li><a href="#33-优化建议">3.3 优化建议</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用第三方插件或在线服务">4. 方案三：使用第三方插件或在线服务</a>
+      <ul>
+        <li><a href="#41-power-query-调用在线-api">4.1 Power Query 调用在线 API</a></li>
+        <li><a href="#42-插件使用">4.2 插件使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答faq">5. 常见问题解答（FAQ）</a></li>
+    <li><a href="#6-小结">6. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

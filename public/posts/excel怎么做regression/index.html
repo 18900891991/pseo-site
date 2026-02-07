@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 做回归分析（Regression）完整教程   目标    了解在 Excel 中完成一次线性回归的常用方法，掌握三种不同的实现路径，并解答常见疑难问题。    受众    适用于需要快速做统计建模、数据分析或学术报告的商务人士、学生和科研人员。    ---">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%81%9Aregression/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么做regression">
+  <meta property="og:description" content="Excel 做回归分析（Regression）完整教程   目标    了解在 Excel 中完成一次线性回归的常用方法，掌握三种不同的实现路径，并解答常见疑难问题。    受众    适用于需要快速做统计建模、数据分析或学术报告的商务人士、学生和科研人员。    ---">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel怎么做regression">
+  <meta itemprop="description" content="Excel 做回归分析（Regression）完整教程   目标    了解在 Excel 中完成一次线性回归的常用方法，掌握三种不同的实现路径，并解答常见疑难问题。    受众    适用于需要快速做统计建模、数据分析或学术报告的商务人士、学生和科研人员。    ---">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="317">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么做regression | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%81%9Aregression/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么做regression</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-三种分步骤的解决方案">2. 三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#21-方法一使用-data-analysis-工具包">2‑1. 方法一：使用 Data Analysis 工具包</a></li>
+        <li><a href="#22-方法二使用-linest-函数">2‑2. 方法二：使用 LINEST 函数</a></li>
+        <li><a href="#23-方法三在图表中添加趋势线">2‑3. 方法三：在图表中添加趋势线</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么做regression
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-做回归分析regression完整教程">Excel 做回归分析（Regression）完整教程<a class="anchor" href="#excel-%e5%81%9a%e5%9b%9e%e5%bd%92%e5%88%86%e6%9e%90regression%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目标</strong><br>
+了解在 Excel 中完成一次线性回归的常用方法，掌握三种不同的实现路径，并解答常见疑难问题。<br>
+<strong>受众</strong><br>
+适用于需要快速做统计建模、数据分析或学术报告的商务人士、学生和科研人员。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>为什么要用 Excel 做回归</th>
+          <th>需要注意的点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>快速验证假设</strong></td>
+          <td>Excel 具备数据分析插件，能在几步内得到回归结果。</td>
+          <td>仅适合 <strong>线性</strong> 或 <strong>简单的非线性</strong> 关系。</td>
+      </tr>
+      <tr>
+          <td><strong>可视化与报告</strong></td>
+          <td>Excel 的图表工具可以直接在工作表里生成散点图+趋势线。</td>
+          <td>结果展示需要手动调整格式。</td>
+      </tr>
+      <tr>
+          <td><strong>无编程背景</strong></td>
+          <td>通过公式或插件实现，无需编写代码。</td>
+          <td>对于大样本、复杂模型（多元、时间序列）限制较多。</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>总结</strong>：Excel 适合作为 <strong>快速原型</strong> 或 <strong>教学演示</strong> 的工具，而不适合作为生产环境的深度统计平台。</p>
+</blockquote><hr>
+<h2 id="2-三种分步骤的解决方案">2. 三种分步骤的解决方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>下面分别介绍 <strong>① Data Analysis 工具包</strong>、<strong>② LINEST 函数</strong> 与 <strong>③ Trendline（趋势线）</strong> 三种常用方法。每种方法都配有完整步骤，方便你根据自己的需求选择。</p>
+</blockquote><h3 id="21-方法一使用-data-analysis-工具包">2‑1. 方法一：使用 Data Analysis 工具包<a class="anchor" href="#21-%e6%96%b9%e6%b3%95%e4%b8%80%e4%bd%bf%e7%94%a8-data-analysis-%e5%b7%a5%e5%85%b7%e5%8c%85">#</a></h3>
+<blockquote class='book-hint '>
+<p><em>适合：一次性回归、需要完整统计报告（R²、F‑统计、p‑值等）</em></p>
+</blockquote><h4 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h4>
+<ol>
+<li>
+<p><strong>启用插件</strong></p>
+<ul>
+<li><code>文件</code> → <code>选项</code> → <code>加载项</code> → 在“管理”框选择 <code>Excel 加载项</code> → <code>转到</code></li>
+<li>勾选 <code>Analysis ToolPak</code> → <code>确定</code></li>
+</ul>
+</li>
+<li>
+<p><strong>准备数据</strong></p>
+<ul>
+<li>例如 A 列为自变量 X，B 列为因变量 Y，第一行留标题。</li>
+<li>数据不允许有空值；如果有缺失请先填充或删除。</li>
+</ul>
+</li>
+<li>
+<p><strong>打开工具包</strong></p>
+<ul>
+<li><code>数据</code> → <code>数据分析</code> → 选择 <code>回归</code> → <code>确定</code></li>
+</ul>
+</li>
+<li>
+<p><strong>设置参数</strong></p>
+<ul>
+<li><strong>Y 变量范围</strong>：选择 B 列（含标题）</li>
+<li><strong>X 变量范围</strong>：选择 A 列（含标题）</li>
+<li>选中 <code>标签</code>（如果包含标题）</li>
+<li>选择输出位置或新工作表</li>
+<li>若需要加入常数项（默认是 1），保持默认即可；若想手动调整，勾选 <code>常数（-1）</code></li>
+</ul>
+</li>
+<li>
+<p><strong>查看结果</strong></p>
+<ul>
+<li>Excel 会生成包含 <code>回归统计</code>、<code>ANOVA</code>、<code>系数</code>、<code>残差</code> 等完整表格。</li>
+<li>关注 <code>R²</code>、<code>显著性 F</code>、各自变量的 <code>p‑值</code>，以及 <code>标准误</code>、<code>t‑值</code>。</li>
+</ul>
+</li>
+</ol>
+<h4 id="小贴士">小贴士<a class="anchor" href="#%e5%b0%8f%e8%b4%b4%e5%a3%ab">#</a></h4>
+<ul>
+<li><strong>多元回归</strong>：在 X 范围里把多列连续选取即可。</li>
+<li><strong>自定义置信区间</strong>：在回归对话框中勾选 <code>置信区间</code>。</li>
+</ul>
+<hr>
+<h3 id="22-方法二使用-linest-函数">2‑2. 方法二：使用 LINEST 函数<a class="anchor" href="#22-%e6%96%b9%e6%b3%95%e4%ba%8c%e4%bd%bf%e7%94%a8-linest-%e5%87%bd%e6%95%b0">#</a></h3>
+<blockquote class='book-hint '>
+<p><em>适合：快速得到斜率与截距，或在单元格中做进一步计算。</em></p>
+</blockquote><h4 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h4>
+<ol>
+<li>
+<p><strong>准备数据</strong></p>
+<ul>
+<li>同上，A 列 X，B 列 Y。</li>
+</ul>
+</li>
+<li>
+<p><strong>写入函数</strong></p>
+<ul>
+<li>选中一个 2 行 × 2 列的区域（例如 D1:E2）。</li>
+<li>在公式栏输入 <code>=LINEST(B2:B101, A2:A101, TRUE, TRUE)</code>（假设有 100 条数据）。</li>
+<li>按 <code>Ctrl+Shift+Enter</code>（数组公式）确认。</li>
+</ul>
+</li>
+<li>
+<p><strong>读取结果</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>位置</th>
+          <th>含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>D1</td>
+          <td>斜率 β₁</td>
+      </tr>
+      <tr>
+          <td>E1</td>
+          <td>截距 β₀</td>
+      </tr>
+      <tr>
+          <td>D2</td>
+          <td>斜率标准误</td>
+      </tr>
+      <tr>
+          <td>E2</td>
+          <td>截距标准误</td>
+      </tr>
+      <tr>
+          <td>D3/E3</td>
+          <td>斜率/截距的 t‑值</td>
+      </tr>
+      <tr>
+          <td>D4/E4</td>
+          <td>斜率/截距的 p‑值</td>
+      </tr>
+      <tr>
+          <td>D5/E5</td>
+          <td>相关系数 R² 等</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p><strong>生成预测值</strong></p>
+<ul>
+<li>在 C 列输入 <code>=D1*A2 + E1</code>（使用 D1、E1 的斜率与截距），并向下填充。</li>
+</ul>
+</li>
+</ol>
+<h4 id="小贴士-1">小贴士<a class="anchor" href="#%e5%b0%8f%e8%b4%b4%e5%a3%ab-1">#</a></h4>
+<ul>
+<li><code>LINEST</code> 的第三个参数是 <code>const</code>，若设为 <code>FALSE</code> 表示截距为 0。</li>
+<li>第四个参数 <code>stats</code> 设为 <code>TRUE</code> 时会返回完整统计信息；设为 <code>FALSE</code> 只返回斜率与截距。</li>
+</ul>
+<hr>
+<h3 id="23-方法三在图表中添加趋势线">2‑3. 方法三：在图表中添加趋势线<a class="anchor" href="#23-%e6%96%b9%e6%b3%95%e4%b8%89%e5%9c%a8%e5%9b%be%e8%a1%a8%e4%b8%ad%e6%b7%bb%e5%8a%a0%e8%b6%8b%e5%8a%bf%e7%ba%bf">#</a></h3>
+<blockquote class='book-hint '>
+<p><em>适合：需要直观展示回归线与散点图，或者在演示中快速说明关系。</em></p>
+</blockquote><h4 id="步骤-2">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2">#</a></h4>
+<ol>
+<li>
+<p><strong>绘制散点图</strong></p>
+<ul>
+<li>选中 A 列 X 与 B 列 Y，插入 → <code>散点图</code> → <code>带直线的散点图</code>（仅线不显示）</li>
+</ul>
+</li>
+<li>
+<p><strong>添加趋势线</strong></p>
+<ul>
+<li>右键单击数据点 → <code>添加趋势线</code></li>
+<li>在右侧面板选择 <code>线性</code>，勾选 <code>显示方程式</code> 与 <code>显示 R² 值</code></li>
+</ul>
+</li>
+<li>
+<p><strong>格式化</strong></p>
+<ul>
+<li>右键趋势线 → <code>设置趋势线格式</code>，可调整颜色、粗细或显示对数/多项式等。</li>
+</ul>
+</li>
+</ol>
+<h4 id="小贴士-2">小贴士<a class="anchor" href="#%e5%b0%8f%e8%b4%b4%e5%a3%ab-2">#</a></h4>
+<ul>
+<li>该方法不提供 p‑值、ANOVA 等统计量；仅用于可视化。</li>
+<li>通过右键 <code>设置趋势线格式</code> → <code>趋势线选项</code> → <code>显示方程式</code>，可以把斜率和截距复制出来，用于后续计算。</li>
+</ul>
+<hr>
+<h2 id="3-常见问题解答faq">3. 常见问题解答（FAQ）<a class="anchor" href="#3-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>Data Analysis 插件没有显示怎么办？</strong></td>
+          <td>确认已在 <code>文件 &gt; 选项 &gt; 加载项</code> 勾选 <code>Analysis ToolPak</code>；若仍无效，尝试重新安装 Office 或更新到最新版本。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>回归结果中的 p‑值为 1，说明什么？</strong></td>
+          <td>数据可能完全不相关或样本量太小；检查是否存在离群点或使用了错误的自变量。</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>如何做多元回归？</strong></td>
+          <td>在 <code>回归</code> 对话框中，X 范围选取多列（如 A:C），即可得到每个自变量的系数与统计量。</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>LINEST 给出的斜率为负，但图表显示正相关。</strong></td>
+          <td>检查数据是否按升序排列，或者是否使用了错误的列；也可能是因为存在误差导致拟合线有噪声。</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>如何在 Excel 里做非线性回归（如指数或对数）？</strong></td>
+          <td>可以先对数据做对数转换后使用 LINEST，或者在 <code>趋势线</code> 里选择 <code>指数</code>、<code>对数</code>、<code>幂函数</code> 等；若需要更高级的模型，可使用 VBA 或 R 进行交互。</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>回归结果显示“#DIV/0!”</strong></td>
+          <td>说明 X 或 Y 列存在空值或零值导致分母为0；请先清理数据。</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td><strong>如何在工作簿中自动更新回归结果？</strong></td>
+          <td>将 LINEST 或 Data Analysis 的输出单元格用 <code>INDIRECT</code> 或 <code>OFFSET</code> 关联到数据源；每次数据变更后，公式会自动重算。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4-小结">4. 小结<a class="anchor" href="#4-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>Data Analysis</strong>：最全、最直观的统计报告，适合一次性分析。</li>
+<li><strong>LINEST</strong>：数组公式，灵活可嵌入其他计算，适合需要在单元格里直接得到系数的场景。</li>
+<li><strong>趋势线</strong>：快速可视化，适合演示与报告。</li>
+</ul>
+<p>选择合适的方法，配合清晰的数据准备与结果解释，你就能在 Excel 中轻松完成回归分析。祝你使用愉快 🚀!</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E9%96%8B%E6%A0%B9%E8%99%9F/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何開根號</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%81%9A%E8%A1%A8%E6%A0%BC/" class="flex align-center">
+      <span>excel怎么做表格</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-三种分步骤的解决方案">2. 三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#21-方法一使用-data-analysis-工具包">2‑1. 方法一：使用 Data Analysis 工具包</a></li>
+        <li><a href="#22-方法二使用-linest-函数">2‑2. 方法二：使用 LINEST 函数</a></li>
+        <li><a href="#23-方法三在图表中添加趋势线">2‑3. 方法三：在图表中添加趋势线</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

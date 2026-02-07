@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 叠图（Stacked Chart）完整教程   叠图（Stacked Chart）是把若干系列的数据“叠加”在一起的图表，常见于柱形、条形、面积或折线图。它可以帮助你直观展示各部分占整体的比例或随时间的累积变化。  ---   一、原因分析  | 目的 | 叠图的优势 | 适用">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%8F%A0%E5%9B%BE/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么叠图">
+  <meta property="og:description" content="Excel 叠图（Stacked Chart）完整教程   叠图（Stacked Chart）是把若干系列的数据“叠加”在一起的图表，常见于柱形、条形、面积或折线图。它可以帮助你直观展示各部分占整体的比例或随时间的累积变化。  ---   一、原因分析  | 目的 | 叠图的优势 | 适用">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel怎么叠图">
+  <meta itemprop="description" content="Excel 叠图（Stacked Chart）完整教程   叠图（Stacked Chart）是把若干系列的数据“叠加”在一起的图表，常见于柱形、条形、面积或折线图。它可以帮助你直观展示各部分占整体的比例或随时间的累积变化。  ---   一、原因分析  | 目的 | 叠图的优势 | 适用">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="288">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么叠图 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%8F%A0%E5%9B%BE/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么叠图</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#一原因分析">一、原因分析</a></li>
+    <li><a href="#二3-种分步骤的解决方案">二、3 种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案-1柱形叠图stacked-column--stacked-bar">方案 1：柱形叠图（Stacked Column / Stacked Bar）</a></li>
+        <li><a href="#方案-2面积叠图stacked-area">方案 2：面积叠图（Stacked Area）</a></li>
+        <li><a href="#方案-3组合图overlay-叠加多图表">方案 3：组合图（Overlay 叠加多图表）</a></li>
+      </ul>
+    </li>
+    <li><a href="#三常见问题解答faq">三、常见问题解答（FAQ）</a></li>
+    <li><a href="#四实用技巧">四、实用技巧</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么叠图
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-叠图stacked-chart完整教程">Excel 叠图（Stacked Chart）完整教程<a class="anchor" href="#excel-%e5%8f%a0%e5%9b%bestacked-chart%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>叠图（Stacked Chart）是把若干系列的数据“叠加”在一起的图表，常见于柱形、条形、面积或折线图。它可以帮助你直观展示各部分占整体的比例或随时间的累积变化。</p>
+</blockquote><hr>
+<h2 id="一原因分析">一、原因分析<a class="anchor" href="#%e4%b8%80%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>目的</th>
+          <th>叠图的优势</th>
+          <th>适用场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>展示整体与部分关系</strong></td>
+          <td>每个柱/线/面积从底部到顶部依次堆叠，能一眼看出各部分占比</td>
+          <td>销售额按地区/产品归档、预算占比、人口结构</td>
+      </tr>
+      <tr>
+          <td><strong>追踪累积变化</strong></td>
+          <td>随时间累积的数值在上层“接合”形成“堆叠”</td>
+          <td>预算累计、库存累计、累计收益</td>
+      </tr>
+      <tr>
+          <td><strong>简化图表数量</strong></td>
+          <td>只用一张图表展示多组数据，避免多张图表造成页面拥挤</td>
+          <td>复合指标、比较同类指标</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：叠图只能展示 <strong>相对关系</strong>，不适合需要显示绝对差异或单一系列趋势的情况。</p>
+</blockquote><hr>
+<h2 id="二3-种分步骤的解决方案">二、3 种分步骤的解决方案<a class="anchor" href="#%e4%ba%8c3-%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>下面给出三种常见的叠图实现方式，分别适用于 <strong>柱形</strong>、<strong>面积</strong>、<strong>组合图</strong>。每一步都配有详细说明，确保你能在任何版本的 Excel（Excel 2016+、Office 365 等）手动完成。</p>
+</blockquote><h3 id="方案-1柱形叠图stacked-column--stacked-bar">方案 1：柱形叠图（Stacked Column / Stacked Bar）<a class="anchor" href="#%e6%96%b9%e6%a1%88-1%e6%9f%b1%e5%bd%a2%e5%8f%a0%e5%9b%bestacked-column--stacked-bar">#</a></h3>
+<ol>
+<li>
+<p><strong>准备数据</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>月份 | 产品A | 产品B | 产品C
+</span></span><span style="display:flex;"><span>1月  |  50   |  30   |  20
+</span></span><span style="display:flex;"><span>2月  |  60   |  25   |  35
+</span></span><span style="display:flex;"><span>3月  |  70   |  40   |  30</span></span></code></pre></div><ul>
+<li>数据列标题放在第一行，第一列为 X 轴标签。</li>
+</ul>
+</li>
+<li>
+<p><strong>插入柱形图</strong></p>
+<ul>
+<li>选中整个数据区域（含标题）。</li>
+<li><code>插入</code> → <code>图表</code> → <code>柱形图</code> → <code>堆叠柱形图</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>调整图表</strong></p>
+<ul>
+<li>右键点击图表 → <code>设置数据系列格式</code> → 选择 <code>堆叠</code>。</li>
+<li>如需换成堆叠条形图，单击图表 → <code>更改图表类型</code> → <code>条形图</code> → <code>堆叠条形图</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>美化</strong></p>
+<ul>
+<li>添加数据标签：<code>图表工具</code> → <code>图表设计</code> → <code>添加图表元素</code> → <code>数据标签</code> → <code>在内部末尾</code>。</li>
+<li>给每个系列设置不同颜色，保持对比。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="方案-2面积叠图stacked-area">方案 2：面积叠图（Stacked Area）<a class="anchor" href="#%e6%96%b9%e6%a1%88-2%e9%9d%a2%e7%a7%af%e5%8f%a0%e5%9b%bestacked-area">#</a></h3>
+<ol>
+<li>
+<p><strong>准备数据</strong><br>
+与方案 1 同样格式，建议使用 <strong>正值</strong> 或 <strong>负值</strong> 统一。</p>
+</li>
+<li>
+<p><strong>插入面积图</strong></p>
+<ul>
+<li>选中数据区域。</li>
+<li><code>插入</code> → <code>图表</code> → <code>面积图</code> → <code>堆叠面积图</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>设置堆叠</strong></p>
+<ul>
+<li>面积图默认已堆叠。若出现分离，右键系列 → <code>设置数据系列格式</code> → <code>堆叠</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>调整</strong></p>
+<ul>
+<li>点击图例 → <code>格式化图例</code> → <code>无</code>（可选）。</li>
+<li>对 Y 轴使用 <code>百分比</code> 或 <code>数值</code> 取决于需求。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="方案-3组合图overlay-叠加多图表">方案 3：组合图（Overlay 叠加多图表）<a class="anchor" href="#%e6%96%b9%e6%a1%88-3%e7%bb%84%e5%90%88%e5%9b%beoverlay-%e5%8f%a0%e5%8a%a0%e5%a4%9a%e5%9b%be%e8%a1%a8">#</a></h3>
+<p>在某些情况下，你可能想把 <strong>柱形</strong> 与 <strong>折线</strong> 或 <strong>面积</strong> 叠加显示。</p>
+<ol>
+<li>
+<p><strong>准备数据</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>月份 | 销售额 | 成本 | 利润
+</span></span><span style="display:flex;"><span>1月  |  100   |  60  |  40
+</span></span><span style="display:flex;"><span>2月  |  120   |  70  |  50
+</span></span><span style="display:flex;"><span>3月  |  150   |  90  |  60</span></span></code></pre></div></li>
+<li>
+<p><strong>插入组合图</strong></p>
+<ul>
+<li>选中 <code>销售额</code> 和 <code>成本</code> 两列。</li>
+<li><code>插入</code> → <code>图表</code> → <code>柱形图</code> → <code>堆叠柱形图</code>。</li>
+<li>右键点击 <code>利润</code> 系列 → <code>更改系列图表类型</code> → 选择 <code>折线图</code>。</li>
+<li>若想让折线使用第二坐标轴：勾选 <code>次坐标轴</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>同步轴</strong></p>
+<ul>
+<li>右键 Y 轴 → <code>设置坐标轴格式</code> → 调整最小/最大值，确保图表比例合适。</li>
+</ul>
+</li>
+<li>
+<p><strong>美化</strong></p>
+<ul>
+<li>给折线加圆点标记。</li>
+<li>调整图例位置、字体大小。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="三常见问题解答faq">三、常见问题解答（FAQ）<a class="anchor" href="#%e4%b8%89%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1. 叠图会让单个系列的数值不明显吗？</strong></td>
+          <td>你可以在图表中添加<strong>数据标签</strong>，或把系列拆成多张图表。使用 <strong>百分比堆叠</strong> 也能让每部分比例更直观。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2. 如何在叠图中显示百分比而不是绝对值？</strong></td>
+          <td>右键图表 → <code>设置数据系列格式</code> → <code>数据标签</code> → 选中 <code>显示百分比</code>。或在 Excel 里使用 <code>=B2/SUM(B2:D2)</code> 计算比例并在图表里引用。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3. 某些系列需要用次坐标轴，如何做到？</strong></td>
+          <td>右键该系列 → <code>更改系列图表类型</code> → 选 <code>次坐标轴</code>。随后在 <code>坐标轴</code> 里调整比例。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4. 叠图能否处理负数？</strong></td>
+          <td>负数会在底部反向堆叠，导致视觉混乱。可以先将负数取绝对值并单独标注，或者使用 <strong>100% 堆叠柱形图</strong> 只展示比例。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5. 如何在叠图中添加图例标题或轴标题？</strong></td>
+          <td><code>图表工具</code> → <code>图表设计</code> → <code>添加图表元素</code> → <code>图例/轴标题</code>。然后点击文字框自行编辑。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6. 叠图的颜色不够区分，怎么办？</strong></td>
+          <td>右键系列 → <code>设置数据系列格式</code> → <code>填充</code>，手动选择颜色。使用对比色或渐变色能让图表更清晰。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7. 如何在叠图中添加趋势线？</strong></td>
+          <td>只适用于折线或柱形（可在 Excel 2019+ 里添加）。右键系列 → <code>添加趋势线</code> → 选择类型。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="四实用技巧">四、实用技巧<a class="anchor" href="#%e5%9b%9b%e5%ae%9e%e7%94%a8%e6%8a%80%e5%b7%a7">#</a></h2>
+<ul>
+<li><strong>使用公式自动计算累计值</strong>：在叠图中如果需要显示累计值，可用 <code>=SUM($B$2:B2)</code> 生成累积列，再作为单独系列显示。</li>
+<li><strong>保持图表可读性</strong>：不要在一张图中堆叠超过 5~6 个系列，过多会导致颜色难辨。</li>
+<li><strong>利用条件格式化</strong>：在原始表格中用颜色标记异常值，图表颜色可同步（使用数据系列颜色与表格一致）。</li>
+</ul>
+<hr>
+<blockquote class='book-hint '>
+<p><strong>小结</strong><br>
+叠图是 Excel 中非常强大的可视化工具，能够帮助你一眼把握各组数据之间的相对关系与累积趋势。通过上述三种分步骤方案，你可以轻松创建柱形、面积或组合叠图，并根据常见问题及时调整。祝你绘图愉快！</p>
+</blockquote></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%8A%A0%E4%B8%80%E8%A1%8C/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么加一行</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%90%88%E5%B9%B6%E5%82%A8%E5%AD%98%E6%A0%BC/" class="flex align-center">
+      <span>excel怎么合并储存格</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#一原因分析">一、原因分析</a></li>
+    <li><a href="#二3-种分步骤的解决方案">二、3 种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案-1柱形叠图stacked-column--stacked-bar">方案 1：柱形叠图（Stacked Column / Stacked Bar）</a></li>
+        <li><a href="#方案-2面积叠图stacked-area">方案 2：面积叠图（Stacked Area）</a></li>
+        <li><a href="#方案-3组合图overlay-叠加多图表">方案 3：组合图（Overlay 叠加多图表）</a></li>
+      </ul>
+    </li>
+    <li><a href="#三常见问题解答faq">三、常见问题解答（FAQ）</a></li>
+    <li><a href="#四实用技巧">四、实用技巧</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

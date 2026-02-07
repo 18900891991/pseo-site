@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 怎么加 Bullet Point（子弹点）？  在 Excel 中，虽然不像 Word 那样有专门的“项目符号”工具，但我们依旧可以通过多种方式在单元格里添加 Bullet Point（子弹点）。下面提供 原因分析、三种分步骤的解决方案，以及 常见问题解答">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%8A%A0bullet-point/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么加bullet point">
+  <meta property="og:description" content="Excel 怎么加 Bullet Point（子弹点）？  在 Excel 中，虽然不像 Word 那样有专门的“项目符号”工具，但我们依旧可以通过多种方式在单元格里添加 Bullet Point（子弹点）。下面提供 原因分析、三种分步骤的解决方案，以及 常见问题解答">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel怎么加bullet point">
+  <meta itemprop="description" content="Excel 怎么加 Bullet Point（子弹点）？  在 Excel 中，虽然不像 Word 那样有专门的“项目符号”工具，但我们依旧可以通过多种方式在单元格里添加 Bullet Point（子弹点）。下面提供 原因分析、三种分步骤的解决方案，以及 常见问题解答">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="215">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么加bullet point | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%8A%A0bullet-point/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么加bullet point</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#解决方案一手动插入子弹符号">解决方案一：手动插入子弹符号</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#解决方案二使用自定义数字格式">解决方案二：使用自定义数字格式</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#解决方案三使用公式char-或-utf-8生成子弹点">解决方案三：使用公式（CHAR 或 UTF-8）生成子弹点</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答faq">常见问题解答（FAQ）</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么加bullet point
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-怎么加-bullet-point子弹点">Excel 怎么加 Bullet Point（子弹点）？<a class="anchor" href="#excel-%e6%80%8e%e4%b9%88%e5%8a%a0-bullet-point%e5%ad%90%e5%bc%b9%e7%82%b9">#</a></h1>
+<p>在 Excel 中，虽然不像 Word 那样有专门的“项目符号”工具，但我们依旧可以通过多种方式在单元格里添加 <strong>Bullet Point</strong>（子弹点）。下面提供 <strong>原因分析</strong>、<strong>三种分步骤的解决方案</strong>，以及 <strong>常见问题解答</strong>，帮助你快速掌握。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要子弹点的原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>列表展示</td>
+          <td>让多项内容一目了然，提升可读性</td>
+      </tr>
+      <tr>
+          <td>电子报表</td>
+          <td>结构化描述、层次分明</td>
+      </tr>
+      <tr>
+          <td>备注说明</td>
+          <td>在单元格内形成简短的项目列表</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li><strong>可读性</strong>：子弹点帮助读者快速抓住要点。</li>
+<li><strong>统一排版</strong>：在同一列或同一工作表中使用统一的符号，保持风格一致。</li>
+<li><strong>兼容性</strong>：大多数字体自带 Unicode 子弹符号，复制粘贴后可以在 Word、PowerPoint 等软件中保持一致。</li>
+</ul>
+<hr>
+<h2 id="解决方案一手动插入子弹符号">解决方案一：手动插入子弹符号<a class="anchor" href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e4%b8%80%e6%89%8b%e5%8a%a8%e6%8f%92%e5%85%a5%e5%ad%90%e5%bc%b9%e7%ac%a6%e5%8f%b7">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：单次或少量单元格需要子弹点。</p>
+</blockquote><h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>定位单元格</strong><br>
+选中你想要添加子弹点的单元格（或一行）。</p>
+</li>
+<li>
+<p><strong>使用 Alt 代码</strong></p>
+<ul>
+<li>在 Windows 上，按住 <strong>Alt</strong> 键，同时在小键盘输入 <strong>0149</strong>（或 <strong>8226</strong> ）。</li>
+<li>松开 Alt，Excel 会生成 • 符号。</li>
+<li>如果你使用的是 macOS，可以使用 <strong>Option + 8</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>复制粘贴</strong></p>
+<ul>
+<li>在一个单元格里输入 •，然后复制（Ctrl+C）并粘贴到需要的单元格。</li>
+<li>也可以在“符号”对话框中搜索 “bullet” 并插入。</li>
+</ul>
+</li>
+<li>
+<p><strong>对齐与换行</strong></p>
+<ul>
+<li>选中单元格，右键 → <strong>格式单元格</strong> → <strong>对齐</strong>，勾选 <strong>自动换行</strong>。</li>
+<li>在需要的行首添加空格或使用 <strong>Tab</strong>（或 <strong>Alt+Tab</strong>）来对齐文本。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：操作简单，适合少量数据。<br>
+<strong>缺点</strong>：不易批量处理，复制粘贴后符号可能因为字体不一致而失效。</p>
+</blockquote><hr>
+<h2 id="解决方案二使用自定义数字格式">解决方案二：使用自定义数字格式<a class="anchor" href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e6%95%b0%e5%ad%97%e6%a0%bc%e5%bc%8f">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：需要在数值或文本前统一加上子弹点，且想保持数据可编辑。</p>
+</blockquote><h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li><strong>选中目标单元格或列</strong></li>
+<li><strong>打开格式设置</strong>
+<ul>
+<li>右键 → <strong>格式单元格</strong>（或 <code>Ctrl+1</code>） → <strong>数字</strong> → <strong>自定义</strong>。</li>
+</ul>
+</li>
+<li><strong>输入自定义格式</strong>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">&#34;• &#34; @</code></pre><ul>
+<li>这里的 <code>&quot;• &quot;</code> 是子弹符号加空格；<code>@</code> 表示单元格中的文本。</li>
+<li>若是数值，则使用 <code>&quot;• &quot;#,##0</code>。</li>
+</ul>
+</li>
+<li><strong>确认</strong>
+<ul>
+<li>单击 <strong>确定</strong>，此时所有选中的单元格的内容前都会出现子弹点。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：一次性设置可以批量应用，保持数据编辑无影响。<br>
+<strong>缺点</strong>：仅在单元格内部显示，复制到其他程序时可能不携带格式。</p>
+</blockquote><hr>
+<h2 id="解决方案三使用公式char-或-utf-8生成子弹点">解决方案三：使用公式（CHAR 或 UTF-8）生成子弹点<a class="anchor" href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8%e5%85%ac%e5%bc%8fchar-%e6%88%96-utf-8%e7%94%9f%e6%88%90%e5%ad%90%e5%bc%b9%e7%82%b9">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：需要在公式里动态生成列表、合并文本时加入子弹点。</p>
+</blockquote><h3 id="步骤-2">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2">#</a></h3>
+<ol>
+<li>
+<p><strong>基本子弹符号</strong></p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=CHAR(8226) &amp; &#34; &#34; &amp; A1</code></pre><ul>
+<li><code>CHAR(8226)</code> 产生 Unicode 子弹；<code>A1</code> 为你想要列出的文本。</li>
+<li>若想在多个单元格中使用，同样适用。</li>
+</ul>
+</li>
+<li>
+<p><strong>多行子弹列表</strong></p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=TEXTJOIN(CHAR(10),TRUE,{&#34;• &#34;&amp;A1,&#34;• &#34;&amp;A2,&#34;• &#34;&amp;A3})</code></pre><ul>
+<li><code>TEXTJOIN</code> 用来拼接多行，<code>CHAR(10)</code> 是换行符。</li>
+<li>需要 <strong>启用自动换行</strong>：右键 → <strong>格式单元格</strong> → <strong>对齐</strong> → <strong>自动换行</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>在 Excel 365/2019 里使用 <code>LET</code></strong></p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=LET(bullet,CHAR(8226),TEXTJOIN(CHAR(10),TRUE,bullet&amp;&#34; &#34;&amp;A1: A3))</code></pre><ul>
+<li>更简洁，减少重复计算。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：完全通过公式实现，易于批量更新和动态生成。<br>
+<strong>缺点</strong>：需要一定的公式基础，若不熟悉 <code>TEXTJOIN</code> 可能会有点麻烦。</p>
+</blockquote><hr>
+<h2 id="常见问题解答faq">常见问题解答（FAQ）<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>说明</th>
+          <th>解决办法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>子弹符号显示不出来</td>
+          <td>字体不支持 Unicode 子弹</td>
+          <td>换用支持的字体（如 Arial、Calibri）或使用 <code>CHAR(149)</code>（旧式子弹）。</td>
+      </tr>
+      <tr>
+          <td>子弹点与文本不对齐</td>
+          <td>缺少换行或空格</td>
+          <td>在自定义格式或公式中添加 <code>&quot;• &quot;</code> 或 <code>CHAR(10)</code>；使用 <code>Indent</code> 选项。</td>
+      </tr>
+      <tr>
+          <td>复制到 Word 后子弹样式丢失</td>
+          <td>Excel 的自定义格式不被其他程序识别</td>
+          <td>先用 <code>CONCATENATE</code> 或公式生成带子弹的纯文本，再粘贴到 Word。</td>
+      </tr>
+      <tr>
+          <td>在单元格中多行子弹点显示不完整</td>
+          <td>自动换行未开启</td>
+          <td>右键 → <strong>格式单元格</strong> → <strong>对齐</strong> → <strong>自动换行</strong>。</td>
+      </tr>
+      <tr>
+          <td>子弹点不适用于所有字体</td>
+          <td>有些字体不包含 <code>•</code></td>
+          <td>选择支持 Unicode 的字体，或直接使用 <code>CHAR(149)</code>、<code>CHAR(8226)</code>。</td>
+      </tr>
+      <tr>
+          <td>在图表或数据透视表中显示子弹</td>
+          <td>图表/透视表默认不支持自定义格式</td>
+          <td>在原始数据中使用公式生成子弹点，然后再引用到图表或透视表。</td>
+      </tr>
+      <tr>
+          <td>子弹点导致排序错误</td>
+          <td>由于文本开头出现符号</td>
+          <td>在排序前使用 <code>SUBSTITUTE</code> 或 <code>TRIM</code> 去掉子弹，再排序；或在排序后重新添加。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li>手动插入适合少量使用，快捷方便。</li>
+<li>自定义数字格式适合批量统一样式，保持数据可编辑。</li>
+<li>公式法适合动态生成列表，能与其他函数搭配使用。</li>
+</ul>
+<p>根据你实际的需求（数量、自动化程度、对外兼容性）选择合适的方法，即可在 Excel 中轻松实现 <strong>Bullet Point</strong> 排版。祝你工作顺利！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%88%97%E5%8D%B0/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么列印</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%8A%A0%E4%B8%80%E8%A1%8C/" class="flex align-center">
+      <span>excel怎么加一行</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#解决方案一手动插入子弹符号">解决方案一：手动插入子弹符号</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#解决方案二使用自定义数字格式">解决方案二：使用自定义数字格式</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#解决方案三使用公式char-或-utf-8生成子弹点">解决方案三：使用公式（CHAR 或 UTF-8）生成子弹点</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答faq">常见问题解答（FAQ）</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

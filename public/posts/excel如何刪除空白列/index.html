@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何刪除空白列  在日常使用 Excel 時，資料往往會因為手動輸入、匯入、或是公式計算等原因而產生多餘的空白列。這些空白列會佔用儲存空間、影響排序、或造成匯出資料時的排版問題。下面提供 原因分析、三種分步驟的解決方案 以及常見問題解答，幫你快速、正確地清除 Excel 表格">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E7%A9%BA%E7%99%BD%E5%88%97/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何刪除空白列">
+  <meta property="og:description" content="Excel 如何刪除空白列  在日常使用 Excel 時，資料往往會因為手動輸入、匯入、或是公式計算等原因而產生多餘的空白列。這些空白列會佔用儲存空間、影響排序、或造成匯出資料時的排版問題。下面提供 原因分析、三種分步驟的解決方案 以及常見問題解答，幫你快速、正確地清除 Excel 表格">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何刪除空白列">
+  <meta itemprop="description" content="Excel 如何刪除空白列  在日常使用 Excel 時，資料往往會因為手動輸入、匯入、或是公式計算等原因而產生多餘的空白列。這些空白列會佔用儲存空間、影響排序、或造成匯出資料時的排版問題。下面提供 原因分析、三種分步驟的解決方案 以及常見問題解答，幫你快速、正確地清除 Excel 表格">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="267">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何刪除空白列 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E7%A9%BA%E7%99%BD%E5%88%97/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何刪除空白列</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-方案一使用篩選功能刪除空白列">2. 方案一：使用「篩選」功能刪除空白列</a>
+      <ul>
+        <li><a href="#步驟-1--選取資料範圍">步驟 1 – 選取資料範圍</a></li>
+        <li><a href="#步驟-2--開啟篩選">步驟 2 – 開啟篩選</a></li>
+        <li><a href="#步驟-3--篩選空白">步驟 3 – 篩選空白</a></li>
+        <li><a href="#步驟-4--刪除篩選結果">步驟 4 – 刪除篩選結果</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二使用定位特殊功能刪除空白列">3. 方案二：使用「定位特殊」功能刪除空白列</a>
+      <ul>
+        <li><a href="#步驟-1--選取工作表">步驟 1 – 選取工作表</a></li>
+        <li><a href="#步驟-2--打開定位特殊">步驟 2 – 打開「定位特殊」</a></li>
+        <li><a href="#步驟-3--選擇空值">步驟 3 – 選擇「空值」</a></li>
+        <li><a href="#步驟-4--刪除整行">步驟 4 – 刪除整行</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用vba-宏自動刪除空白列">4. 方案三：使用「VBA 宏」自動刪除空白列</a>
+      <ul>
+        <li><a href="#步驟-1--開啟-vba-編輯器">步驟 1 – 開啟 VBA 編輯器</a></li>
+        <li><a href="#步驟-2--新增模組">步驟 2 – 新增模組</a></li>
+        <li><a href="#步驟-3--輸入以下程式碼">步驟 3 – 輸入以下程式碼</a></li>
+        <li><a href="#步驟-4--執行宏">步驟 4 – 執行宏</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常見問題解答faq">5. 常見問題解答（FAQ）</a></li>
+    <li><a href="#6-小結">6. 小結</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何刪除空白列
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何刪除空白列">Excel 如何刪除空白列<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%88%aa%e9%99%a4%e7%a9%ba%e7%99%bd%e5%88%97">#</a></h1>
+<p>在日常使用 Excel 時，資料往往會因為手動輸入、匯入、或是公式計算等原因而產生多餘的空白列。這些空白列會佔用儲存空間、影響排序、或造成匯出資料時的排版問題。下面提供 <strong>原因分析、三種分步驟的解決方案</strong> 以及常見問題解答，幫你快速、正確地清除 Excel 表格中的空白列。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>可能原因</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>手動輸入錯誤</strong></td>
+          <td>在輸入資料時不小心按下 Enter，產生空白列。</td>
+      </tr>
+      <tr>
+          <td><strong>從外部檔案匯入</strong></td>
+          <td>CSV、TXT 或其他來源可能包含空行。</td>
+      </tr>
+      <tr>
+          <td><strong>公式結果為空值</strong></td>
+          <td><strong>=IF(condition, value, &ldquo;&rdquo;)</strong> 或 <strong>=&quot;&quot;</strong> 會產生空格。</td>
+      </tr>
+      <tr>
+          <td><strong>使用篩選/排序</strong></td>
+          <td>先排序或篩選時，空白列被移到表格底部或頂部。</td>
+      </tr>
+      <tr>
+          <td><strong>宏／VBA 產生</strong></td>
+          <td>在資料處理過程中插入空列。</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>備註</strong>：空白列可能不只是一個「空格」字元，而是完全沒有任何資料（包括公式、格式、或條件格式）。若要確保刪除成功，最好先檢查「是否真的為空」的條件。</p>
+</blockquote><hr>
+<h2 id="2-方案一使用篩選功能刪除空白列">2. 方案一：使用「篩選」功能刪除空白列<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e7%af%a9%e9%81%b8%e5%8a%9f%e8%83%bd%e5%88%aa%e9%99%a4%e7%a9%ba%e7%99%bd%e5%88%97">#</a></h2>
+<h3 id="步驟-1--選取資料範圍">步驟 1 – 選取資料範圍<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1--%e9%81%b8%e5%8f%96%e8%b3%87%e6%96%99%e7%af%84%e5%9c%8d">#</a></h3>
+<ul>
+<li>點選整個工作表（可使用 <strong>Ctrl+A</strong>）或僅選取含有資料的區塊。</li>
+</ul>
+<h3 id="步驟-2--開啟篩選">步驟 2 – 開啟篩選<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2--%e9%96%8b%e5%95%9f%e7%af%a9%e9%81%b8">#</a></h3>
+<ul>
+<li>在功能區選擇 <strong>資料 &gt; 篩選</strong>（或按 <strong>Ctrl+Shift+L</strong>）</li>
+<li>所有欄位標題會出現下拉箭頭。</li>
+</ul>
+<h3 id="步驟-3--篩選空白">步驟 3 – 篩選空白<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-3--%e7%af%a9%e9%81%b8%e7%a9%ba%e7%99%bd">#</a></h3>
+<ul>
+<li>點擊任一欄位的篩選箭頭，取消全選，勾選 <strong>(空白)</strong>，按 <strong>確定</strong>。</li>
+<li>這時所有包含空白儲存格的列會被顯示。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：若要確保「所有欄位都為空」的列被篩選，可先在 <strong>資料 &gt; 篩選 &gt; 高級篩選</strong> 內使用條件篩選。</p>
+</blockquote><h3 id="步驟-4--刪除篩選結果">步驟 4 – 刪除篩選結果<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-4--%e5%88%aa%e9%99%a4%e7%af%a9%e9%81%b8%e7%b5%90%e6%9e%9c">#</a></h3>
+<ul>
+<li>選取篩選後顯示的所有列（<strong>Ctrl+Shift+↓</strong>，或使用滑鼠拖曳）</li>
+<li>右鍵選擇 <strong>刪除列</strong>，或按 <strong>Ctrl-</strong>（減號）</li>
+<li>再點選 <strong>資料 &gt; 篩選</strong> 取消篩選，剩下的即為去除空白列後的資料。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：此方法僅刪除「至少有一個空格」的列；若某列所有欄位都有資料，則不會被篩選。</p>
+</blockquote><hr>
+<h2 id="3-方案二使用定位特殊功能刪除空白列">3. 方案二：使用「定位特殊」功能刪除空白列<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%ae%9a%e4%bd%8d%e7%89%b9%e6%ae%8a%e5%8a%9f%e8%83%bd%e5%88%aa%e9%99%a4%e7%a9%ba%e7%99%bd%e5%88%97">#</a></h2>
+<h3 id="步驟-1--選取工作表">步驟 1 – 選取工作表<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1--%e9%81%b8%e5%8f%96%e5%b7%a5%e4%bd%9c%e8%a1%a8">#</a></h3>
+<ul>
+<li>按 <strong>Ctrl+A</strong> 選取整個工作表，或選取你想處理的範圍。</li>
+</ul>
+<h3 id="步驟-2--打開定位特殊">步驟 2 – 打開「定位特殊」<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2--%e6%89%93%e9%96%8b%e5%ae%9a%e4%bd%8d%e7%89%b9%e6%ae%8a">#</a></h3>
+<ul>
+<li><strong>首頁</strong> → <strong>尋找與選取</strong> → <strong>定位特殊</strong></li>
+<li>或使用快捷鍵 <strong>F5</strong> → <strong>定位特殊</strong>。</li>
+</ul>
+<h3 id="步驟-3--選擇空值">步驟 3 – 選擇「空值」<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-3--%e9%81%b8%e6%93%87%e7%a9%ba%e5%80%bc">#</a></h3>
+<ul>
+<li>在彈出的對話框中勾選 <strong>空值</strong>，點 <strong>確定</strong>。</li>
+<li>這時工作表中所有空白儲存格都會被選中。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：若要排除格式化空格，可在<strong>定位特殊</strong>中勾選 <strong>公式</strong>、<strong>值</strong>、<strong>錯誤</strong> 等條件，僅留下真正空白。</p>
+</blockquote><h3 id="步驟-4--刪除整行">步驟 4 – 刪除整行<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-4--%e5%88%aa%e9%99%a4%e6%95%b4%e8%a1%8c">#</a></h3>
+<ul>
+<li>在選取的空白儲存格上右鍵 → <strong>刪除</strong></li>
+<li>選擇 <strong>整行</strong> → <strong>確定</strong></li>
+<li>Excel 會自動將所有包含空白儲存格的列刪除。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>備註</strong>：此方法會刪除包含空白儲存格的任何列，即使其他欄位有資料。若只想刪除「整列完全空白」的行，請先使用公式判斷完整空白，再刪除。</p>
+</blockquote><hr>
+<h2 id="4-方案三使用vba-宏自動刪除空白列">4. 方案三：使用「VBA 宏」自動刪除空白列<a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8vba-%e5%ae%8f%e8%87%aa%e5%8b%95%e5%88%aa%e9%99%a4%e7%a9%ba%e7%99%bd%e5%88%97">#</a></h2>
+<h3 id="步驟-1--開啟-vba-編輯器">步驟 1 – 開啟 VBA 編輯器<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1--%e9%96%8b%e5%95%9f-vba-%e7%b7%a8%e8%bc%af%e5%99%a8">#</a></h3>
+<ul>
+<li>按 <strong>Alt+F11</strong> 打開 VBA 編輯器。</li>
+</ul>
+<h3 id="步驟-2--新增模組">步驟 2 – 新增模組<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2--%e6%96%b0%e5%a2%9e%e6%a8%a1%e7%b5%84">#</a></h3>
+<ul>
+<li>在左側專案樹中點擊 <strong>插入 &gt; 標準模組</strong>。</li>
+</ul>
+<h3 id="步驟-3--輸入以下程式碼">步驟 3 – 輸入以下程式碼<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-3--%e8%bc%b8%e5%85%a5%e4%bb%a5%e4%b8%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">DeleteBlankRows</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> ws <span style="color:#f92672">As</span> Worksheet
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> lastRow <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> ws <span style="color:#f92672">=</span> ActiveSheet
+</span></span><span style="display:flex;"><span>    lastRow <span style="color:#f92672">=</span> ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Application.ScreenUpdating <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> lastRow <span style="color:#66d9ef">To</span> 1 <span style="color:#66d9ef">Step</span> <span style="color:#f92672">-</span>1
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> Application.WorksheetFunction.CountA(ws.Rows(i)) <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            ws.Rows(i).Delete
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Application.ScreenUpdating <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;空白列已刪除！&#34;</span>, vbInformation
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span></span></span></code></pre></div><blockquote class='book-hint '>
+<p><strong>說明</strong></p>
+<ul>
+<li><code>CountA</code> 會計算列中非空儲存格的個數；若為0，表示整列完全空白。</li>
+<li>從最後一行往前迴圈，可避免刪除時行號變動造成錯誤。</li>
+</ul>
+</blockquote><h3 id="步驟-4--執行宏">步驟 4 – 執行宏<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-4--%e5%9f%b7%e8%a1%8c%e5%ae%8f">#</a></h3>
+<ul>
+<li>在編輯器中按 <strong>F5</strong> 或在 Excel 內按 <strong>Alt+F8</strong> → 選擇 <code>DeleteBlankRows</code> → <strong>執行</strong>。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>備註</strong>：若要刪除所有工作表中的空白列，可將 <code>Set ws = ActiveSheet</code> 改為 <code>For Each ws In ThisWorkbook.Worksheets</code> 並將程式碼放入迴圈。</p>
+</blockquote><hr>
+<h2 id="5-常見問題解答faq">5. 常見問題解答（FAQ）<a class="anchor" href="#5-%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：刪除空白列後，公式會失效嗎？</strong></td>
+          <td>若公式引用整列範圍，刪除列後引用會自動更新；但若有手動輸入的相對參照，可能會產生錯誤。建議先檢查公式。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：如何只刪除「完全空白」的列，而不是單一儲存格空白？</strong></td>
+          <td>可使用「定位特殊」時，先選擇「公式」或「值」；或使用 <code>CountA</code> 公式判斷整列空白後再刪除。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：篩選法會保留空格字元嗎？</strong></td>
+          <td>篩選會把「空格」也視為空白；若想保留含空格的列，需先刪除空格字元或使用 <code>TRIM()</code> 公式清除。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：刪除後工作表的行號會跳躍嗎？</strong></td>
+          <td>刪除列會自動將下方行號上移，保持行號連續。若有資料透過「行號+列號」的連結，需重新整理。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：刪除空白列會影響資料匯入的範圍嗎？</strong></td>
+          <td>會影響，因為匯入時範圍會自動擴充；若想保留空白列，可在匯入前先設定資料範圍。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：可否自動在每次保存時刪除空白列？</strong></td>
+          <td>可以在工作簿保存事件 <code>Workbook_BeforeSave</code> 中加入刪除程式碼。但建議先備份，以免誤刪。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7：刪除空白列會影響已設定的條件格式嗎？</strong></td>
+          <td>會，條件格式會自動隨行刪除，若條件格式依賴行號，請重新檢查。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="6-小結">6. 小結<a class="anchor" href="#6-%e5%b0%8f%e7%b5%90">#</a></h2>
+<ul>
+<li><strong>篩選</strong>：適合快速處理小型資料集，手動操作簡單。</li>
+<li><strong>定位特殊</strong>：一次性選取所有空白儲存格，適用於大範圍。</li>
+<li><strong>VBA 宏</strong>：自動化流程，適合大量工作表或重複性任務。</li>
+</ul>
+<p>選擇最符合你需求的方法，並在刪除前備份資料，確保不會遺失重要資訊。祝你使用 Excel 更順手、更高效！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%86%E9%A0%81/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何分頁</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E9%87%8D%E8%A4%87%E8%B3%87%E6%96%99/" class="flex align-center">
+      <span>excel如何刪除重複資料</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-方案一使用篩選功能刪除空白列">2. 方案一：使用「篩選」功能刪除空白列</a>
+      <ul>
+        <li><a href="#步驟-1--選取資料範圍">步驟 1 – 選取資料範圍</a></li>
+        <li><a href="#步驟-2--開啟篩選">步驟 2 – 開啟篩選</a></li>
+        <li><a href="#步驟-3--篩選空白">步驟 3 – 篩選空白</a></li>
+        <li><a href="#步驟-4--刪除篩選結果">步驟 4 – 刪除篩選結果</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二使用定位特殊功能刪除空白列">3. 方案二：使用「定位特殊」功能刪除空白列</a>
+      <ul>
+        <li><a href="#步驟-1--選取工作表">步驟 1 – 選取工作表</a></li>
+        <li><a href="#步驟-2--打開定位特殊">步驟 2 – 打開「定位特殊」</a></li>
+        <li><a href="#步驟-3--選擇空值">步驟 3 – 選擇「空值」</a></li>
+        <li><a href="#步驟-4--刪除整行">步驟 4 – 刪除整行</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用vba-宏自動刪除空白列">4. 方案三：使用「VBA 宏」自動刪除空白列</a>
+      <ul>
+        <li><a href="#步驟-1--開啟-vba-編輯器">步驟 1 – 開啟 VBA 編輯器</a></li>
+        <li><a href="#步驟-2--新增模組">步驟 2 – 新增模組</a></li>
+        <li><a href="#步驟-3--輸入以下程式碼">步驟 3 – 輸入以下程式碼</a></li>
+        <li><a href="#步驟-4--執行宏">步驟 4 – 執行宏</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常見問題解答faq">5. 常見問題解答（FAQ）</a></li>
+    <li><a href="#6-小結">6. 小結</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

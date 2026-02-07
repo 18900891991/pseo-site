@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 怎麼開根號？  在 Excel 裡做數學運算時，開根號（求平方根）是最常見的需求之一。無論是統計分析、工程計算，還是資料處理，熟練掌握開根號的技巧都能大幅提升工作效率。  ---   原因分析  | 為什麼要在 Excel 開根號？ | 典型場景 | |-------------">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E9%BA%BC%E9%96%8B%E6%A0%B9%E8%99%9F/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎麼開根號">
+  <meta property="og:description" content="Excel 怎麼開根號？  在 Excel 裡做數學運算時，開根號（求平方根）是最常見的需求之一。無論是統計分析、工程計算，還是資料處理，熟練掌握開根號的技巧都能大幅提升工作效率。  ---   原因分析  | 為什麼要在 Excel 開根號？ | 典型場景 | |-------------">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel怎麼開根號">
+  <meta itemprop="description" content="Excel 怎麼開根號？  在 Excel 裡做數學運算時，開根號（求平方根）是最常見的需求之一。無論是統計分析、工程計算，還是資料處理，熟練掌握開根號的技巧都能大幅提升工作效率。  ---   原因分析  | 為什麼要在 Excel 開根號？ | 典型場景 | |-------------">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="178">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎麼開根號 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E9%BA%BC%E9%96%8B%E6%A0%B9%E8%99%9F/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎麼開根號</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-sqrt-函數">方案一：使用 <code>SQRT</code> 函數</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+        <li><a href="#範例">範例</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-power-函數">方案二：使用 <code>POWER</code> 函數</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+        <li><a href="#範例-1">範例</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-char-或-text-產生根號符號">方案三：使用 <code>CHAR</code> 或 <code>TEXT</code> 產生根號符號</a>
+      <ul>
+        <li><a href="#步驟-2">步驟</a></li>
+        <li><a href="#範例-2">範例</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答faq">常見問題解答（FAQ）</a></li>
+    <li><a href="#小結">小結</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎麼開根號
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-怎麼開根號">Excel 怎麼開根號？<a class="anchor" href="#excel-%e6%80%8e%e9%ba%bc%e9%96%8b%e6%a0%b9%e8%99%9f">#</a></h1>
+<p>在 Excel 裡做數學運算時，開根號（求平方根）是最常見的需求之一。無論是統計分析、工程計算，還是資料處理，熟練掌握開根號的技巧都能大幅提升工作效率。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>為什麼要在 Excel 開根號？</th>
+          <th>典型場景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>數據處理</strong></td>
+          <td>計算距離、標準差、機率等需要平方根</td>
+      </tr>
+      <tr>
+          <td><strong>數學模型</strong></td>
+          <td>求解方程、做投資回報率計算</td>
+      </tr>
+      <tr>
+          <td><strong>資料清洗</strong></td>
+          <td>去除負數、處理極值後再做平方根</td>
+      </tr>
+      <tr>
+          <td><strong>可視化</strong></td>
+          <td>在圖表中顯示根號數值</td>
+      </tr>
+      <tr>
+          <td><strong>自動化</strong></td>
+          <td>用公式批量處理大量數據</td>
+      </tr>
+  </tbody>
+</table>
+<p>掌握三種常見的開根號方法，能在不同情境下選擇最合適的解決方案。</p>
+<hr>
+<h2 id="方案一使用-sqrt-函數">方案一：使用 <code>SQRT</code> 函數<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-sqrt-%e5%87%bd%e6%95%b8">#</a></h2>
+<p><code>SQRT(number)</code> 直接返回給定數字的平方根。</p>
+<h3 id="步驟">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f">#</a></h3>
+<ol>
+<li>
+<p><strong>選擇目標單元格</strong><br>
+在你想要顯示根號結果的單元格輸入公式。</p>
+</li>
+<li>
+<p><strong>輸入公式</strong></p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=SQRT(A1)</code></pre><p>其中 <code>A1</code> 是你想開根號的數值所在的單元格。</p>
+</li>
+<li>
+<p><strong>確認輸出</strong><br>
+按 <code>Enter</code>，單元格將顯示平方根值。</p>
+</li>
+</ol>
+<h3 id="範例">範例<a class="anchor" href="#%e7%af%84%e4%be%8b">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>A</th>
+          <th>B</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>16</td>
+          <td><code>=SQRT(A1)</code> → 4</td>
+      </tr>
+      <tr>
+          <td>25</td>
+          <td><code>=SQRT(A1)</code> → 5</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：<code>SQRT</code> 只能處理非負數，若輸入負數會得到 <code>#NUM!</code> 錯誤。</p>
+</blockquote><hr>
+<h2 id="方案二使用-power-函數">方案二：使用 <code>POWER</code> 函數<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-power-%e5%87%bd%e6%95%b8">#</a></h2>
+<p><code>POWER(number, power)</code> 可以用來做更廣泛的指數運算，平方根相當於 <code>POWER(number, 0.5)</code>。</p>
+<h3 id="步驟-1">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1">#</a></h3>
+<ol>
+<li>
+<p><strong>選擇目標單元格</strong><br>
+在你想要顯示根號結果的單元格輸入公式。</p>
+</li>
+<li>
+<p><strong>輸入公式</strong></p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=POWER(A1, 0.5)</code></pre><p>或者 <code>=POWER(A1,1/2)</code>。</p>
+</li>
+<li>
+<p><strong>確認輸出</strong><br>
+按 <code>Enter</code>，單元格將顯示平方根值。</p>
+</li>
+</ol>
+<h3 id="範例-1">範例<a class="anchor" href="#%e7%af%84%e4%be%8b-1">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>A</th>
+          <th>B</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>9</td>
+          <td><code>=POWER(A1,0.5)</code> → 3</td>
+      </tr>
+      <tr>
+          <td>49</td>
+          <td><code>=POWER(A1,1/2)</code> → 7</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>優點</strong>：可靈活改為立方根（<code>POWER(A1,1/3)</code>）或其他根號。</p>
+</blockquote><hr>
+<h2 id="方案三使用-char-或-text-產生根號符號">方案三：使用 <code>CHAR</code> 或 <code>TEXT</code> 產生根號符號<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-char-%e6%88%96-text-%e7%94%a2%e7%94%9f%e6%a0%b9%e8%99%9f%e7%ac%a6%e8%99%9f">#</a></h2>
+<p>如果你想在工作表中顯示 <strong>根號符號</strong>（√）而不是數值，或者需要將根號符號與數字組合成文字。</p>
+<h3 id="步驟-2">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2">#</a></h3>
+<ol>
+<li>
+<p><strong>顯示根號符號</strong><br>
+在單元格輸入 <code>=CHAR(8730)</code> 或直接輸入 <code>√</code>（在鍵盤上輸入 Alt+251 或使用符號插入）。</p>
+</li>
+<li>
+<p><strong>組合文字</strong></p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=&#34;√&#34;&amp;A1</code></pre><p>或者</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=&#34;√&#34;&amp;TEXT(A1,&#34;0.00&#34;)</code></pre></li>
+<li>
+<p><strong>使用公式計算</strong><br>
+若要同時顯示根號符號和計算結果，可結合 <code>SQRT</code>：</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=&#34;√&#34;&amp;A1&amp;&#34; = &#34;&amp;SQRT(A1)</code></pre></li>
+</ol>
+<h3 id="範例-2">範例<a class="anchor" href="#%e7%af%84%e4%be%8b-2">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>36</td>
+          <td><code>=CHAR(8730)</code> → √</td>
+          <td><code>=&quot;√&quot;&amp;A1&amp;&quot; = &quot;&amp;SQRT(A1)</code> → √36 = 6</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：使用 <code>CHAR(8730)</code> 可在不輸入特殊符號的情況下產生根號。</p>
+</blockquote><hr>
+<h2 id="常見問題解答faq">常見問題解答（FAQ）<a class="anchor" href="#%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：輸入負數會出現什麼錯誤？</strong></td>
+          <td><code>SQRT</code> 與 <code>POWER</code> 只能處理非負數，負數會返回 <code>#NUM!</code>。若需處理複數，可使用 <code>IMABS</code> 或 <code>COMPLEX</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：如何一次性開多個根號？</strong></td>
+          <td>在列或行中拖拉公式，或使用填充功能。也可使用 <code>ARRAYFORMULA</code>（在 Google Sheets）或 <code>=SQRT(A1:A10)</code>（在 Office 365）。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：根號符號顯示不出來，怎麼辦？</strong></td>
+          <td>確認單元格格式為「常規」或「文字」。若仍不顯示，使用 <code>=CHAR(8730)</code> 或直接複製粘貼符號。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：公式結果有誤差？</strong></td>
+          <td>Excel 的浮點數精度有限，特別是大數或多次運算時可做四捨五入：<code>=ROUND(SQRT(A1),2)</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：如何用 VBA 取根號？</strong></td>
+          <td><code>vba&lt;br&gt;Function SquareRoot(x As Double) As Double&lt;br&gt;    SquareRoot = x ^ 0.5&lt;br&gt;End Function&lt;br&gt;</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小結">小結<a class="anchor" href="#%e5%b0%8f%e7%b5%90">#</a></h2>
+<ul>
+<li><strong>最簡單</strong>：直接使用 <code>SQRT</code> 函數。</li>
+<li><strong>更彈性</strong>：使用 <code>POWER</code> 可計算任意根。</li>
+<li><strong>美化輸出</strong>：用 <code>CHAR(8730)</code> 或文字拼接顯示根號符號。</li>
+</ul>
+<p>只要掌握上述三種方法，你就能在任何 Excel 任務中快速且正確地進行平方根計算。祝你開根號愉快！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E9%BA%BC%E8%BD%89word/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎麼轉word</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/python%E6%8A%A5%E9%94%99%E5%87%BD%E6%95%B0/" class="flex align-center">
+      <span>python报错函数</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-sqrt-函數">方案一：使用 <code>SQRT</code> 函數</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+        <li><a href="#範例">範例</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-power-函數">方案二：使用 <code>POWER</code> 函數</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+        <li><a href="#範例-1">範例</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-char-或-text-產生根號符號">方案三：使用 <code>CHAR</code> 或 <code>TEXT</code> 產生根號符號</a>
+      <ul>
+        <li><a href="#步驟-2">步驟</a></li>
+        <li><a href="#範例-2">範例</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答faq">常見問題解答（FAQ）</a></li>
+    <li><a href="#小結">小結</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 表格使用完整指南   为什么要把数据放进 “表格” ？    在 Excel 中，表格（Table） 并不是普通的单元格区域，而是一种结构化的数据容器。它能让你更便捷地进行排序、筛选、公式引用、图表生成，以及自动扩展等操作。对初学者来说，了解并熟练使用表格是提升工">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E8%A1%A8%E6%A0%BC/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么用表格">
+  <meta property="og:description" content="Excel 表格使用完整指南   为什么要把数据放进 “表格” ？    在 Excel 中，表格（Table） 并不是普通的单元格区域，而是一种结构化的数据容器。它能让你更便捷地进行排序、筛选、公式引用、图表生成，以及自动扩展等操作。对初学者来说，了解并熟练使用表格是提升工">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel怎么用表格">
+  <meta itemprop="description" content="Excel 表格使用完整指南   为什么要把数据放进 “表格” ？    在 Excel 中，表格（Table） 并不是普通的单元格区域，而是一种结构化的数据容器。它能让你更便捷地进行排序、筛选、公式引用、图表生成，以及自动扩展等操作。对初学者来说，了解并熟练使用表格是提升工">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="170">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么用表格 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E8%A1%A8%E6%A0%BC/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么用表格</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-解决方案一手动创建表格insert--table">2. 解决方案一：手动创建表格（Insert → Table）</a></li>
+    <li><a href="#3-解决方案二使用结构化引用structured-references">3. 解决方案二：使用结构化引用（Structured References）</a></li>
+    <li><a href="#4-解决方案三利用表格功能进行数据分析">4. 解决方案三：利用表格功能进行数据分析</a></li>
+    <li><a href="#5-常见问题解答faq">5. 常见问题解答（FAQ）</a></li>
+    <li><a href="#6-小结">6. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么用表格
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-表格使用完整指南">Excel 表格使用完整指南<a class="anchor" href="#excel-%e8%a1%a8%e6%a0%bc%e4%bd%bf%e7%94%a8%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>为什么要把数据放进 “表格” ？</strong><br>
+在 Excel 中，<strong>表格（Table）</strong> 并不是普通的单元格区域，而是一种结构化的数据容器。它能让你更便捷地进行排序、筛选、公式引用、图表生成，以及自动扩展等操作。对初学者来说，了解并熟练使用表格是提升工作效率的关键。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>传统单元格操作</th>
+          <th>使用表格的优势</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>自动填充公式</strong></td>
+          <td>需要手动拖拽或复制</td>
+          <td>新增行自动继承公式</td>
+      </tr>
+      <tr>
+          <td><strong>动态排序/筛选</strong></td>
+          <td>需要手动设置</td>
+          <td>只需点一键即可完成</td>
+      </tr>
+      <tr>
+          <td><strong>结构化引用</strong></td>
+          <td>用 <code>A1</code> 等引用</td>
+          <td>用 <code>[@列名]</code> 更直观</td>
+      </tr>
+      <tr>
+          <td><strong>格式统一</strong></td>
+          <td>每次手工格式化</td>
+          <td>自动应用表格样式</td>
+      </tr>
+      <tr>
+          <td><strong>数据管理</strong></td>
+          <td>需要手动调整范围</td>
+          <td>表格会自动扩展</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>总结</strong>：使用表格能让数据更可维护，减少错误，提升可读性和可扩展性。</p>
+</blockquote><hr>
+<h2 id="2-解决方案一手动创建表格insert--table">2. 解决方案一：手动创建表格（Insert → Table）<a class="anchor" href="#2-%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e4%b8%80%e6%89%8b%e5%8a%a8%e5%88%9b%e5%bb%ba%e8%a1%a8%e6%a0%bcinsert--table">#</a></h2>
+<ol>
+<li>
+<p><strong>选中数据区域</strong><br>
+① 选择你想转成表格的单元格范围（例如 <code>A1:D10</code>）。<br>
+② 若包含标题，勾选 <strong>“我的表包含标题”</strong>。</p>
+</li>
+<li>
+<p><strong>插入表格</strong></p>
+<ul>
+<li>在 <strong>“插入”</strong> 选项卡点击 <strong>“表格”</strong>。</li>
+<li>或者使用快捷键 <strong>Ctrl + T</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>设置表格样式</strong></p>
+<ul>
+<li>在 <strong>“表格工具” → “设计”</strong> 里选择你喜欢的样式。</li>
+<li>可以开启 <strong>“总计行”</strong> 或 <strong>“带条纹行”</strong> 等功能。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>技巧</strong>：如果你想让表格自动扩展（添加新行时自动包含），请在 <strong>“设计”</strong> 里勾选 <strong>“表格样式选项” → “带有标题行”</strong>。</p>
+</blockquote><hr>
+<h2 id="3-解决方案二使用结构化引用structured-references">3. 解决方案二：使用结构化引用（Structured References）<a class="anchor" href="#3-%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e7%bb%93%e6%9e%84%e5%8c%96%e5%bc%95%e7%94%a8structured-references">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>传统公式</th>
+          <th>结构化引用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>=SUM(A2:A10)</code></td>
+          <td><code>=SUM([@金额])</code> 或 <code>=SUM(表格名[金额])</code></td>
+      </tr>
+  </tbody>
+</table>
+<ol>
+<li><strong>创建表格</strong>（见方案一）。</li>
+<li><strong>插入公式</strong>
+<ul>
+<li>选中单元格，输入 <code>=SUM(</code>。</li>
+<li>在表格列名上点击，Excel 会自动填充 <code>[@列名]</code>。</li>
+</ul>
+</li>
+<li><strong>复制公式</strong>
+<ul>
+<li>直接拖拽，表格会自动更新引用。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong></p>
+<ul>
+<li>公式更易读。</li>
+<li>当列名更改时，公式会自动同步。</li>
+<li>在不同工作表引用同一表格时非常方便。</li>
+</ul>
+</blockquote><hr>
+<h2 id="4-解决方案三利用表格功能进行数据分析">4. 解决方案三：利用表格功能进行数据分析<a class="anchor" href="#4-%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e4%b8%89%e5%88%a9%e7%94%a8%e8%a1%a8%e6%a0%bc%e5%8a%9f%e8%83%bd%e8%bf%9b%e8%a1%8c%e6%95%b0%e6%8d%ae%e5%88%86%e6%9e%90">#</a></h2>
+<ol>
+<li>
+<p><strong>排序 &amp; 筛选</strong></p>
+<ul>
+<li>直接点击列标题右侧的下拉箭头。</li>
+<li>选择 <strong>“升序/降序”</strong> 或 <strong>“筛选条件”</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用表格总计行</strong></p>
+<ul>
+<li>在 <strong>“设计”</strong> 里勾选 <strong>“总计行”</strong>。</li>
+<li>在总计行可以选择 <strong>求和、计数、平均值</strong> 等。</li>
+</ul>
+</li>
+<li>
+<p><strong>生成结构化图表</strong></p>
+<ul>
+<li>选中表格，<strong>插入 → 图表</strong>。</li>
+<li>Excel 会自动识别表格列名，生成更精准的图表。</li>
+</ul>
+</li>
+<li>
+<p><strong>动态命名范围</strong></p>
+<ul>
+<li>表格会自动为列名创建命名范围，便于在 VBA 或 Power Query 中调用。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="5-常见问题解答faq">5. 常见问题解答（FAQ）<a class="anchor" href="#5-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：如何将已有的数据转成表格？</strong></td>
+          <td>① 选中区域 → Ctrl+T → 勾选“我的表包含标题”。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：表格里的公式为何不生效？</strong></td>
+          <td>检查公式是否使用结构化引用；或确保表格已完全选中。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：如何在表格中添加新列？</strong></td>
+          <td>① 在表格最后一行右侧点击 “+”（如果未出现，右键 → 插入列）。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：表格会不会影响现有单元格格式？</strong></td>
+          <td>表格默认应用样式；若不想，可在“设计”里关闭 “带条纹行”。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：如何删除表格却保留数据？</strong></td>
+          <td>右键表格 → “转换为常规范围”。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：如何在多个工作表间共享同一表格的数据？</strong></td>
+          <td>使用 <strong>“引用表格”</strong> 或 <strong>Power Query</strong> 进行数据链接。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="6-小结">6. 小结<a class="anchor" href="#6-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>表格</strong> 是 Excel 的核心工具之一，能够让数据管理和分析更高效、直观。</li>
+<li>通过 <strong>“Insert → Table”</strong>、<strong>结构化引用</strong>、以及 <strong>表格的高级功能</strong>，你可以快速提升工作效率。</li>
+<li>只要掌握了上述三种方法，日常数据处理就会变得轻而易举。祝你玩得愉快，Excel 之旅从表格开始！</li>
+</ul>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E6%97%A5%E6%9C%9F/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么用日期</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%BC%A9%E6%8E%92/" class="flex align-center">
+      <span>excel怎么缩排</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-解决方案一手动创建表格insert--table">2. 解决方案一：手动创建表格（Insert → Table）</a></li>
+    <li><a href="#3-解决方案二使用结构化引用structured-references">3. 解决方案二：使用结构化引用（Structured References）</a></li>
+    <li><a href="#4-解决方案三利用表格功能进行数据分析">4. 解决方案三：利用表格功能进行数据分析</a></li>
+    <li><a href="#5-常见问题解答faq">5. 常见问题解答（FAQ）</a></li>
+    <li><a href="#6-小结">6. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 怎么算数？——完整使用指南   问题：在 Excel 中如何进行各种数值计算？    目标：帮助你从基础到进阶，快速掌握 Excel 的算数技巧。  ---   1. 原因分析  | 可能导致“Excel 怎么算数”困惑的原因 | 说明 | |---|---|">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%AE%97-%E6%95%B0/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么算 数">
+  <meta property="og:description" content="Excel 怎么算数？——完整使用指南   问题：在 Excel 中如何进行各种数值计算？    目标：帮助你从基础到进阶，快速掌握 Excel 的算数技巧。  ---   1. 原因分析  | 可能导致“Excel 怎么算数”困惑的原因 | 说明 | |---|---|">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel怎么算 数">
+  <meta itemprop="description" content="Excel 怎么算数？——完整使用指南   问题：在 Excel 中如何进行各种数值计算？    目标：帮助你从基础到进阶，快速掌握 Excel 的算数技巧。  ---   1. 原因分析  | 可能导致“Excel 怎么算数”困惑的原因 | 说明 | |---|---|">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="225">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么算 数 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%AE%97-%E6%95%B0/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么算 数</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-三种分步骤的解决方案">2. 三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#21-方案一基础算术运算">2.1 方案一：基础算术运算</a></li>
+        <li><a href="#22-方案二使用常用函数">2.2 方案二：使用常用函数</a></li>
+        <li><a href="#23-方案三动态数组与命名范围">2.3 方案三：动态数组与命名范围</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么算 数
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-怎么算数完整使用指南">Excel 怎么算数？——完整使用指南<a class="anchor" href="#excel-%e6%80%8e%e4%b9%88%e7%ae%97%e6%95%b0%e5%ae%8c%e6%95%b4%e4%bd%bf%e7%94%a8%e6%8c%87%e5%8d%97">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>问题</strong>：在 Excel 中如何进行各种数值计算？<br>
+<strong>目标</strong>：帮助你从基础到进阶，快速掌握 Excel 的算数技巧。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>可能导致“Excel 怎么算数”困惑的原因</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>公式语法不熟悉</strong></td>
+          <td>Excel 计算都是通过公式完成，初学者常常不知道公式的基本写法。</td>
+      </tr>
+      <tr>
+          <td><strong>单元格引用错误</strong></td>
+          <td>公式中引用单元格时，使用错误的相对/绝对引用会导致结果不对。</td>
+      </tr>
+      <tr>
+          <td><strong>数据格式和类型</strong></td>
+          <td>文本被误认为数值或数值被误认为文本会导致计算错误。</td>
+      </tr>
+      <tr>
+          <td><strong>函数使用不当</strong></td>
+          <td>选择错误的函数、缺少必要参数，或没有考虑函数的返回值类型。</td>
+      </tr>
+      <tr>
+          <td><strong>计算顺序与优先级</strong></td>
+          <td>括号使用不当会导致运算顺序错误。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="2-三种分步骤的解决方案">2. 三种分步骤的解决方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>下面给出 <strong>三条典型方案</strong>，分别适用于不同需求：<br>
+1️⃣ <strong>基础算术</strong>（+、-、*、/、^、% 等）<br>
+2️⃣ <strong>高级函数</strong>（SUM、AVERAGE、COUNT、IF 等）<br>
+3️⃣ <strong>自定义公式</strong>（数组公式、动态数组、命名范围）</p>
+</blockquote><h3 id="21-方案一基础算术运算">2.1 方案一：基础算术运算<a class="anchor" href="#21-%e6%96%b9%e6%a1%88%e4%b8%80%e5%9f%ba%e7%a1%80%e7%ae%97%e6%9c%af%e8%bf%90%e7%ae%97">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>步骤</th>
+          <th>操作</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1️⃣</td>
+          <td>打开工作簿并定位到目标单元格</td>
+          <td><code>Sheet1!C1</code></td>
+      </tr>
+      <tr>
+          <td>2️⃣</td>
+          <td>输入等号 <code>=</code> 开始公式</td>
+          <td><code>=5+3</code></td>
+      </tr>
+      <tr>
+          <td>3️⃣</td>
+          <td>使用标准运算符</td>
+          <td><code>=A1+B1-C1*D1/E1</code></td>
+      </tr>
+      <tr>
+          <td>4️⃣</td>
+          <td>使用括号控制优先级</td>
+          <td><code>=(A1+B1)*(C1-D1)/E1</code></td>
+      </tr>
+      <tr>
+          <td>5️⃣</td>
+          <td>复制公式</td>
+          <td>选中单元格右下角拖动或 Ctrl+C/Ctrl+V</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：按 <code>Ctrl + ~</code> 可以查看所有单元格的公式，便于调试。</p>
+</blockquote><hr>
+<h3 id="22-方案二使用常用函数">2.2 方案二：使用常用函数<a class="anchor" href="#22-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%b8%b8%e7%94%a8%e5%87%bd%e6%95%b0">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>函数</th>
+          <th>作用</th>
+          <th>示例</th>
+          <th>备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>SUM()</code></td>
+          <td>求和</td>
+          <td><code>=SUM(A1:A10)</code></td>
+          <td>也可用 <code>+</code> 链接</td>
+      </tr>
+      <tr>
+          <td><code>AVERAGE()</code></td>
+          <td>平均数</td>
+          <td><code>=AVERAGE(B1:B10)</code></td>
+          <td>自动忽略空单元格</td>
+      </tr>
+      <tr>
+          <td><code>COUNT()</code></td>
+          <td>计数</td>
+          <td><code>=COUNT(C1:C10)</code></td>
+          <td>只计数数值</td>
+      </tr>
+      <tr>
+          <td><code>COUNTA()</code></td>
+          <td>非空计数</td>
+          <td><code>=COUNTA(D1:D10)</code></td>
+          <td>计数文本与数值</td>
+      </tr>
+      <tr>
+          <td><code>MAX()</code> / <code>MIN()</code></td>
+          <td>最大/最小值</td>
+          <td><code>=MAX(E1:E10)</code></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>IF()</code></td>
+          <td>条件判断</td>
+          <td><code>=IF(F1&gt;10,&quot;大&quot;,&quot;小&quot;)</code></td>
+          <td>可嵌套</td>
+      </tr>
+      <tr>
+          <td><code>VLOOKUP()</code></td>
+          <td>垂直查找</td>
+          <td><code>=VLOOKUP(G1,Sheet2!A:B,2,FALSE)</code></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>步骤示例</strong>：<br>
+1️⃣ 选中目标单元格。<br>
+2️⃣ 输入 <code>=SUM(</code> 并选中需要求和的范围。<br>
+3️⃣ 关闭括号，按 <code>Enter</code>。</p>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：按 <code>Ctrl+Shift+Enter</code> 可以创建 <strong>数组公式</strong>（需在旧版 Excel 中使用）。</p>
+</blockquote><hr>
+<h3 id="23-方案三动态数组与命名范围">2.3 方案三：动态数组与命名范围<a class="anchor" href="#23-%e6%96%b9%e6%a1%88%e4%b8%89%e5%8a%a8%e6%80%81%e6%95%b0%e7%bb%84%e4%b8%8e%e5%91%bd%e5%90%8d%e8%8c%83%e5%9b%b4">#</a></h3>
+<h4 id="231-动态数组公式excel-365excel-2019">2.3.1 动态数组公式（Excel 365/Excel 2019+）<a class="anchor" href="#231-%e5%8a%a8%e6%80%81%e6%95%b0%e7%bb%84%e5%85%ac%e5%bc%8fexcel-365excel-2019">#</a></h4>
+<table>
+  <thead>
+      <tr>
+          <th>公式</th>
+          <th>作用</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>SORT()</code></td>
+          <td>排序</td>
+          <td><code>=SORT(A1:A10)</code></td>
+      </tr>
+      <tr>
+          <td><code>FILTER()</code></td>
+          <td>按条件筛选</td>
+          <td><code>=FILTER(B1:B10, C1:C10&gt;5)</code></td>
+      </tr>
+      <tr>
+          <td><code>UNIQUE()</code></td>
+          <td>去重</td>
+          <td><code>=UNIQUE(D1:D10)</code></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>示例</strong>：<br>
+<code>=FILTER(A1:C10, B1:B10=&quot;是&quot;)</code> 只返回 B 列等于 “是” 的行。</p>
+</blockquote><h4 id="232-命名范围">2.3.2 命名范围<a class="anchor" href="#232-%e5%91%bd%e5%90%8d%e8%8c%83%e5%9b%b4">#</a></h4>
+<p>1️⃣ 选中需要命名的单元格或区域。<br>
+2️⃣ 在“名称框”（左上角下拉框）输入名称，例如 <code>SalesData</code>。<br>
+3️⃣ 在公式中使用：<code>=SUM(SalesData)</code>。</p>
+<blockquote class='book-hint '>
+<p><strong>优势</strong>：公式更易读，避免引用错误。</p>
+</blockquote><hr>
+<h2 id="3-常见问题解答faq">3. 常见问题解答（FAQ）<a class="anchor" href="#3-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：公式返回错误值 <code>#VALUE!</code></strong></td>
+          <td>检查是否有文本与数值混用，或使用 <code>TEXT</code> 函数转为数值。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：怎么把文本的数字转换成数值？</strong></td>
+          <td>选中单元格，点击“数据”→“文本到列”，或使用 <code>VALUE()</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：公式不更新</strong></td>
+          <td>按 <code>Ctrl+Alt+F9</code> 强制刷新，或检查工作簿设置是否为“手动计算”。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：怎么在单元格里显示两个数的和</strong></td>
+          <td>直接输入 <code>=A1+B1</code> 或 <code>=SUM(A1,B1)</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：为什么 <code>A1/B1</code> 显示 <code>#DIV/0!</code></strong></td>
+          <td>B1 可能为 0 或空白；可使用 <code>IFERROR(A1/B1,&quot;&quot;)</code> 处理。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：如何在单元格中添加百分比</strong></td>
+          <td>选中单元格，右键→“设置单元格格式”→“百分比”。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7：公式里使用了相对引用，复制后出现错误</strong></td>
+          <td>需要使用绝对引用 <code>$A$1</code> 或 <code>A$1</code>、<code>$A1</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q8：如何做条件求和（SUMIF/SUMIFS）</strong></td>
+          <td><code>=SUMIF(range, criteria, [sum_range])</code> 或 <code>=SUMIFS(sum_range, criteria_range1, criteria1, …)</code></td>
+      </tr>
+      <tr>
+          <td><strong>Q9：公式里出现 <code>#NAME?</code></strong></td>
+          <td>检查函数拼写、是否使用了不存在的命名范围。</td>
+      </tr>
+      <tr>
+          <td><strong>Q10：如何把两列合并成一列</strong></td>
+          <td><code>=A1 &amp; &quot; &quot; &amp; B1</code> 或 <code>=CONCAT(A1,B1)</code>。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4-小结">4. 小结<a class="anchor" href="#4-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>掌握公式语法</strong>：先从 <code>=</code> 开始，用运算符或函数完成计算。</li>
+<li><strong>熟悉常用函数</strong>：SUM、AVERAGE、IF 等是日常计算的核心。</li>
+<li><strong>使用命名范围与动态数组</strong>：提升公式可读性与灵活性。</li>
+<li><strong>排查错误</strong>：先检查数据类型、引用、函数参数，再看错误提示。</li>
+</ul>
+<p>祝你在 Excel 的数值计算之旅玩得愉快 🚀！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E7%BC%96%E5%8F%B7/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么用编号</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E8%87%AA%E5%8A%A8%E5%8A%A0%E6%80%BB/" class="flex align-center">
+      <span>excel怎么自动加总</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-三种分步骤的解决方案">2. 三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#21-方案一基础算术运算">2.1 方案一：基础算术运算</a></li>
+        <li><a href="#22-方案二使用常用函数">2.2 方案二：使用常用函数</a></li>
+        <li><a href="#23-方案三动态数组与命名范围">2.3 方案三：动态数组与命名范围</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

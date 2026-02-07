@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/categories/ai%E6%95%99%E7%A8%8B/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="AI教程">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="AI教程">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+
+<title>AI教程 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/categories/ai%E6%95%99%E7%A8%8B/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/ai%E6%95%99%E7%A8%8B/index.xml" title="Cloudata AI" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-term book-type-categories">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>AI教程</h3>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%A4%87%E8%A3%BD/">excel如何複製</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何複製--完整-markdown-教程">Excel 如何複製 — 完整 Markdown 教程<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%a4%87%e8%a3%bd--%e5%ae%8c%e6%95%b4-markdown-%e6%95%99%e7%a8%8b">#</a></h1>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<p>在日常使用 Excel 時，複製（copy）功能是最常用也是最重要的工具之一。你可能需要：</p>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>典型場景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>複製單元格或範圍</td>
+          <td>快速將資料搬移或複製到其他工作表</td>
+      </tr>
+      <tr>
+          <td>複製公式</td>
+          <td>讓相同或類似的計算在不同位置重複使用</td>
+      </tr>
+      <tr>
+          <td>複製格式</td>
+          <td>讓資料在不同區域保持統一的外觀</td>
+      </tr>
+      <tr>
+          <td>複製整張工作表</td>
+          <td>產生模板或備份</td>
+      </tr>
+      <tr>
+          <td>複製到其他工作簿</td>
+          <td>整合多個檔案的資料</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>常見問題</strong></p>
+<ol>
+<li><strong>公式引用變化</strong>：複製時相對引用會自動調整，導致結果不符。</li>
+<li><strong>格式遺失</strong>：直接粘貼可能會帶走公式或值，導致只剩空白。</li>
+<li><strong>跨工作簿複製</strong>：有時候粘貼會失去某些設定（如資料驗證）。</li>
+</ol>
+<p>了解這些問題後，我們可以選擇最適合的複製方法。</p>
+<hr>
+<h2 id="方案一標準鍵盤複製--粘貼">方案一：標準鍵盤複製 / 粘貼<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e6%a8%99%e6%ba%96%e9%8d%b5%e7%9b%a4%e8%a4%87%e8%a3%bd--%e7%b2%98%e8%b2%bc">#</a></h2>
+<p>最簡單、最快捷的方式，適合一般資料搬移。</p>
+<ol>
+<li><strong>選擇範圍</strong>
+<ul>
+<li>點擊並拖曳，或按 <code>Shift</code> + 方向鍵選取多個單元格。</li>
+</ul>
+</li>
+<li><strong>複製</strong>
+<ul>
+<li><code>Ctrl + C</code>（或右鍵 → <code>複製</code>）。</li>
+</ul>
+</li>
+<li><strong>粘貼</strong>
+<ul>
+<li>將游標移至目標位置，按 <code>Ctrl + V</code>（或右鍵 → <code>貼上</code>）。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：複製公式時，Excel 會根據粘貼位置自動調整相對引用。若想保留原始公式，需使用絕對引用（<code>$A$1</code>）或在粘貼時選擇「粘貼特殊」中的「公式」。</p>
+</blockquote><hr>
+<h2 id="方案二使用粘貼特殊-paste-special">方案二：使用「粘貼特殊」 (Paste Special)<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e7%b2%98%e8%b2%bc%e7%89%b9%e6%ae%8a-paste-special">#</a></h2>
+<p>「粘貼特殊」提供多種選項，讓你精細掌控複製內容。</p>
+<table>
+  <thead>
+      <tr>
+          <th>選項</th>
+          <th>說明</th>
+          <th>適用情境</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>值</strong></td>
+          <td>只貼上計算結果</td>
+          <td>需要保留資料但不想帶入公式</td>
+      </tr>
+      <tr>
+          <td><strong>公式</strong></td>
+          <td>只貼上公式</td>
+          <td>只想複製計算邏輯</td>
+      </tr>
+      <tr>
+          <td><strong>格式</strong></td>
+          <td>只貼上單元格格式</td>
+          <td>需要統一外觀</td>
+      </tr>
+      <tr>
+          <td><strong>轉置</strong></td>
+          <td>交換行列</td>
+          <td>把縱向資料變成橫向</td>
+      </tr>
+      <tr>
+          <td><strong>連結</strong></td>
+          <td>連結到來源</td>
+          <td>讓粘貼單元格隨原始動態變化</td>
+      </tr>
+      <tr>
+          <td><strong>數值與公式</strong></td>
+          <td>同時貼上</td>
+          <td>需要完整保留</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>操作步驟</strong></p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%A8%AD%E5%AE%9A/">excel如何設定</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何设置--详尽教程">Excel 如何设置 – 详尽教程<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%ae%be%e7%bd%ae--%e8%af%a6%e5%b0%bd%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>本文针对「Excel 如何設定」问题，提供<strong>原因分析</strong>、<strong>三种分步骤的解决方案</strong>以及<strong>常见问题解答</strong>，帮助你快速、系统地调整 Excel 以符合个人或团队使用习惯。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<p>在日常工作中，默认的 Excel 配置往往无法满足多样化的需求，导致：</p>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>影响</th>
+          <th>需要的设置</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>跨团队协作</strong></td>
+          <td>文件样式不统一、公式不同步</td>
+          <td>统一默认字体、单元格格式、列宽</td>
+      </tr>
+      <tr>
+          <td><strong>高效操作</strong></td>
+          <td>常用功能被隐藏、重复点击</td>
+          <td>自定义功能区、快捷键</td>
+      </tr>
+      <tr>
+          <td><strong>数据安全</strong></td>
+          <td>审阅权限、密码保护缺失</td>
+          <td>设置工作簿/工作表保护</td>
+      </tr>
+      <tr>
+          <td><strong>性能优化</strong></td>
+          <td>大量数据导致计算慢</td>
+          <td>关闭自动计算、调整内存使用</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>结论</strong>：合理配置 Excel 可提升效率、减少错误、统一风格、并保证数据安全。</p>
+</blockquote><hr>
+<h2 id="2-方案一手动调整常用设置适合单机使用">2. 方案一：手动调整常用设置（适合单机使用）<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e6%89%8b%e5%8a%a8%e8%b0%83%e6%95%b4%e5%b8%b8%e7%94%a8%e8%ae%be%e7%bd%ae%e9%80%82%e5%90%88%e5%8d%95%e6%9c%ba%e4%bd%bf%e7%94%a8">#</a></h2>
+<blockquote class='book-hint '>
+<p>通过 Excel 的 “选项” 界面进行手动配置，适合不想写脚本、但想快速上手的用户。</p>
+</blockquote><h3 id="步骤-1--打开-excel-选项">步骤 1️⃣ – 打开 Excel 选项<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1--%e6%89%93%e5%bc%80-excel-%e9%80%89%e9%a1%b9">#</a></h3>
+<ol>
+<li>打开任意工作簿。</li>
+<li>点击左上角的 <strong>文件</strong> → <strong>选项</strong>（或按 <code>Alt+F</code> → <code>T</code>）。</li>
+</ol>
+<h3 id="步骤-2--设置默认工作簿工作簿选项">步骤 2️⃣ – 设置默认工作簿（工作簿选项）<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2--%e8%ae%be%e7%bd%ae%e9%bb%98%e8%ae%a4%e5%b7%a5%e4%bd%9c%e7%b0%bf%e5%b7%a5%e4%bd%9c%e7%b0%bf%e9%80%89%e9%a1%b9">#</a></h3>
+<ul>
+<li><strong>显示</strong> → 取消勾选 <strong>“在新工作簿中显示此类对象”</strong>，保持干净的工作区。</li>
+<li><strong>高级</strong> → 在 <strong>“编辑选项”</strong> 中：
+<ul>
+<li>关闭 <strong>“启用自动更正”</strong>（如果你不喜欢自动更正）。</li>
+<li>改变 <strong>“自动保存间隔”</strong> 以匹配团队协作频率。</li>
+</ul>
+</li>
+</ul>
+<h3 id="步骤-3--调整计算方式">步骤 3️⃣ – 调整计算方式<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3--%e8%b0%83%e6%95%b4%e8%ae%a1%e7%ae%97%e6%96%b9%e5%bc%8f">#</a></h3>
+<ul>
+<li><strong>高级</strong> → 在 <strong>“公式”</strong> 区域：
+<ul>
+<li>选择 <strong>“手动”</strong> 或 <strong>“自动”</strong>。</li>
+<li>若数据量大，建议选择 <strong>“手动”</strong> 并在需要时按 <code>F9</code> 强制计算。</li>
+</ul>
+</li>
+</ul>
+<h3 id="步骤-4--统一默认字体与格式">步骤 4️⃣ – 统一默认字体与格式<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-4--%e7%bb%9f%e4%b8%80%e9%bb%98%e8%ae%a4%e5%ad%97%e4%bd%93%e4%b8%8e%e6%a0%bc%e5%bc%8f">#</a></h3>
+<ul>
+<li><strong>常规</strong> → 设定 <strong>“默认字体”</strong>、<strong>“默认字号”</strong>。</li>
+<li>在 <strong>“工作簿”</strong> → <strong>“工作表”</strong> 区域，设置 <strong>“默认单元格格式”</strong>（如日期、货币）。</li>
+</ul>
+<h3 id="步骤-5--保存并重启-excel">步骤 5️⃣ – 保存并重启 Excel<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-5--%e4%bf%9d%e5%ad%98%e5%b9%b6%e9%87%8d%e5%90%af-excel">#</a></h3>
+<ul>
+<li>点击 <strong>确定</strong>。</li>
+<li>关闭并重新打开 Excel，设置生效。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：在团队共享的电脑上，可将此配置导出为 <strong><code>Excel选项</code></strong> 文件，便于后续批量部署。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%A8%AD%E5%AF%86%E7%A2%BC/">excel如何設密碼</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何設密碼">Excel 如何設密碼？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%a8%ad%e5%af%86%e7%a2%bc">#</a></h1>
+<p>在日常工作中，經常需要保護敏感數據或防止意外修改。Excel 提供了多種方式來設置密碼，從簡單的工作表保護到完整的文件加密，滿足不同程度的安全需求。以下將從「設密碼的原因」說明開始，提供 <strong>三種分步驟解決方案</strong>，並列出常見問題及解答，供你快速上手。</p>
+<hr>
+<h2 id="1-為什麼要給-excel-文件設密碼">1. 為什麼要給 Excel 文件設密碼？<a class="anchor" href="#1-%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e7%b5%a6-excel-%e6%96%87%e4%bb%b6%e8%a8%ad%e5%af%86%e7%a2%bc">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>目的</th>
+          <th>具體場景</th>
+          <th>需要的保護級別</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>防止未授權訪問</strong></td>
+          <td>財務報表、合約、個人資料</td>
+          <td>文件加密（整個工作簿）</td>
+      </tr>
+      <tr>
+          <td><strong>保護公式/資料不被修改</strong></td>
+          <td>內部計算模型、關鍵指標</td>
+          <td>工作表保護</td>
+      </tr>
+      <tr>
+          <td><strong>防止意外刪除/改動</strong></td>
+          <td>共享工作簿、多人編輯</td>
+          <td>版本控制 + 密碼保護</td>
+      </tr>
+      <tr>
+          <td><strong>符合法規要求</strong></td>
+          <td>GDPR、HIPAA 等</td>
+          <td>文件加密 + 敏感列隱藏</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小提示</strong>：Excel 的保護功能並不是 100% 防破解，但足以阻擋大部分非專業使用者。若資料極為機密，建議結合雲端加密或專業安全工具。</p>
+</blockquote><hr>
+<h2 id="2-三種分步驟的解決方案">2. 三種分步驟的解決方案<a class="anchor" href="#2-%e4%b8%89%e7%a8%ae%e5%88%86%e6%ad%a5%e9%a9%9f%e7%9a%84%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>所有示例以 <strong>Excel 365</strong> 為基準，其他版本（Excel 2019/2016/2013 等）操作位置略有差異，但基本流程相同。</p>
+</blockquote><h3 id="方法一加密整個工作簿文件級密碼">方法一：加密整個工作簿（文件級密碼）<a class="anchor" href="#%e6%96%b9%e6%b3%95%e4%b8%80%e5%8a%a0%e5%af%86%e6%95%b4%e5%80%8b%e5%b7%a5%e4%bd%9c%e7%b0%bf%e6%96%87%e4%bb%b6%e7%b4%9a%e5%af%86%e7%a2%bc">#</a></h3>
+<p>此方式需要在打開文件時輸入密碼，適合保護整個工作簿。</p>
+<ol>
+<li>
+<p><strong>打開工作簿</strong><br>
+<code>Ctrl + O</code> → 選擇文件 → 打開</p>
+</li>
+<li>
+<p><strong>進入「文件」菜單</strong><br>
+點擊左上角 <strong>「文件」</strong> → <strong>「資訊」</strong></p>
+</li>
+<li>
+<p><strong>設置密碼</strong></p>
+<ul>
+<li>點擊 <strong>「保護工作簿」</strong> → <strong>「加密以密碼」</strong></li>
+<li>在彈出的對話框中輸入密碼，點擊 <strong>「確定」</strong></li>
+<li>再次輸入以確認，點擊 <strong>「確定」</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>保存文件</strong><br>
+<code>Ctrl + S</code> 或 <strong>「文件」</strong> → <strong>「保存」</strong>，完成後文件將被加密。<br>
+<strong>備註</strong>：若忘記密碼，無法恢復，請謹慎備份。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%AE%BE%E5%AE%9A/">excel如何设定</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-设定settings完整指南">Excel 设定（Settings）完整指南<a class="anchor" href="#excel-%e8%ae%be%e5%ae%9asettings%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目标</strong><br>
+了解为什么要调整 Excel 的设定，掌握三种常用的设定方法，并解答常见疑问，帮助你快速、精准地配置 Excel 以提升工作效率。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1️⃣ 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>具体问题</th>
+          <th>设定的重要性</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>统一格式</strong></td>
+          <td>不同电脑/版本出现日期/货币格式不一致</td>
+          <td>通过全局设定保持一致性，避免数据解释错误</td>
+      </tr>
+      <tr>
+          <td><strong>提升效率</strong></td>
+          <td>自定义工具栏、快捷键、常用功能</td>
+          <td>快速访问关键功能，减少重复操作</td>
+      </tr>
+      <tr>
+          <td><strong>自动化与安全</strong></td>
+          <td>开启宏、禁用不安全的外部链接</td>
+          <td>确保工作簿安全，避免恶意代码</td>
+      </tr>
+      <tr>
+          <td><strong>性能优化</strong></td>
+          <td>计算模式、缓存设置</td>
+          <td>在大数据表中减少卡顿，提升响应速度</td>
+      </tr>
+      <tr>
+          <td><strong>本地化需求</strong></td>
+          <td>中文/英文界面、键盘布局</td>
+          <td>让 Excel 更符合本地使用习惯</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p>设定不当会导致：</p>
+<ul>
+<li>数据显示错误（如日期 2023/07/01 变成 7/1/2023）</li>
+<li>宏被阻止，自动化脚本失效</li>
+<li>性能下降，文件打开/保存慢</li>
+<li>使用体验差，频繁点“文件 → 选项”</li>
+</ul>
+</blockquote><hr>
+<h2 id="2-三种分步骤的解决方案">2️⃣ 三种分步骤的解决方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>下面列出 <strong>三种</strong> 典型的设定路径，按需选择即可。</p>
+</blockquote><h3 id="方案-1使用-excel-gui图形化界面设定">方案 1：使用 Excel GUI（图形化界面）设定<a class="anchor" href="#%e6%96%b9%e6%a1%88-1%e4%bd%bf%e7%94%a8-excel-gui%e5%9b%be%e5%bd%a2%e5%8c%96%e7%95%8c%e9%9d%a2%e8%ae%be%e5%ae%9a">#</a></h3>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：大多数常规设置（语言、显示、简易自定义）<br>
+<strong>步骤</strong>：</p>
+</blockquote><ol>
+<li><strong>打开 Excel</strong> → 点击左上角 <strong>文件 (File)</strong></li>
+<li>选择 <strong>选项 (Options)</strong>
+<ul>
+<li>在 Windows 中：<code>文件 → 选项</code></li>
+<li>在 macOS 中：<code>Excel → 首选项</code></li>
+</ul>
+</li>
+<li>在弹出的 <strong>Excel 选项</strong> 对话框中，依次调整：
+<ul>
+<li><strong>常规</strong>：默认文件位置、工作簿启动方式、隐藏/显示工具栏</li>
+<li><strong>高级</strong>：显示选项、编辑选项、键盘快捷键</li>
+<li><strong>高级</strong>（继续）：计算模式、字体、行列显示</li>
+<li><strong>自定义功能区</strong>：添加/删除菜单、快捷键</li>
+<li><strong>安全性</strong>：受信任位置、宏设置、外部内容</li>
+</ul>
+</li>
+<li>点击 <strong>确定</strong> 保存更改。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>示例</strong>：将默认保存路径改为 Google Drive</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%AE%BE%E5%AF%86%E7%A0%81/">excel如何设密码</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-设密码完整教程">Excel 设密码完整教程<a class="anchor" href="#excel-%e8%ae%be%e5%af%86%e7%a0%81%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在日常工作中，Excel 文件往往包含敏感数据、重要公式或需要共享给多位同事的工作表。为了避免未授权访问、误操作或数据泄露，<strong>给 Excel 文件设密码</strong>是一个常见且必要的安全措施。本文将从<strong>原因</strong>、<strong>三种主流设密码方案</strong>以及<strong>常见问题</strong>三大维度，帮助你快速掌握 Excel 设密码的完整流程。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要保护的内容</th>
+          <th>采用哪种密码策略</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>共享文件</td>
+          <td>敏感信息或机密数据</td>
+          <td><strong>文件加密</strong>（打开密码）</td>
+      </tr>
+      <tr>
+          <td>只允许自己编辑</td>
+          <td>公式、数据完整性</td>
+          <td><strong>工作簿/工作表保护</strong>（修改/查看密码）</td>
+      </tr>
+      <tr>
+          <td>防止结构被破坏</td>
+          <td>重要布局、宏</td>
+          <td><strong>工作簿结构保护</strong></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：Excel 的密码保护不是“绝对安全”，但足以防止一般用户随意查看或修改。若需要高度安全，建议结合文件加密软件或使用专用的数据库系统。</p>
+</blockquote><hr>
+<h2 id="2-方案一为整个工作簿设置打开修改密码文件加密">2. 方案一：为整个工作簿设置<strong>打开/修改密码</strong>（文件加密）<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e4%b8%ba%e6%95%b4%e4%b8%aa%e5%b7%a5%e4%bd%9c%e7%b0%bf%e8%ae%be%e7%bd%ae%e6%89%93%e5%bc%80%e4%bf%ae%e6%94%b9%e5%af%86%e7%a0%81%e6%96%87%e4%bb%b6%e5%8a%a0%e5%af%86">#</a></h2>
+<h3 id="21-步骤">2.1 步骤<a class="anchor" href="#21-%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>打开需要加密的 Excel 文件。</li>
+<li>点击 <strong>“文件” → “信息”</strong>。</li>
+<li>在右侧面板中，点击 <strong>“保护工作簿”</strong> 或 <strong>“加密以保护工作簿”</strong>（取决于 Office 版本）。</li>
+<li>选择 <strong>“密码”</strong>，输入<strong>开启密码</strong>（打开文件时需要）或 <strong>“更改密码”</strong>（仅修改文件时需要）。</li>
+<li>再次确认密码后，点击 <strong>“确定”</strong>。</li>
+<li>重新保存文件。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小贴士</strong>：如果你想让文件既需要打开密码又需要修改密码，可在“加密以保护工作簿”中分别填写两个密码。</p>
+</blockquote><h3 id="22-适用场景">2.2 适用场景<a class="anchor" href="#22-%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af">#</a></h3>
+<ul>
+<li>需要让同事或外部人员只在输入正确密码后才能打开文件。</li>
+<li>文档中包含个人隐私、财务数据等敏感信息。</li>
+</ul>
+<h3 id="23-常见错误">2.3 常见错误<a class="anchor" href="#23-%e5%b8%b8%e8%a7%81%e9%94%99%e8%af%af">#</a></h3>
+<ul>
+<li><strong>忘记密码</strong> → Excel 无法恢复，建议提前备份未加密文件。</li>
+<li><strong>密码过短</strong> → 只要 4 位以上即可，但建议 8 位以上。</li>
+</ul>
+<hr>
+<h2 id="3-方案二为工作簿结构或工作表设置密码">3. 方案二：为工作簿<strong>结构</strong>或<strong>工作表</strong>设置密码<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%b8%ba%e5%b7%a5%e4%bd%9c%e7%b0%bf%e7%bb%93%e6%9e%84%e6%88%96%e5%b7%a5%e4%bd%9c%e8%a1%a8%e8%ae%be%e7%bd%ae%e5%af%86%e7%a0%81">#</a></h2>
+<h3 id="31-步骤">3.1 步骤<a class="anchor" href="#31-%e6%ad%a5%e9%aa%a4">#</a></h3>
+<h4 id="311-保护工作簿结构">3.1.1 保护工作簿结构<a class="anchor" href="#311-%e4%bf%9d%e6%8a%a4%e5%b7%a5%e4%bd%9c%e7%b0%bf%e7%bb%93%e6%9e%84">#</a></h4>
+<ol>
+<li>单击 <strong>“文件” → “信息”</strong> → <strong>“保护工作簿”</strong> → <strong>“结构与视图”</strong>。</li>
+<li>勾选 <strong>“密码”</strong>，输入密码。</li>
+<li>确认后保存。</li>
+</ol>
+<h4 id="312-保护单个工作表">3.1.2 保护单个工作表<a class="anchor" href="#312-%e4%bf%9d%e6%8a%a4%e5%8d%95%e4%b8%aa%e5%b7%a5%e4%bd%9c%e8%a1%a8">#</a></h4>
+<ol>
+<li>右键单击要保护的工作表标签，选择 <strong>“保護工作表”</strong>。</li>
+<li>选中 <strong>“密码”</strong>，输入密码。</li>
+<li>如需限制用户可执行的操作（如插入行、删除列等），可勾选对应选项。</li>
+<li>点击 <strong>“确定”</strong>，再次确认密码。</li>
+</ol>
+<h3 id="32-适用场景">3.2 适用场景<a class="anchor" href="#32-%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af">#</a></h3>
+<ul>
+<li>只想防止某些工作表被编辑或结构被修改。</li>
+<li>需要让同事仅能查看而不能随意改动公式。</li>
+</ul>
+<h3 id="33-常见错误">3.3 常见错误<a class="anchor" href="#33-%e5%b8%b8%e8%a7%81%e9%94%99%e8%af%af">#</a></h3>
+<ul>
+<li><strong>忘记密码</strong> → 可以使用第三方破解工具，但不建议。</li>
+<li><strong>未保存</strong> → 保护后需重新保存，否则设置无效。</li>
+</ul>
+<hr>
+<h2 id="4-方案三使用-vba-宏-为工作簿工作表添加自定义密码高级方案">4. 方案三：使用 <strong>VBA 宏</strong> 为工作簿/工作表添加<strong>自定义密码</strong>（高级方案）<a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-vba-%e5%ae%8f-%e4%b8%ba%e5%b7%a5%e4%bd%9c%e7%b0%bf%e5%b7%a5%e4%bd%9c%e8%a1%a8%e6%b7%bb%e5%8a%a0%e8%87%aa%e5%ae%9a%e4%b9%89%e5%af%86%e7%a0%81%e9%ab%98%e7%ba%a7%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于需要更细粒度控制（如按角色分配不同权限）或自动化密码检查的场景。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%AF%A0%E9%80%89/">excel如何诠选</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何筛选从诠选到精确筛选">Excel 如何筛选（从“诠选”到“精确筛选”）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e7%ad%9b%e9%80%89%e4%bb%8e%e8%af%a0%e9%80%89%e5%88%b0%e7%b2%be%e7%a1%ae%e7%ad%9b%e9%80%89">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果你想快速找到“excel如何筛选”，下面的教程将帮助你从基本操作到高级技巧，系统化地掌握筛选功能。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<p>在日常数据处理时，“筛选”往往是第一步。为什么我们需要用筛选？</p>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要的功能</th>
+          <th>可能遇到的痛点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>报表汇总</strong></td>
+          <td>只看某一部门或某一时间段的数据</td>
+          <td>大表里手动滚动太慢</td>
+      </tr>
+      <tr>
+          <td><strong>数据清洗</strong></td>
+          <td>排除重复、错误或不符合条件的行</td>
+          <td>不能一次性过滤所有不符合规则</td>
+      </tr>
+      <tr>
+          <td><strong>交互式分析</strong></td>
+          <td>快速切换视图、动态更新</td>
+          <td>需要频繁刷新或更改筛选条件</td>
+      </tr>
+      <tr>
+          <td><strong>报表共享</strong></td>
+          <td>让不同人员看到不同视图</td>
+          <td>需对每个用户设置不同的筛选</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>核心痛点</strong>：手动查找耗时、错误率高、缺少灵活性。<br>
+<strong>解决方案</strong>：Excel 提供 <strong>AutoFilter</strong>、<strong>Advanced Filter</strong>、以及 <strong>Power Query / Slicer</strong> 三大工具，满足从简单到复杂的筛选需求。</p>
+</blockquote><hr>
+<h2 id="2-三种分步骤的解决方案">2. 三种分步骤的解决方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="21-方案一autofilter自动筛选">2.1 方案一：AutoFilter（自动筛选）<a class="anchor" href="#21-%e6%96%b9%e6%a1%88%e4%b8%80autofilter%e8%87%aa%e5%8a%a8%e7%ad%9b%e9%80%89">#</a></h3>
+<p>适合快速、一次性筛选，最常用。</p>
+<table>
+  <thead>
+      <tr>
+          <th>步骤</th>
+          <th>操作</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>选择数据范围</strong>（含标题）</td>
+          <td>例如 A1:D1000</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>打开筛选按钮</strong> <code>数据 → 筛选</code></td>
+          <td>在标题行插入下拉箭头</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>点击箭头 → 选择条件</strong></td>
+          <td>可按文本、数值、日期、颜色等</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>多列筛选</strong></td>
+          <td>按住 <code>Ctrl</code> 同时选择多列</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>清除筛选</strong></td>
+          <td><code>数据 → 清除筛选</code> 或点击每列的下拉箭头 → “清除筛选”</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%BD%89pdf/">excel如何轉pdf</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何转-pdf-完全指南">Excel 如何转 PDF 完全指南<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%bd%ac-pdf-%e5%ae%8c%e5%85%a8%e6%8c%87%e5%8d%97">#</a></h1>
+<blockquote class='book-hint '>
+<p>这份教程将帮助你在 Windows、Mac 或在线环境下，把 Excel 工作簿、工作表或单元格区域快速、完整地转换为 PDF。<br>
+你可以根据自己的需求选择 <strong>三种不同的方案</strong>——内置导出、第三方虚拟打印机、以及在线转换工具。<br>
+还附上常见问题和解决技巧，助你避免常见坑。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要转 PDF 的原因</th>
+          <th>关键考量</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>正式报告</strong></td>
+          <td>需要保持格式、排版、字体、颜色不变</td>
+          <td>合规、审计、归档</td>
+      </tr>
+      <tr>
+          <td><strong>电子邮件附件</strong></td>
+          <td>PDF 兼容性更好，收件方不必安装 Excel</td>
+          <td>统一阅读体验</td>
+      </tr>
+      <tr>
+          <td><strong>打印准备</strong></td>
+          <td>PDF 可直接送至打印机，防止排版错位</td>
+          <td>页边距、分页符</td>
+      </tr>
+      <tr>
+          <td><strong>共享给非 Excel 用户</strong></td>
+          <td>受限于软件安装</td>
+          <td>只读、不可编辑</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：不同导出方式对 <strong>页眉/页脚、页边距、缩放</strong> 的处理略有差异，选择前请先预览。</p>
+</blockquote><hr>
+<h2 id="方案一使用-excel-自带导出功能">方案一：使用 Excel 自带导出功能<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-excel-%e8%87%aa%e5%b8%a6%e5%af%bc%e5%87%ba%e5%8a%9f%e8%83%bd">#</a></h2>
+<blockquote class='book-hint '>
+<p>这是最直接、最不需要额外软件的方案，适用于 Excel 2010 及以后版本。</p>
+</blockquote><h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>步骤</th>
+          <th>操作</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>打开目标工作簿</td>
+          <td>确认所有数据已完成，避免后期修改导致不一致</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>选中要导出的区域（如单张工作表或多张）</td>
+          <td><code>Ctrl+A</code> 选中全表，或拖拽选区</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><code>文件</code> → <code>另存为</code></td>
+          <td>选择存储位置</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>在文件类型中选择 <code>PDF (*.pdf)</code></td>
+          <td>可点击 <code>选项…</code> 进一步设置</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>在 <code>选项…</code> 页面中设定：<!-- raw HTML omitted -->• <strong>发布范围</strong>：工作表/工作簿/选定区域<!-- raw HTML omitted -->• <strong>页面</strong>：整个工作簿、特定工作表、打印区域<!-- raw HTML omitted -->• <strong>标注</strong>：包含/不包含注释、图形</td>
+          <td>预览后确认</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>点击 <code>保存</code></td>
+          <td>Excel 会自动渲染并生成 PDF</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="进阶技巧">进阶技巧<a class="anchor" href="#%e8%bf%9b%e9%98%b6%e6%8a%80%e5%b7%a7">#</a></h3>
+<ul>
+<li><strong>页面设置</strong>：在 <code>页面布局</code> → <code>打印标题</code>、<code>分页符</code>、<code>纸张大小</code> 预先调整，保证 PDF 的排版。</li>
+<li><strong>多工作表合并</strong>：如果想一次性导出所有工作表，可在 <strong>选项</strong> 中选择 <code>整个工作簿</code>。</li>
+<li><strong>自动化</strong>：使用 VBA 代码 <code>ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:=...</code> 批量导出。</li>
+</ul>
+<hr>
+<h2 id="方案二使用第三方-pdf-打印机">方案二：使用第三方 PDF 打印机<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e7%ac%ac%e4%b8%89%e6%96%b9-pdf-%e6%89%93%e5%8d%b0%e6%9c%ba">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于老版本 Excel 或需要更细粒度控制（如页边距、压缩、加密）的情况。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%BD%89pdf%E6%AA%94/">excel如何轉pdf檔</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何转-pdf完整攻略">Excel 如何转 PDF：完整攻略<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%bd%ac-pdf%e5%ae%8c%e6%95%b4%e6%94%bb%e7%95%a5">#</a></h1>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<p>在日常工作中，Excel 文件经常需要以 <strong>PDF</strong> 的形式分享或打印。PDF 与 Excel 的区别主要在于：</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>Excel</th>
+          <th>PDF</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>可编辑性</strong></td>
+          <td>可直接编辑</td>
+          <td>只读，保留排版</td>
+      </tr>
+      <tr>
+          <td><strong>兼容性</strong></td>
+          <td>需 Office 或兼容软件</td>
+          <td>任何设备都能打开</td>
+      </tr>
+      <tr>
+          <td><strong>排版稳定</strong></td>
+          <td>可能因字体/版本差异导致变形</td>
+          <td>固定排版，保持一致</td>
+      </tr>
+      <tr>
+          <td><strong>文件体积</strong></td>
+          <td>较大（含公式、图表等）</td>
+          <td>通常更小，压缩后更易传输</td>
+      </tr>
+  </tbody>
+</table>
+<p>因此，将 Excel 转为 PDF 能保证文件在不同环境下保持一致、易于存档和分发。下面给出三种常用且实用的转换方法，帮助你根据实际需求选择最合适的方案。</p>
+<hr>
+<h2 id="2-方案一使用-excel-自带的导出-pdf功能">2. 方案一：使用 Excel 自带的「导出 PDF」功能<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-excel-%e8%87%aa%e5%b8%a6%e7%9a%84%e5%af%bc%e5%87%ba-pdf%e5%8a%9f%e8%83%bd">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用版本</strong>：Excel 2010 及以后（含 Office 365/2021/2019）</p>
+</blockquote><h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>打开工作簿</strong><br>
+在 Excel 中打开你想转换的文件。</p>
+</li>
+<li>
+<p><strong>选择导出</strong></p>
+<ul>
+<li><code>文件</code> → <code>导出</code> → <code>创建 PDF/XPS 文档</code></li>
+<li>或者直接点击 <code>文件</code> → <code>另存为</code>，在文件类型中选择 <strong>PDF</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>设置导出选项</strong></p>
+<ul>
+<li><strong>页面范围</strong>：全部工作表 / 选定工作表 / 当前工作表 / 选定单元格</li>
+<li><strong>输出质量</strong>：标准（高质量）或最小文件大小</li>
+<li><strong>附加选项</strong>：勾选 <code>保留标注</code>、<code>包含打印区域</code> 等。</li>
+</ul>
+</li>
+<li>
+<p><strong>点击导出 / 保存</strong><br>
+选择保存路径后，点击 <strong>发布</strong> 或 <strong>保存</strong>，Excel 便会生成 PDF 文件。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E9%92%89%E9%80%89/">excel如何钉选</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何钉选冻结窗格">Excel 如何钉选（冻结窗格）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e9%92%89%e9%80%89%e5%86%bb%e7%bb%93%e7%aa%97%e6%a0%bc">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>钉选</strong>（或“冻结窗格”）是指在 Excel 中锁定某一行、列或区域，使其在滚动时始终保持可见。<br>
+这在处理大型表格、对照多列信息或需要保持标题行/列可读性时尤为重要。</p>
+</blockquote><hr>
+<h2 id="1--为什么要使用钉选">1️⃣  为什么要使用钉选？<a class="anchor" href="#1--%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e4%bd%bf%e7%94%a8%e9%92%89%e9%80%89">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求</th>
+          <th>如何解决</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>大量数据</td>
+          <td>需要在滚动时仍能看到表头</td>
+          <td>冻结首行</td>
+      </tr>
+      <tr>
+          <td>行列对照</td>
+          <td>同时查看左侧索引和右侧内容</td>
+          <td>冻结首列与首行</td>
+      </tr>
+      <tr>
+          <td>多工作表对比</td>
+          <td>需要同时查看不同工作表的相同列</td>
+          <td>分块冻结</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>常见问题</strong><br>
+<em>“冻结后，滚动时会出现空白条”</em><br>
+这通常是因冻结的行/列未对齐导致的，检查是否在正确的单元格（如 B2）执行冻结。</p>
+</blockquote><hr>
+<h2 id="2--三种分步骤的解决方案">2️⃣  三种分步骤的解决方案<a class="anchor" href="#2--%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案一使用视图菜单最常用">方案一：使用“视图”菜单（最常用）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e8%a7%86%e5%9b%be%e8%8f%9c%e5%8d%95%e6%9c%80%e5%b8%b8%e7%94%a8">#</a></h3>
+<ol>
+<li><strong>打开工作簿</strong>，定位到需要冻结的单元格（例如 <strong>B2</strong>，表示冻结第一行和第一列）。</li>
+<li>在 <strong>“视图”</strong> 选项卡中，点击 <strong>“冻结窗格”</strong>。</li>
+<li>选择 <strong>“冻结首行”</strong>、<strong>“冻结首列”</strong> 或 <strong>“冻结窗格”</strong>（自定义位置）。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：</p>
+<ul>
+<li><strong>冻结首行</strong>：仅保持第一行可见。</li>
+<li><strong>冻结首列</strong>：仅保持第一列可见。</li>
+<li><strong>冻结窗格</strong>：在选定单元格左侧和上方的区域将被锁定。</li>
+</ul>
+</blockquote><h3 id="方案二使用快捷键适合快速操作">方案二：使用快捷键（适合快速操作）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%bf%ab%e6%8d%b7%e9%94%ae%e9%80%82%e5%90%88%e5%bf%ab%e9%80%9f%e6%93%8d%e4%bd%9c">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>快捷键</th>
+          <th>适用情境</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Alt + W + F + F</code></td>
+          <td>冻结首行</td>
+          <td>通过键盘完成全部步骤</td>
+      </tr>
+      <tr>
+          <td><code>Alt + W + F + C</code></td>
+          <td>冻结首列</td>
+          <td>适用于列索引始终可见</td>
+      </tr>
+      <tr>
+          <td><code>Alt + W + F + R</code></td>
+          <td>冻结当前选区</td>
+          <td>自定义行/列</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>操作步骤</strong></p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E9%9A%B1%E8%97%8F/">excel如何隱藏</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何隱藏hide">Excel 如何隱藏（Hide）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e9%9a%b1%e8%97%8fhide">#</a></h1>
+<p>在日常使用 Excel 時，常會遇到需要對工作表、行列、資料、公式或其他元素進行「隱藏」的需求。這可以幫助你：</p>
+<ul>
+<li><strong>保護敏感資料</strong>：只讓授權使用者看到關鍵內容。</li>
+<li><strong>簡化介面</strong>：隱藏不必要的列/行，讓報表更易閱讀。</li>
+<li><strong>防止誤操作</strong>：隱藏公式或關鍵欄位，避免使用者不小心改寫。</li>
+<li><strong>提升性能</strong>：在大量資料列上隱藏不常用的資料，減少列印或匯出的佔用空間。</li>
+</ul>
+<p>以下將以 Markdown 方式，詳細說明 3 種常見的隱藏方法，並提供常見問題解答。</p>
+<hr>
+<h2 id="1-原因分析">1️⃣ 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>隱藏類型</th>
+          <th>典型場景</th>
+          <th>需要注意的地方</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>行/列</td>
+          <td>隱藏中間資料、隱藏備份列、列印時省略</td>
+          <td>隱藏後仍能透過 <code>Ctrl+Shift+→</code> 找到，且公式仍會計算</td>
+      </tr>
+      <tr>
+          <td>工作表</td>
+          <td>隱藏不常用的工作表、保護敏感表單</td>
+          <td>需要「解鎖」或「解除保護」才能重新顯示</td>
+      </tr>
+      <tr>
+          <td>公式</td>
+          <td>隱藏公式顯示，僅顯示結果</td>
+          <td>必須先設定「隱藏公式」並保護工作表</td>
+      </tr>
+      <tr>
+          <td>列印</td>
+          <td>隱藏列印時不想印出的列</td>
+          <td>可在「列印範圍」中排除，或直接隱藏列</td>
+      </tr>
+      <tr>
+          <td>VBA</td>
+          <td>隱藏模組、工作表、工作簿</td>
+          <td>需要 VBE 進行隱藏，並防止使用者直接存取</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="2-三種分步驟的解決方案">2️⃣ 三種分步驟的解決方案<a class="anchor" href="#2-%e4%b8%89%e7%a8%ae%e5%88%86%e6%ad%a5%e9%a9%9f%e7%9a%84%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案一隱藏取消隱藏-行列">方案一：隱藏/取消隱藏 行/列<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e9%9a%b1%e8%97%8f%e5%8f%96%e6%b6%88%e9%9a%b1%e8%97%8f-%e8%a1%8c%e5%88%97">#</a></h3>
+<h4 id="隱藏行">隱藏行<a class="anchor" href="#%e9%9a%b1%e8%97%8f%e8%a1%8c">#</a></h4>
+<ol>
+<li>選取你想隱藏的行號（左側行數標籤）。</li>
+<li>右鍵 → <strong>隱藏</strong>。<br>
+或使用功能區：<strong>開始 → 格式 → 隱藏與取消隱藏 → 隱藏行</strong>。</li>
+</ol>
+<h4 id="取消隱藏行">取消隱藏行<a class="anchor" href="#%e5%8f%96%e6%b6%88%e9%9a%b1%e8%97%8f%e8%a1%8c">#</a></h4>
+<ol>
+<li>選取相鄰的兩行。</li>
+<li>右鍵 → <strong>取消隱藏</strong>。</li>
+</ol>
+<h4 id="隱藏列">隱藏列<a class="anchor" href="#%e9%9a%b1%e8%97%8f%e5%88%97">#</a></h4>
+<ol>
+<li>選取你想隱藏的列字母標籤。</li>
+<li>右鍵 → <strong>隱藏</strong>，或 <strong>開始 → 格式 → 隱藏與取消隱藏 → 隱藏列</strong>。</li>
+</ol>
+<h4 id="取消隱藏列">取消隱藏列<a class="anchor" href="#%e5%8f%96%e6%b6%88%e9%9a%b1%e8%97%8f%e5%88%97">#</a></h4>
+<ol>
+<li>選取相鄰的兩列。</li>
+<li>右鍵 → <strong>取消隱藏</strong>。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：若你想一次隱藏多個不相鄰的行/列，按住 <code>Ctrl</code> 選取多個區域再執行上述操作即可。</p></div>
+  </article>
+  
+
+  
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/12/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/11/" aria-label="Page 11" class="page-link" role="button">11</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/12/" aria-label="Page 12" class="page-link" role="button">12</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 13" class="page-link" role="button">13</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/14/" aria-label="Page 14" class="page-link" role="button">14</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/15/" aria-label="Page 15" class="page-link" role="button">15</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/14/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/16/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <a>Categories</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+          <span>160</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Tags</a>
+      <ul>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </div>
+</aside>
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 怎么做表格：完整实战教程  在日常工作中，几乎所有人都会用 Excel 记录数据、做统计、分析趋势。   如果你想把一堆原始数据变成“表格”——既可以美化外观，又能让后续的筛选、排序、汇总变得轻松——下面这份 Markdown 教程会帮你快速掌握 如何在 Excel 中创建表格">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%81%9A%E8%A1%A8%E6%A0%BC/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么做表格">
+  <meta property="og:description" content="Excel 怎么做表格：完整实战教程  在日常工作中，几乎所有人都会用 Excel 记录数据、做统计、分析趋势。   如果你想把一堆原始数据变成“表格”——既可以美化外观，又能让后续的筛选、排序、汇总变得轻松——下面这份 Markdown 教程会帮你快速掌握 如何在 Excel 中创建表格">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel怎么做表格">
+  <meta itemprop="description" content="Excel 怎么做表格：完整实战教程  在日常工作中，几乎所有人都会用 Excel 记录数据、做统计、分析趋势。   如果你想把一堆原始数据变成“表格”——既可以美化外观，又能让后续的筛选、排序、汇总变得轻松——下面这份 Markdown 教程会帮你快速掌握 如何在 Excel 中创建表格">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="209">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么做表格 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%81%9A%E8%A1%A8%E6%A0%BC/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么做表格</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-插入表格最常用最直观">方案一：使用 <strong>“插入表格”</strong>（最常用、最直观）</a></li>
+    <li><a href="#方案二使用-样式-先做格式再手动添加表格功能">方案二：使用 <strong>“样式”</strong> 先做格式，再手动添加表格功能</a></li>
+    <li><a href="#方案三利用-power-query-处理外部数据后生成表格">方案三：利用 <strong>“Power Query”</strong> 处理外部数据后生成表格</a></li>
+    <li><a href="#常见问题解答faq">常见问题解答（FAQ）</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么做表格
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-怎么做表格完整实战教程">Excel 怎么做表格：完整实战教程<a class="anchor" href="#excel-%e6%80%8e%e4%b9%88%e5%81%9a%e8%a1%a8%e6%a0%bc%e5%ae%8c%e6%95%b4%e5%ae%9e%e6%88%98%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在日常工作中，几乎所有人都会用 Excel 记录数据、做统计、分析趋势。<br>
+如果你想把一堆原始数据变成“表格”——既可以美化外观，又能让后续的筛选、排序、汇总变得轻松——下面这份 Markdown 教程会帮你快速掌握 <strong>如何在 Excel 中创建表格</strong>。</p>
+<blockquote class='book-hint '>
+<p><strong>为什么要把数据做成表格？</strong></p>
+<ol>
+<li><strong>结构化</strong>：表格为你提供固定列标题、单元格边框和交替行色彩，让数据一目了然。</li>
+<li><strong>功能增强</strong>：使用“表格”功能后，Excel 自动为你添加筛选器、排序按钮、快速汇总、自动填充公式等。</li>
+<li><strong>可扩展性</strong>：随时插入行/列、引用表格而非单元格范围，公式更稳健；数据更新时，引用也会自动调整。</li>
+</ol>
+</blockquote><h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求</th>
+          <th>传统做法</th>
+          <th>建议做法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>财务报表</strong></td>
+          <td>需要频繁汇总、分组</td>
+          <td>手动求和</td>
+          <td>用 Excel 表格 + 公式</td>
+      </tr>
+      <tr>
+          <td><strong>项目进度表</strong></td>
+          <td>需要动态排序、筛选</td>
+          <td>只靠单元格</td>
+          <td>用表格 + 过滤器</td>
+      </tr>
+      <tr>
+          <td><strong>客户名单</strong></td>
+          <td>需要快速查找、导出</td>
+          <td>手工复制</td>
+          <td>用表格 + 数据验证</td>
+      </tr>
+      <tr>
+          <td><strong>数据库导入</strong></td>
+          <td>大量数据</td>
+          <td>粗粝粘贴</td>
+          <td>用表格 + Power Query</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>常见痛点</strong></p>
+<ul>
+<li><strong>手动填写时缺少边框和标题</strong> → 视觉混乱</li>
+<li><strong>公式引用不自动扩展</strong> → 维护成本高</li>
+<li><strong>数据导入后没有自动筛选器</strong> → 难以快速定位</li>
+</ul>
+</blockquote><h2 id="方案一使用-插入表格最常用最直观">方案一：使用 <strong>“插入表格”</strong>（最常用、最直观）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-%e6%8f%92%e5%85%a5%e8%a1%a8%e6%a0%bc%e6%9c%80%e5%b8%b8%e7%94%a8%e6%9c%80%e7%9b%b4%e8%a7%82">#</a></h2>
+<ol>
+<li>
+<p><strong>选中数据范围</strong></p>
+<ul>
+<li>选中包含列标题和所有数据的区域（例如 A1:D20）。</li>
+<li>如果你已经在工作表中准备好了列标题，直接选中标题行即可。</li>
+</ul>
+</li>
+<li>
+<p><strong>插入表格</strong></p>
+<ul>
+<li>按 <code>Ctrl + T</code>（快捷键）或在“开始”&gt;“样式”里点击 <strong>“表格”</strong> → <strong>“插入表格”</strong>。</li>
+<li>在弹出的对话框中确认范围，勾选 <strong>“我的表格有标题”</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>自定义表格样式</strong></p>
+<ul>
+<li>选中表格后，切换到 <strong>“设计”</strong> 选项卡。</li>
+<li>选择预设样式，或者点击 <strong>“填充色”</strong>、<strong>“边框”</strong> 自定义。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用表格功能</strong></p>
+<ul>
+<li><strong>筛选</strong>：点击列标题右侧的小箭头即可。</li>
+<li><strong>排序</strong>：同样通过列标题的下拉框完成。</li>
+<li><strong>自动填充公式</strong>：在任一列输入公式后，Excel 会自动应用到整列。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong></p>
+<ul>
+<li><strong>表格名称</strong>：在 <strong>“设计”</strong> 选项卡左侧可设置表格名称，便于在公式中引用（如 <code>=SUM(Orders[Amount])</code>）。</li>
+<li><strong>总计行</strong>：勾选 <strong>“总计行”</strong>，即可快速添加求和、平均等。</li>
+</ul>
+</blockquote><h2 id="方案二使用-样式-先做格式再手动添加表格功能">方案二：使用 <strong>“样式”</strong> 先做格式，再手动添加表格功能<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-%e6%a0%b7%e5%bc%8f-%e5%85%88%e5%81%9a%e6%a0%bc%e5%bc%8f%e5%86%8d%e6%89%8b%e5%8a%a8%e6%b7%bb%e5%8a%a0%e8%a1%a8%e6%a0%bc%e5%8a%9f%e8%83%bd">#</a></h2>
+<p>有时你想先做一份“美观”表格，再决定是否启用 Excel 的表格特性。</p>
+<ol>
+<li>
+<p><strong>手动排版</strong></p>
+<ul>
+<li>在工作表中手动输入数据。</li>
+<li>使用 <strong>边框</strong>、<strong>填充色</strong>、<strong>对齐</strong>等工具美化。</li>
+</ul>
+</li>
+<li>
+<p><strong>添加筛选/排序</strong></p>
+<ul>
+<li>选中列标题行，点击 <strong>“开始”&gt;“排序和筛选”</strong> → <strong>“筛选”</strong>。</li>
+<li>这一步会在每列标题生成下拉箭头，功能与真正的表格相同，但后续添加行/列时需要手动调整。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用“表格工具”</strong></p>
+<ul>
+<li>右键点击任何单元格，选择 <strong>“转换为表格”</strong>。</li>
+<li>这一步会把已有格式保留，并启用表格功能。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong></p>
+<ul>
+<li>需要一个 <em>自定义</em> 颜色方案，表格默认样式不够灵活。</li>
+<li>只想在已有工作表中快速添加筛选器，而不想改动原有布局。</li>
+</ul>
+</blockquote><h2 id="方案三利用-power-query-处理外部数据后生成表格">方案三：利用 <strong>“Power Query”</strong> 处理外部数据后生成表格<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e5%88%a9%e7%94%a8-power-query-%e5%a4%84%e7%90%86%e5%a4%96%e9%83%a8%e6%95%b0%e6%8d%ae%e5%90%8e%e7%94%9f%e6%88%90%e8%a1%a8%e6%a0%bc">#</a></h2>
+<p>当你从 CSV、数据库或网页抓取大量原始数据时，Power Query 能帮你清洗、转换并直接输出为“表格”。</p>
+<ol>
+<li>
+<p><strong>导入数据</strong></p>
+<ul>
+<li><code>数据</code> &gt; <code>获取数据</code> &gt; <code>从文件</code>/<code>从数据库</code>/<code>从网络</code> → 选择相应源。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用 Power Query 编辑器</strong></p>
+<ul>
+<li>在编辑器中删除无用列、合并行、转换数据类型等。</li>
+<li>通过 <strong>“高级编辑器”</strong> 写 M 语言脚本实现更复杂的逻辑。</li>
+</ul>
+</li>
+<li>
+<p><strong>加载为表格</strong></p>
+<ul>
+<li>点击 <strong>“关闭并加载”</strong> → <strong>“关闭并加载到&hellip;”</strong> → 选择 <strong>“表格”</strong>。</li>
+<li>Power Query 会在工作表中自动插入一张表格，且带有<strong>刷新</strong>按钮。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong></p>
+<ul>
+<li><strong>一次性</strong>：数据源更新后只需点击刷新即可同步。</li>
+<li><strong>可重复</strong>：步骤保存为查询，后续可重复使用。</li>
+</ul>
+</blockquote><h2 id="常见问题解答faq">常见问题解答（FAQ）<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>位置</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>表格创建后</strong></td>
+          <td>如何让公式自动扩展到新行？</td>
+          <td>在表格中输入公式后，Excel 会自动向下填充。若未自动，可在“设计”&gt;“表格样式选项”勾选 <strong>“自动填充列”</strong>。</td>
+      </tr>
+      <tr>
+          <td><strong>列标题为空</strong></td>
+          <td>插入表格时提示“我的表格有标题”未勾选</td>
+          <td>如果列标题为空，先在第一行插入标题或取消勾选。</td>
+      </tr>
+      <tr>
+          <td><strong>筛选器不显示</strong></td>
+          <td>过滤器左侧的下拉箭头消失</td>
+          <td>在“设计”中勾选 <strong>“展示行标题”</strong> 并检查表格是否已激活。</td>
+      </tr>
+      <tr>
+          <td><strong>如何删除行/列</strong></td>
+          <td>删除不需要的列</td>
+          <td>右键列头 → <strong>删除列</strong>；如果直接删除单元格内容，表格会自动调整。</td>
+      </tr>
+      <tr>
+          <td><strong>如何将表格转换回普通范围</strong></td>
+          <td>想保留格式却不需要表格功能</td>
+          <td>右键点击表格 → <strong>表格</strong> &gt; <strong>转换为常规范围</strong>。</td>
+      </tr>
+      <tr>
+          <td><strong>表格名称冲突</strong></td>
+          <td>两个表格同名导致公式错误</td>
+          <td>在“设计”选项卡手动修改表格名称，使用唯一名称即可。</td>
+      </tr>
+      <tr>
+          <td><strong>如何在表格中使用条件格式</strong></td>
+          <td>需要根据值高亮单元格</td>
+          <td>选中列 → “开始”&gt; “条件格式”&gt; “新建规则”，规则中可引用表格列名。</td>
+      </tr>
+      <tr>
+          <td><strong>表格宽度自适应</strong></td>
+          <td>列宽不匹配数据</td>
+          <td>双击列标题右侧的边框，Excel 会自动调整宽度。</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>方案一</strong>：最简洁、最常用，适合快手创建标准表格。</li>
+<li><strong>方案二</strong>：先做美化，再转换，适合已有美化需求。</li>
+<li><strong>方案三</strong>：用于处理大批量外部数据，自动刷新与清洗。</li>
+</ul>
+<p>按照上述步骤，你就能让 Excel 表格成为你数据管理的高效利器。祝你使用愉快 🚀！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%81%9Aregression/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么做regression</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%85%B1%E7%94%A8/" class="flex align-center">
+      <span>excel怎么共用</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-插入表格最常用最直观">方案一：使用 <strong>“插入表格”</strong>（最常用、最直观）</a></li>
+    <li><a href="#方案二使用-样式-先做格式再手动添加表格功能">方案二：使用 <strong>“样式”</strong> 先做格式，再手动添加表格功能</a></li>
+    <li><a href="#方案三利用-power-query-处理外部数据后生成表格">方案三：利用 <strong>“Power Query”</strong> 处理外部数据后生成表格</a></li>
+    <li><a href="#常见问题解答faq">常见问题解答（FAQ）</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

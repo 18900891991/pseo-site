@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 排名（Rank）使用全攻略  在数据分析、成绩统计、销售排行等情境中，往往需要对一组数值进行排序并给出排名。Excel 提供了多种函数与工具来完成这一任务，本文将从原因、三种常用实现方式以及常见问题三大角度，为你详细阐述如何在 Excel 中使用排名。">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E6%8E%92%E5%90%8D/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么用排名">
+  <meta property="og:description" content="Excel 排名（Rank）使用全攻略  在数据分析、成绩统计、销售排行等情境中，往往需要对一组数值进行排序并给出排名。Excel 提供了多种函数与工具来完成这一任务，本文将从原因、三种常用实现方式以及常见问题三大角度，为你详细阐述如何在 Excel 中使用排名。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel怎么用排名">
+  <meta itemprop="description" content="Excel 排名（Rank）使用全攻略  在数据分析、成绩统计、销售排行等情境中，往往需要对一组数值进行排序并给出排名。Excel 提供了多种函数与工具来完成这一任务，本文将从原因、三种常用实现方式以及常见问题三大角度，为你详细阐述如何在 Excel 中使用排名。">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="312">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么用排名 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E6%8E%92%E5%90%8D/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么用排名</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为什么需要排名">1. 为什么需要排名？</a></li>
+    <li><a href="#2-方案一使用-rankeq--rankavg-函数">2. 方案一：使用 <code>RANK.EQ</code> / <code>RANK.AVG</code> 函数</a>
+      <ul>
+        <li><a href="#21-基础公式">2.1 基础公式</a></li>
+        <li><a href="#22-分步操作">2.2 分步操作</a></li>
+        <li><a href="#23-注意事项">2.3 注意事项</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二使用-sort--unique--sequenceexcel-365--2019">3. 方案二：使用 <code>SORT</code> + <code>UNIQUE</code> + <code>SEQUENCE</code>（Excel 365 / 2019+）</a>
+      <ul>
+        <li><a href="#31-准备公式">3.1 准备公式</a></li>
+        <li><a href="#32-分步操作">3.2 分步操作</a></li>
+        <li><a href="#33-优点">3.3 优点</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用-percent_rank-与-percentileexc">4. 方案三：使用 <code>PERCENT_RANK</code> 与 <code>PERCENTILE.EXC</code></a>
+      <ul>
+        <li><a href="#41-基础公式">4.1 基础公式</a></li>
+        <li><a href="#42-分步操作">4.2 分步操作</a></li>
+        <li><a href="#43-适用场景">4.3 适用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答">5. 常见问题解答</a></li>
+    <li><a href="#6-小结">6. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么用排名
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-排名rank使用全攻略">Excel 排名（Rank）使用全攻略<a class="anchor" href="#excel-%e6%8e%92%e5%90%8drank%e4%bd%bf%e7%94%a8%e5%85%a8%e6%94%bb%e7%95%a5">#</a></h1>
+<p>在数据分析、成绩统计、销售排行等情境中，往往需要对一组数值进行排序并给出排名。Excel 提供了多种函数与工具来完成这一任务，本文将从<strong>原因</strong>、<strong>三种常用实现方式</strong>以及<strong>常见问题</strong>三大角度，为你详细阐述如何在 Excel 中使用排名。</p>
+<blockquote class='book-hint '>
+<p>你不需要额外的插件或宏，只需要 Excel 自带的函数或排序工具即可实现排名。</p>
+</blockquote><hr>
+<h2 id="1-为什么需要排名">1. 为什么需要排名？<a class="anchor" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e6%8e%92%e5%90%8d">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>排名的作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>成绩统计</strong></td>
+          <td>直观展示学生或员工的相对表现，便于评估优劣。</td>
+      </tr>
+      <tr>
+          <td><strong>销售排行</strong></td>
+          <td>识别销售冠军、潜在问题区域，制定激励措施。</td>
+      </tr>
+      <tr>
+          <td><strong>数据筛选</strong></td>
+          <td>取前 N / 后 N 名数据，用于后续分析。</td>
+      </tr>
+      <tr>
+          <td><strong>竞品对比</strong></td>
+          <td>对比各品牌、产品的市场份额或评分。</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>核心优势</strong></p>
+<ul>
+<li><strong>可视化</strong>：排名一目了然，省去手动排序的繁琐。</li>
+<li><strong>动态更新</strong>：只需修改原始数据，排名自动刷新。</li>
+<li><strong>兼容性</strong>：支持多种排序规则（升序/降序、唯一/重复、空值处理等）。</li>
+</ul>
+</blockquote><hr>
+<h2 id="2-方案一使用-rankeq--rankavg-函数">2. 方案一：使用 <code>RANK.EQ</code> / <code>RANK.AVG</code> 函数<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-rankeq--rankavg-%e5%87%bd%e6%95%b0">#</a></h2>
+<h3 id="21-基础公式">2.1 基础公式<a class="anchor" href="#21-%e5%9f%ba%e7%a1%80%e5%85%ac%e5%bc%8f">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>函数</th>
+          <th>语法</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>RANK.EQ(number, ref, [order])</code></td>
+          <td><code>=RANK.EQ(A2,$A$2:$A$10,0)</code></td>
+          <td>对 <code>A2</code> 的数值在 <code>A2:A10</code> 范围内进行排名，<code>order=0</code> 为降序（最高值为 1）。</td>
+      </tr>
+      <tr>
+          <td><code>RANK.AVG(number, ref, [order])</code></td>
+          <td><code>=RANK.AVG(A2,$A$2:$A$10,0)</code></td>
+          <td>同样排名，但若出现重复值则给出平均排名。</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="22-分步操作">2.2 分步操作<a class="anchor" href="#22-%e5%88%86%e6%ad%a5%e6%93%8d%e4%bd%9c">#</a></h3>
+<ol>
+<li>
+<p><strong>准备数据</strong><br>
+在 <code>A</code> 列放置需要排名的数值，例如：成绩、销量。</p>
+</li>
+<li>
+<p><strong>输入公式</strong><br>
+在 <code>B2</code> 输入：<code>=RANK.EQ(A2,$A$2:$A$10,0)</code>，按 Enter。</p>
+</li>
+<li>
+<p><strong>复制公式</strong><br>
+将 <code>B2</code> 向下填充至对应行数，得到完整的排名列表。</p>
+</li>
+<li>
+<p><strong>（可选）处理重复值</strong><br>
+若想让重复值获得相同排名，可以改用 <code>RANK.AVG</code>；如果想让重复值排名不相同但顺序一致，可使用 <code>RANK.EQ</code> 并配合 <code>+</code> 公式调整。</p>
+</li>
+</ol>
+<h3 id="23-注意事项">2.3 注意事项<a class="anchor" href="#23-%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9">#</a></h3>
+<ul>
+<li><strong>空值</strong>：公式会忽略空单元格，但会将空单元格的排名设为 0。</li>
+<li><strong>负数</strong>：排名会按大小处理，负数会被视为低于 0。</li>
+<li><strong>升序</strong>：把 <code>order</code> 设为 <code>1</code> 即可实现升序排名。</li>
+</ul>
+<hr>
+<h2 id="3-方案二使用-sort--unique--sequenceexcel-365--2019">3. 方案二：使用 <code>SORT</code> + <code>UNIQUE</code> + <code>SEQUENCE</code>（Excel 365 / 2019+）<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-sort--unique--sequenceexcel-365--2019">#</a></h2>
+<p>此方法不使用传统排名函数，而是通过排序+序列生成实现动态排名，适合需要显示完整排名列表并同步更新的场景。</p>
+<h3 id="31-准备公式">3.1 准备公式<a class="anchor" href="#31-%e5%87%86%e5%a4%87%e5%85%ac%e5%bc%8f">#</a></h3>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=SORT(A2:A10, 1, -1)          // 升序或降序排序
+=SEQUENCE(COUNT(A2:A10))      // 生成 1..N 的序列
+=UNIQUE(SORT(A2:A10,1,-1))   // 去重后排序</code></pre><h3 id="32-分步操作">3.2 分步操作<a class="anchor" href="#32-%e5%88%86%e6%ad%a5%e6%93%8d%e4%bd%9c">#</a></h3>
+<ol>
+<li>
+<p><strong>排序</strong><br>
+在 <code>B2</code> 输入：<code>=SORT(A2:A10,1,-1)</code>，得到降序排列的数值。</p>
+</li>
+<li>
+<p><strong>生成排名序列</strong><br>
+在 <code>C2</code> 输入：<code>=SEQUENCE(COUNT(A2:A10))</code>，得到 1,2,3… 的序列。</p>
+</li>
+<li>
+<p><strong>合并</strong><br>
+在 <code>D2</code> 通过 <code>INDEX</code> 或 <code>VLOOKUP</code> 把数值与排名对应，例如 <code>=INDEX($C$2:$C$10, MATCH(B2,$B$2:$B$10,0))</code>。</p>
+</li>
+<li>
+<p><strong>（可选）去重</strong><br>
+若需要平均排名或唯一排名，可在 <code>B2</code> 使用 <code>UNIQUE(SORT(...))</code> 并相应调整 <code>SEQUENCE</code>。</p>
+</li>
+</ol>
+<h3 id="33-优点">3.3 优点<a class="anchor" href="#33-%e4%bc%98%e7%82%b9">#</a></h3>
+<ul>
+<li><strong>自动更新</strong>：当原始数据变动时，排名列表会实时刷新。</li>
+<li><strong>可视化</strong>：可以直接显示在表头或侧栏中，便于对齐。</li>
+<li><strong>灵活</strong>：支持多列排名、条件过滤后排名等。</li>
+</ul>
+<hr>
+<h2 id="4-方案三使用-percent_rank-与-percentileexc">4. 方案三：使用 <code>PERCENT_RANK</code> 与 <code>PERCENTILE.EXC</code><a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-percent_rank-%e4%b8%8e-percentileexc">#</a></h2>
+<p>在需要对排名进行百分比/百分位数展示时，<code>PERCENT_RANK</code> 与 <code>PERCENTILE.EXC</code> 可以提供更细粒度的相对位置。</p>
+<h3 id="41-基础公式">4.1 基础公式<a class="anchor" href="#41-%e5%9f%ba%e7%a1%80%e5%85%ac%e5%bc%8f">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>函数</th>
+          <th>语法</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>PERCENT_RANK(array, x, [significance])</code></td>
+          <td><code>=PERCENT_RANK($A$2:$A$10, A2, 3)</code></td>
+          <td>计算 <code>A2</code> 在 <code>A2:A10</code> 内的百分比排名（0-1 之间）。</td>
+      </tr>
+      <tr>
+          <td><code>PERCENTILE.EXC(array, k)</code></td>
+          <td><code>=PERCENTILE.EXC($A$2:$A$10, 0.75)</code></td>
+          <td>计算第 75% 分位数对应的数值。</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="42-分步操作">4.2 分步操作<a class="anchor" href="#42-%e5%88%86%e6%ad%a5%e6%93%8d%e4%bd%9c">#</a></h3>
+<ol>
+<li>
+<p><strong>计算百分比排名</strong><br>
+在 <code>B2</code> 输入：<code>=PERCENT_RANK($A$2:$A$10, A2, 3)</code>，四舍五入到 3 位小数。</p>
+</li>
+<li>
+<p><strong>转换为 1~N 排名</strong><br>
+通过 <code>=ROUNDUP(B2*COUNT($A$2:$A$10), 0)</code> 或 <code>=RANK.EQ(A2,$A$2:$A$10,0)</code> 结合使用。</p>
+</li>
+<li>
+<p><strong>可视化</strong><br>
+在图表或条件格式化中使用百分比排名突出高/低区间。</p>
+</li>
+</ol>
+<h3 id="43-适用场景">4.3 适用场景<a class="anchor" href="#43-%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af">#</a></h3>
+<ul>
+<li><strong>分布分析</strong>：了解数据的分布情况。</li>
+<li><strong>异常值识别</strong>：极端值往往对应极低或极高的百分比排名。</li>
+<li><strong>报告输出</strong>：往往需要“排名前 10%”等表达。</li>
+</ul>
+<hr>
+<h2 id="5-常见问题解答">5. 常见问题解答<a class="anchor" href="#5-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>为什么 <code>RANK.EQ</code> 产生重复排名？</strong></td>
+          <td><code>RANK.EQ</code> 对相同数值给出相同排名，随后排名会跳过。例如，数值 100 有 3 个，排名为 1、1、1，下一位为 4。若想连号排名，使用 <code>RANK.AVG</code> 或自定义公式 <code>=RANK.EQ(A2,$A$2:$A$10,0)+COUNTIF($A$2:A2,A2)-1</code>。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>如何对空值或文本进行排名？</strong></td>
+          <td>先将空值或文本转换为数值（可使用 <code>IFERROR</code> 或 <code>IF</code> 处理），或者在公式中使用 <code>IF(ISNUMBER(A2), RANK.EQ(...), &quot;&quot;)</code>。</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>怎样实现升序排名？</strong></td>
+          <td>将 <code>order</code> 参数设为 <code>1</code>：<code>=RANK.EQ(A2,$A$2:$A$10,1)</code>。</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>想要排名从 0 开始吗？</strong></td>
+          <td>在 <code>RANK.EQ</code> 之后减 1：<code>=RANK.EQ(A2,$A$2:$A$10,0)-1</code>。</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>排名要排除前 N 名吗？</strong></td>
+          <td>使用 <code>FILTER</code> 函数先筛选前 N 名，再用 <code>RANK.EQ</code>：<code>=RANK.EQ(A2,FILTER($A$2:$A$10,$A$2:$A$10&gt;=LARGE($A$2:$A$10,N)))</code>。</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>如何在同一列内显示数值和排名？</strong></td>
+          <td>在相邻列使用 <code>=A2 &amp; &quot; (&quot; &amp; RANK.EQ(A2,$A$2:$A$10,0) &amp; &quot;)&quot;</code>。</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td><strong>为什么 <code>PERCENT_RANK</code> 返回 0.0？</strong></td>
+          <td>数据集太小或所有值相同。可尝试 <code>PERCENT_RANK(array, x, 0)</code> 或 <code>=IF(COUNT(array)=1,1, ...)</code>。</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td><strong>Excel 2016 没有 <code>SORT</code> 函数怎么办？</strong></td>
+          <td>使用 <code>SMALL</code> / <code>LARGE</code> + <code>INDEX</code>：<code>=INDEX($A$2:$A$10, MATCH(SMALL($A$2:$A$10,ROW(A1)), $A$2:$A$10,0))</code>。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="6-小结">6. 小结<a class="anchor" href="#6-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>RANK.EQ / RANK.AVG</strong>：适合传统排名需求，易用、兼容性好。</li>
+<li><strong>SORT + SEQUENCE</strong>：适用于动态数据、需要完整排序列表的高级场景。</li>
+<li><strong>PERCENT_RANK</strong>：提供百分位数视角，适合分布分析。</li>
+</ul>
+<p>根据自己的数据量、版本以及输出需求，任选一种方案即可轻松完成 Excel 排名。祝你工作顺利，数据分析事半功倍！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E5%9B%BE%E8%A1%A8/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么用图表</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E6%96%9C%E7%BA%BF/" class="flex align-center">
+      <span>excel怎么用斜线</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为什么需要排名">1. 为什么需要排名？</a></li>
+    <li><a href="#2-方案一使用-rankeq--rankavg-函数">2. 方案一：使用 <code>RANK.EQ</code> / <code>RANK.AVG</code> 函数</a>
+      <ul>
+        <li><a href="#21-基础公式">2.1 基础公式</a></li>
+        <li><a href="#22-分步操作">2.2 分步操作</a></li>
+        <li><a href="#23-注意事项">2.3 注意事项</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二使用-sort--unique--sequenceexcel-365--2019">3. 方案二：使用 <code>SORT</code> + <code>UNIQUE</code> + <code>SEQUENCE</code>（Excel 365 / 2019+）</a>
+      <ul>
+        <li><a href="#31-准备公式">3.1 准备公式</a></li>
+        <li><a href="#32-分步操作">3.2 分步操作</a></li>
+        <li><a href="#33-优点">3.3 优点</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用-percent_rank-与-percentileexc">4. 方案三：使用 <code>PERCENT_RANK</code> 与 <code>PERCENTILE.EXC</code></a>
+      <ul>
+        <li><a href="#41-基础公式">4.1 基础公式</a></li>
+        <li><a href="#42-分步操作">4.2 分步操作</a></li>
+        <li><a href="#43-适用场景">4.3 适用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答">5. 常见问题解答</a></li>
+    <li><a href="#6-小结">6. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

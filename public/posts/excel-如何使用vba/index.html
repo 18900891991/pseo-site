@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何使用 VBA   本教程面向想要掌握 Excel VBA 的初学者，帮助你从根本上了解为什么需要 VBA、如何逐步上手以及常见疑难的解决办法。  ---   1. 原因分析  | 需求 | 说明 | 典型场景 | |------|------|----------| |">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vba/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel 如何使用vba">
+  <meta property="og:description" content="Excel 如何使用 VBA   本教程面向想要掌握 Excel VBA 的初学者，帮助你从根本上了解为什么需要 VBA、如何逐步上手以及常见疑难的解决办法。  ---   1. 原因分析  | 需求 | 说明 | 典型场景 | |------|------|----------| |">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel 如何使用vba">
+  <meta itemprop="description" content="Excel 如何使用 VBA   本教程面向想要掌握 Excel VBA 的初学者，帮助你从根本上了解为什么需要 VBA、如何逐步上手以及常见疑难的解决办法。  ---   1. 原因分析  | 需求 | 说明 | 典型场景 | |------|------|----------| |">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="479">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel 如何使用vba | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vba/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel 如何使用vba</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-3-种分步骤的解决方案">2. 3 种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案一录制宏--查看代码--轻松修改">方案一：录制宏 → 查看代码 → 轻松修改</a></li>
+        <li><a href="#方案二手动编写-vba-代码--结构化项目">方案二：手动编写 VBA 代码 → 结构化项目</a></li>
+        <li><a href="#方案三结合表单与-api-自动化">方案三：结合表单与 API 自动化</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel 如何使用vba
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何使用-vba">Excel 如何使用 VBA<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8-vba">#</a></h1>
+<blockquote class='book-hint '>
+<p>本教程面向想要掌握 Excel VBA 的初学者，帮助你从根本上了解为什么需要 VBA、如何逐步上手以及常见疑难的解决办法。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>说明</th>
+          <th>典型场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>自动化重复任务</strong></td>
+          <td>Excel 中的复制、粘贴、格式化等操作，手工完成耗时且易出错</td>
+          <td>每月财务报表、数据清洗</td>
+      </tr>
+      <tr>
+          <td><strong>扩展 Excel 功能</strong></td>
+          <td>通过 VBA 可以实现标准功能无法完成的自定义功能</td>
+          <td>复杂的多表汇总、图形化报表</td>
+      </tr>
+      <tr>
+          <td><strong>与外部系统交互</strong></td>
+          <td>读取/写入数据库、调用 Web API、与 Outlook/Word 等 Office 应用联动</td>
+          <td>自动发送邮件、从数据库导入数据</td>
+      </tr>
+      <tr>
+          <td><strong>提高工作效率</strong></td>
+          <td>通过快捷键、事件触发器即时执行脚本</td>
+          <td>通过单击按钮立即刷新数据</td>
+      </tr>
+      <tr>
+          <td><strong>学习编程基础</strong></td>
+          <td>许多初学者通过 VBA 进入更深的编程世界</td>
+          <td>练习循环、条件判断、对象模型</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>为什么选择 VBA 而不是 Power Query / Power Automate？</strong></p>
+<ul>
+<li><strong>VBA</strong> 适合需要对 Excel 内部对象 (单元格、工作表、图表) 进行细粒度控制的场景；</li>
+<li><strong>Power Query</strong> 主要用于 ETL（提取、转换、加载）和数据预处理；</li>
+<li><strong>Power Automate</strong> 更偏向跨应用流程自动化，但对 Excel 内部逻辑的控制有限。</li>
+</ul>
+</blockquote><hr>
+<h2 id="2-3-种分步骤的解决方案">2. 3 种分步骤的解决方案<a class="anchor" href="#2-3-%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案一录制宏--查看代码--轻松修改">方案一：录制宏 → 查看代码 → 轻松修改<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e5%bd%95%e5%88%b6%e5%ae%8f--%e6%9f%a5%e7%9c%8b%e4%bb%a3%e7%a0%81--%e8%bd%bb%e6%9d%be%e4%bf%ae%e6%94%b9">#</a></h3>
+<blockquote class='book-hint '>
+<p>适用于没有编程经验、想快速实现简单功能的用户。</p>
+</blockquote><ol>
+<li>
+<p><strong>打开宏录制器</strong></p>
+<ul>
+<li><code>开发工具</code> → <code>录制宏</code>（如果没有开发工具标签：文件 → 选项 → 自定义功能区 → 勾选“开发工具”）。</li>
+<li>给宏起名后，点击 <code>确定</code> 开始录制。</li>
+</ul>
+</li>
+<li>
+<p><strong>执行想要自动化的操作</strong></p>
+<ul>
+<li>复制粘贴、格式化、过滤等。</li>
+<li>录制期间的每一步都会被记录。</li>
+</ul>
+</li>
+<li>
+<p><strong>停止录制</strong></p>
+<ul>
+<li><code>开发工具</code> → <code>停止录制</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>查看生成的 VBA 代码</strong></p>
+<ul>
+<li><code>开发工具</code> → <code>Visual Basic</code> 打开 VBA 编辑器。</li>
+<li>在 <code>模块1</code> 找到你录制的宏，代码大致如下：</li>
+</ul>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub SampleMacro()
+    Range(&#34;A1&#34;).Select
+    Range(&#34;A1&#34;).Copy
+    Range(&#34;B1&#34;).Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+End Sub</code></pre></li>
+<li>
+<p><strong>修改 &amp; 调试</strong></p>
+<ul>
+<li>在代码中添加 <code>MsgBox</code>、循环、条件判断等。</li>
+<li>按 <code>F5</code> 运行或给按钮绑定。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：零基础、快速得到可执行代码。<br>
+<strong>缺点</strong>：生成代码往往冗余且不易维护。</p>
+</blockquote><hr>
+<h3 id="方案二手动编写-vba-代码--结构化项目">方案二：手动编写 VBA 代码 → 结构化项目<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e6%89%8b%e5%8a%a8%e7%bc%96%e5%86%99-vba-%e4%bb%a3%e7%a0%81--%e7%bb%93%e6%9e%84%e5%8c%96%e9%a1%b9%e7%9b%ae">#</a></h3>
+<blockquote class='book-hint '>
+<p>适合想学习编程逻辑、后期需要维护脚本的用户。</p>
+</blockquote><ol>
+<li>
+<p><strong>打开 VBA 编辑器</strong></p>
+<ul>
+<li><code>ALT + F11</code> 打开。</li>
+</ul>
+</li>
+<li>
+<p><strong>创建模块</strong></p>
+<ul>
+<li><code>插入</code> → <code>模块</code>，在 <code>Project – VBAProject</code> 中右键 <code>模块1</code> → <code>代码窗口</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>编写基本结构</strong></p>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Option Explicit
+
+Sub Main()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets(&#34;Sheet1&#34;)
+
+    &#39; 调用子过程
+    Call CleanData(ws)
+End Sub
+
+Sub CleanData(ws As Worksheet)
+    Dim rng As Range
+    Set rng = ws.Range(&#34;A1:A100&#34;)
+
+    Dim cell As Range
+    For Each cell In rng
+        If IsNumeric(cell.Value) Then
+            cell.Value = cell.Value
+        Else
+            cell.ClearContents
+        End If
+    Next cell
+End Sub</code></pre></li>
+<li>
+<p><strong>使用事件</strong></p>
+<ul>
+<li>例如在 <code>Sheet1</code> 的 <code>Worksheet_Change</code> 事件中自动触发：</li>
+</ul>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Private Sub Worksheet_Change(ByVal Target As Range)
+    If Not Intersect(Target, Me.Range(&#34;A1:A100&#34;)) Is Nothing Then
+        MsgBox &#34;A1:A100 发生变化！&#34;
+    End If
+End Sub</code></pre></li>
+<li>
+<p><strong>调试技巧</strong></p>
+<ul>
+<li><code>F8</code> 单步调试；</li>
+<li>在 <code>立即窗口</code> (<code>CTRL+G</code>) 输入 <code>?变量名</code> 查看值；</li>
+<li>设置断点（点击左侧灰色边缘）。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：代码可读、可维护、可拓展。<br>
+<strong>缺点</strong>：需要一定的 VBA 语法基础。</p>
+</blockquote><hr>
+<h3 id="方案三结合表单与-api-自动化">方案三：结合表单与 API 自动化<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e7%bb%93%e5%90%88%e8%a1%a8%e5%8d%95%e4%b8%8e-api-%e8%87%aa%e5%8a%a8%e5%8c%96">#</a></h3>
+<blockquote class='book-hint '>
+<p>适用于需要与外部系统（数据库、Web）交互、或构建用户界面的高级场景。</p>
+</blockquote><ol>
+<li>
+<p><strong>使用 <code>UserForm</code> 创建界面</strong></p>
+<ul>
+<li><code>插入</code> → <code>UserForm</code>。</li>
+<li>添加 <code>TextBox</code>、<code>CommandButton</code>。</li>
+<li>代码示例：</li>
+</ul>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Private Sub btnSubmit_Click()
+    Dim name As String
+    name = txtName.Text
+    MsgBox &#34;你好，&#34; &amp; name
+End Sub</code></pre></li>
+<li>
+<p><strong>调用外部 API</strong></p>
+<ul>
+<li>使用 <code>MSXML2.XMLHTTP</code> 或 <code>WinHttp.WinHttpRequest</code>：</li>
+</ul>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub GetWeather()
+    Dim http As Object
+    Set http = CreateObject(&#34;MSXML2.XMLHTTP&#34;)
+    http.Open &#34;GET&#34;, &#34;https://api.weatherapi.com/v1/current.json?key=YOURKEY&amp;q=Beijing&#34;, False
+    http.Send
+    MsgBox http.responseText
+End Sub</code></pre></li>
+<li>
+<p><strong>连接数据库</strong>（例如 Access、SQL Server）</p>
+<ul>
+<li><code>ADODB.Connection</code>、<code>ADODB.Recordset</code>：</li>
+</ul>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub ReadSQL()
+    Dim cn As Object, rs As Object
+    Set cn = CreateObject(&#34;ADODB.Connection&#34;)
+    cn.Open &#34;Provider=SQLOLEDB;Data Source=SERVER;Initial Catalog=DB;Integrated Security=SSPI;&#34;
+
+    Set rs = cn.Execute(&#34;SELECT * FROM Employees&#34;)
+    While Not rs.EOF
+        Debug.Print rs.Fields(&#34;Name&#34;).Value
+        rs.MoveNext
+    Wend
+
+    rs.Close
+    cn.Close
+End Sub</code></pre></li>
+<li>
+<p><strong>自动化触发</strong></p>
+<ul>
+<li>在 <code>Workbook_Open</code> 或 <code>Worksheet_Activate</code> 中调用上述子过程，或使用 <code>Timer</code> 机制。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：可实现复杂业务流程、外部系统集成。<br>
+<strong>缺点</strong>：需要对 API、数据库、对象模型有更深了解。</p>
+</blockquote><hr>
+<h2 id="3-常见问题解答faq">3. 常见问题解答（FAQ）<a class="anchor" href="#3-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>说明</th>
+          <th>解决办法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：VBA 宏被禁用怎么办？</strong></td>
+          <td>Excel 默认启用宏安全性，可能阻止宏执行。</td>
+          <td><code>文件</code> → <code>选项</code> → <code>信任中心</code> → <code>信任中心设置</code> → <code>宏设置</code> → 选择“启用所有宏”或“禁用所有宏并发出通知”。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：为什么代码运行时出现 “运行时错误 1004”？</strong></td>
+          <td>典型错误：单元格引用错误、对象未设置。</td>
+          <td>检查 <code>Range</code> 是否存在、使用 <code>Option Explicit</code> 强制变量声明、加入错误处理 <code>On Error Resume Next</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：如何在 VBA 中引用外部库？</strong></td>
+          <td>需要使用第三方 COM 组件或 .NET DLL。</td>
+          <td><code>工具</code> → <code>引用</code> → 选中相应库；若为自定义 DLL，使用 <code>CreateObject</code> 或 <code>LoadLibrary</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：VBA 代码运行很慢，怎样优化？</strong></td>
+          <td>大量循环、频繁读写单元格导致低效。</td>
+          <td>- 关闭 <code>Application.ScreenUpdating</code>、<code>Calculation</code>、<code>EnableEvents</code>；<!-- raw HTML omitted -->- 将数据读入数组，循环处理后一次写回。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：如何在 Excel 365 中使用 VBA 访问 Power Query？</strong></td>
+          <td>Power Query 以查询对象存在。</td>
+          <td>使用 <code>Workbook.Queries</code> 访问、修改或刷新查询。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：VBA 可以在后台无界面运行吗？</strong></td>
+          <td>通过 <code>Application.DisplayAlerts = False</code>、<code>Application.ScreenUpdating = False</code>。</td>
+          <td>对于需要在服务器上运行的脚本，可使用 <code>WScript.Shell</code> 创建无界面实例。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7：如何在 VBA 中调用 Python 或 R？</strong></td>
+          <td>通过 COM 接口或外部脚本。</td>
+          <td>在 VBA 中使用 <code>Shell</code> 调用 <code>python script.py</code> 或 <code>Rscript script.R</code>。</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小贴士</strong>：在编写宏前，先在 Excel 里手动完成一次完整流程，记录每一步；录制宏或手动编写时，最好先把“可重用代码”写成子过程或函数，便于后期维护。</p>
+</blockquote><hr>
+<h2 id="4-小结">4. 小结<a class="anchor" href="#4-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>VBA</strong> 是 Excel 自动化的核心工具，能让你把重复性工作变成一次性脚本。</li>
+<li>先从 <strong>录制宏</strong> 开始，快速获得代码；再逐步学习 <strong>手动编写</strong>、<strong>事件驱动</strong>、<strong>外部系统集成</strong>，提升脚本的灵活性。</li>
+<li>通过 <strong>调试技巧</strong> 与 <strong>错误处理</strong>，你可以把大块代码拆成可维护的模块。</li>
+<li>结合 <strong>常见 FAQ</strong>，在遇到障碍时快速定位问题。</li>
+</ul>
+<blockquote class='book-hint '>
+<p>继续学习 VBA 的方法包括：阅读官方文档、参加在线课程、在 Stack Overflow 查找类似问题、以及加入相关社区交流。祝编码愉快 🚀!</p>
+</blockquote></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel-%E5%A6%82%E4%BD%95%E4%B8%8B%E6%8B%89%E9%80%89%E5%8D%95/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel 如何下拉选单</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel-%E5%A6%82%E4%BD%95%E8%A1%A50/" class="flex align-center">
+      <span>excel 如何补0</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-3-种分步骤的解决方案">2. 3 种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#方案一录制宏--查看代码--轻松修改">方案一：录制宏 → 查看代码 → 轻松修改</a></li>
+        <li><a href="#方案二手动编写-vba-代码--结构化项目">方案二：手动编写 VBA 代码 → 结构化项目</a></li>
+        <li><a href="#方案三结合表单与-api-自动化">方案三：结合表单与 API 自动化</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

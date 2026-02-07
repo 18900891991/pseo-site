@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Python 报错处理（Exception Handling）完整教程   目标    通过本教程，读者能够：    1. 明白 Python 报错（异常）的基本概念与产生机制。    2. 熟练使用 try/except/finally、自定义异常、日志记录等三种常见的错误">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/python%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="python报错处理">
+  <meta property="og:description" content="Python 报错处理（Exception Handling）完整教程   目标    通过本教程，读者能够：    1. 明白 Python 报错（异常）的基本概念与产生机制。    2. 熟练使用 try/except/finally、自定义异常、日志记录等三种常见的错误">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="python报错处理">
+  <meta itemprop="description" content="Python 报错处理（Exception Handling）完整教程   目标    通过本教程，读者能够：    1. 明白 Python 报错（异常）的基本概念与产生机制。    2. 熟练使用 try/except/finally、自定义异常、日志记录等三种常见的错误">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="405">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>python报错处理 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/python%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>python报错处理</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#一原因分析">一、原因分析</a></li>
+    <li><a href="#二三种分步骤的解决方案">二、三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#1-方案一基础-tryexceptfinally">1️⃣ 方案一：基础 <code>try/except/finally</code></a></li>
+        <li><a href="#2-方案二使用-日志-记录错误">2️⃣ 方案二：使用 <strong>日志</strong> 记录错误</a></li>
+        <li><a href="#3-方案三自定义异常-与-层级化错误处理">3️⃣ 方案三：<strong>自定义异常</strong> 与 <strong>层级化错误处理</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#三常见问题解答faq">三、常见问题解答（FAQ）</a></li>
+    <li><a href="#四总结">四、总结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    python报错处理
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="python-报错处理exception-handling完整教程">Python 报错处理（Exception Handling）完整教程<a class="anchor" href="#python-%e6%8a%a5%e9%94%99%e5%a4%84%e7%90%86exception-handling%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目标</strong><br>
+通过本教程，读者能够：</p>
+<ol>
+<li>明白 Python 报错（异常）的基本概念与产生机制。</li>
+<li>熟练使用 <code>try/except/finally</code>、自定义异常、日志记录等三种常见的错误处理方案。</li>
+<li>能够快速定位错误、避免程序崩溃，并把错误信息写入日志或展示给用户。</li>
+</ol>
+</blockquote><hr>
+<h2 id="一原因分析">一、原因分析<a class="anchor" href="#%e4%b8%80%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>错误类型</th>
+          <th>典型场景</th>
+          <th>产生原因</th>
+          <th>典型错误信息</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>SyntaxError</code></td>
+          <td>代码写法错误</td>
+          <td>语法不符合 Python 语法</td>
+          <td><code>invalid syntax</code></td>
+      </tr>
+      <tr>
+          <td><code>ImportError</code></td>
+          <td>模块/包导入失败</td>
+          <td>模块不存在、路径错误</td>
+          <td><code>No module named 'xxx'</code></td>
+      </tr>
+      <tr>
+          <td><code>NameError</code></td>
+          <td>未定义变量</td>
+          <td>变量未声明或拼写错误</td>
+          <td><code>name 'foo' is not defined</code></td>
+      </tr>
+      <tr>
+          <td><code>TypeError</code></td>
+          <td>参数类型不匹配</td>
+          <td>传入了错误类型的参数</td>
+          <td><code>unsupported operand type(s)</code></td>
+      </tr>
+      <tr>
+          <td><code>ValueError</code></td>
+          <td>参数值错误</td>
+          <td>传入了无效但类型正确的值</td>
+          <td><code>invalid literal for int() with base 10</code></td>
+      </tr>
+      <tr>
+          <td><code>IOError/OSError</code></td>
+          <td>文件/网络操作</td>
+          <td>文件不存在、权限不足、网络异常</td>
+          <td><code>FileNotFoundError</code>, <code>ConnectionError</code></td>
+      </tr>
+      <tr>
+          <td><code>KeyError</code></td>
+          <td>访问字典不存在的 key</td>
+          <td>key 不在字典里</td>
+          <td><code>KeyError: 'foo'</code></td>
+      </tr>
+      <tr>
+          <td><code>IndexError</code></td>
+          <td>列表/元组越界</td>
+          <td>访问了不存在的索引</td>
+          <td><code>list index out of range</code></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：所有异常最终都会生成一个“<strong>Traceback</strong>”，它记录了异常发生的调用栈，便于定位问题。</p>
+</blockquote><hr>
+<h2 id="二三种分步骤的解决方案">二、三种分步骤的解决方案<a class="anchor" href="#%e4%ba%8c%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>下面分别介绍三种常用的错误处理方法。每个方法都配有<strong>步骤</strong>和<strong>代码示例</strong>，可按需选择。</p>
+</blockquote><h3 id="1-方案一基础-tryexceptfinally">1️⃣ 方案一：基础 <code>try/except/finally</code><a class="anchor" href="#1-%e6%96%b9%e6%a1%88%e4%b8%80%e5%9f%ba%e7%a1%80-tryexceptfinally">#</a></h3>
+<blockquote class='book-hint '>
+<p>适用于大多数场景，可以捕获并处理错误，保证程序继续执行。</p>
+</blockquote><h4 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h4>
+<ol>
+<li><strong>识别可能抛异常的代码段</strong>（如 I/O、网络请求、第三方库调用等）。</li>
+<li>使用 <code>try:</code> 包装该段代码。</li>
+<li>用 <code>except ExceptionType:</code> 捕获具体异常，或用 <code>except Exception:</code> 捕获所有异常。</li>
+<li>在 <code>except</code> 块中<strong>记录错误</strong>或<strong>给用户友好提示</strong>。</li>
+<li>（可选）使用 <code>finally:</code> 执行无论是否异常都需要执行的清理代码（如关闭文件、释放资源）。</li>
+</ol>
+<h4 id="代码示例">代码示例<a class="anchor" href="#%e4%bb%a3%e7%a0%81%e7%a4%ba%e4%be%8b">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_file</span>(path):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(path, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>            data <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> data
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">FileNotFoundError</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;文件未找到: </span><span style="color:#e6db74">{</span>path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 记录日志</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># logging.error(e)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">PermissionError</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;没有足够的权限读取文件&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">finally</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;文件读取尝试完成&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 调用</span>
+</span></span><span style="display:flex;"><span>content <span style="color:#f92672">=</span> read_file(<span style="color:#e6db74">&#34;non_existent.txt&#34;</span>)</span></span></code></pre></div><blockquote class='book-hint '>
+<p><strong>要点</strong></p>
+<ul>
+<li>不要捕获所有异常 (<code>except:</code>)，否则会掩盖隐藏的 bug。</li>
+<li><code>finally:</code> 用来保证资源释放。</li>
+</ul>
+</blockquote><hr>
+<h3 id="2-方案二使用-日志-记录错误">2️⃣ 方案二：使用 <strong>日志</strong> 记录错误<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-%e6%97%a5%e5%bf%97-%e8%ae%b0%e5%bd%95%e9%94%99%e8%af%af">#</a></h3>
+<blockquote class='book-hint '>
+<p>当程序需要持续运行、或错误需要持久化记录（如后台服务），建议将错误写入日志文件。</p>
+</blockquote><h4 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h4>
+<ol>
+<li>配置 <code>logging</code> 模块（文件、级别、格式）。</li>
+<li>在 <code>except</code> 块中使用 <code>logging.exception()</code> 或 <code>logging.error()</code> 记录异常。</li>
+<li>（可选）根据业务需求，决定是否继续执行或抛出自定义异常。</li>
+</ol>
+<h4 id="代码示例-1">代码示例<a class="anchor" href="#%e4%bb%a3%e7%a0%81%e7%a4%ba%e4%be%8b-1">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(
+</span></span><span style="display:flex;"><span>    filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;app.log&#39;</span>,
+</span></span><span style="display:flex;"><span>    level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>ERROR,
+</span></span><span style="display:flex;"><span>    format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_config</span>(path):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(path, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> json<span style="color:#f92672">.</span>load(f)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> json<span style="color:#f92672">.</span>JSONDecodeError <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>exception(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;配置文件解析错误: </span><span style="color:#e6db74">{</span>path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 重新抛出，或者返回默认配置</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">FileNotFoundError</span>:
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;配置文件不存在: </span><span style="color:#e6db74">{</span>path<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> load_config(<span style="color:#e6db74">&#39;config.json&#39;</span>)</span></span></code></pre></div><blockquote class='book-hint '>
+<p><strong>要点</strong></p>
+<ul>
+<li><code>logging.exception()</code> 会自动把 traceback 信息写入日志。</li>
+<li>结合 <code>logging</code> 的不同级别（DEBUG/INFO/WARNING/ERROR/CRITICAL）可以细化日志策略。</li>
+</ul>
+</blockquote><hr>
+<h3 id="3-方案三自定义异常-与-层级化错误处理">3️⃣ 方案三：<strong>自定义异常</strong> 与 <strong>层级化错误处理</strong><a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%b8%89%e8%87%aa%e5%ae%9a%e4%b9%89%e5%bc%82%e5%b8%b8-%e4%b8%8e-%e5%b1%82%e7%ba%a7%e5%8c%96%e9%94%99%e8%af%af%e5%a4%84%e7%90%86">#</a></h3>
+<blockquote class='book-hint '>
+<p>对于复杂项目，最好定义自己的异常类，方便调用者根据业务层次做不同处理。</p>
+</blockquote><h4 id="步骤-2">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2">#</a></h4>
+<ol>
+<li>定义自定义异常类，继承自 <code>Exception</code> 或更细粒度的基类。</li>
+<li>在业务函数内部抛出该异常，并附带有意义的错误信息。</li>
+<li>在高层调用处捕获自定义异常，决定是否重试、提示用户或最终退出。</li>
+</ol>
+<h4 id="代码示例-2">代码示例<a class="anchor" href="#%e4%bb%a3%e7%a0%81%e7%a4%ba%e4%be%8b-2">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># my_exceptions.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ValidationError</span>(<span style="color:#a6e22e">Exception</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;数据校验错误&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServiceError</span>(<span style="color:#a6e22e">Exception</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;后端服务异常&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># business.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> my_exceptions <span style="color:#f92672">import</span> ValidationError, ServiceError
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch_user</span>(user_id: int) <span style="color:#f92672">-&gt;</span> dict:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(user_id, int):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> ValidationError(<span style="color:#e6db74">&#34;用户 ID 必须是整数&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        resp <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;https://api.example.com/user/</span><span style="color:#e6db74">{</span>user_id<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        resp<span style="color:#f92672">.</span>raise_for_status()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> resp<span style="color:#f92672">.</span>json()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> requests<span style="color:#f92672">.</span>RequestException <span style="color:#66d9ef">as</span> err:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> ServiceError(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;获取用户失败: </span><span style="color:#e6db74">{</span>err<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>) <span style="color:#f92672">from</span> err
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># main.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> business <span style="color:#f92672">import</span> fetch_user
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> my_exceptions <span style="color:#f92672">import</span> ValidationError, ServiceError
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        user <span style="color:#f92672">=</span> fetch_user(<span style="color:#e6db74">&#34;abc&#34;</span>)   <span style="color:#75715e"># 故意传错类型</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> ValidationError <span style="color:#66d9ef">as</span> ve:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;验证错误: </span><span style="color:#e6db74">{</span>ve<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> ServiceError <span style="color:#66d9ef">as</span> se:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;服务错误: </span><span style="color:#e6db74">{</span>se<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(user)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()</span></span></code></pre></div><blockquote class='book-hint '>
+<p><strong>要点</strong></p>
+<ul>
+<li>使用 <code>raise ... from ...</code> 链接原始异常，保持 traceback。</li>
+<li>自定义异常可以携带更多上下文信息，方便日志分析。</li>
+</ul>
+</blockquote><hr>
+<h2 id="三常见问题解答faq">三、常见问题解答（FAQ）<a class="anchor" href="#%e4%b8%89%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>异常捕获后程序仍然崩溃</strong></td>
+          <td>检查是否在 <code>except</code> 后又 <code>raise</code> 了同样的异常，或没有 <code>except</code> 代码块覆盖到。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>日志文件没有写入</strong></td>
+          <td>确认 <code>logging.basicConfig()</code> 的 <code>filename</code> 路径可写，或检查文件权限。</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>捕获 <code>Exception</code> 后仍然看到原始 Traceback</strong></td>
+          <td>可能在 <code>except</code> 里又 <code>raise</code> 了异常。若想完全隐藏，请使用 <code>except Exception:</code> 并不再 re‑raise。</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>自定义异常未被捕获</strong></td>
+          <td>确认 <code>except CustomError:</code> 与自定义异常类的命名、导入路径一致。</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>无法在 <code>finally</code> 中访问异常对象</strong></td>
+          <td>在 <code>except</code> 里可将异常对象赋值给外部变量，或使用 <code>sys.exc_info()</code>。</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>多线程/异步程序中的异常</strong></td>
+          <td>线程内部异常不会自动传播到主线程；需要使用 <code>concurrent.futures</code> 的 <code>future.exception()</code> 或在 async 函数中 <code>try/except</code>。</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td><strong>全局异常处理</strong></td>
+          <td>在入口文件使用 <code>sys.excepthook</code> 或 <code>logging</code> 的 <code>logging.basicConfig</code> 统一捕获未处理异常。</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td><strong>异常堆栈过长导致日志文件膨胀</strong></td>
+          <td>在生产环境中可使用 <code>logging.handlers.RotatingFileHandler</code> 或 <code>TimedRotatingFileHandler</code>，并限制日志级别。</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td><strong>如何在单元测试中验证异常</strong></td>
+          <td>使用 <code>pytest.raises</code> 或 <code>unittest.assertRaises</code>。</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td><strong>异常信息中包含敏感数据</strong></td>
+          <td>在捕获后，先“清洗”异常信息再写日志或返回给用户。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="四总结">四、总结<a class="anchor" href="#%e5%9b%9b%e6%80%bb%e7%bb%93">#</a></h2>
+<ol>
+<li><strong>先定位，再处理</strong>：先看错误信息、traceback，确定触发点。</li>
+<li><strong>层级化错误处理</strong>：从底层抛出自定义异常，再由业务层解码处理。</li>
+<li><strong>日志是最好的伙伴</strong>：无论是开发还是运维，持久化错误堆栈是排查问题的关键。</li>
+<li><strong>避免“吞噬”异常</strong>：不要随意捕获所有异常；至少要记录后再抛出或给出明确提示。</li>
+</ol>
+<p>掌握了上述三种方案，你就能在大多数 Python 项目中优雅地处理错误，并保持代码的可维护性与健壮性。祝你编码愉快 🚀</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/python%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF%E6%80%8E%E4%B9%88%E7%9C%8B/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>python报错信息怎么看</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/python%E6%8A%A5%E9%94%99%E5%B9%B6%E9%80%80%E5%87%BA/" class="flex align-center">
+      <span>python报错并退出</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#一原因分析">一、原因分析</a></li>
+    <li><a href="#二三种分步骤的解决方案">二、三种分步骤的解决方案</a>
+      <ul>
+        <li><a href="#1-方案一基础-tryexceptfinally">1️⃣ 方案一：基础 <code>try/except/finally</code></a></li>
+        <li><a href="#2-方案二使用-日志-记录错误">2️⃣ 方案二：使用 <strong>日志</strong> 记录错误</a></li>
+        <li><a href="#3-方案三自定义异常-与-层级化错误处理">3️⃣ 方案三：<strong>自定义异常</strong> 与 <strong>层级化错误处理</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#三常见问题解答faq">三、常见问题解答（FAQ）</a></li>
+    <li><a href="#四总结">四、总结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

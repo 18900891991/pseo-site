@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel图表制作全攻略   本文适合：    - 需要快速把数据可视化的初学者    - 想了解为何要用图表的中级用户    - 想掌握至少三种不同的图表制作方法的进阶者    ---   原因分析  | 目的 | 说明 | |------|------| | 信息传递">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%81%9A%E5%9B%BE%E8%A1%A8/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何做图表">
+  <meta property="og:description" content="Excel图表制作全攻略   本文适合：    - 需要快速把数据可视化的初学者    - 想了解为何要用图表的中级用户    - 想掌握至少三种不同的图表制作方法的进阶者    ---   原因分析  | 目的 | 说明 | |------|------| | 信息传递">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何做图表">
+  <meta itemprop="description" content="Excel图表制作全攻略   本文适合：    - 需要快速把数据可视化的初学者    - 想了解为何要用图表的中级用户    - 想掌握至少三种不同的图表制作方法的进阶者    ---   原因分析  | 目的 | 说明 | |------|------| | 信息传递">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="300">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何做图表 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%81%9A%E5%9B%BE%E8%A1%A8/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何做图表</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用插入图表向导最常用最直观">方案一：使用“插入”图表向导（最常用、最直观）</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二利用快速图表功能excel-365-特有">方案二：利用“快速图表”功能（Excel 365 特有）</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三通过数据透视表--数据透视图实现动态可视化">方案三：通过“数据透视表 + 数据透视图”实现动态可视化</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答faq">常见问题解答（FAQ）</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何做图表
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel图表制作全攻略">Excel图表制作全攻略<a class="anchor" href="#excel%e5%9b%be%e8%a1%a8%e5%88%b6%e4%bd%9c%e5%85%a8%e6%94%bb%e7%95%a5">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>本文适合：</strong></p>
+<ul>
+<li>需要快速把数据可视化的初学者</li>
+<li>想了解为何要用图表的中级用户</li>
+<li>想掌握至少三种不同的图表制作方法的进阶者</li>
+</ul>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>目的</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>信息传递更直观</strong></td>
+          <td>通过图形展示，读者能一眼捕捉趋势、对比、占比等关键信息。</td>
+      </tr>
+      <tr>
+          <td><strong>提升报告质量</strong></td>
+          <td>图表能让报告更具专业感，避免文字堆砌。</td>
+      </tr>
+      <tr>
+          <td><strong>数据洞察</strong></td>
+          <td>某些关系（如相关性、季节性）在图表中更易发现，帮助后续决策。</td>
+      </tr>
+      <tr>
+          <td><strong>减少错误</strong></td>
+          <td>对照图表可快速检查数据异常或录入错误。</td>
+      </tr>
+      <tr>
+          <td><strong>自动化更新</strong></td>
+          <td>通过绑定数据源，图表会随数据变动自动刷新，省时省力。</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小贴士</strong>：在选择图表类型时，先问自己“我想表达什么？”</p>
+<ul>
+<li>对比：柱状/条形</li>
+<li>趋势：折线/面积</li>
+<li>占比：饼图/环形</li>
+<li>分布：箱线图/柱形/散点</li>
+</ul>
+</blockquote><hr>
+<h2 id="方案一使用插入图表向导最常用最直观">方案一：使用“插入”图表向导（最常用、最直观）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e6%8f%92%e5%85%a5%e5%9b%be%e8%a1%a8%e5%90%91%e5%af%bc%e6%9c%80%e5%b8%b8%e7%94%a8%e6%9c%80%e7%9b%b4%e8%a7%82">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：数据已在工作表中整理好，需快速生成常见图表。</p>
+</blockquote><h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li><strong>选中数据</strong>
+<ul>
+<li>选中包含标题、数字的完整区域，例如 <code>A1:B10</code>。</li>
+</ul>
+</li>
+<li><strong>点击“插入”</strong>
+<ul>
+<li>在 Excel 菜单栏中选择 <code>插入 &gt; 图表</code>。</li>
+</ul>
+</li>
+<li><strong>选择图表类型</strong>
+<ul>
+<li>在弹出的图表库中挑选 <code>柱形图</code>、<code>折线图</code>、<code>饼图</code> 等。</li>
+</ul>
+</li>
+<li><strong>使用图表向导（如 Excel 2013+）</strong>
+<ul>
+<li>选择“推荐的图表”，Excel 会自动给出最适合的图表类型。</li>
+</ul>
+</li>
+<li><strong>定制图表</strong>
+<ul>
+<li><strong>图表标题</strong>：单击标题 → 输入</li>
+<li><strong>图例</strong>：右键 → 选择“图例位置”</li>
+<li><strong>数据标签</strong>：右键柱子/线条 → “添加数据标签”</li>
+<li><strong>格式</strong>：选中图表 → <code>图表工具 &gt; 设计/格式</code></li>
+</ul>
+</li>
+<li><strong>完成</strong>
+<ul>
+<li>选中图表，按 <code>Ctrl + C</code> 复制，粘贴到 PowerPoint/Word/其他位置即可。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>快捷键</strong>：<code>Alt + N + V</code>（插入柱形图）或 <code>Alt + N + F</code>（折线图）等。</p>
+</blockquote><hr>
+<h2 id="方案二利用快速图表功能excel-365-特有">方案二：利用“快速图表”功能（Excel 365 特有）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e5%88%a9%e7%94%a8%e5%bf%ab%e9%80%9f%e5%9b%be%e8%a1%a8%e5%8a%9f%e8%83%bdexcel-365-%e7%89%b9%e6%9c%89">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：在 Excel 365 里，想一键生成多种图表并快速切换。</p>
+</blockquote><h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li><strong>选中数据</strong></li>
+<li><strong>点击“快速图表”</strong>
+<ul>
+<li>在 <code>插入</code> 选项卡左侧，点击 <code>快速图表</code>（图标形如小柱子）。</li>
+</ul>
+</li>
+<li><strong>选择图表类型</strong>
+<ul>
+<li>一个弹出窗口会列出 <code>柱形</code>、<code>折线</code>、<code>堆叠柱形</code>、<code>堆叠折线</code>、<code>饼图</code> 等。</li>
+</ul>
+</li>
+<li><strong>一键生成</strong>
+<ul>
+<li>选中所需类型后，Excel 会在工作表上直接插入对应图表。</li>
+</ul>
+</li>
+<li><strong>切换图表</strong>
+<ul>
+<li>选中图表 → 在 <code>快速图表</code> 菜单里切换不同样式，保持数据不变。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>一键生成，省时</li>
+<li>可以一次性比较多种图表效果</li>
+<li>适合演示前的快速预览</li>
+</ul>
+</blockquote><hr>
+<h2 id="方案三通过数据透视表--数据透视图实现动态可视化">方案三：通过“数据透视表 + 数据透视图”实现动态可视化<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e9%80%9a%e8%bf%87%e6%95%b0%e6%8d%ae%e9%80%8f%e8%a7%86%e8%a1%a8--%e6%95%b0%e6%8d%ae%e9%80%8f%e8%a7%86%e5%9b%be%e5%ae%9e%e7%8e%b0%e5%8a%a8%e6%80%81%e5%8f%af%e8%a7%86%e5%8c%96">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：当数据量大、需要交叉分析、筛选或分组时。</p>
+</blockquote><h3 id="步骤-2">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2">#</a></h3>
+<ol>
+<li><strong>准备数据</strong>
+<ul>
+<li>确保数据无空行，列标题清晰。</li>
+</ul>
+</li>
+<li><strong>插入数据透视表</strong>
+<ul>
+<li><code>插入 &gt; 数据透视表</code> → 选择数据范围 → 目标位置。</li>
+</ul>
+</li>
+<li><strong>设置数据透视字段</strong>
+<ul>
+<li><strong>行标签</strong>：拖到 <code>行</code> 区域（如“地区”）</li>
+<li><strong>列标签</strong>：拖到 <code>列</code> 区域（如“月份”）</li>
+<li><strong>数值</strong>：拖到 <code>数值</code> 区域（如“销售额”）</li>
+</ul>
+</li>
+<li><strong>插入数据透视图</strong>
+<ul>
+<li>在数据透视表工具栏中点击 <code>分析 &gt; 插入图表</code> → 选择想要的图表（柱形/折线/饼）。</li>
+</ul>
+</li>
+<li><strong>动态更新</strong>
+<ul>
+<li>通过切换字段、筛选器，图表会随之更新。</li>
+</ul>
+</li>
+<li><strong>美化</strong>
+<ul>
+<li>使用 <code>图表工具 &gt; 设计/格式</code>，添加图例、标题、数据标签等。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：</p>
+<ul>
+<li><strong>切片器（Slicer）</strong>：在 <code>分析 &gt; 插入切片器</code> 添加交互式过滤器</li>
+<li><strong>时间线（Timeline）</strong>：为日期字段添加交互式时间线</li>
+</ul>
+</blockquote><hr>
+<h2 id="常见问题解答faq">常见问题解答（FAQ）<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>如何让图表随数据自动更新？</strong></td>
+          <td>1️⃣ 选中图表 → 右键 → “更改数据源” → 绑定到表格或命名范围；<!-- raw HTML omitted -->2️⃣ 若使用数据透视图，刷新数据透视表即可。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>图表标题消失了，怎么办？</strong></td>
+          <td>① 右键图表，在弹出的菜单中勾选 “图表标题” 或手动添加 <!-- raw HTML omitted -->② 若标题不可见，检查是否被图例遮挡或图表大小过小</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>为什么饼图显示“其他”而不是全部类别？</strong></td>
+          <td>Excel 默认将小于 5% 的分类合并为 “其他”。 <!-- raw HTML omitted -->解决：右键图表 → “设置数据系列格式” → “显示所有标签”；或在数据表中合并小类</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>如何在折线图上显示每个点的数值？</strong></td>
+          <td>右键折线 → “添加数据标签” → 选中标签 → 右键 → “格式化数据标签” → 勾选 “值”</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>我想把图表导出为 PNG，但分辨率低怎么办？</strong></td>
+          <td>① 选中图表 → 右键 → “另存为图片” → 选择高分辨率； <!-- raw HTML omitted -->② 在打印预览中使用 <code>高质量打印</code> 或使用 <code>Excel 选项 &gt; 高级 &gt; 输出图像质量</code></td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>如何在同一张图表中显示柱形和折线？</strong></td>
+          <td>① 插入柱形图 → 右键系列 → “更改系列图表类型” → 选择 “折线”； <!-- raw HTML omitted -->② 通过“组合图表”功能实现。</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td><strong>我有大量数据要做堆叠柱形图，列数过多导致图表太宽怎么办？</strong></td>
+          <td>① 使用 <code>图表工具 &gt; 设计 &gt; 自动筛选</code> 只显示需要的列； <!-- raw HTML omitted -->② 把数据拆分成多张图表；<!-- raw HTML omitted -->③ 或把列名缩短，或者使用 <code>数据透视图</code> 进行分组。</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td><strong>图表出现“#N/A”或空白，原因是什么？</strong></td>
+          <td>① 数据源中有空值或错误； <!-- raw HTML omitted -->② 公式返回错误； <!-- raw HTML omitted -->③ 图表已断开与源数据的链接。检查并清理数据后重新刷新。</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td><strong>如何在图表中添加趋势线？</strong></td>
+          <td>① 选中折线/柱形系列 → 右键 → “添加趋势线” → 选择线性/指数等； <!-- raw HTML omitted -->② 在“趋势线选项”里可设置“显示方程式”和“R²”。</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td><strong>图表无法在 PowerPoint 中保持格式？</strong></td>
+          <td>① 在 Excel 中先复制图表 → 右键 → “粘贴为图片” <!-- raw HTML omitted -->② 或使用 <code>粘贴特殊</code> → “保持源格式” 或 “链接数据” 以同步更新。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>选择合适的图表类型</strong>：先理解数据特征，再决定柱形、折线、饼图或其它。</li>
+<li><strong>利用 Excel 的自动化功能</strong>：推荐使用“推荐图表”“快速图表”或“数据透视图”进行快速可视化。</li>
+<li><strong>保持图表与数据同步</strong>：使用表格或命名范围，避免手动复制粘贴导致的错误。</li>
+<li><strong>美化与交互</strong>：合理使用图例、标题、标签、切片器，让图表既美观又易于理解。</li>
+</ul>
+<p>祝你玩得开心，图表制作事半功倍！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何做下拉式選單</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%81%9A%E5%9C%96%E8%A1%A8/" class="flex align-center">
+      <span>excel如何做圖表</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用插入图表向导最常用最直观">方案一：使用“插入”图表向导（最常用、最直观）</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二利用快速图表功能excel-365-特有">方案二：利用“快速图表”功能（Excel 365 特有）</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三通过数据透视表--数据透视图实现动态可视化">方案三：通过“数据透视表 + 数据透视图”实现动态可视化</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答faq">常见问题解答（FAQ）</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

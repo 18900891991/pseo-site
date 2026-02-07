@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/categories/ai%E6%95%99%E7%A8%8B/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="AI教程">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="AI教程">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+
+<title>AI教程 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/categories/ai%E6%95%99%E7%A8%8B/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/ai%E6%95%99%E7%A8%8B/index.xml" title="Cloudata AI" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-term book-type-categories">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>AI教程</h3>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E9%87%8D%E8%A4%87%E8%B3%87%E6%96%99/">excel如何刪除重複資料</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何刪除重複資料">Excel 如何刪除重複資料<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%88%aa%e9%99%a4%e9%87%8d%e8%a4%87%e8%b3%87%e6%96%99">#</a></h1>
+<p>在日常使用 Excel 時，經常會遇到重複資料，這不僅浪費儲存空間，還可能影響分析結果。下面將從「為什麼會產生重複」說起，依次介紹三種最常用的刪除重複資料方法，並回答常見的疑問。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>可能原因</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>手動輸入錯誤</strong></td>
+          <td>同一筆資料被重複輸入。</td>
+      </tr>
+      <tr>
+          <td><strong>資料合併</strong></td>
+          <td>多個工作表或檔案合併時未去重。</td>
+      </tr>
+      <tr>
+          <td><strong>匯入外部資料</strong></td>
+          <td>從 CSV、Web、資料庫等導入時，重複行被保留下來。</td>
+      </tr>
+      <tr>
+          <td><strong>公式計算</strong></td>
+          <td>在使用 <code>VLOOKUP</code>、<code>INDEX</code> 等公式產生列時，可能產生重複。</td>
+      </tr>
+      <tr>
+          <td><strong>資料更新</strong></td>
+          <td>版本控制不當，舊資料未刪除就覆蓋新資料。</td>
+      </tr>
+  </tbody>
+</table>
+<p>了解來源能幫助你選擇更合適的刪除方式，並在未來預防重複。</p>
+<hr>
+<h2 id="2-方案一使用刪除重複項功能">2. 方案一：使用「刪除重複項」功能<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e5%88%aa%e9%99%a4%e9%87%8d%e8%a4%87%e9%a0%85%e5%8a%9f%e8%83%bd">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>快捷、直觀</strong>，適合一次性處理整張表或單列。</p>
+</blockquote><h3 id="步驟">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f">#</a></h3>
+<ol>
+<li>
+<p><strong>選擇範圍</strong></p>
+<ul>
+<li>若要整張工作表去重，點擊左上角的全選按鈕；</li>
+<li>若只想去重某些列，先選中這些列。</li>
+</ul>
+</li>
+<li>
+<p><strong>開啟功能</strong></p>
+<ul>
+<li><code>資料</code> ➜ <code>刪除重複項</code>（Excel 2016+）</li>
+<li>在彈出的對話框中，勾選需要比對的列（預設全選）。</li>
+<li><code>確定</code> → Excel 會顯示「已刪除 X 個重複項，保留 Y 行」。</li>
+</ul>
+</li>
+<li>
+<p><strong>檢查結果</strong></p>
+<ul>
+<li>用 <code>Ctrl+F</code> 搜索關鍵字或手動確認無重複。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：若想保留第一筆或最後一筆，可先對資料排序，再使用此功能。</p>
+</blockquote><hr>
+<h2 id="3-方案二使用高級篩選-公式">3. 方案二：使用「高級篩選」+ 公式<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e9%ab%98%e7%b4%9a%e7%af%a9%e9%81%b8-%e5%85%ac%e5%bc%8f">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>可保留原始順序</strong>，適合需要保留特定列順序的情況。</p>
+</blockquote><h3 id="步驟-1">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1">#</a></h3>
+<ol>
+<li>
+<p><strong>複製原始範圍</strong></p>
+<ul>
+<li>例如在 <code>A1:B10</code> 放入資料，先將整個區塊複製到 <code>D1:E10</code>（作為工作區）。</li>
+</ul>
+</li>
+<li>
+<p><strong>開啟高級篩選</strong></p>
+<ul>
+<li><code>資料</code> ➜ <code>進階</code>（或 <code>高級篩選</code>）</li>
+<li>在彈出框中，選擇 <code>將結果複製到其他位置</code>，並勾選 <code>僅保留唯一記錄</code>，目標為 <code>D1</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>驗證</strong></p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E6%9D%A1%E7%A0%81/">excel如何制作条码</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-制作条码完整教程">Excel 制作条码完整教程<a class="anchor" href="#excel-%e5%88%b6%e4%bd%9c%e6%9d%a1%e7%a0%81%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目标</strong><br>
+通过 Excel 轻松生成多种条码（Code‑128、EAN13、QR 等），适用于库存管理、标签打印、资产跟踪等场景。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>可能的做法</th>
+          <th>主要难点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>只需在表格中显示条码符号</td>
+          <td>直接使用条码字体（如 <strong>IDAutomationHC39M</strong>、<strong>Code 128</strong> 等）</td>
+          <td>① 需要下载并安装条码字体<!-- raw HTML omitted -->② 需要在单元格前后加上对应的 <strong>起始/结束符</strong>（如 <code>*</code>、<code>+</code>）</td>
+      </tr>
+      <tr>
+          <td>需要生成图片条码</td>
+          <td>用插件或 VBA 调用外部 API 生成 PNG/JPG 并插入</td>
+          <td>① 插件收费或功能有限<!-- raw HTML omitted -->② VBA 需要一定编码经验</td>
+      </tr>
+      <tr>
+          <td>高度可定制（颜色、尺寸、二维码）</td>
+          <td>使用在线 API 或第三方库</td>
+          <td>① 需要网络环境<!-- raw HTML omitted -->② 需要将图片导入表格</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>结论</strong></p>
+<ol>
+<li><strong>条码字体</strong> 是最快捷、最轻量的方案，适合单次打印。</li>
+<li><strong>插件/VBA</strong> 适合需要批量生成、自动化或需在 Excel 里直接预览。</li>
+<li><strong>在线生成 + 插件</strong> 适合需要多种条码类型（如二维码、条形码混排）且对图像质量要求高。</li>
+</ol>
+</blockquote><hr>
+<h2 id="方案一使用条码字体">方案一：使用条码字体<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e6%9d%a1%e7%a0%81%e5%ad%97%e4%bd%93">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>适用场景</strong>：需要快速在表格中显示条码，打印时即可使用，且条码类型为常见的 1D 条码（Code‑128、Code‑39、EAN13 等）。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E5%87%8F/">excel如何加减</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何加减">Excel 如何加减<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%8a%a0%e5%87%8f">#</a></h1>
+<p>在日常工作中，往往需要对数值进行求和、差值、加减运算。Excel 提供了多种实现方式，既可以手动输入公式，也可以利用快捷键、函数、工具栏等。本文将从<strong>原因分析</strong>入手，提供三种分步骤的解决方案，并列出常见问题与对应的答案，帮助你快速、准确地完成加减操作。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要的操作</th>
+          <th>常见困难</th>
+          <th>解决思路</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>单元格求和</strong></td>
+          <td>需要将一列/行数字加起来</td>
+          <td>记不住公式或手动点算</td>
+          <td>利用 <code>SUM()</code>、快捷键 <code>Alt+=</code> 或直接 <code>+</code> 运算</td>
+      </tr>
+      <tr>
+          <td><strong>两列相减</strong></td>
+          <td>计算差值</td>
+          <td>位置不对、引用错误</td>
+          <td>使用相减公式 <code>=A1-B1</code> 或 <code>SUM()</code> 组合</td>
+      </tr>
+      <tr>
+          <td><strong>批量运算</strong></td>
+          <td>同时对多行/列加减</td>
+          <td>复制粘贴时引用失效</td>
+          <td>绝对/相对引用、填充手柄、数组公式</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>核心问题</strong></p>
+<ol>
+<li><strong>引用错误</strong>：相对引用在复制时会自动变动，导致错误</li>
+<li><strong>公式输入错误</strong>：符号遗漏、括号不配对</li>
+<li><strong>工作效率低</strong>：频繁手动点击、输入，容易出现疏漏</li>
+</ol>
+</blockquote><p>掌握三种标准方法，可根据需求和工作量灵活选用。</p>
+<hr>
+<h2 id="2-方案一直接输入公式手动方式">2. 方案一：直接输入公式（手动方式）<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e7%9b%b4%e6%8e%a5%e8%be%93%e5%85%a5%e5%85%ac%e5%bc%8f%e6%89%8b%e5%8a%a8%e6%96%b9%e5%bc%8f">#</a></h2>
+<h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li><strong>选中目标单元格</strong><br>
+例如你想在 <code>C1</code> 里显示 <code>A1+B1</code> 的结果。</li>
+<li><strong>输入公式</strong>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=A1+B1</code></pre></li>
+<li><strong>按回车</strong><br>
+结果会自动显示。</li>
+<li><strong>拖拽填充</strong><br>
+若需要在多行进行相同运算，拖动单元格右下角的小方块（填充柄）向下填充即可。</li>
+<li><strong>使用 <code>SUM()</code> 计算总和</strong>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=SUM(A1:A10)</code></pre></li>
+</ol>
+<h3 id="适用场景">适用场景<a class="anchor" href="#%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af">#</a></h3>
+<ul>
+<li><strong>单一计算</strong>：仅需要一次性求和或相减</li>
+<li><strong>教学或演示</strong>：需要展示公式写法</li>
+</ul>
+<hr>
+<h2 id="3-方案二使用快捷键快速方式">3. 方案二：使用快捷键（快速方式）<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%bf%ab%e6%8d%b7%e9%94%ae%e5%bf%ab%e9%80%9f%e6%96%b9%e5%bc%8f">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>快捷键</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Alt + =</code></td>
+          <td>自动插入 <code>SUM()</code> 公式</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl + Shift + \</code></td>
+          <td>选中当前列/行的连续区域</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl + D</code></td>
+          <td>向下填充单元格内容</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl + R</code></td>
+          <td>向右填充单元格内容</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li><strong>选中目标单元格</strong><br>
+例如 <code>B11</code> 需要求 <code>B1:B10</code> 的和。</li>
+<li><strong>按 <code>Alt + =</code></strong><br>
+Excel 自动填充 <code>=SUM(B1:B10)</code> 并执行。</li>
+<li><strong>按 <code>Ctrl + Shift + \</code></strong><br>
+选中列范围后按 <code>Ctrl + Shift + \</code> 可快速插入 <code>SUM()</code>。</li>
+<li><strong>按 <code>Ctrl + D</code> 或 <code>Ctrl + R</code></strong><br>
+如果需要将公式向下/右填充，使用这些快捷键即可。</li>
+</ol>
+<h3 id="适用场景-1">适用场景<a class="anchor" href="#%e9%80%82%e7%94%a8%e5%9c%ba%e6%99%af-1">#</a></h3>
+<ul>
+<li><strong>大量数据</strong>：快速求和、相减</li>
+<li><strong>不想手动拖拽</strong>：快捷键可一次完成</li>
+<li><strong>提升效率</strong>：适合日常大批量操作</li>
+</ul>
+<hr>
+<h2 id="4-方案三使用函数与图形工具">4. 方案三：使用函数与图形工具<a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8%e5%87%bd%e6%95%b0%e4%b8%8e%e5%9b%be%e5%bd%a2%e5%b7%a5%e5%85%b7">#</a></h2>
+<p>Excel 还提供了“函数向导”和“公式按钮”来帮助你创建复杂的加减运算。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E5%AF%86%E7%A2%BC/">excel如何加密碼</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何加密密码保护">Excel 如何加密（密码保护）？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%8a%a0%e5%af%86%e5%af%86%e7%a0%81%e4%bf%9d%e6%8a%a4">#</a></h1>
+<p>在办公环境中，Excel 文件往往包含公司机密、个人隐私或财务数据。若不加密，文件可能被未经授权的人查看、篡改或复制。为保证数据安全，可以给工作簿、工作表或单元格添加密码。本文从<strong>为什么需要加密</strong>出发，提供 <strong>三种常见的加密方法</strong>，并解答常见疑问，帮助你安全、有效地保护 Excel 数据。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要密码保护的原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>共享工作簿</strong></td>
+          <td>其他人可以编辑、删除或插入数据，导致信息泄露。</td>
+      </tr>
+      <tr>
+          <td><strong>存储敏感信息</strong></td>
+          <td>如工资、客户名单、财务报表，未加密会让任何拥有文件的人看到。</td>
+      </tr>
+      <tr>
+          <td><strong>防止篡改</strong></td>
+          <td>防止同事或自己在无意中改动重要公式或数据。</td>
+      </tr>
+      <tr>
+          <td><strong>法规合规</strong></td>
+          <td>某些行业（医疗、金融）要求对数据进行加密或访问控制。</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：密码保护不是万能的安全手段，仍需配合磁盘加密、网络安全等措施。</p>
+</blockquote><hr>
+<h2 id="2-3-种分步骤的加密方案">2. 3 种分步骤的加密方案<a class="anchor" href="#2-3-%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e5%8a%a0%e5%af%86%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>下面的方案分别适用于 <strong>工作簿级别</strong>、<strong>工作表级别</strong>、以及 <strong>单元格级别</strong>。你可以根据需要选择最合适的方案。</p>
+</blockquote><h3 id="方案一给整个工作簿加密最常用">方案一：给整个工作簿加密（最常用）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e7%bb%99%e6%95%b4%e4%b8%aa%e5%b7%a5%e4%bd%9c%e7%b0%bf%e5%8a%a0%e5%af%86%e6%9c%80%e5%b8%b8%e7%94%a8">#</a></h3>
+<ol>
+<li>
+<p><strong>打开工作簿</strong><br>
+打开你想加密的 Excel 文件。</p>
+</li>
+<li>
+<p><strong>进入文件菜单</strong><br>
+<code>文件 → 信息 → 保护工作簿 → 用密码加密</code>（Excel 2016/2019/Office 365）<br>
+或者 <code>文件 → 信息 → 保护工作簿 → 加密文件</code>（旧版本的 Excel）。</p>
+</li>
+<li>
+<p><strong>设置密码</strong></p>
+<ul>
+<li>在弹出的对话框中输入<strong>新密码</strong>。</li>
+<li>再次输入确认，点击 <strong>确定</strong>。</li>
+<li><strong>记住密码</strong>：一旦忘记，文件将无法恢复。</li>
+</ul>
+</li>
+<li>
+<p><strong>保存文件</strong><br>
+保存并关闭，然后重新打开，系统会要求输入密码。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：此方法阻止未授权用户打开整个文件，但不阻止已打开文件的用户对内容做更改（除非你再配合设置编辑限制）。</p>
+</blockquote><hr>
+<h3 id="方案二保护单个工作表隐藏锁定">方案二：保护单个工作表（隐藏/锁定）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bf%9d%e6%8a%a4%e5%8d%95%e4%b8%aa%e5%b7%a5%e4%bd%9c%e8%a1%a8%e9%9a%90%e8%97%8f%e9%94%81%e5%ae%9a">#</a></h3>
+<ol>
+<li>
+<p><strong>选择工作表</strong><br>
+在工作簿中点击你想保护的工作表标签。</p>
+</li>
+<li>
+<p><strong>右键 → 保护工作表</strong><br>
+或者 <code>审阅 → 保护工作表</code>。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8C%AF%E5%87%BA/">excel如何匯出</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何匯出文件">Excel 如何匯出文件？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%8c%af%e5%87%ba%e6%96%87%e4%bb%b6">#</a></h1>
+<p>在日常工作中，將 Excel 資料匯出成不同格式（如 CSV、PDF、或其他外部系統）是非常常見的需求。本教程將從<strong>原因分析</strong>開始，接著提供 <strong>三種分步驟的解決方案</strong>，最後整理常見問題解答，幫助你快速、正確地完成匯出任務。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>可能遇到的問題</th>
+          <th>造成原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>共享簡單數據</strong></td>
+          <td>需要把表格發送給不使用 Excel 的同事</td>
+          <td>需要更通用的格式（如 CSV）</td>
+      </tr>
+      <tr>
+          <td><strong>生成報表</strong></td>
+          <td>想把工作表轉成 PDF 以便打印或郵件</td>
+          <td>需要保留格式、頁面佈局</td>
+      </tr>
+      <tr>
+          <td><strong>資料備份</strong></td>
+          <td>想把資料存成壓縮檔案或備份到雲端</td>
+          <td>需要自動化、批次處理</td>
+      </tr>
+      <tr>
+          <td><strong>輸入其他系統</strong></td>
+          <td>要把資料匯入資料庫或其他 BI 工具</td>
+          <td>需要特定格式或 API 呼叫</td>
+      </tr>
+      <tr>
+          <td><strong>多語系或特殊字元</strong></td>
+          <td>匯出時字元顯示錯亂</td>
+          <td>編碼不匹配（UTF‑8 vs ANSI）</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小提醒</strong>：在匯出前先確認目標格式的特性和限制（例如 CSV 會丟失公式與格式，PDF 會固定頁面），以避免資料遺失或誤解。</p>
+</blockquote><hr>
+<h2 id="2-三種分步驟的解決方案">2. 三種分步驟的解決方案<a class="anchor" href="#2-%e4%b8%89%e7%a8%ae%e5%88%86%e6%ad%a5%e9%a9%9f%e7%9a%84%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案一使用另存新檔或匯出功能最簡單">方案一：使用「另存新檔」或「匯出」功能（最簡單）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e5%8f%a6%e5%ad%98%e6%96%b0%e6%aa%94%e6%88%96%e5%8c%af%e5%87%ba%e5%8a%9f%e8%83%bd%e6%9c%80%e7%b0%a1%e5%96%ae">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>步驟</th>
+          <th>操作說明</th>
+          <th>參考圖片</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>打開需要匯出的工作簿</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>點選 <strong>檔案</strong> → <strong>匯出</strong>（或 <strong>另存新檔</strong>）</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>選擇目標格式：<!-- raw HTML omitted -->• CSV（逗號分隔值）<!-- raw HTML omitted -->• PDF<!-- raw HTML omitted -->• TXT</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>設定檔名、位置，點擊 <strong>匯出</strong> 或 <strong>儲存</strong></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：若匯出 PDF，請先確定工作表已設定好「列印區域」與「頁面設定」(Page Layout → Print Area, Page Setup)，避免內容被截斷。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8F%96%E4%BB%A3/">excel如何取代</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="如何取代-excel完整教程">如何取代 Excel：完整教程<a class="anchor" href="#%e5%a6%82%e4%bd%95%e5%8f%96%e4%bb%a3-excel%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>本文为你系统说明为什么会想要替代 Excel、可行的三种替代方案以及常见问题的解答。<br>
+目标读者：正在使用 Excel 做数据处理、报表、可视化的业务分析师、数据分析师、产品经理以及技术团队负责人。</p>
+</blockquote><hr>
+<h2 id="1-原因分析为什么要考虑取代-excel">1️⃣ 原因分析：为什么要考虑取代 Excel？<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%80%83%e8%99%91%e5%8f%96%e4%bb%a3-excel">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>具体场景</th>
+          <th>问题</th>
+          <th>影响</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>大数据量</strong></td>
+          <td>Excel 单工作表单元格数上限为 1,048,576 行 × 16,384 列；文件尺寸往往受限</td>
+          <td>超大表格导致滚动卡顿、编辑崩溃</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>多人协作</strong></td>
+          <td>传统 Excel 需要手动共享、合并，版本冲突多</td>
+          <td>版本管理麻烦，实时协作受限</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>自动化 &amp; 脚本</strong></td>
+          <td>依赖 VBA 或手工操作</td>
+          <td>脚本可维护性差，易出错</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>可视化 &amp; 报表</strong></td>
+          <td>受限于 Excel 的图表功能、布局</td>
+          <td>需要更精细的交互式仪表盘</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>安全 &amp; 合规</strong></td>
+          <td>本地文件易丢失、访问受限</td>
+          <td>难满足企业级存储与审计需求</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>跨平台</strong></td>
+          <td>Windows 版本友好，Mac 或 Linux 版功能受限</td>
+          <td>远程办公和移动端体验差</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>结论</strong>：当数据量、协作频率、自动化需求和可视化要求均超过 Excel 的舒适区，或者你需要更好的版本控制、集成与安全时，考虑替代方案是必要的。</p>
+</blockquote><hr>
+<h2 id="2-三种分步骤的解决方案">2️⃣ 三种分步骤的解决方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>下面列出三条主流路线：云端协作、开源表格、程序化数据处理。每条都提供从入门到上线的具体步骤。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8F%A0%E5%9B%BE/">excel如何叠图</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-叠图overlay-charts教程">Excel 叠图（Overlay Charts）教程<a class="anchor" href="#excel-%e5%8f%a0%e5%9b%beoverlay-charts%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在数据可视化中，叠图（Overlay Chart）可以让你把多组数据放在同一坐标系里，便于直接比较或展示两种不同尺度的数据。本文将从<strong>为何需要叠图</strong>讲起，给出<strong>三种常用解决方案</strong>，并回答<strong>最常见的疑问</strong>，帮助你在 Excel 中轻松实现叠图。</p>
+<hr>
+<h2 id="1-为什么要做叠图">1. 为什么要做叠图？<a class="anchor" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%81%9a%e5%8f%a0%e5%9b%be">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求</th>
+          <th>叠图的优势</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>销售与利润</td>
+          <td>同时展示销量与利润，销量大、利润小</td>
+          <td>直接对比，节省空间</td>
+      </tr>
+      <tr>
+          <td>预算与实际</td>
+          <td>同时查看预算与实际支出</td>
+          <td>直观发现偏差</td>
+      </tr>
+      <tr>
+          <td>目标与达成</td>
+          <td>目标值与实际值</td>
+          <td>及时评估进度</td>
+      </tr>
+      <tr>
+          <td>多维度</td>
+          <td>同时展示不同指标</td>
+          <td>统一视图，减少图表数</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小贴士</strong>：叠图不等于“堆叠图”。堆叠图是把各系列的值相加，叠图是把系列放在同一坐标轴上，彼此叠加。</p>
+</blockquote><hr>
+<h2 id="2-方案一组合图combination-chart">2. 方案一：组合图（Combination Chart）<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e7%bb%84%e5%90%88%e5%9b%becombination-chart">#</a></h2>
+<p>组合图是最常用的叠图方式，允许你把柱形图、折线图、面积图等多种图形叠加在同一坐标轴。</p>
+<h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>准备数据</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>月份</th>
+          <th>销售额</th>
+          <th>利润率</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1月</td>
+          <td>12000</td>
+          <td>8%</td>
+      </tr>
+      <tr>
+          <td>2月</td>
+          <td>15000</td>
+          <td>10%</td>
+      </tr>
+      <tr>
+          <td>3月</td>
+          <td>11000</td>
+          <td>7%</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>
+<p><strong>插入图表</strong></p>
+<ul>
+<li>选中整个数据区域</li>
+<li><code>插入</code> → <code>图表</code> → <code>柱形图</code>（先选一个柱形图）</li>
+</ul>
+</li>
+<li>
+<p><strong>设置组合图</strong></p>
+<ul>
+<li>选中图表，右键 → <code>更改图表类型</code></li>
+<li>在左侧选择 <code>组合</code>，为不同系列分配图表类型（如：销售额 → 柱形，利润率 → 折线）</li>
+<li>确认 <code>主轴</code> 和 <code>次轴</code> 的选择（如利润率使用次轴，以便比例匹配）</li>
+</ul>
+</li>
+<li>
+<p><strong>调整格式</strong></p>
+<ul>
+<li>右键系列 → <code>设置系列格式</code> → <code>填充</code>，为柱形设置透明度（如 50%），让折线能清晰可见</li>
+<li>调整轴标签、图例、标题等</li>
+</ul>
+</li>
+<li>
+<p><strong>完成</strong></p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5/">excel如何合併</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何合併">Excel 如何合併<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e4%bd%b5">#</a></h1>
+<p>在日常使用 Excel 時，常常會遇到需要「合併」的情況。<br>
+合併可能指：</p>
+<ul>
+<li><strong>合併單元格</strong>（把多個格子變成一個大格子）</li>
+<li><strong>合併文字</strong>（將多列/多欄的資料串成一行或一列）</li>
+<li><strong>合併表格</strong>（把兩個或多個表格合成一個完整資料集）</li>
+</ul>
+<p>本文將針對「合併」的三種常見需求，提供詳細的分步驟解決方案，並附上常見問題解答，協助你快速掌握。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>合併類型</th>
+          <th>典型場景</th>
+          <th>需要注意的坑</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>合併單元格</td>
+          <td>製作標題、表格佈局</td>
+          <td>合併後只能保留左上角的值，其他資料會被覆寫；排序、篩選時會失效</td>
+      </tr>
+      <tr>
+          <td>合併文字</td>
+          <td>把多列資料串成一行（如姓名+地址）</td>
+          <td>需要注意空格、分隔符；合併後資料不可再拆分</td>
+      </tr>
+      <tr>
+          <td>合併表格</td>
+          <td>合併兩個資料表、匯總多個工作表</td>
+          <td>需要確認欄位對應、重複值處理、資料型別一致</td>
+      </tr>
+  </tbody>
+</table>
+<p>了解需求後，選擇最適合的合併方法能避免不必要的錯誤。</p>
+<hr>
+<h2 id="方案一使用合併單元格功能">方案一：使用「合併單元格」功能<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e5%90%88%e4%bd%b5%e5%96%ae%e5%85%83%e6%a0%bc%e5%8a%9f%e8%83%bd">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用情況</strong>：需要在工作表中將多個格子視覺上合併為一個格子，例如合併標題、佈局調整。</p>
+</blockquote><h3 id="步驟">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f">#</a></h3>
+<ol>
+<li><strong>選取要合併的格子</strong><br>
+<em>點擊並拖曳</em> 或使用 <code>Shift</code> + 選擇多個格子。</li>
+<li><strong>前往「開始」&gt;「對齊」區域</strong><br>
+點擊 <strong>「合併及置中」</strong>（或「合併單元格」），並選擇下列其中一項：
+<ul>
+<li><strong>合併及置中</strong>（保留左上角值，並置中）</li>
+<li><strong>合併跨列</strong>（只合併列）</li>
+<li><strong>合併跨列、保留左側值</strong>（保留左側值且不置中）</li>
+</ul>
+</li>
+<li><strong>確認結果</strong><br>
+合併完成後，右鍵可選擇「取消合併」以恢復原狀。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小提示</strong>：若要快速取消合併，選中合併格後再次點擊「合併及置中」即可。</p>
+</blockquote><hr>
+<h2 id="方案二使用-concatenate--textjoin-合併文字">方案二：使用 <code>CONCATENATE</code> / <code>TEXTJOIN</code> 合併文字<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-concatenate--textjoin-%e5%90%88%e4%bd%b5%e6%96%87%e5%ad%97">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用情況</strong>：需要將多列或多欄資料拼接成一個字符串，例如「姓名 + 電話」或「地址」等。</p>
+</blockquote><h3 id="步驟-1">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1">#</a></h3>
+<ol>
+<li><strong>選擇輸出單元格</strong><br>
+在你想要顯示合併結果的單元格輸入公式。</li>
+<li><strong>使用 <code>CONCATENATE</code>（舊版）</strong>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=CONCATENATE(A2, &#34; &#34;, B2)</code></pre>或者使用 <code>&amp;</code> 運算子：
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=A2 &amp; &#34; &#34; &amp; B2</code></pre></li>
+<li><strong>使用 <code>TEXTJOIN</code>（Excel 2016 以上）</strong>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=TEXTJOIN(&#34; &#34;, TRUE, A2, B2, C2)</code></pre><ul>
+<li>第 1 個參數是分隔符（如空格、逗號等）</li>
+<li>第 2 個參數 <code>TRUE</code> 表示忽略空白值</li>
+<li>後面的參數是要合併的範圍或單元格</li>
+</ul>
+</li>
+<li><strong>拖曳填充</strong><br>
+把公式向下或向右拖曳，以處理多行資料。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：合併後的文字是 <strong>靜態值</strong>，若原始資料改變，需要重新計算或使用 <code>Ctrl + C / Ctrl + V</code> 貼上值。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5%E5%84%B2%E5%AD%98%E6%A0%BC/">excel如何合併儲存格</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何合併儲存格">Excel 如何合併儲存格<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e4%bd%b5%e5%84%b2%e5%ad%98%e6%a0%bc">#</a></h1>
+<p>合併儲存格是 Excel 中最常見的格式化操作之一，常被用來：</p>
+<ul>
+<li>讓標題跨多欄顯示</li>
+<li>在資料表格中做「合併列」或「合併欄」以提升可讀性</li>
+<li>產生報表摘要時，將多個值合併成一個單元格</li>
+</ul>
+<p>雖然操作簡單，但在實務中仍會遇到各種「合併失敗」或「資料被破壞」的問題。以下將從原因分析、三種分步解決方案以及常見問答，為你提供完整的參考。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>造成原因</th>
+          <th>影響</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>合併後資料遺失</strong></td>
+          <td>合併時，Excel 只保留左上角（或上方最左側）儲存格的值，其他儲存格的內容會被刪除。</td>
+          <td>資料丟失、報表不完整</td>
+      </tr>
+      <tr>
+          <td><strong>排序/篩選失敗</strong></td>
+          <td>合併儲存格在同一列或同一欄中會被視為同一個儲存格，Excel 無法對其進行排序或篩選。</td>
+          <td>數據處理困難、報表錯亂</td>
+      </tr>
+      <tr>
+          <td><strong>複製/貼上失敗</strong></td>
+          <td>合併儲存格的範圍在複製時會被視為單一實體，貼上到未合併區域可能會導致錯誤。</td>
+          <td>操作失敗、資料錯位</td>
+      </tr>
+      <tr>
+          <td><strong>公式計算錯誤</strong></td>
+          <td>合併儲存格在引用時會產生「#REF!」或「#VALUE!」錯誤，尤其是合併後的儲存格位於公式範圍內時。</td>
+          <td>計算失敗、報表錯誤</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：若只是為了「顯示」而不真正需要合併，請考慮使用「合併及居中」後再將「文字對齊」設定為「左對齊」或「右對齊」以避免資料遺失。</p>
+</blockquote><hr>
+<h2 id="方法一使用合併及居中工具最常見方式">方法一：使用「合併及居中」工具（最常見方式）<a class="anchor" href="#%e6%96%b9%e6%b3%95%e4%b8%80%e4%bd%bf%e7%94%a8%e5%90%88%e4%bd%b5%e5%8f%8a%e5%b1%85%e4%b8%ad%e5%b7%a5%e5%85%b7%e6%9c%80%e5%b8%b8%e8%a6%8b%e6%96%b9%e5%bc%8f">#</a></h2>
+<ol>
+<li><strong>選取要合併的儲存格範圍</strong>
+<ul>
+<li>例如 <code>A1:C1</code>（3 列寬的橫向合併）</li>
+<li>或 <code>B2:B4</code>（3 列高的縱向合併）</li>
+</ul>
+</li>
+<li><strong>點擊「開始」選項卡</strong>
+<ul>
+<li>在「對齊」群組中找到「合併及居中」按鈕</li>
+</ul>
+</li>
+<li><strong>點擊下拉箭頭</strong>
+<ul>
+<li>選擇「合併及居中」或其他選項：
+<ul>
+<li><strong>合併及居中</strong>：合併並將文字置中</li>
+<li><strong>合併儲存格</strong>：僅合併，不改變對齊</li>
+<li><strong>取消合併</strong>：拆分已合併的儲存格</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>確認</strong>
+<ul>
+<li>合併後，左上角的值保留，其他儲存格內容被刪除。若需要保留多個值，先將其合併前用「&amp;」連接，或使用「文字到欄」先分離。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：這種方式最直觀，適合單一工作表的簡易格式化。</p>
+</blockquote><hr>
+<h2 id="方法二使用快捷鍵快速操作">方法二：使用快捷鍵（快速操作）<a class="anchor" href="#%e6%96%b9%e6%b3%95%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%bf%ab%e6%8d%b7%e9%8d%b5%e5%bf%ab%e9%80%9f%e6%93%8d%e4%bd%9c">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>快捷鍵</th>
+          <th>功能</th>
+          <th>需求</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Alt + H + M + M</code></td>
+          <td>合併及居中</td>
+          <td>Excel 2007+</td>
+      </tr>
+      <tr>
+          <td><code>Alt + H + M + C</code></td>
+          <td>僅合併</td>
+          <td>Excel 2007+</td>
+      </tr>
+      <tr>
+          <td><code>Alt + H + M + U</code></td>
+          <td>取消合併</td>
+          <td>Excel 2007+</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="步驟示例">步驟示例<a class="anchor" href="#%e6%ad%a5%e9%a9%9f%e7%a4%ba%e4%be%8b">#</a></h3>
+<ol>
+<li><strong>選取儲存格範圍</strong></li>
+<li><strong>按下 <code>Alt</code></strong> → 會顯示功能鍵提示（如 <code>H</code> 表示「開始」）</li>
+<li><strong>按 <code>H</code></strong> → 進入「開始」群組</li>
+<li><strong>按 <code>M</code></strong> → 開啟「合併」功能</li>
+<li><strong>按 <code>M</code></strong> → 合併及居中<br>
+或 <code>C</code> / <code>U</code> 選擇其他選項</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：如果你經常需要合併，可以將「合併及居中」指令添加到「快速存取工具列」（QAT）中，直接點擊圖示即可。</p></div>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5%E6%AC%84%E4%BD%8D/">excel如何合併欄位</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+    <div class="book-post-content"><h1 id="excel-如何合併欄位合併單元格全攻略">Excel 如何合併欄位（合併單元格）全攻略<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e4%bd%b5%e6%ac%84%e4%bd%8d%e5%90%88%e4%bd%b5%e5%96%ae%e5%85%83%e6%a0%bc%e5%85%a8%e6%94%bb%e7%95%a5">#</a></h1>
+<blockquote class='book-hint '>
+<p>在日常工作中，常需要把多個相鄰的單元格合併為一個大單元格，以便做表頭、分組、佈局等。<br>
+這份教程將從 <strong>原因分析</strong> 出發，提供 <strong>三種分步驟的解決方案</strong>，並整理常見問題的解答，讓你輕鬆掌握 Excel 合併欄位的技巧。</p>
+</blockquote><h2 id="1-為什麼要合併欄位">1️⃣ 為什麼要合併欄位？<a class="anchor" href="#1-%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e5%90%88%e4%bd%b5%e6%ac%84%e4%bd%8d">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>目的</th>
+          <th>典型場景</th>
+          <th>需要注意的點</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>美化表格</strong></td>
+          <td>表頭跨多列、報表標題</td>
+          <td>合併後不宜再做排序或篩選</td>
+      </tr>
+      <tr>
+          <td><strong>分組顯示</strong></td>
+          <td>章節分隔、分類標題</td>
+          <td>合併後單元格只能保留左上角的資料</td>
+      </tr>
+      <tr>
+          <td><strong>佈局設計</strong></td>
+          <td>佈滿空白區域、標準化格式</td>
+          <td>合併會影響公式計算、列寬調整</td>
+      </tr>
+      <tr>
+          <td><strong>資料輸入</strong></td>
+          <td>需要在同一格輸入多行文字</td>
+          <td>輸入時需使用 Alt+Enter 分行</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小貼士</strong>：合併單元格雖能改進視覺效果，但會破壞資料表的「純數據」結構，請在確定不需要排序/篩選時再使用。</p>
+</blockquote><hr>
+<h2 id="2-三種分步驟的解決方案">2️⃣ 三種分步驟的解決方案<a class="anchor" href="#2-%e4%b8%89%e7%a8%ae%e5%88%86%e6%ad%a5%e9%a9%9f%e7%9a%84%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案一使用-excel-功能區gui合併">方案一：使用 Excel 功能區（GUI）合併<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-excel-%e5%8a%9f%e8%83%bd%e5%8d%80gui%e5%90%88%e4%bd%b5">#</a></h3>
+<ol>
+<li><strong>選取需要合併的單元格</strong>
+<ul>
+<li>點擊並拖動，或按住 <code>Ctrl</code> 選取不連續範圍。</li>
+</ul>
+</li>
+<li><strong>點擊「開始」&gt;「合併與置中」</strong>
+<ul>
+<li>常見選項：
+<ul>
+<li><strong>合併並置中</strong>（Merge &amp; Center）</li>
+<li><strong>合併不置中</strong>（Merge）</li>
+<li><strong>取消合併</strong>（Unmerge）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>確認合併結果</strong>
+<ul>
+<li>右上角只留一個儲存格，內容位於左上角。</li>
+</ul>
+</li>
+<li><strong>若需要合併後仍保留多個資料</strong>，可以在合併前使用 <code>Ctrl+C</code> 先備份，或在合併後再填寫新資料。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>示例</strong><br>
+<img src="https://i.imgur.com/yourimage.png" alt="Merge Cells Screenshot" /></p>
+</blockquote><hr>
+<h3 id="方案二使用快捷鍵鍵盤操作合併">方案二：使用快捷鍵（鍵盤操作）合併<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%bf%ab%e6%8d%b7%e9%8d%b5%e9%8d%b5%e7%9b%a4%e6%93%8d%e4%bd%9c%e5%90%88%e4%bd%b5">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>快捷鍵</th>
+          <th>功能</th>
+          <th>操作步驟</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Alt + H + M + M</code></td>
+          <td>合併並置中</td>
+          <td>選取範圍後，按 <code>Alt</code> 進入功能區，然後 <code>H</code> → <code>M</code> → <code>M</code></td>
+      </tr>
+      <tr>
+          <td><code>Alt + H + M + C</code></td>
+          <td>合併不置中</td>
+          <td><code>Alt</code> → <code>H</code> → <code>M</code> → <code>C</code></td>
+      </tr>
+      <tr>
+          <td><code>Alt + H + M + U</code></td>
+          <td>取消合併</td>
+          <td><code>Alt</code> → <code>H</code> → <code>M</code> → <code>U</code></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>步驟</strong></p></div>
+  </article>
+  
+
+  
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/9/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/8/" aria-label="Page 8" class="page-link" role="button">8</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/9/" aria-label="Page 9" class="page-link" role="button">9</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 10" class="page-link" role="button">10</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/11/" aria-label="Page 11" class="page-link" role="button">11</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/12/" aria-label="Page 12" class="page-link" role="button">12</a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/11/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/categories/ai%E6%95%99%E7%A8%8B/page/16/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <a>Categories</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+          <span>160</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Tags</a>
+      <ul>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </div>
+</aside>
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

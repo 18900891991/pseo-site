@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何固定欄位（列）？  在大量数据表格中，常常需要让表头、序号列或关键列始终可见，以便于对比与筛选。Excel 提供了多种“固定列”或“冻结窗格”方式，下面为你详细解析其使用原因、三种常见的分步骤解决方案以及常见问题解答。  ---   1. 为什么要固定列？  | 场景 | 作">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%9B%BA%E5%AE%9A%E6%AC%84%E4%BD%8D/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何固定欄位">
+  <meta property="og:description" content="Excel 如何固定欄位（列）？  在大量数据表格中，常常需要让表头、序号列或关键列始终可见，以便于对比与筛选。Excel 提供了多种“固定列”或“冻结窗格”方式，下面为你详细解析其使用原因、三种常见的分步骤解决方案以及常见问题解答。  ---   1. 为什么要固定列？  | 场景 | 作">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何固定欄位">
+  <meta itemprop="description" content="Excel 如何固定欄位（列）？  在大量数据表格中，常常需要让表头、序号列或关键列始终可见，以便于对比与筛选。Excel 提供了多种“固定列”或“冻结窗格”方式，下面为你详细解析其使用原因、三种常见的分步骤解决方案以及常见问题解答。  ---   1. 为什么要固定列？  | 场景 | 作">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="253">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何固定欄位 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%9B%BA%E5%AE%9A%E6%AC%84%E4%BD%8D/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何固定欄位</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为什么要固定列">1. 为什么要固定列？</a></li>
+    <li><a href="#2-方案一使用-冻结窗格">2. 方案一：使用 “冻结窗格”</a>
+      <ul>
+        <li><a href="#步骤-1选择你想固定列的右侧单元格">步骤 1：选择你想固定列的右侧单元格</a></li>
+        <li><a href="#步骤-2打开冻结窗格">步骤 2：打开冻结窗格</a></li>
+        <li><a href="#步骤-3确认效果">步骤 3：确认效果</a></li>
+        <li><a href="#快捷键">快捷键</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二使用-分隔窗口">3. 方案二：使用 “分隔窗口”</a>
+      <ul>
+        <li><a href="#步骤-1选择分隔起点">步骤 1：选择分隔起点</a></li>
+        <li><a href="#步骤-2打开分隔窗口">步骤 2：打开分隔窗口</a></li>
+        <li><a href="#步骤-3拖动拆分线">步骤 3：拖动拆分线</a></li>
+        <li><a href="#取消拆分">取消拆分</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用-表格工具--行列锁定">4. 方案三：使用 “表格工具” + “行/列锁定”</a>
+      <ul>
+        <li><a href="#步骤-1将数据转换为表格">步骤 1：将数据转换为表格</a></li>
+        <li><a href="#步骤-2冻结表头">步骤 2：冻结表头</a></li>
+        <li><a href="#步骤-3手动锁定列">步骤 3：手动锁定列</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答faq">5. 常见问题解答（FAQ）</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何固定欄位
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何固定欄位列">Excel 如何固定欄位（列）？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%9b%ba%e5%ae%9a%e6%ac%84%e4%bd%8d%e5%88%97">#</a></h1>
+<p>在大量数据表格中，常常需要让表头、序号列或关键列始终可见，以便于对比与筛选。Excel 提供了多种“固定列”或“冻结窗格”方式，下面为你详细解析其使用原因、三种常见的分步骤解决方案以及常见问题解答。</p>
+<hr>
+<h2 id="1-为什么要固定列">1. 为什么要固定列？<a class="anchor" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%9b%ba%e5%ae%9a%e5%88%97">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>作用</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>滚动大型表格</strong></td>
+          <td>让关键列始终可见</td>
+          <td>例如：左侧序号列、产品编号、客户姓名</td>
+      </tr>
+      <tr>
+          <td><strong>对齐对比</strong></td>
+          <td>方便横向比较</td>
+          <td>例如：A列是日期，B列是销售额，滚动时保持日期列固定</td>
+      </tr>
+      <tr>
+          <td><strong>提高可读性</strong></td>
+          <td>减少误操作</td>
+          <td>通过锁定列，避免误点到错误单元格</td>
+      </tr>
+      <tr>
+          <td><strong>打印时保持标题</strong></td>
+          <td>打印列标题</td>
+          <td>固定列可在打印预览中保持标题位置</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="2-方案一使用-冻结窗格">2. 方案一：使用 “冻结窗格”<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-%e5%86%bb%e7%bb%93%e7%aa%97%e6%a0%bc">#</a></h2>
+<h3 id="步骤-1选择你想固定列的右侧单元格">步骤 1：选择你想固定列的右侧单元格<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e9%80%89%e6%8b%a9%e4%bd%a0%e6%83%b3%e5%9b%ba%e5%ae%9a%e5%88%97%e7%9a%84%e5%8f%b3%e4%be%a7%e5%8d%95%e5%85%83%e6%a0%bc">#</a></h3>
+<ul>
+<li>若想固定左侧 <strong>A 列</strong>，点击 <strong>B1</strong>。</li>
+<li>若想固定左侧 <strong>A 列到 C 列</strong>，点击 <strong>D1</strong>。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：冻结的列是你当前选中单元格左侧的所有列。</p>
+</blockquote><h3 id="步骤-2打开冻结窗格">步骤 2：打开冻结窗格<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e6%89%93%e5%bc%80%e5%86%bb%e7%bb%93%e7%aa%97%e6%a0%bc">#</a></h3>
+<ol>
+<li><strong>Windows</strong>
+<ul>
+<li>菜单栏 → <strong>视图</strong> → <strong>冻结窗格</strong> → <strong>冻结首列</strong> 或 <strong>冻结窗格</strong>。</li>
+</ul>
+</li>
+<li><strong>Mac</strong>
+<ul>
+<li>菜单栏 → <strong>视图</strong> → <strong>冻结窗格</strong> → <strong>冻结首列</strong> 或 <strong>冻结窗格</strong>。</li>
+</ul>
+</li>
+</ol>
+<h3 id="步骤-3确认效果">步骤 3：确认效果<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e7%a1%ae%e8%ae%a4%e6%95%88%e6%9e%9c">#</a></h3>
+<ul>
+<li>滚动表格，左侧的列会保持在原位。</li>
+<li>若想取消：同样路径 → <strong>取消冻结窗格</strong>。</li>
+</ul>
+<h3 id="快捷键">快捷键<a class="anchor" href="#%e5%bf%ab%e6%8d%b7%e9%94%ae">#</a></h3>
+<ul>
+<li><strong>Windows</strong>: <code>Alt + W + F + R</code>（冻结首列）或 <code>Alt + W + F + F</code>（冻结窗格）</li>
+<li><strong>Mac</strong>: <code>⌘ + Option + W</code>（冻结首列）或 <code>⌘ + Option + F</code>（冻结窗格）</li>
+</ul>
+<hr>
+<h2 id="3-方案二使用-分隔窗口">3. 方案二：使用 “分隔窗口”<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-%e5%88%86%e9%9a%94%e7%aa%97%e5%8f%a3">#</a></h2>
+<p>适合需要同时查看表格的 <strong>上方/下方</strong> 或 <strong>左侧/右侧</strong> 内容，而不是只固定列。</p>
+<h3 id="步骤-1选择分隔起点">步骤 1：选择分隔起点<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e9%80%89%e6%8b%a9%e5%88%86%e9%9a%94%e8%b5%b7%e7%82%b9">#</a></h3>
+<ul>
+<li>选中你想分隔的行或列的下方/右侧单元格。
+<ul>
+<li>例如：在 <strong>B5</strong> 处分隔，意味着 <strong>A5</strong> 之前的内容将上移。</li>
+</ul>
+</li>
+</ul>
+<h3 id="步骤-2打开分隔窗口">步骤 2：打开分隔窗口<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e6%89%93%e5%bc%80%e5%88%86%e9%9a%94%e7%aa%97%e5%8f%a3">#</a></h3>
+<ol>
+<li><strong>Windows</strong>
+<ul>
+<li>菜单栏 → <strong>视图</strong> → <strong>拆分</strong>。</li>
+</ul>
+</li>
+<li><strong>Mac</strong>
+<ul>
+<li>菜单栏 → <strong>视图</strong> → <strong>拆分</strong>。</li>
+</ul>
+</li>
+</ol>
+<h3 id="步骤-3拖动拆分线">步骤 3：拖动拆分线<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e6%8b%96%e5%8a%a8%e6%8b%86%e5%88%86%e7%ba%bf">#</a></h3>
+<ul>
+<li>拖动横向或纵向拆分线，使你想查看的区域固定。</li>
+<li>你可以在每个窗格中单独滚动。</li>
+</ul>
+<h3 id="取消拆分">取消拆分<a class="anchor" href="#%e5%8f%96%e6%b6%88%e6%8b%86%e5%88%86">#</a></h3>
+<ul>
+<li><strong>Windows</strong>: 菜单栏 → <strong>视图</strong> → <strong>拆分</strong>（再次点击）</li>
+<li><strong>Mac</strong>: 菜单栏 → <strong>视图</strong> → <strong>拆分</strong>（再次点击）</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：拆分窗口与冻结窗格不同，拆分后每个窗格都可以独立滚动，不会互相影响。</p>
+</blockquote><hr>
+<h2 id="4-方案三使用-表格工具--行列锁定">4. 方案三：使用 “表格工具” + “行/列锁定”<a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-%e8%a1%a8%e6%a0%bc%e5%b7%a5%e5%85%b7--%e8%a1%8c%e5%88%97%e9%94%81%e5%ae%9a">#</a></h2>
+<p>如果你正在使用 <strong>Excel 表格（Ctrl+T）</strong>，可以利用表格本身的功能来锁定列。</p>
+<h3 id="步骤-1将数据转换为表格">步骤 1：将数据转换为表格<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1%e5%b0%86%e6%95%b0%e6%8d%ae%e8%bd%ac%e6%8d%a2%e4%b8%ba%e8%a1%a8%e6%a0%bc">#</a></h3>
+<ul>
+<li>选中数据 → <strong>Ctrl + T</strong> → 确认表格范围 → 点击 <strong>确定</strong>。</li>
+</ul>
+<h3 id="步骤-2冻结表头">步骤 2：冻结表头<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2%e5%86%bb%e7%bb%93%e8%a1%a8%e5%a4%b4">#</a></h3>
+<ul>
+<li>表格默认会锁定 <strong>第一行</strong> 为表头（在 <strong>设计</strong> 选项卡中勾选 <strong>表头行</strong>）。</li>
+</ul>
+<h3 id="步骤-3手动锁定列">步骤 3：手动锁定列<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-3%e6%89%8b%e5%8a%a8%e9%94%81%e5%ae%9a%e5%88%97">#</a></h3>
+<ul>
+<li>选中想要固定的列 → 右键 → <strong>设置单元格格式</strong> → <strong>保护</strong> → <strong>锁定</strong>。</li>
+<li>然后 <strong>保护工作表</strong> → 只允许滚动。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>局限</strong>：此方法主要用于隐藏/保护列，不能像冻结窗格那样在滚动时保持可见。</p>
+</blockquote><hr>
+<h2 id="5-常见问题解答faq">5. 常见问题解答（FAQ）<a class="anchor" href="#5-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>冻结窗格后，列标题不显示</strong></td>
+          <td>确认你已在 <strong>第一行</strong> 选中单元格后冻结窗口；如果是在列标题后面，可能是冻结了错误的列。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>想同时冻结列和行</strong></td>
+          <td>使用 <strong>冻结窗格</strong>，先选择你想冻结的行数+列数右侧单元格，例如想冻结前两行和前三列，选中 <strong>D3</strong> 并冻结。</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>冻结后无法取消</strong></td>
+          <td>进入 <strong>视图</strong> → <strong>取消冻结窗格</strong>；若无该选项，说明未冻结，尝试重新打开 Excel。</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>滚动时冻结列不跟随</strong></td>
+          <td>有时使用 <strong>分隔窗口</strong> 后，冻结窗口会失效；请先取消分隔，然后再次冻结。</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>冻结列后，打印时列不固定</strong></td>
+          <td>在打印设置中，勾选 <strong>“在每页上重复标题行”</strong> 并确保使用 <strong>“冻结窗格”</strong>。</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>Mac 与 Windows 快捷键不同</strong></td>
+          <td>请使用对应系统的快捷键，如 Mac 上使用 <code>⌘ + Option + W</code>。</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td><strong>冻结列后，列宽失效</strong></td>
+          <td>先冻结列，再手动调整列宽；如果列宽被锁定，可在 <strong>视图</strong> → <strong>冻结窗格</strong> 后重新调整。</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td><strong>冻结列后，单元格内容被截断</strong></td>
+          <td>确认列宽足够，或使用 <strong>换行</strong> 功能。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<blockquote class='book-hint '>
+<p><strong>小贴士</strong>：</p>
+<ul>
+<li>若你只是想在屏幕上“锁定”某列而不影响打印，可使用 <strong>“冻结窗格”</strong>；</li>
+<li>如果需要在同一工作表中查看多段数据，建议使用 <strong>“分隔窗口”</strong>；</li>
+<li>对于频繁使用的工作簿，可以将冻结/拆分操作记录为 <strong>宏</strong>，一键执行。</li>
+</ul>
+</blockquote><p>祝你在 Excel 中玩得愉快，数据分析更高效！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%9B%BA%E5%AE%9A%E6%A0%8F%E4%BD%8D/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何固定栏位</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%A4%8D%E5%88%B6%E5%88%86%E9%A1%B5/" class="flex align-center">
+      <span>excel如何复制分页</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-为什么要固定列">1. 为什么要固定列？</a></li>
+    <li><a href="#2-方案一使用-冻结窗格">2. 方案一：使用 “冻结窗格”</a>
+      <ul>
+        <li><a href="#步骤-1选择你想固定列的右侧单元格">步骤 1：选择你想固定列的右侧单元格</a></li>
+        <li><a href="#步骤-2打开冻结窗格">步骤 2：打开冻结窗格</a></li>
+        <li><a href="#步骤-3确认效果">步骤 3：确认效果</a></li>
+        <li><a href="#快捷键">快捷键</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二使用-分隔窗口">3. 方案二：使用 “分隔窗口”</a>
+      <ul>
+        <li><a href="#步骤-1选择分隔起点">步骤 1：选择分隔起点</a></li>
+        <li><a href="#步骤-2打开分隔窗口">步骤 2：打开分隔窗口</a></li>
+        <li><a href="#步骤-3拖动拆分线">步骤 3：拖动拆分线</a></li>
+        <li><a href="#取消拆分">取消拆分</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用-表格工具--行列锁定">4. 方案三：使用 “表格工具” + “行/列锁定”</a>
+      <ul>
+        <li><a href="#步骤-1将数据转换为表格">步骤 1：将数据转换为表格</a></li>
+        <li><a href="#步骤-2冻结表头">步骤 2：冻结表头</a></li>
+        <li><a href="#步骤-3手动锁定列">步骤 3：手动锁定列</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答faq">5. 常见问题解答（FAQ）</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Python 报错并退出：完整排查与解决教程   当 Python 脚本在执行时出现错误并直接退出，往往让人感到困惑。本文从原因分析、三种分步骤解决方案以及常见问题解答三大维度，为你提供系统化的排查思路与实战技巧。  ---   1. 原因分析  | 错误类型 |">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/python%E6%8A%A5%E9%94%99%E5%B9%B6%E9%80%80%E5%87%BA/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="python报错并退出">
+  <meta property="og:description" content="Python 报错并退出：完整排查与解决教程   当 Python 脚本在执行时出现错误并直接退出，往往让人感到困惑。本文从原因分析、三种分步骤解决方案以及常见问题解答三大维度，为你提供系统化的排查思路与实战技巧。  ---   1. 原因分析  | 错误类型 |">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="python报错并退出">
+  <meta itemprop="description" content="Python 报错并退出：完整排查与解决教程   当 Python 脚本在执行时出现错误并直接退出，往往让人感到困惑。本文从原因分析、三种分步骤解决方案以及常见问题解答三大维度，为你提供系统化的排查思路与实战技巧。  ---   1. 原因分析  | 错误类型 |">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="393">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>python报错并退出 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/python%E6%8A%A5%E9%94%99%E5%B9%B6%E9%80%80%E5%87%BA/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>python报错并退出</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-解决方案">2. 解决方案</a>
+      <ul>
+        <li><a href="#方案一逐层回溯--先看错误信息再定位">方案一：逐层回溯 – 先看错误信息，再定位</a></li>
+        <li><a href="#方案二环境一致性--依赖与版本">方案二：环境一致性 – 依赖与版本</a></li>
+        <li><a href="#方案三异常捕获--记录--退出">方案三：异常捕获 + 记录 + 退出</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    python报错并退出
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="python-报错并退出完整排查与解决教程">Python 报错并退出：完整排查与解决教程<a class="anchor" href="#python-%e6%8a%a5%e9%94%99%e5%b9%b6%e9%80%80%e5%87%ba%e5%ae%8c%e6%95%b4%e6%8e%92%e6%9f%a5%e4%b8%8e%e8%a7%a3%e5%86%b3%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>当 Python 脚本在执行时出现错误并直接退出，往往让人感到困惑。本文从<strong>原因分析</strong>、<strong>三种分步骤解决方案</strong>以及<strong>常见问题解答</strong>三大维度，为你提供系统化的排查思路与实战技巧。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>错误类型</th>
+          <th>典型表现</th>
+          <th>可能原因</th>
+          <th>典型场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>SyntaxError</code></td>
+          <td><code>invalid syntax</code></td>
+          <td>代码书写错误、未闭合括号、错误缩进</td>
+          <td>代码文件被直接复制粘贴，缺失冒号等</td>
+      </tr>
+      <tr>
+          <td><code>IndentationError</code></td>
+          <td><code>unexpected indent</code></td>
+          <td>缩进混用空格与 Tab、错误的层级</td>
+          <td>编辑器自动替换 Tab 为 4 空格</td>
+      </tr>
+      <tr>
+          <td><code>ImportError</code> / <code>ModuleNotFoundError</code></td>
+          <td><code>cannot import name 'X'</code></td>
+          <td>依赖包未安装、路径错误</td>
+          <td>直接执行 pip 安装的脚本时，环境不一致</td>
+      </tr>
+      <tr>
+          <td><code>NameError</code></td>
+          <td><code>name 'x' is not defined</code></td>
+          <td>未定义变量、作用域问题</td>
+          <td>变量在函数内部定义却在外部使用</td>
+      </tr>
+      <tr>
+          <td><code>TypeError</code></td>
+          <td><code>unsupported operand type(s)</code></td>
+          <td>参数类型不匹配</td>
+          <td>调用第三方库时传参错误</td>
+      </tr>
+      <tr>
+          <td><code>ValueError</code></td>
+          <td><code>invalid literal for int()</code></td>
+          <td>数据格式错误</td>
+          <td>解析字符串为整数等</td>
+      </tr>
+      <tr>
+          <td><code>AttributeError</code></td>
+          <td><code>module 'X' has no attribute 'Y'</code></td>
+          <td>对象不存在的方法</td>
+          <td>误用旧版本的库</td>
+      </tr>
+      <tr>
+          <td><code>MemoryError</code></td>
+          <td><code>Out of memory</code></td>
+          <td>内存泄露、数据量过大</td>
+          <td>大规模列表/字典操作、无限循环</td>
+      </tr>
+      <tr>
+          <td><code>Segmentation Fault</code></td>
+          <td><code>Segmentation fault (core dumped)</code></td>
+          <td>C/C++ 扩展、NumPy 等第三方库崩溃</td>
+          <td>低级库调用错误、硬件兼容问题</td>
+      </tr>
+      <tr>
+          <td><code>SystemExit</code></td>
+          <td><code>sys.exit()</code></td>
+          <td>程序主动退出</td>
+          <td>业务逻辑中使用 <code>sys.exit()</code></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果终端只显示 <code>Traceback (most recent call last):</code>，后面没有错误信息，可能是程序在 <strong><code>__main__</code></strong> 之外的线程中抛出了异常，或者被 <code>try/except</code> 捕获后直接 <code>sys.exit()</code>。</p>
+</blockquote><hr>
+<h2 id="2-解决方案">2. 解决方案<a class="anchor" href="#2-%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">#</a></h2>
+<p>下面给出 <strong>三种</strong>典型的排查与修复流程，按 <strong>“从最外层到最内层”</strong> 的思路进行。</p>
+<h3 id="方案一逐层回溯--先看错误信息再定位">方案一：逐层回溯 – 先看错误信息，再定位<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e9%80%90%e5%b1%82%e5%9b%9e%e6%ba%af--%e5%85%88%e7%9c%8b%e9%94%99%e8%af%af%e4%bf%a1%e6%81%af%e5%86%8d%e5%ae%9a%e4%bd%8d">#</a></h3>
+<blockquote class='book-hint '>
+<p><strong>步骤 1</strong>：<strong>打开终端</strong> 或 IDE 的 <em>调试</em> 面板，查看完整的 <strong>Traceback</strong>。<br>
+<strong>步骤 2</strong>：定位到 <strong>文件名 + 行号</strong>，打开对应文件。<br>
+<strong>步骤 3</strong>：对照错误类型（如 <code>SyntaxError</code>、<code>NameError</code>）检查代码。<br>
+<strong>步骤 4</strong>：在出现错误的地方插入 <code>print()</code> 或 <code>logging</code> 语句，验证变量/类型。<br>
+<strong>步骤 5</strong>：修复后再次运行，确认错误消失。</p>
+</blockquote><blockquote class='book-hint '>
+<p><strong>示例</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># file: main.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> data<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;,&#39;</span>)  <span style="color:#75715e"># TypeError: &#39;int&#39; object has no attribute &#39;split&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    raw <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>  <span style="color:#75715e"># 故意错误</span>
+</span></span><span style="display:flex;"><span>    print(process(raw))</span></span></code></pre></div><p>运行后会得到 <code>TypeError</code>，定位到 <code>raw</code> 变量是整数。更正后即可。</p>
+</blockquote><h3 id="方案二环境一致性--依赖与版本">方案二：环境一致性 – 依赖与版本<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e7%8e%af%e5%a2%83%e4%b8%80%e8%87%b4%e6%80%a7--%e4%be%9d%e8%b5%96%e4%b8%8e%e7%89%88%e6%9c%ac">#</a></h3>
+<blockquote class='book-hint '>
+<p><strong>步骤 1</strong>：使用 <code>pip freeze &gt; requirements.txt</code> 保存当前环境。<br>
+<strong>步骤 2</strong>：在新机器/容器中创建虚拟环境：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -m venv venv
+</span></span><span style="display:flex;"><span>source venv/bin/activate  <span style="color:#75715e"># Windows: venv\Scripts\activate</span>
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt</span></span></code></pre></div><p><strong>步骤 3</strong>：检查 Python 版本与第三方库的兼容性。<br>
+<strong>步骤 4</strong>：若出现 <code>ImportError</code>，确认 <code>PYTHONPATH</code> 未被误改。<br>
+<strong>步骤 5</strong>：使用 <code>pip list</code> 与 <code>python -c &quot;import X; print(X.__version__)&quot;</code> 对照，确认所有依赖已安装。</p>
+</blockquote><blockquote class='book-hint '>
+<p><strong>注意</strong>：如果你在 <strong>Docker</strong> 或 CI 环境中运行，记得在 <code>Dockerfile</code> 或 <code>gitlab-ci.yml</code> 中显式指定 <code>python:3.11</code> 或其他版本。</p>
+</blockquote><h3 id="方案三异常捕获--记录--退出">方案三：异常捕获 + 记录 + 退出<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e5%bc%82%e5%b8%b8%e6%8d%95%e8%8e%b7--%e8%ae%b0%e5%bd%95--%e9%80%80%e5%87%ba">#</a></h3>
+<blockquote class='book-hint '>
+<p><strong>步骤 1</strong>：在程序入口处全局捕获异常。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> traceback
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 业务代码</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        main()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        traceback<span style="color:#f92672">.</span>print_exc()
+</span></span><span style="display:flex;"><span>        sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)</span></span></code></pre></div><p><strong>步骤 2</strong>：为关键模块添加 <code>try/except</code>，并在异常中输出更友好的日志。<br>
+<strong>步骤 3</strong>：使用 <code>logging</code> 代替 <code>print</code>，把日志写入文件，便于后期分析。<br>
+<strong>步骤 4</strong>：如果你想让程序在异常后继续执行，使用 <code>logging.exception()</code> 并 <code>continue</code>。<br>
+<strong>步骤 5</strong>：在 <code>finally</code> 块中保证资源释放（文件句柄、网络连接等）。</p>
+</blockquote><blockquote class='book-hint '>
+<p><strong>优点</strong>：即使出现不可预期的错误，也能得到完整的堆栈信息，避免“无声退出”。</p>
+</blockquote><hr>
+<h2 id="3-常见问题解答faq">3. 常见问题解答（FAQ）<a class="anchor" href="#3-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>说明</th>
+          <th>解决思路</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>为什么错误信息不完整，只有 <code>Traceback (most recent call last):</code>？</td>
+          <td>可能是 <strong>子线程</strong> 抛出了异常，主线程没有捕获；或使用了 <code>sys.excepthook</code> 重写后不输出。</td>
+          <td>在子线程中使用 <code>queue</code> 或 <code>concurrent.futures</code> 捕获异常；或者在主线程设置 <code>sys.excepthook</code> 打印错误。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>我使用 <code>-m</code> 运行模块时，报 <code>ImportError: cannot import name 'X' from '__main__'</code></td>
+          <td>这通常是因为 <strong>循环导入</strong> 或 <strong>相对导入</strong> 的误写。</td>
+          <td>修正 <code>import</code> 语句，使用绝对路径或 <code>from . import X</code>；把业务代码放在 <code>if __name__ == &quot;__main__&quot;:</code> 之外。</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>在 <code>pipenv</code> 环境下，出现 <code>ModuleNotFoundError: No module named 'foo'</code></td>
+          <td><code>pipenv</code> 的虚拟环境可能未激活，或 <code>PIPENV_ACTIVE</code> 未设置。</td>
+          <td>运行 <code>pipenv shell</code> 激活环境；或者使用 <code>pipenv run python script.py</code>。</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>运行时出现 <code>Segmentation fault</code>，但代码是纯 Python 的</td>
+          <td>说明某个 C 扩展或第三方库（如 NumPy、Pandas）内部出现了内存访问错误。</td>
+          <td>升级相关库；尝试在不同机器 / Python 版本下运行；使用 <code>faulthandler</code> 打印详细信息。</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>代码中使用 <code>sys.exit(0)</code> 但程序仍然报错并退出</td>
+          <td><code>sys.exit(0)</code> 只会在 <strong>正常路径</strong> 退出；如果是异常导致，则会先抛出异常再返回。</td>
+          <td>在 <code>try/except</code> 中使用 <code>sys.exit(1)</code> 或 <code>raise</code>，根据需要决定退出码。</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>如何让程序在出现异常后继续执行其他任务？</td>
+          <td>需要在 <code>except</code> 块里捕获并处理，或者使用 <code>try/except</code> 包装每个子任务。</td>
+          <td>```python</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p>try:
+task()
+except Exception as e:
+logger.error(e)
+# 继续执行下一个任务</p>
+<pre tabindex="0"><code class="language-|" data-lang="|"></code></pre></blockquote><hr>
+<h2 id="4-小结">4. 小结<a class="anchor" href="#4-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>先定位</strong>：错误信息是最直观的线索，先看 Traceback 再定位代码。</li>
+<li><strong>再检查</strong>：依赖、环境、路径等外部因素往往是“看不见的杀手”。</li>
+<li><strong>最后捕获</strong>：全局异常捕获可以避免程序无声退出，并把错误记录下来。</li>
+</ul>
+<p>排查 “Python 报错并退出” 需要耐心与细致的步骤。遵循上述流程，你可以大幅提升定位效率，并在不同环境中快速恢复程序运行。祝你编码愉快 🚀！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/python%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>python报错处理</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/python%E6%8A%A5%E9%94%99%E7%B1%BB%E5%9E%8B/" class="flex align-center">
+      <span>python报错类型</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-解决方案">2. 解决方案</a>
+      <ul>
+        <li><a href="#方案一逐层回溯--先看错误信息再定位">方案一：逐层回溯 – 先看错误信息，再定位</a></li>
+        <li><a href="#方案二环境一致性--依赖与版本">方案二：环境一致性 – 依赖与版本</a></li>
+        <li><a href="#方案三异常捕获--记录--退出">方案三：异常捕获 + 记录 + 退出</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答faq">3. 常见问题解答（FAQ）</a></li>
+    <li><a href="#4-小结">4. 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

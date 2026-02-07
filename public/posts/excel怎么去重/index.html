@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 去重全攻略  在日常数据处理、报表统计、客户名单管理等场景中，常常会遇到“重复记录”这一痛点。Excel 提供了多种去重方式，既有内置工具，也有公式 &#43; Power Query 的高级方案。下面为你系统性梳理 为什么数据会出现重复、三种常用去重方法（逐步演示）以及">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%8E%BB%E9%87%8D/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么去重">
+  <meta property="og:description" content="Excel 去重全攻略  在日常数据处理、报表统计、客户名单管理等场景中，常常会遇到“重复记录”这一痛点。Excel 提供了多种去重方式，既有内置工具，也有公式 &#43; Power Query 的高级方案。下面为你系统性梳理 为什么数据会出现重复、三种常用去重方法（逐步演示）以及">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel怎么去重">
+  <meta itemprop="description" content="Excel 去重全攻略  在日常数据处理、报表统计、客户名单管理等场景中，常常会遇到“重复记录”这一痛点。Excel 提供了多种去重方式，既有内置工具，也有公式 &#43; Power Query 的高级方案。下面为你系统性梳理 为什么数据会出现重复、三种常用去重方法（逐步演示）以及">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="192">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么去重 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%8E%BB%E9%87%8D/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么去重</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-先了解一下去重到底在干什么">1️⃣ 先了解一下“去重”到底在干什么？</a></li>
+    <li><a href="#2-三种实用分步骤的去重方案">2️⃣ 三种实用分步骤的去重方案</a>
+      <ul>
+        <li><a href="#方案一使用-excel-内置删除重复项工具">方案一：使用 Excel 内置“删除重复项”工具</a></li>
+        <li><a href="#方案二使用高级筛选保持原表不改动">方案二：使用高级筛选（保持原表不改动）</a></li>
+        <li><a href="#方案三使用-power-query适合大数据复杂合并">方案三：使用 Power Query（适合大数据、复杂合并）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答-faq">3️⃣ 常见问题解答 (FAQ)</a></li>
+    <li><a href="#4-小结">4️⃣ 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么去重
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-去重全攻略">Excel 去重全攻略<a class="anchor" href="#excel-%e5%8e%bb%e9%87%8d%e5%85%a8%e6%94%bb%e7%95%a5">#</a></h1>
+<p>在日常数据处理、报表统计、客户名单管理等场景中，常常会遇到“重复记录”这一痛点。Excel 提供了多种去重方式，既有内置工具，也有公式 + Power Query 的高级方案。下面为你系统性梳理 <strong>为什么数据会出现重复</strong>、<strong>三种常用去重方法</strong>（逐步演示）以及 <strong>常见问题解答</strong>，帮助你快速、准确地清理数据。</p>
+<hr>
+<h2 id="1-先了解一下去重到底在干什么">1️⃣ 先了解一下“去重”到底在干什么？<a class="anchor" href="#1-%e5%85%88%e4%ba%86%e8%a7%a3%e4%b8%80%e4%b8%8b%e5%8e%bb%e9%87%8d%e5%88%b0%e5%ba%95%e5%9c%a8%e5%b9%b2%e4%bb%80%e4%b9%88">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>典型原因</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>数据同步不一致</td>
+          <td>多个系统或手工录入导致同一条记录出现多次</td>
+      </tr>
+      <tr>
+          <td>合并表格时重复</td>
+          <td>合并不同来源的数据表，未做去重处理</td>
+      </tr>
+      <tr>
+          <td>统计报表误差</td>
+          <td>统计时出现多列或多行重复计数</td>
+      </tr>
+      <tr>
+          <td>数据清洗未完成</td>
+          <td>先前的去重步骤未覆盖所有字段或未考虑大小写、空格等差异</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>要点</strong>：在去重前先确认 <em>“重复”</em> 的定义——是单列、还是多列组合？是否需要保留第一条/最后一条？是否要考虑大小写、空格等细节？</p>
+</blockquote><hr>
+<h2 id="2-三种实用分步骤的去重方案">2️⃣ 三种实用分步骤的去重方案<a class="anchor" href="#2-%e4%b8%89%e7%a7%8d%e5%ae%9e%e7%94%a8%e5%88%86%e6%ad%a5%e9%aa%a4%e7%9a%84%e5%8e%bb%e9%87%8d%e6%96%b9%e6%a1%88">#</a></h2>
+<h3 id="方案一使用-excel-内置删除重复项工具">方案一：使用 Excel 内置“删除重复项”工具<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-excel-%e5%86%85%e7%bd%ae%e5%88%a0%e9%99%a4%e9%87%8d%e5%a4%8d%e9%a1%b9%e5%b7%a5%e5%85%b7">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>步骤</th>
+          <th>操作</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>选中需要去重的范围（整张表或单列）</td>
+          <td>也可使用快捷键 <code>Ctrl+A</code> 选全表</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>在 <strong>“数据”</strong> 选项卡 → <strong>“删除重复项”</strong></td>
+          <td>直接弹出对话框</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>选择要判断的列</td>
+          <td>默认全选，若只需单列去重取消其他列勾选</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>确认并点击 <strong>“确定”</strong></td>
+          <td>Excel 会保留第一条出现的记录，删除其余重复行</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>检查结果</td>
+          <td>若想保留最后一条，可先按列排序后再执行</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>技巧</strong>：若想保留最后一次出现的记录，先按该列 <strong>降序</strong> 排序，再执行上述步骤；Excel 只保留第一行（此时为原来的最后一行）。</p>
+</blockquote><hr>
+<h3 id="方案二使用高级筛选保持原表不改动">方案二：使用高级筛选（保持原表不改动）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e9%ab%98%e7%ba%a7%e7%ad%9b%e9%80%89%e4%bf%9d%e6%8c%81%e5%8e%9f%e8%a1%a8%e4%b8%8d%e6%94%b9%e5%8a%a8">#</a></h3>
+<ol>
+<li><strong>准备工作</strong>
+<ul>
+<li>复制一个新列标题，例如 <code>IsDuplicate</code>，放在数据表右侧。</li>
+</ul>
+</li>
+<li><strong>添加辅助列公式</strong>（可用 <code>COUNTIF</code>）
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=IF(COUNTIF($A$2:A2, A2)&gt;1, &#34;重复&#34;, &#34;唯一&#34;)</code></pre><ul>
+<li>这里假设要去重的列是 <code>A</code>，从第二行开始填充公式。</li>
+</ul>
+</li>
+<li><strong>筛选</strong>
+<ul>
+<li>在 <code>IsDuplicate</code> 列中筛选 <code>唯一</code>，即可得到无重复的数据行。</li>
+</ul>
+</li>
+<li><strong>复制粘贴（可选）</strong>
+<ul>
+<li>将筛选结果复制到新工作表或新位置。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优点</strong>：不破坏原始数据，可随时撤销。<br>
+<strong>缺点</strong>：需要手工复制/粘贴。</p>
+</blockquote><hr>
+<h3 id="方案三使用-power-query适合大数据复杂合并">方案三：使用 Power Query（适合大数据、复杂合并）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-power-query%e9%80%82%e5%90%88%e5%a4%a7%e6%95%b0%e6%8d%ae%e5%a4%8d%e6%9d%82%e5%90%88%e5%b9%b6">#</a></h3>
+<ol>
+<li><strong>加载数据到 Power Query</strong>
+<ul>
+<li>选中表格 → <strong>“数据”</strong> → <strong>“从表/范围”</strong>。</li>
+</ul>
+</li>
+<li><strong>在查询编辑器中去重</strong>
+<ul>
+<li>右键想要去重的列 → <strong>“删除重复项”</strong>；若需要多列合并去重，先 <strong>“按列组合”</strong> 再删除。</li>
+</ul>
+</li>
+<li><strong>返回 Excel</strong>
+<ul>
+<li><strong>“关闭并加载”</strong> → 生成新的工作表，已去重的数据。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优势</strong>：可在 Power Query 中设置多列去重、排序、分组等复杂逻辑；适合频繁更新的数据集。<br>
+<strong>劣势</strong>：学习曲线略高；需 Excel 2016+ 或 Office 365。</p>
+</blockquote><hr>
+<h2 id="3-常见问题解答-faq">3️⃣ 常见问题解答 (FAQ)<a class="anchor" href="#3-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94-faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：去重后，想保留某一列的最大值或最小值</strong></td>
+          <td>在“删除重复项”前先使用 <code>MAXIFS</code>/<code>MINIFS</code> 或 Power Query 的 <strong>“分组”</strong> 功能。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：有些重复行只在某些列相同，其他列不同，如何处理</strong></td>
+          <td>在“删除重复项”或 Power Query 中选择需要比较的列；若想按多列组合去重，勾选所有需要的列。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：去重时要忽略大小写、前后空格</strong></td>
+          <td>先用 <code>TRIM</code>、<code>UPPER</code>/<code>LOWER</code> 生成辅助列，再按该列去重；或在 Power Query 中使用 <code>Text.Upper</code>、<code>Text.Trim</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：去重后，原始行顺序被打乱怎么办</strong></td>
+          <td>在“删除重复项”前先插入“序号”列，然后按该列排序；或使用 Power Query 的 <strong>“按列排序”</strong> 功能。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：大量数据去重时 Excel 卡顿怎么办</strong></td>
+          <td>采用 <strong>Power Query</strong> 或分批处理；或将数据导入数据库（如 Access）再去重。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：如何在去重后保留某些关键列的原始内容</strong></td>
+          <td>在 Power Query 中使用 <strong>“选择列”</strong> 先保留需要的列，再去重；或在 Excel 公式中使用 <code>INDEX</code>/<code>MATCH</code> 取值。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7：想在去重后将结果直接粘贴为值</strong></td>
+          <td>复制去重后的结果 → 右键 → <strong>“粘贴特殊”</strong> → <strong>“值”</strong>。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4-小结">4️⃣ 小结<a class="anchor" href="#4-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>去重</strong> 的核心是“定义重复”。先确定需要去重的列组合，再选择合适工具。</li>
+<li><strong>内置工具</strong>（删除重复项）最直观，适合一次性、单列去重。</li>
+<li><strong>高级筛选 + 公式</strong> 能保持原表不变，适合临时查看或多条件判断。</li>
+<li><strong>Power Query</strong> 则是面向大数据、需要频繁更新的场景，提供最强的灵活性。</li>
+</ul>
+<p>希望这份 Markdown 教程能帮你快速搞定 Excel 去重问题，提升数据清洗效率！如果还有更细节的需求（如VBA自动化、数据导入前预处理等），欢迎继续提问。祝你工作顺利 🚀</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%85%B1%E7%94%A8/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么共用</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%90%88%E5%B9%B6%E5%82%A8%E5%AD%98%E6%A0%BC-mac/" class="flex align-center">
+      <span>excel怎么合并储存格 mac</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-先了解一下去重到底在干什么">1️⃣ 先了解一下“去重”到底在干什么？</a></li>
+    <li><a href="#2-三种实用分步骤的去重方案">2️⃣ 三种实用分步骤的去重方案</a>
+      <ul>
+        <li><a href="#方案一使用-excel-内置删除重复项工具">方案一：使用 Excel 内置“删除重复项”工具</a></li>
+        <li><a href="#方案二使用高级筛选保持原表不改动">方案二：使用高级筛选（保持原表不改动）</a></li>
+        <li><a href="#方案三使用-power-query适合大数据复杂合并">方案三：使用 Power Query（适合大数据、复杂合并）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常见问题解答-faq">3️⃣ 常见问题解答 (FAQ)</a></li>
+    <li><a href="#4-小结">4️⃣ 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

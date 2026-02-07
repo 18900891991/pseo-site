@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何分割儲存格（拆分儲存格）完整教程  在日常使用 Excel 時，常會遇到「合併儲存格」或「一個儲存格內包含多筆資料」的情況。無論是想把一個合併儲存格拆開，還是想把單一儲存格中的文字拆成多列/多欄，Excel 都提供了多種方法。本教程將從 原因分析 開始，依次介紹 三種">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%88%86%E5%89%B2%E5%84%B2%E5%AD%98%E6%A0%BC/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何分割儲存格">
+  <meta property="og:description" content="Excel 如何分割儲存格（拆分儲存格）完整教程  在日常使用 Excel 時，常會遇到「合併儲存格」或「一個儲存格內包含多筆資料」的情況。無論是想把一個合併儲存格拆開，還是想把單一儲存格中的文字拆成多列/多欄，Excel 都提供了多種方法。本教程將從 原因分析 開始，依次介紹 三種">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何分割儲存格">
+  <meta itemprop="description" content="Excel 如何分割儲存格（拆分儲存格）完整教程  在日常使用 Excel 時，常會遇到「合併儲存格」或「一個儲存格內包含多筆資料」的情況。無論是想把一個合併儲存格拆開，還是想把單一儲存格中的文字拆成多列/多欄，Excel 都提供了多種方法。本教程將從 原因分析 開始，依次介紹 三種">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="247">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何分割儲存格 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%88%86%E5%89%B2%E5%84%B2%E5%AD%98%E6%A0%BC/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何分割儲存格</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用文字分列text-to-columns拆分單一儲存格內容">方案一：使用「文字分列（Text to Columns）」拆分單一儲存格內容</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用拆分儲存格功能合併儲存格拆開">方案二：使用「拆分儲存格」功能（合併儲存格拆開）</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用公式--vba-動態拆分">方案三：使用公式 + VBA 動態拆分</a>
+      <ul>
+        <li><a href="#方案-a使用公式excel-365-的-textsplit--split">方案 A：使用公式（Excel 365 的 <code>TEXTSPLIT</code> / <code>SPLIT</code>）</a></li>
+        <li><a href="#方案-b使用-leftmidrightsearch-的手工拆分">方案 B：使用 <code>LEFT</code>、<code>MID</code>、<code>RIGHT</code>+<code>SEARCH</code> 的手工拆分</a></li>
+        <li><a href="#方案-cvba-自動拆分">方案 C：VBA 自動拆分</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答">常見問題解答</a></li>
+    <li><a href="#小結">小結</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何分割儲存格
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何分割儲存格拆分儲存格完整教程">Excel 如何分割儲存格（拆分儲存格）完整教程<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%88%86%e5%89%b2%e5%84%b2%e5%ad%98%e6%a0%bc%e6%8b%86%e5%88%86%e5%84%b2%e5%ad%98%e6%a0%bc%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在日常使用 Excel 時，常會遇到「合併儲存格」或「一個儲存格內包含多筆資料」的情況。無論是想把一個合併儲存格拆開，還是想把單一儲存格中的文字拆成多列/多欄，Excel 都提供了多種方法。本教程將從 <strong>原因分析</strong> 開始，依次介紹 <strong>三種分步驟的解決方案</strong>，並附上常見問題解答，幫你快速掌握。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>典型場景</th>
+          <th>為何需要拆分儲存格</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>拆分合併儲存格</strong></td>
+          <td>報表頭、設計版面</td>
+          <td>合併儲存格在排序、篩選、VLOOKUP 等操作中會產生錯誤，將其拆開可保證資料完整性</td>
+      </tr>
+      <tr>
+          <td><strong>將文字拆成多欄</strong></td>
+          <td>例如 <code>姓名,年齡,地址</code></td>
+          <td>當資料以逗號、空格、制表符等分隔符分開時，使用「文字分列」可快速轉成多列</td>
+      </tr>
+      <tr>
+          <td><strong>將文字拆成多列</strong></td>
+          <td>例如 <code>2020年 10月 15日</code></td>
+          <td>要將日期拆成「年」「月」「日」三欄，或將地址拆成「街道」「城市」等</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="方案一使用文字分列text-to-columns拆分單一儲存格內容">方案一：使用「文字分列（Text to Columns）」拆分單一儲存格內容<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e6%96%87%e5%ad%97%e5%88%86%e5%88%97text-to-columns%e6%8b%86%e5%88%86%e5%96%ae%e4%b8%80%e5%84%b2%e5%ad%98%e6%a0%bc%e5%85%a7%e5%ae%b9">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用場景</strong>：資料已合併在同一儲存格，且有明確的分隔符（逗號、空格、制表符等）。</p>
+</blockquote><h3 id="步驟">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f">#</a></h3>
+<ol>
+<li><strong>選取</strong>要拆分的儲存格或列。</li>
+<li>在功能區選單中點擊 <strong>資料 &gt; 文字分列</strong>。</li>
+<li>選擇 <strong>分隔符號（Delimited）</strong> 或 <strong>固定寬度（Fixed width）</strong>，點 <strong>下一步</strong>。</li>
+<li>如果是分隔符號，勾選對應分隔符（逗號、空格、分號、制表符或自訂），點 <strong>下一步</strong>。</li>
+<li>在「資料格式」中選擇每一欄的格式（常見：常規、文字、日期），點 <strong>完成</strong>。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果原始資料列有多個儲存格，文字分列會在相鄰的右側儲存格覆蓋原有資料，請先確保空位。</p>
+</blockquote><hr>
+<h2 id="方案二使用拆分儲存格功能合併儲存格拆開">方案二：使用「拆分儲存格」功能（合併儲存格拆開）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e6%8b%86%e5%88%86%e5%84%b2%e5%ad%98%e6%a0%bc%e5%8a%9f%e8%83%bd%e5%90%88%e4%bd%b5%e5%84%b2%e5%ad%98%e6%a0%bc%e6%8b%86%e9%96%8b">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用場景</strong>：需要把一個合併儲存格拆成多個獨立儲存格，常見於報表設計後期。</p>
+</blockquote><h3 id="步驟-1">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1">#</a></h3>
+<ol>
+<li><strong>選取</strong>已合併的儲存格。</li>
+<li>在功能區選單中點擊 <strong>開始 &gt; 合併與置中 &gt; 拆分儲存格</strong>。
+<ul>
+<li><strong>Excel 2010+</strong>：此選項會自動將合併儲存格拆成等寬的行/列。</li>
+</ul>
+</li>
+<li>若需指定拆分比例，先在合併儲存格中輸入一個值，再利用 <strong>「合併儲存格」</strong> 的「參照」或 VBA 指令進行精確拆分。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：合併儲存格拆分後，原始內容只保留在左上角的儲存格，其他儲存格會變為空白。</p>
+</blockquote><hr>
+<h2 id="方案三使用公式--vba-動態拆分">方案三：使用公式 + VBA 動態拆分<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8%e5%85%ac%e5%bc%8f--vba-%e5%8b%95%e6%85%8b%e6%8b%86%e5%88%86">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用場景</strong>：需要根據不同分隔符或自動化拆分多列/多欄，或在複雜資料結構中拆分。</p>
+</blockquote><h3 id="方案-a使用公式excel-365-的-textsplit--split">方案 A：使用公式（Excel 365 的 <code>TEXTSPLIT</code> / <code>SPLIT</code>）<a class="anchor" href="#%e6%96%b9%e6%a1%88-a%e4%bd%bf%e7%94%a8%e5%85%ac%e5%bc%8fexcel-365-%e7%9a%84-textsplit--split">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>公式</th>
+          <th>說明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>=TEXTSPLIT(A1, &quot;,&quot;)</code></td>
+          <td>把 A1 以逗號拆成多列</td>
+          <td><code>姓名,年齡,地址</code> → <code>姓名</code> <code>年齡</code> <code>地址</code></td>
+      </tr>
+      <tr>
+          <td><code>=TEXTSPLIT(A1, &quot; &quot;, , 1)</code></td>
+          <td>拆成多行</td>
+          <td><code>2020 10 15</code> → <code>2020</code> <code>10</code> <code>15</code></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：<code>TEXTSPLIT</code> 只在 Excel 365 或 2021 之後的版本可用。</p>
+</blockquote><h3 id="方案-b使用-leftmidrightsearch-的手工拆分">方案 B：使用 <code>LEFT</code>、<code>MID</code>、<code>RIGHT</code>+<code>SEARCH</code> 的手工拆分<a class="anchor" href="#%e6%96%b9%e6%a1%88-b%e4%bd%bf%e7%94%a8-leftmidrightsearch-%e7%9a%84%e6%89%8b%e5%b7%a5%e6%8b%86%e5%88%86">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>公式</th>
+          <th>位置</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>=LEFT(A1, SEARCH(&quot;,&quot;,A1)-1)</code></td>
+          <td>前段</td>
+          <td><code>姓名,年齡,地址</code> → <code>姓名</code></td>
+      </tr>
+      <tr>
+          <td><code>=MID(A1, SEARCH(&quot;,&quot;,A1)+1, SEARCH(&quot;,&quot;, A1, SEARCH(&quot;,&quot;,A1)+1)-SEARCH(&quot;,&quot;,A1)-1)</code></td>
+          <td>中段</td>
+          <td><code>姓名,年齡,地址</code> → <code>年齡</code></td>
+      </tr>
+      <tr>
+          <td><code>=RIGHT(A1, LEN(A1)-SEARCH(&quot;,&quot;,A1, SEARCH(&quot;,&quot;,A1)+1))</code></td>
+          <td>後段</td>
+          <td><code>姓名,年齡,地址</code> → <code>地址</code></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：若分隔符不固定，可先用 <code>TRIM</code> 清除空格，再使用上述公式。</p>
+</blockquote><h3 id="方案-cvba-自動拆分">方案 C：VBA 自動拆分<a class="anchor" href="#%e6%96%b9%e6%a1%88-cvba-%e8%87%aa%e5%8b%95%e6%8b%86%e5%88%86">#</a></h3>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub SplitCell()
+    Dim rng As Range, col As Long
+    Dim arr() As String
+    Dim i As Long
+
+    Set rng = Selection
+    For Each cell In rng
+        arr = Split(cell.Value, &#34;,&#34;) &#39;以逗號拆分
+        For i = 0 To UBound(arr)
+            cell.Offset(0, i).Value = arr(i)
+        Next i
+    Next cell
+End Sub</code></pre><blockquote class='book-hint '>
+<p><strong>說明</strong>：選取需拆分的儲存格後啟動此巨集，即可將資料拆成同一列右側多個儲存格。</p>
+</blockquote><hr>
+<h2 id="常見問題解答">常見問題解答<a class="anchor" href="#%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1</strong>：文字分列後原資料被覆蓋，怎麼避免？</td>
+          <td>先將要拆分的列複製到空白列，或在「文字分列」的「目的地」欄位選擇一個空列（例如 <code>=$B$1</code>）。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2</strong>：合併儲存格拆開後，資料丟失？</td>
+          <td>只保留左上角儲存格的內容，其他儲存格會清空。若需保留內容，可先在拆分前手動複製。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3</strong>：如何將一行資料拆成多行？</td>
+          <td>文字分列只能拆成多列；若要拆成多行，可使用 <code>TEXTSPLIT</code> 的第二個參數設為 <code>,</code> 並將「行」設為 <code>1</code>，或使用 <code>TRANSPOSE</code> 轉置。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4</strong>：分隔符號是空格時，文字分列會把連續空格視為多個分隔符？</td>
+          <td>在文字分列中勾選「空格」時，Excel 只會將 <strong>一個</strong> 空格視為一次分隔；若要將多個空格合併，勾選「連續分隔符號視為一個」。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5</strong>：合併儲存格拆分後，格式不對（字體、對齊）怎麼調整？</td>
+          <td>拆分後所有新儲存格會保留合併儲存格的格式，若需統一，可在拆分後選取範圍，右鍵「設定儲存格格式」一次調整。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6</strong>：Excel 2007 以前的版本沒有 <code>TEXTSPLIT</code>，怎麼拆分？</td>
+          <td>可使用 <code>LEFT</code>、<code>MID</code>、<code>RIGHT</code>+<code>SEARCH</code> 的組合公式，或使用 VBA <code>Split</code> 函式。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7</strong>：資料中同時包含逗號和空格，想以兩種分隔符拆分怎麼辦？</td>
+          <td>在「文字分列」中可以一次勾選多個分隔符；若需要更複雜的拆分，可使用 <code>TEXTSPLIT(A1, &quot;, &quot;, , 1)</code> 或 <code>SPLIT</code> 公式。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小結">小結<a class="anchor" href="#%e5%b0%8f%e7%b5%90">#</a></h2>
+<ul>
+<li><strong>合併儲存格拆開</strong>：右鍵「合併與置中」→「拆分儲存格」。</li>
+<li><strong>文字分列</strong>：最簡單、最常用，適合已知分隔符的情況。</li>
+<li><strong>公式 / VBA</strong>：當需要自動化、動態拆分或處理舊版 Excel 時，會更靈活。</li>
+</ul>
+<p>根據你的實際需求，選擇最合適的方案。若遇到特殊情況，別忘了先備份資料，避免意外覆蓋。祝你使用愉快！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%87%8D%E7%B5%90%E8%A6%96%E7%AA%97/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何凍結視窗</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E5%AF%86/" class="flex align-center">
+      <span>excel如何加密</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用文字分列text-to-columns拆分單一儲存格內容">方案一：使用「文字分列（Text to Columns）」拆分單一儲存格內容</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用拆分儲存格功能合併儲存格拆開">方案二：使用「拆分儲存格」功能（合併儲存格拆開）</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用公式--vba-動態拆分">方案三：使用公式 + VBA 動態拆分</a>
+      <ul>
+        <li><a href="#方案-a使用公式excel-365-的-textsplit--split">方案 A：使用公式（Excel 365 的 <code>TEXTSPLIT</code> / <code>SPLIT</code>）</a></li>
+        <li><a href="#方案-b使用-leftmidrightsearch-的手工拆分">方案 B：使用 <code>LEFT</code>、<code>MID</code>、<code>RIGHT</code>+<code>SEARCH</code> 的手工拆分</a></li>
+        <li><a href="#方案-cvba-自動拆分">方案 C：VBA 自動拆分</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答">常見問題解答</a></li>
+    <li><a href="#小結">小結</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

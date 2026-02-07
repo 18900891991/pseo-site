@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何合併  在日常使用 Excel 時，常常會遇到需要「合併」的情況。   合併可能指：   合併單元格（把多個格子變成一個大格子）    合併文字（將多列/多欄的資料串成一行或一列）    合併表格（把兩個或多個表格合成一個完整資料集）  本文將針對「">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何合併">
+  <meta property="og:description" content="Excel 如何合併  在日常使用 Excel 時，常常會遇到需要「合併」的情況。   合併可能指：   合併單元格（把多個格子變成一個大格子）    合併文字（將多列/多欄的資料串成一行或一列）    合併表格（把兩個或多個表格合成一個完整資料集）  本文將針對「">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何合併">
+  <meta itemprop="description" content="Excel 如何合併  在日常使用 Excel 時，常常會遇到需要「合併」的情況。   合併可能指：   合併單元格（把多個格子變成一個大格子）    合併文字（將多列/多欄的資料串成一行或一列）    合併表格（把兩個或多個表格合成一個完整資料集）  本文將針對「">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="177">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何合併 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何合併</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用合併單元格功能">方案一：使用「合併單元格」功能</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-concatenate--textjoin-合併文字">方案二：使用 <code>CONCATENATE</code> / <code>TEXTJOIN</code> 合併文字</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-power-query-合併表格高級合併">方案三：使用 Power Query 合併表格（高級合併）</a>
+      <ul>
+        <li><a href="#步驟-2">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答">常見問題解答</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何合併
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何合併">Excel 如何合併<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e4%bd%b5">#</a></h1>
+<p>在日常使用 Excel 時，常常會遇到需要「合併」的情況。<br>
+合併可能指：</p>
+<ul>
+<li><strong>合併單元格</strong>（把多個格子變成一個大格子）</li>
+<li><strong>合併文字</strong>（將多列/多欄的資料串成一行或一列）</li>
+<li><strong>合併表格</strong>（把兩個或多個表格合成一個完整資料集）</li>
+</ul>
+<p>本文將針對「合併」的三種常見需求，提供詳細的分步驟解決方案，並附上常見問題解答，協助你快速掌握。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>合併類型</th>
+          <th>典型場景</th>
+          <th>需要注意的坑</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>合併單元格</td>
+          <td>製作標題、表格佈局</td>
+          <td>合併後只能保留左上角的值，其他資料會被覆寫；排序、篩選時會失效</td>
+      </tr>
+      <tr>
+          <td>合併文字</td>
+          <td>把多列資料串成一行（如姓名+地址）</td>
+          <td>需要注意空格、分隔符；合併後資料不可再拆分</td>
+      </tr>
+      <tr>
+          <td>合併表格</td>
+          <td>合併兩個資料表、匯總多個工作表</td>
+          <td>需要確認欄位對應、重複值處理、資料型別一致</td>
+      </tr>
+  </tbody>
+</table>
+<p>了解需求後，選擇最適合的合併方法能避免不必要的錯誤。</p>
+<hr>
+<h2 id="方案一使用合併單元格功能">方案一：使用「合併單元格」功能<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e5%90%88%e4%bd%b5%e5%96%ae%e5%85%83%e6%a0%bc%e5%8a%9f%e8%83%bd">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用情況</strong>：需要在工作表中將多個格子視覺上合併為一個格子，例如合併標題、佈局調整。</p>
+</blockquote><h3 id="步驟">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f">#</a></h3>
+<ol>
+<li><strong>選取要合併的格子</strong><br>
+<em>點擊並拖曳</em> 或使用 <code>Shift</code> + 選擇多個格子。</li>
+<li><strong>前往「開始」&gt;「對齊」區域</strong><br>
+點擊 <strong>「合併及置中」</strong>（或「合併單元格」），並選擇下列其中一項：
+<ul>
+<li><strong>合併及置中</strong>（保留左上角值，並置中）</li>
+<li><strong>合併跨列</strong>（只合併列）</li>
+<li><strong>合併跨列、保留左側值</strong>（保留左側值且不置中）</li>
+</ul>
+</li>
+<li><strong>確認結果</strong><br>
+合併完成後，右鍵可選擇「取消合併」以恢復原狀。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小提示</strong>：若要快速取消合併，選中合併格後再次點擊「合併及置中」即可。</p>
+</blockquote><hr>
+<h2 id="方案二使用-concatenate--textjoin-合併文字">方案二：使用 <code>CONCATENATE</code> / <code>TEXTJOIN</code> 合併文字<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-concatenate--textjoin-%e5%90%88%e4%bd%b5%e6%96%87%e5%ad%97">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用情況</strong>：需要將多列或多欄資料拼接成一個字符串，例如「姓名 + 電話」或「地址」等。</p>
+</blockquote><h3 id="步驟-1">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1">#</a></h3>
+<ol>
+<li><strong>選擇輸出單元格</strong><br>
+在你想要顯示合併結果的單元格輸入公式。</li>
+<li><strong>使用 <code>CONCATENATE</code>（舊版）</strong>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=CONCATENATE(A2, &#34; &#34;, B2)</code></pre>或者使用 <code>&amp;</code> 運算子：
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=A2 &amp; &#34; &#34; &amp; B2</code></pre></li>
+<li><strong>使用 <code>TEXTJOIN</code>（Excel 2016 以上）</strong>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=TEXTJOIN(&#34; &#34;, TRUE, A2, B2, C2)</code></pre><ul>
+<li>第 1 個參數是分隔符（如空格、逗號等）</li>
+<li>第 2 個參數 <code>TRUE</code> 表示忽略空白值</li>
+<li>後面的參數是要合併的範圍或單元格</li>
+</ul>
+</li>
+<li><strong>拖曳填充</strong><br>
+把公式向下或向右拖曳，以處理多行資料。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：合併後的文字是 <strong>靜態值</strong>，若原始資料改變，需要重新計算或使用 <code>Ctrl + C / Ctrl + V</code> 貼上值。</p>
+</blockquote><hr>
+<h2 id="方案三使用-power-query-合併表格高級合併">方案三：使用 Power Query 合併表格（高級合併）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-power-query-%e5%90%88%e4%bd%b5%e8%a1%a8%e6%a0%bc%e9%ab%98%e7%b4%9a%e5%90%88%e4%bd%b5">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用情況</strong>：需要把兩個或多個表格（工作表、範圍）依照共同欄位合併成一個完整資料集。</p>
+</blockquote><h3 id="步驟-2">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2">#</a></h3>
+<ol>
+<li><strong>將資料轉為表格</strong><br>
+<em>選取</em> 資料範圍 → <code>插入</code> &gt; <code>表格</code>，確保「表格包含標題」。</li>
+<li><strong>載入 Power Query</strong><br>
+<em>選取</em> 表格 → <code>資料</code> &gt; <code>從表格/範圍</code>。</li>
+<li><strong>重複上述步驟</strong><br>
+對另一個表格重複載入，產生兩個查詢。</li>
+<li><strong>使用「合併查詢」</strong>
+<ul>
+<li>在 Power Query 編輯器中，選擇「首頁」&gt;「合併查詢」</li>
+<li>選擇第一個查詢作為基礎</li>
+<li>在對話框中選擇第二個查詢，並指定 <strong>合併欄位</strong>（如 <code>ID</code>）</li>
+<li>選擇合併類型（左外連接、內連接、完整外連接等）</li>
+</ul>
+</li>
+<li><strong>展開合併列</strong><br>
+點擊合併列標題右側的展開按鈕，選擇要保留的欄位。</li>
+<li><strong>載入回工作表</strong><br>
+<code>關閉並載入</code> → 選擇「資料表」或「只建立連結」</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>好處</strong>：Power Query 能自動處理重複、缺漏、資料型別轉換，適合大型數據集。</p>
+</blockquote><hr>
+<h2 id="常見問題解答">常見問題解答<a class="anchor" href="#%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>合併單元格後如何刪除合併？</strong></td>
+          <td>選取合併後的格子，點擊「合併及置中」即可取消合併。</td>
+      </tr>
+      <tr>
+          <td><strong>合併文字後資料會變成文字，無法排序嗎？</strong></td>
+          <td>可以使用 <code>SORT</code>、<code>FILTER</code> 等函數處理文字列；如果想保留原始欄位，請不要直接將結果粘貼為值。</td>
+      </tr>
+      <tr>
+          <td><strong>合併表格時，欄位名稱重複會怎樣？</strong></td>
+          <td>Power Query 會自動在重複欄位後加上 <code>_1</code>、<code>_2</code> 等後綴，避免衝突。</td>
+      </tr>
+      <tr>
+          <td><strong>合併單元格會影響 VBA 迴圈嗎？</strong></td>
+          <td>合併後的格子只會返回左上角的值，若用程式迴圈範圍，請先取消合併或使用 <code>Range.MergeArea</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>想把多個工作表合併成一個工作表，該怎麼做？</strong></td>
+          <td>可用「資料」&gt;「從其他來源」&gt;「合併查詢」或寫簡單的 VBA，亦可利用 Power Query 的「從工作簿」功能。</td>
+      </tr>
+      <tr>
+          <td><strong>合併文字時要保留原始空格，該怎麼做？</strong></td>
+          <td><code>TEXTJOIN</code> 的第二個參數設為 <code>FALSE</code>，即可保留空白。</td>
+      </tr>
+      <tr>
+          <td><strong>合併單元格會影響列寬或行高嗎？</strong></td>
+          <td>合併後的格子會自動調整為最寬/最高的格子，若需要手動調整，請改變列寬/行高。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<blockquote class='book-hint '>
+<p><strong>結語</strong><br>
+Excel 的「合併」功能雖然簡單，但若使用不當可能導致資料遺失或操作困難。<br>
+請根據實際需求選擇合適的合併方法，並在必要時先備份資料。祝你使用順利！</p>
+</blockquote></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8F%A0%E5%9B%BE/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何叠图</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5%E5%84%B2%E5%AD%98%E6%A0%BC/" class="flex align-center">
+      <span>excel如何合併儲存格</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用合併單元格功能">方案一：使用「合併單元格」功能</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-concatenate--textjoin-合併文字">方案二：使用 <code>CONCATENATE</code> / <code>TEXTJOIN</code> 合併文字</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-power-query-合併表格高級合併">方案三：使用 Power Query 合併表格（高級合併）</a>
+      <ul>
+        <li><a href="#步驟-2">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答">常見問題解答</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

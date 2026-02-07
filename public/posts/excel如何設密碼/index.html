@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何設密碼？  在日常工作中，經常需要保護敏感數據或防止意外修改。Excel 提供了多種方式來設置密碼，從簡單的工作表保護到完整的文件加密，滿足不同程度的安全需求。以下將從「設密碼的原因」說明開始，提供 三種分步驟解決方案，並列出常見問題及解答，供你快速上手。  ---">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E8%A8%AD%E5%AF%86%E7%A2%BC/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何設密碼">
+  <meta property="og:description" content="Excel 如何設密碼？  在日常工作中，經常需要保護敏感數據或防止意外修改。Excel 提供了多種方式來設置密碼，從簡單的工作表保護到完整的文件加密，滿足不同程度的安全需求。以下將從「設密碼的原因」說明開始，提供 三種分步驟解決方案，並列出常見問題及解答，供你快速上手。  ---">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何設密碼">
+  <meta itemprop="description" content="Excel 如何設密碼？  在日常工作中，經常需要保護敏感數據或防止意外修改。Excel 提供了多種方式來設置密碼，從簡單的工作表保護到完整的文件加密，滿足不同程度的安全需求。以下將從「設密碼的原因」說明開始，提供 三種分步驟解決方案，並列出常見問題及解答，供你快速上手。  ---">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="231">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何設密碼 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E8%A8%AD%E5%AF%86%E7%A2%BC/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何設密碼</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-為什麼要給-excel-文件設密碼">1. 為什麼要給 Excel 文件設密碼？</a></li>
+    <li><a href="#2-三種分步驟的解決方案">2. 三種分步驟的解決方案</a>
+      <ul>
+        <li><a href="#方法一加密整個工作簿文件級密碼">方法一：加密整個工作簿（文件級密碼）</a></li>
+        <li><a href="#方法二保護單個工作表防止編輯刪除">方法二：保護單個工作表（防止編輯/刪除）</a></li>
+        <li><a href="#方法三使用-vba-自訂密碼更靈活的保護">方法三：使用 VBA 自訂密碼（更靈活的保護）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常見問題解答faq">3. 常見問題解答（FAQ）</a></li>
+    <li><a href="#4-小結">4. 小結</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何設密碼
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何設密碼">Excel 如何設密碼？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%a8%ad%e5%af%86%e7%a2%bc">#</a></h1>
+<p>在日常工作中，經常需要保護敏感數據或防止意外修改。Excel 提供了多種方式來設置密碼，從簡單的工作表保護到完整的文件加密，滿足不同程度的安全需求。以下將從「設密碼的原因」說明開始，提供 <strong>三種分步驟解決方案</strong>，並列出常見問題及解答，供你快速上手。</p>
+<hr>
+<h2 id="1-為什麼要給-excel-文件設密碼">1. 為什麼要給 Excel 文件設密碼？<a class="anchor" href="#1-%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e7%b5%a6-excel-%e6%96%87%e4%bb%b6%e8%a8%ad%e5%af%86%e7%a2%bc">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>目的</th>
+          <th>具體場景</th>
+          <th>需要的保護級別</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>防止未授權訪問</strong></td>
+          <td>財務報表、合約、個人資料</td>
+          <td>文件加密（整個工作簿）</td>
+      </tr>
+      <tr>
+          <td><strong>保護公式/資料不被修改</strong></td>
+          <td>內部計算模型、關鍵指標</td>
+          <td>工作表保護</td>
+      </tr>
+      <tr>
+          <td><strong>防止意外刪除/改動</strong></td>
+          <td>共享工作簿、多人編輯</td>
+          <td>版本控制 + 密碼保護</td>
+      </tr>
+      <tr>
+          <td><strong>符合法規要求</strong></td>
+          <td>GDPR、HIPAA 等</td>
+          <td>文件加密 + 敏感列隱藏</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>小提示</strong>：Excel 的保護功能並不是 100% 防破解，但足以阻擋大部分非專業使用者。若資料極為機密，建議結合雲端加密或專業安全工具。</p>
+</blockquote><hr>
+<h2 id="2-三種分步驟的解決方案">2. 三種分步驟的解決方案<a class="anchor" href="#2-%e4%b8%89%e7%a8%ae%e5%88%86%e6%ad%a5%e9%a9%9f%e7%9a%84%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%a1%88">#</a></h2>
+<blockquote class='book-hint '>
+<p>所有示例以 <strong>Excel 365</strong> 為基準，其他版本（Excel 2019/2016/2013 等）操作位置略有差異，但基本流程相同。</p>
+</blockquote><h3 id="方法一加密整個工作簿文件級密碼">方法一：加密整個工作簿（文件級密碼）<a class="anchor" href="#%e6%96%b9%e6%b3%95%e4%b8%80%e5%8a%a0%e5%af%86%e6%95%b4%e5%80%8b%e5%b7%a5%e4%bd%9c%e7%b0%bf%e6%96%87%e4%bb%b6%e7%b4%9a%e5%af%86%e7%a2%bc">#</a></h3>
+<p>此方式需要在打開文件時輸入密碼，適合保護整個工作簿。</p>
+<ol>
+<li>
+<p><strong>打開工作簿</strong><br>
+<code>Ctrl + O</code> → 選擇文件 → 打開</p>
+</li>
+<li>
+<p><strong>進入「文件」菜單</strong><br>
+點擊左上角 <strong>「文件」</strong> → <strong>「資訊」</strong></p>
+</li>
+<li>
+<p><strong>設置密碼</strong></p>
+<ul>
+<li>點擊 <strong>「保護工作簿」</strong> → <strong>「加密以密碼」</strong></li>
+<li>在彈出的對話框中輸入密碼，點擊 <strong>「確定」</strong></li>
+<li>再次輸入以確認，點擊 <strong>「確定」</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>保存文件</strong><br>
+<code>Ctrl + S</code> 或 <strong>「文件」</strong> → <strong>「保存」</strong>，完成後文件將被加密。<br>
+<strong>備註</strong>：若忘記密碼，無法恢復，請謹慎備份。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>技巧</strong>：若想在不同裝置上共享，請將文件發送前先設置密碼，接收者在打開時必須輸入正確密碼。</p>
+</blockquote><h3 id="方法二保護單個工作表防止編輯刪除">方法二：保護單個工作表（防止編輯/刪除）<a class="anchor" href="#%e6%96%b9%e6%b3%95%e4%ba%8c%e4%bf%9d%e8%ad%b7%e5%96%ae%e5%80%8b%e5%b7%a5%e4%bd%9c%e8%a1%a8%e9%98%b2%e6%ad%a2%e7%b7%a8%e8%bc%af%e5%88%aa%e9%99%a4">#</a></h3>
+<p>此方式主要用於保護工作表內的公式、格式等。</p>
+<ol>
+<li>
+<p><strong>選擇工作表</strong><br>
+點擊工作表標籤</p>
+</li>
+<li>
+<p><strong>進入「審閱」菜單</strong><br>
+點擊 <strong>「審閱」</strong> → <strong>「保護工作表」</strong></p>
+</li>
+<li>
+<p><strong>設置工作表密碼</strong></p>
+<ul>
+<li>在彈出的對話框中輸入密碼（可選）</li>
+<li>勾選需要允許的操作（如「選擇鎖定單元格」或「選擇未鎖定單元格」）</li>
+<li>點擊 <strong>「確定」</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>解除保護</strong><br>
+如需修改，回到 <strong>「審閱」</strong> → <strong>「解除工作表保護」</strong>，輸入密碼即可。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：預設所有單元格都被鎖定，除非你先在「格式」中解鎖需要編輯的單元格，否則保護後所有單元格均不可編輯。</p>
+</blockquote><h3 id="方法三使用-vba-自訂密碼更靈活的保護">方法三：使用 VBA 自訂密碼（更靈活的保護）<a class="anchor" href="#%e6%96%b9%e6%b3%95%e4%b8%89%e4%bd%bf%e7%94%a8-vba-%e8%87%aa%e8%a8%82%e5%af%86%e7%a2%bc%e6%9b%b4%e9%9d%88%e6%b4%bb%e7%9a%84%e4%bf%9d%e8%ad%b7">#</a></h3>
+<p>如果你需要更細粒度的控制，例如在特定條件下自動解鎖或限制功能，可用 VBA 編寫自訂宏。</p>
+<ol>
+<li>
+<p><strong>啟用開發人員工具欄</strong><br>
+<code>文件</code> → <code>選項</code> → <code>自訂功能區</code> → 勾選 <strong>「開發人員」</strong></p>
+</li>
+<li>
+<p><strong>插入 VBA 模組</strong></p>
+<ul>
+<li><code>開發人員</code> → <code>Visual Basic</code></li>
+<li>在左側「VBAProject」中右鍵 <em>ThisWorkbook</em> → <code>插入</code> → <code>模組</code></li>
+</ul>
+</li>
+<li>
+<p><strong>粘貼下列範例程式碼</strong></p>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Dim pwd As String
+
+Private Sub Workbook_Open()
+    pwd = InputBox(&#34;請輸入密碼以開啟工作簿：&#34;, &#34;密碼保護&#34;)
+    If pwd &lt;&gt; &#34;YourPasswordHere&#34; Then
+        MsgBox &#34;密碼錯誤，工作簿將被關閉！&#34;, vbCritical
+        ThisWorkbook.Close SaveChanges:=False
+    End If
+End Sub
+
+Private Sub Workbook_BeforeClose(Cancel As Boolean)
+    Dim ans As VbMsgBoxResult
+    ans = MsgBox(&#34;確定要關閉工作簿嗎？&#34;, vbYesNo + vbQuestion)
+    If ans = vbNo Then
+        Cancel = True
+    End If
+End Sub</code></pre></li>
+<li>
+<p><strong>保存並設置為宏啟用工作簿 (.xlsm)</strong><br>
+<code>文件</code> → <code>另存為</code> → <strong>「Excel 宏啟用工作簿」</strong> → 保存</p>
+</li>
+<li>
+<p><strong>測試</strong></p>
+<ul>
+<li>關閉工作簿，重新打開，會彈出密碼輸入框</li>
+<li>密碼錯誤則自動關閉</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：VBA 代碼可被禁用，若安全設置過高，宏可能被阻止。若需要更高安全，結合方法一/二一起使用。</p>
+</blockquote><hr>
+<h2 id="3-常見問題解答faq">3. 常見問題解答（FAQ）<a class="anchor" href="#3-%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：Excel 密碼可以忘記恢復嗎？</strong></td>
+          <td>一般來說，Excel 密碼無法恢復。若忘記，建議嘗試備份或使用第三方恢復工具，或者重新建立文件。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：能否在不破壞工作簿的情況下把工作表保護改成只允許讀取？</strong></td>
+          <td>可以：在「保護工作表」時，取消所有勾選，只允許「選擇未鎖定單元格」即可。若需要完全只讀，可將整個工作簿設為「只讀」屬性。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：加密文件後，其他人可以在 Excel 中複製內容嗎？</strong></td>
+          <td>在加密文件時，打開文件需要密碼，若輸入正確，對方仍可複製內容。若想限制複製，需結合 VBA 或使用「保護工作簿」中的「保護工作簿結構」功能。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：Excel 2010 以上版本的保護方法有什麼不同？</strong></td>
+          <td>主要差異在菜單位置：Excel 2010 以後使用「文件」→「資訊」來設置文件加密；Excel 2007 以前則在「工具」→「工作簿保護」中操作。步驟基本相同。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：能否將密碼設為「無」但仍保護工作表？</strong></td>
+          <td>可以：在「保護工作表」對話框中留空密碼，但勾選所需保護選項。此時任何人都無法解除保護，除非知道密鑰。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：密碼保護會影響 Excel 的自動保存功能嗎？</strong></td>
+          <td>加密文件後，Excel 仍可自動保存，但每次打開文件時仍需輸入密碼。若自動保存到雲端，請確保雲端服務也具備加密。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7：如何在工作簿中隱藏列或行並保護？</strong></td>
+          <td>先隱藏列/行，然後將整個工作表保護，或只允許「選擇未鎖定單元格」的方式。隱藏的列/行在保護後仍可被解隱，但需密碼。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="4-小結">4. 小結<a class="anchor" href="#4-%e5%b0%8f%e7%b5%90">#</a></h2>
+<ul>
+<li><strong>文件加密</strong>：最適合保護整個工作簿的機密性。</li>
+<li><strong>工作表保護</strong>：防止公式或格式被意外修改，適用於多人協作。</li>
+<li><strong>VBA 自訂</strong>：提供更靈活的控制，適合需要自動化檢查或多層保護的場景。</li>
+</ul>
+<p>選擇合適的保護方式，並做好密碼備份，既能保護資料，又不會因忘記密碼而造成工作損失。祝你玩得開心，數據安全有保障！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%A8%AD%E5%AE%9A/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何設定</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%AE%BE%E5%AE%9A/" class="flex align-center">
+      <span>excel如何设定</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-為什麼要給-excel-文件設密碼">1. 為什麼要給 Excel 文件設密碼？</a></li>
+    <li><a href="#2-三種分步驟的解決方案">2. 三種分步驟的解決方案</a>
+      <ul>
+        <li><a href="#方法一加密整個工作簿文件級密碼">方法一：加密整個工作簿（文件級密碼）</a></li>
+        <li><a href="#方法二保護單個工作表防止編輯刪除">方法二：保護單個工作表（防止編輯/刪除）</a></li>
+        <li><a href="#方法三使用-vba-自訂密碼更靈活的保護">方法三：使用 VBA 自訂密碼（更靈活的保護）</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-常見問題解答faq">3. 常見問題解答（FAQ）</a></li>
+    <li><a href="#4-小結">4. 小結</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

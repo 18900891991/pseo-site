@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何刪除重複資料  在日常使用 Excel 時，經常會遇到重複資料，這不僅浪費儲存空間，還可能影響分析結果。下面將從「為什麼會產生重複」說起，依次介紹三種最常用的刪除重複資料方法，並回答常見的疑問。  ---   1. 原因分析  | 可能原因 | 說明 | |---------">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E9%87%8D%E8%A4%87%E8%B3%87%E6%96%99/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何刪除重複資料">
+  <meta property="og:description" content="Excel 如何刪除重複資料  在日常使用 Excel 時，經常會遇到重複資料，這不僅浪費儲存空間，還可能影響分析結果。下面將從「為什麼會產生重複」說起，依次介紹三種最常用的刪除重複資料方法，並回答常見的疑問。  ---   1. 原因分析  | 可能原因 | 說明 | |---------">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何刪除重複資料">
+  <meta itemprop="description" content="Excel 如何刪除重複資料  在日常使用 Excel 時，經常會遇到重複資料，這不僅浪費儲存空間，還可能影響分析結果。下面將從「為什麼會產生重複」說起，依次介紹三種最常用的刪除重複資料方法，並回答常見的疑問。  ---   1. 原因分析  | 可能原因 | 說明 | |---------">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="159">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何刪除重複資料 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E9%87%8D%E8%A4%87%E8%B3%87%E6%96%99/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何刪除重複資料</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-方案一使用刪除重複項功能">2. 方案一：使用「刪除重複項」功能</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二使用高級篩選-公式">3. 方案二：使用「高級篩選」+ 公式</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用公式--篩選--刪除">4. 方案三：使用公式 + 篩選 + 刪除</a>
+      <ul>
+        <li><a href="#步驟-2">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常見問題解答-faq">5. 常見問題解答 (FAQ)</a></li>
+    <li><a href="#6-小結">6. 小結</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何刪除重複資料
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何刪除重複資料">Excel 如何刪除重複資料<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%88%aa%e9%99%a4%e9%87%8d%e8%a4%87%e8%b3%87%e6%96%99">#</a></h1>
+<p>在日常使用 Excel 時，經常會遇到重複資料，這不僅浪費儲存空間，還可能影響分析結果。下面將從「為什麼會產生重複」說起，依次介紹三種最常用的刪除重複資料方法，並回答常見的疑問。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>可能原因</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>手動輸入錯誤</strong></td>
+          <td>同一筆資料被重複輸入。</td>
+      </tr>
+      <tr>
+          <td><strong>資料合併</strong></td>
+          <td>多個工作表或檔案合併時未去重。</td>
+      </tr>
+      <tr>
+          <td><strong>匯入外部資料</strong></td>
+          <td>從 CSV、Web、資料庫等導入時，重複行被保留下來。</td>
+      </tr>
+      <tr>
+          <td><strong>公式計算</strong></td>
+          <td>在使用 <code>VLOOKUP</code>、<code>INDEX</code> 等公式產生列時，可能產生重複。</td>
+      </tr>
+      <tr>
+          <td><strong>資料更新</strong></td>
+          <td>版本控制不當，舊資料未刪除就覆蓋新資料。</td>
+      </tr>
+  </tbody>
+</table>
+<p>了解來源能幫助你選擇更合適的刪除方式，並在未來預防重複。</p>
+<hr>
+<h2 id="2-方案一使用刪除重複項功能">2. 方案一：使用「刪除重複項」功能<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e5%88%aa%e9%99%a4%e9%87%8d%e8%a4%87%e9%a0%85%e5%8a%9f%e8%83%bd">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>快捷、直觀</strong>，適合一次性處理整張表或單列。</p>
+</blockquote><h3 id="步驟">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f">#</a></h3>
+<ol>
+<li>
+<p><strong>選擇範圍</strong></p>
+<ul>
+<li>若要整張工作表去重，點擊左上角的全選按鈕；</li>
+<li>若只想去重某些列，先選中這些列。</li>
+</ul>
+</li>
+<li>
+<p><strong>開啟功能</strong></p>
+<ul>
+<li><code>資料</code> ➜ <code>刪除重複項</code>（Excel 2016+）</li>
+<li>在彈出的對話框中，勾選需要比對的列（預設全選）。</li>
+<li><code>確定</code> → Excel 會顯示「已刪除 X 個重複項，保留 Y 行」。</li>
+</ul>
+</li>
+<li>
+<p><strong>檢查結果</strong></p>
+<ul>
+<li>用 <code>Ctrl+F</code> 搜索關鍵字或手動確認無重複。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：若想保留第一筆或最後一筆，可先對資料排序，再使用此功能。</p>
+</blockquote><hr>
+<h2 id="3-方案二使用高級篩選-公式">3. 方案二：使用「高級篩選」+ 公式<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e9%ab%98%e7%b4%9a%e7%af%a9%e9%81%b8-%e5%85%ac%e5%bc%8f">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>可保留原始順序</strong>，適合需要保留特定列順序的情況。</p>
+</blockquote><h3 id="步驟-1">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1">#</a></h3>
+<ol>
+<li>
+<p><strong>複製原始範圍</strong></p>
+<ul>
+<li>例如在 <code>A1:B10</code> 放入資料，先將整個區塊複製到 <code>D1:E10</code>（作為工作區）。</li>
+</ul>
+</li>
+<li>
+<p><strong>開啟高級篩選</strong></p>
+<ul>
+<li><code>資料</code> ➜ <code>進階</code>（或 <code>高級篩選</code>）</li>
+<li>在彈出框中，選擇 <code>將結果複製到其他位置</code>，並勾選 <code>僅保留唯一記錄</code>，目標為 <code>D1</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>驗證</strong></p>
+<ul>
+<li><code>E</code> 列是保留的唯一值，<code>D</code> 列為對應的其他資料。</li>
+<li>若需要回到原始表格，只需複製 <code>D</code> 列回 <code>A</code> 列。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：如果只想刪除某列重複，可以只把那一列作為篩選條件；其他列不受影響。</p>
+</blockquote><hr>
+<h2 id="4-方案三使用公式--篩選--刪除">4. 方案三：使用公式 + 篩選 + 刪除<a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8%e5%85%ac%e5%bc%8f--%e7%af%a9%e9%81%b8--%e5%88%aa%e9%99%a4">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>最靈活</strong>，可自定義複雜條件，適合有特殊規則的資料。</p>
+</blockquote><h3 id="步驟-2">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2">#</a></h3>
+<ol>
+<li>
+<p><strong>增加輔助列</strong></p>
+<ul>
+<li>在 <code>C</code> 列寫入公式：
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=IF(COUNTIF($A$1:A1, A1)=1, &#34;保留&#34;, &#34;刪除&#34;)</code></pre></li>
+<li>這個公式說：如果目前行的值在之前沒有出現過，標記為「保留」；否則標記為「刪除」。</li>
+</ul>
+</li>
+<li>
+<p><strong>篩選</strong></p>
+<ul>
+<li><code>資料</code> ➜ <code>篩選</code>，在 <code>C</code> 列篩選 <code>刪除</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>刪除</strong></p>
+<ul>
+<li>選中所有被篩選出的行，右鍵 <code>刪除行</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>去除篩選</strong></p>
+<ul>
+<li><code>資料</code> ➜ <code>篩選</code> 取消，重新顯示所有數據。</li>
+</ul>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>進階</strong>：若需要多列組合去重，可改為<br>
+<code>=IF(COUNTIFS($A$1:A1, A1, $B$1:B1, B1)=1, &quot;保留&quot;, &quot;刪除&quot;)</code></p>
+</blockquote><hr>
+<h2 id="5-常見問題解答-faq">5. 常見問題解答 (FAQ)<a class="anchor" href="#5-%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94-faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：刪除重複資料後，如何保留第一筆出現的記錄？</strong></td>
+          <td>方案一中，先按需要的列升序排序，然後使用「刪除重複項」即可保留第一筆。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：只想刪除 A 列中的重複，B 列保留不變，怎麼做？</strong></td>
+          <td>在「刪除重複項」時只勾選 A 列；或在公式中只使用 A 列作為條件。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：Excel 2010 沒有「刪除重複項」功能，怎麼辦？</strong></td>
+          <td>在 <code>資料</code> -&gt; <code>進階</code>（或 <code>高級篩選</code>）中勾選「僅保留唯一記錄」即可。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：刪除重複後會影響公式引用嗎？</strong></td>
+          <td>若公式引用的是已被刪除的行，會產生 <code>#REF!</code>。建議在刪除前先將公式轉成值。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：刪除後想恢復，該怎麼辦？</strong></td>
+          <td>若未另存，<code>Ctrl+Z</code> 可以撤銷；建議刪除前先備份一份工作簿。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：如何在多條件下刪除重複，例如同時考慮姓名和日期？</strong></td>
+          <td>使用方案三中的 <code>COUNTIFS</code>，或者在「刪除重複項」中勾選多列。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7：刪除重複後資料順序會改變嗎？</strong></td>
+          <td>方案一會改變順序；方案二和方案三可保留原始順序。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="6-小結">6. 小結<a class="anchor" href="#6-%e5%b0%8f%e7%b5%90">#</a></h2>
+<ul>
+<li><strong>「刪除重複項」</strong>：最快、最直接，適合一次性處理；但可能改變順序。</li>
+<li><strong>「高級篩選」</strong>：保留原始順序，適合保留第一筆或最後一筆。</li>
+<li><strong>公式+篩選</strong>：最靈活，能設定複雜條件，適合大規模資料清洗。</li>
+</ul>
+<p>在進行任何刪除操作前，務必備份原始工作表，避免資料遺失。祝你使用愉快 🚀！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E7%A9%BA%E7%99%BD%E5%88%97/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何刪除空白列</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E6%9D%A1%E7%A0%81/" class="flex align-center">
+      <span>excel如何制作条码</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1. 原因分析</a></li>
+    <li><a href="#2-方案一使用刪除重複項功能">2. 方案一：使用「刪除重複項」功能</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二使用高級篩選-公式">3. 方案二：使用「高級篩選」+ 公式</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三使用公式--篩選--刪除">4. 方案三：使用公式 + 篩選 + 刪除</a>
+      <ul>
+        <li><a href="#步驟-2">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常見問題解答-faq">5. 常見問題解答 (FAQ)</a></li>
+    <li><a href="#6-小結">6. 小結</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

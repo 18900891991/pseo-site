@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="Posts">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="Posts">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+
+<title>Posts | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="Cloudata AI" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Posts</h3>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%AA%E9%99%A4%E9%87%8D%E8%A4%87%E8%B3%87%E6%96%99/">excel如何刪除重複資料</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何刪除重複資料">Excel 如何刪除重複資料<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%88%aa%e9%99%a4%e9%87%8d%e8%a4%87%e8%b3%87%e6%96%99">#</a></h1>
+<p>在日常使用 Excel 時，經常會遇到重複資料，這不僅浪費儲存空間，還可能影響分析結果。下面將從「為什麼會產生重複」說起，依次介紹三種最常用的刪除重複資料方法，並回答常見的疑問。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>可能原因</th>
+          <th>說明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>手動輸入錯誤</strong></td>
+          <td>同一筆資料被重複輸入。</td>
+      </tr>
+      <tr>
+          <td><strong>資料合併</strong></td>
+          <td>多 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E6%9D%A1%E7%A0%81/">excel如何制作条码</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-制作条码完整教程">Excel 制作条码完整教程<a class="anchor" href="#excel-%e5%88%b6%e4%bd%9c%e6%9d%a1%e7%a0%81%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目标</strong><br>
+通过 Excel 轻松生成多种条码（Code‑128、EAN13、QR 等），适用于库存管理、标签打印、资产跟踪等场景。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>可能的做法</th>
+          <th>主要难点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>只需在表格中显示条码符号</td>
+          <td>直接使用条码字体（如 <strong>IDAutomationHC39M</strong>、<strong>Code 128</strong> 等）</td>
+          <td>① 需要下载 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E5%87%8F/">excel如何加减</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何加减">Excel 如何加减<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%8a%a0%e5%87%8f">#</a></h1>
+<p>在日常工作中，往往需要对数值进行求和、差值、加减运算。Excel 提供了多种实现方式，既可以手动输入公式，也可以利用快捷键、函数、工具栏等。本文将从<strong>原因分析</strong>入手，提供三种分步骤的解决方案，并列出常见问题与对应的答案，帮助你快速、准确地完成加减操作。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要的操作</th>
+          <th>常见困难</th>
+          <th>解决思路</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>单元格求和 …</strong></td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8A%A0%E5%AF%86%E7%A2%BC/">excel如何加密碼</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何加密密码保护">Excel 如何加密（密码保护）？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%8a%a0%e5%af%86%e5%af%86%e7%a0%81%e4%bf%9d%e6%8a%a4">#</a></h1>
+<p>在办公环境中，Excel 文件往往包含公司机密、个人隐私或财务数据。若不加密，文件可能被未经授权的人查看、篡改或复制。为保证数据安全，可以给工作簿、工作表或单元格添加密码。本文从<strong>为什么需要加密</strong>出发，提供 <strong>三种常见的加密方法</strong>，并解答常见疑问，帮助你安全、有效地保护 Excel 数据。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要密码保护的原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>共享工作簿 …</strong></td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8C%AF%E5%87%BA/">excel如何匯出</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何匯出文件">Excel 如何匯出文件？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%8c%af%e5%87%ba%e6%96%87%e4%bb%b6">#</a></h1>
+<p>在日常工作中，將 Excel 資料匯出成不同格式（如 CSV、PDF、或其他外部系統）是非常常見的需求。本教程將從<strong>原因分析</strong>開始，接著提供 <strong>三種分步驟的解決方案</strong>，最後整理常見問題解答，幫助你快速、正確地完成匯出任務。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>可能遇到的問題</th>
+          <th>造成原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>共享簡單數據</strong></td>
+          <td>需要把表格發送給不使用 Excel …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8F%96%E4%BB%A3/">excel如何取代</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="如何取代-excel完整教程">如何取代 Excel：完整教程<a class="anchor" href="#%e5%a6%82%e4%bd%95%e5%8f%96%e4%bb%a3-excel%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>本文为你系统说明为什么会想要替代 Excel、可行的三种替代方案以及常见问题的解答。<br>
+目标读者：正在使用 Excel 做数据处理、报表、可视化的业务分析师、数据分析师、产品经理以及技术团队负责人。</p>
+</blockquote><hr>
+<h2 id="1-原因分析为什么要考虑取代-excel">1️⃣ 原因分析：为什么要考虑取代 Excel？<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%80%83%e8%99%91%e5%8f%96%e4%bb%a3-excel">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>具体场景</th>
+          <th>问题</th>
+          <th>影响</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>大数据 …</strong></td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%8F%A0%E5%9B%BE/">excel如何叠图</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-叠图overlay-charts教程">Excel 叠图（Overlay Charts）教程<a class="anchor" href="#excel-%e5%8f%a0%e5%9b%beoverlay-charts%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在数据可视化中，叠图（Overlay Chart）可以让你把多组数据放在同一坐标系里，便于直接比较或展示两种不同尺度的数据。本文将从<strong>为何需要叠图</strong>讲起，给出<strong>三种常用解决方案</strong>，并回答<strong>最常见的疑问</strong>，帮助你在 Excel 中轻松实现叠图。</p>
+<hr>
+<h2 id="1-为什么要做叠图">1. 为什么要做叠图？<a class="anchor" href="#1-%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%81%9a%e5%8f%a0%e5%9b%be">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求</th>
+          <th>叠图的优势</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>销售与利润 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5/">excel如何合併</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何合併">Excel 如何合併<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e4%bd%b5">#</a></h1>
+<p>在日常使用 Excel 時，常常會遇到需要「合併」的情況。<br>
+合併可能指：</p>
+<ul>
+<li><strong>合併單元格</strong>（把多個格子變成一個大格子）</li>
+<li><strong>合併文字</strong>（將多列/多欄的資料串成一行或一列）</li>
+<li><strong>合併表格</strong>（把兩個或多個表格合成一個完整資料集）</li>
+</ul>
+<p>本文將針對「合併」的三種常見需求，提供詳細的分步驟解決方案，並附上常見問題解答，協助你快速掌握。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>合併類型</th>
+          <th>典型場景</th>
+          <th>需要注意的坑 …</th></tr></thead></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5%E5%84%B2%E5%AD%98%E6%A0%BC/">excel如何合併儲存格</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何合併儲存格">Excel 如何合併儲存格<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e4%bd%b5%e5%84%b2%e5%ad%98%e6%a0%bc">#</a></h1>
+<p>合併儲存格是 Excel 中最常見的格式化操作之一，常被用來：</p>
+<ul>
+<li>讓標題跨多欄顯示</li>
+<li>在資料表格中做「合併列」或「合併欄」以提升可讀性</li>
+<li>產生報表摘要時，將多個值合併成一個單元格</li>
+</ul>
+<p>雖然操作簡單，但在實務中仍會遇到各種「合併失敗」或「資料被破壞」的問題。以下將從原因分析、三種分步解決方案以及常見問答，為你提供完整的參考。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>造成原因</th>
+          <th>影響 …</th></tr></thead></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5%E6%AC%84%E4%BD%8D/">excel如何合併欄位</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何合併欄位合併單元格全攻略">Excel 如何合併欄位（合併單元格）全攻略<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e4%bd%b5%e6%ac%84%e4%bd%8d%e5%90%88%e4%bd%b5%e5%96%ae%e5%85%83%e6%a0%bc%e5%85%a8%e6%94%bb%e7%95%a5">#</a></h1>
+<blockquote class='book-hint '>
+<p>在日常工作中，常需要把多個相鄰的單元格合併為一個大單元格，以便做表頭、分組、佈局等。<br>
+這份教程將從 <strong>原因分析</strong> 出發，提供 <strong>三種分步驟的解決方案</strong>，並整理常見問題的解答，讓你輕鬆掌握 Excel 合併欄位的技巧。</p>
+</blockquote><h2 id="1-為什麼要合併欄位">1️⃣ 為什麼要合併欄位？<a class="anchor" href="#1-%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e5%90%88%e4%bd%b5%e6%ac%84%e4%bd%8d">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>目的</th>
+          <th>典型場景</th>
+          <th>需要注意的點</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>美化表格</strong></td>
+          <td>表頭跨多列、報 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <span>
+    <a href="/posts/page/9/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+    </a>
+  
+  </span>
+  
+  <span class="flex gap"><a href="/posts/page/8/">8</a><a href="/posts/page/9/">9</a><a >10</a><a href="/posts/page/11/">11</a><a href="/posts/page/12/">12</a></span>
+  
+  <span>
+    <a href="/posts/page/11/" class="flex align-center">
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </span>
+</div>
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <a>Categories</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+          <span>160</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Tags</a>
+      <ul>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </div>
+</aside>
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

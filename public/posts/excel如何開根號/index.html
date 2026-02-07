@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何開根號（取平方根）——完整 Markdown 教程   目标    了解在 Excel 中获取平方根的多种方式，掌握使用公式、快捷键、VBA 等方法，解决常见错误与疑问。  ---   原因分析  在日常数据处理、财务分析、科研计算等场景中，往往需要对数值做">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E9%96%8B%E6%A0%B9%E8%99%9F/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何開根號">
+  <meta property="og:description" content="Excel 如何開根號（取平方根）——完整 Markdown 教程   目标    了解在 Excel 中获取平方根的多种方式，掌握使用公式、快捷键、VBA 等方法，解决常见错误与疑问。  ---   原因分析  在日常数据处理、财务分析、科研计算等场景中，往往需要对数值做">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何開根號">
+  <meta itemprop="description" content="Excel 如何開根號（取平方根）——完整 Markdown 教程   目标    了解在 Excel 中获取平方根的多种方式，掌握使用公式、快捷键、VBA 等方法，解决常见错误与疑问。  ---   原因分析  在日常数据处理、财务分析、科研计算等场景中，往往需要对数值做">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="205">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何開根號 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E9%96%8B%E6%A0%B9%E8%99%9F/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何開根號</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-sqrt-函数">方案一：使用 <code>SQRT</code> 函数</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-power-函数">方案二：使用 <code>POWER</code> 函数</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用指数运算符-">方案三：使用指数运算符 <code>^</code></a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案四可选使用-vba-自定义函数">方案四（可选）：使用 <strong>VBA 自定义函数</strong></a></li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何開根號
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何開根號取平方根完整-markdown-教程">Excel 如何開根號（取平方根）——完整 Markdown 教程<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e9%96%8b%e6%a0%b9%e8%99%9f%e5%8f%96%e5%b9%b3%e6%96%b9%e6%a0%b9%e5%ae%8c%e6%95%b4-markdown-%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目标</strong><br>
+了解在 Excel 中获取平方根的多种方式，掌握使用公式、快捷键、VBA 等方法，解决常见错误与疑问。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<p>在日常数据处理、财务分析、科研计算等场景中，往往需要对数值做 <strong>平方根</strong> 处理。Excel 提供了多种实现手段，但新手常会遇到以下问题：</p>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>可能原因</th>
+          <th>解决思路</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>公式返回错误值 <code>#NUM!</code></td>
+          <td>传入负数</td>
+          <td>先判断非负，或使用 <code>ABS</code></td>
+      </tr>
+      <tr>
+          <td>结果看不懂</td>
+          <td>结果为小数</td>
+          <td>需要四舍五入或设置小数位</td>
+      </tr>
+      <tr>
+          <td>公式复制后出现错误</td>
+          <td>绝对/相对引用不当</td>
+          <td>关注 <code>$</code> 的使用</td>
+      </tr>
+      <tr>
+          <td>需要快速批量处理</td>
+          <td>公式写法繁琐</td>
+          <td>使用函数或 VBA 自动化</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="方案一使用-sqrt-函数">方案一：使用 <code>SQRT</code> 函数<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-sqrt-%e5%87%bd%e6%95%b0">#</a></h2>
+<p><code>SQRT</code> 是 Excel 内置的平方根函数，语法最直接、易用。</p>
+<h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li><strong>选中目标单元格</strong>（例如 <code>B2</code>）。</li>
+<li><strong>输入公式</strong>：<code>=SQRT(A2)</code>，其中 <code>A2</code> 是你想开根号的数值。</li>
+<li><strong>按回车</strong>，得到平方根。</li>
+<li><strong>拖拽填充柄</strong>，即可批量计算相邻单元格。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>技巧</strong></p>
+<ul>
+<li>若要忽略负数导致的错误，可结合 <code>IFERROR</code>：<code>=IFERROR(SQRT(A2), &quot;负数&quot;)</code>。</li>
+<li>若想保留原值同时展示根号结果，可在旁列使用此公式。</li>
+</ul>
+</blockquote><hr>
+<h2 id="方案二使用-power-函数">方案二：使用 <code>POWER</code> 函数<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-power-%e5%87%bd%e6%95%b0">#</a></h2>
+<p><code>POWER</code> 可以进行任意指数运算，平方根即是 <code>POWER(x, 0.5)</code>。</p>
+<h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li>选中单元格 <code>C2</code>。</li>
+<li>输入公式：<code>=POWER(A2, 0.5)</code>。</li>
+<li>回车后复制到需要的范围。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>优势</strong></p>
+<ul>
+<li>当你需要做 <code>x^(1/n)</code> 形式的根时（如立方根 <code>POWER(x, 1/3)</code>），此方法更通用。</li>
+<li>可以与 <code>ABS</code> 或 <code>IF</code> 组合，处理更复杂的逻辑。</li>
+</ul>
+</blockquote><hr>
+<h2 id="方案三使用指数运算符-">方案三：使用指数运算符 <code>^</code><a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8%e6%8c%87%e6%95%b0%e8%bf%90%e7%ae%97%e7%ac%a6-">#</a></h2>
+<p>Excel 允许直接使用 <code>^</code> 进行幂运算，<code>x^(1/2)</code> 与 <code>POWER</code> 等价。</p>
+<h3 id="步骤-2">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2">#</a></h3>
+<ol>
+<li>在单元格 <code>D2</code> 里写：<code>=A2^(1/2)</code>。</li>
+<li>回车后下拉填充。</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong></p>
+<ul>
+<li>需要注意 <strong>分数</strong> 的写法。若不想出现 <code>0.5</code>，可使用 <code>=A2^0.5</code>。</li>
+<li>对于负数，Excel 仍会返回 <code>#NUM!</code>，请先加 <code>ABS</code> 或 <code>IF</code> 判断。</li>
+</ul>
+</blockquote><hr>
+<h2 id="方案四可选使用-vba-自定义函数">方案四（可选）：使用 <strong>VBA 自定义函数</strong><a class="anchor" href="#%e6%96%b9%e6%a1%88%e5%9b%9b%e5%8f%af%e9%80%89%e4%bd%bf%e7%94%a8-vba-%e8%87%aa%e5%ae%9a%e4%b9%89%e5%87%bd%e6%95%b0">#</a></h2>
+<p>如果你想在单元格中使用更具可读性的函数（如 <code>√(x)</code>），可以写一个小宏。</p>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Function SqrtCustom(x As Double) As Double
+    If x &lt; 0 Then
+        SqrtCustom = CVErr(xlErrNum) &#39; 或返回错误
+    Else
+        SqrtCustom = Sqr(x)
+    End If
+End Function</code></pre><blockquote class='book-hint '>
+<p>之后在单元格里输入 <code>=SqrtCustom(A2)</code> 即可。</p>
+</blockquote><hr>
+<h2 id="常见问题解答">常见问题解答<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Q</th>
+          <th>A</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1</strong>：为什么 <code>SQRT(-4)</code> 会报错？</td>
+          <td><code>SQRT</code> 只能接受非负数。若需要处理负数，先使用 <code>ABS</code> 或 <code>IF</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2</strong>：如何对一列负数求绝对值后再开根号？</td>
+          <td><code>=SQRT(ABS(A2))</code> 或 <code>=POWER(ABS(A2),0.5)</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3</strong>：我想把根号结果保留两位小数，应该怎么做？</td>
+          <td>选中结果列，右键 → “设置单元格格式” → “数字” → 2 位小数；或使用 <code>ROUND</code>：<code>=ROUND(SQRT(A2),2)</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4</strong>：为什么填充后出现 <code>#NUM!</code>，但原单元格正常？</td>
+          <td>可能是引用了空单元格或负数。检查公式中的相对引用，必要时使用 <code>IF</code> 过滤。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5</strong>：可以一次性把整列平方根写成公式吗？</td>
+          <td>选中目标列，输入 <code>=SQRT(A:A)</code>，按 <strong>Ctrl+Shift+Enter</strong>（数组公式），或使用 <code>=ArrayFormula(SQRT(A:A))</code>（Google Sheets）。但在 Excel 中最好使用普通填充。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6</strong>：如何在 Excel 里用快捷键快速写 <code>SQRT</code>？</td>
+          <td>没有直接快捷键，但可以用 <strong>公式</strong> → <strong>插入函数</strong> → 搜索 <code>SQRT</code>。或自定义快捷键。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7</strong>：在 Power Query 中怎么取平方根？</td>
+          <td>在查询编辑器中添加自定义列：<code>= Number.Sqrt([列名])</code>。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>最简洁</strong>：<code>SQRT</code>。</li>
+<li><strong>更灵活</strong>：<code>POWER</code> 或 <code>^</code>。</li>
+<li><strong>需要处理负数</strong>：先 <code>ABS</code> 或 <code>IF</code>。</li>
+<li><strong>批量/自动化</strong>：使用填充、数组公式或 VBA。</li>
+</ul>
+<p>掌握上述方法后，你可以在任何需要平方根的场景中快速、准确地完成计算。祝你使用愉快！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E9%94%81%E5%AF%86%E7%A0%81/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何锁密码</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%81%9Aregression/" class="flex align-center">
+      <span>excel怎么做regression</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-sqrt-函数">方案一：使用 <code>SQRT</code> 函数</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-power-函数">方案二：使用 <code>POWER</code> 函数</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用指数运算符-">方案三：使用指数运算符 <code>^</code></a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案四可选使用-vba-自定义函数">方案四（可选）：使用 <strong>VBA 自定义函数</strong></a></li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

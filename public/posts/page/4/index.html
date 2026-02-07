@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="Posts">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="Posts">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+
+<title>Posts | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="Cloudata AI" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Posts</h3>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E6%98%BE%E7%A4%BA%E6%B3%A8%E9%9F%B3/">excel如何显示注音</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何显示注音拼音">Excel 如何显示注音（拼音）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e6%98%be%e7%a4%ba%e6%b3%a8%e9%9f%b3%e6%8b%bc%e9%9f%b3">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>目的</strong>：在 Excel 中把中文字符自动或手动转换为拼音，或让单元格直接显示含声调的注音。<br>
+<strong>读者</strong>：需要在数据表格里做文字处理、教学、或分析中文文本的用户。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>现象</th>
+          <th>可能原因</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>直接输入中文后无拼音显示</td>
+          <td>Excel 默认不解析文字</td>
+          <td>Excel 只处理数值、公式、格式等 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E6%B1%87%E5%87%BA/">excel如何汇出</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何汇出export完整教程">Excel 如何汇出（Export）——完整教程<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e6%b1%87%e5%87%baexport%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>“汇出”</strong> 在中文里通常指 <em>导出</em>（Export），即将 Excel 工作簿或工作表中的数据、表格、图表等内容导出为其他文件格式（CSV、PDF、HTML、XML、数据库等），或将数据同步到外部应用。<br>
+本文将从原因分析、三种常见导出方法（分步骤）以及常见问题答疑四个部分，为你提供一套完整、实用的导出技巧。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要导出的格式</th>
+          <th>典型需求 …</th></tr></thead></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E7%94%A8%E6%96%9C%E7%BA%BF/">excel如何用斜线</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-中使用斜线对角线的完整教程">Excel 中使用斜线（对角线）的完整教程<a class="anchor" href="#excel-%e4%b8%ad%e4%bd%bf%e7%94%a8%e6%96%9c%e7%ba%bf%e5%af%b9%e8%a7%92%e7%ba%bf%e7%9a%84%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>常见场景</strong></p>
+<ul>
+<li>在单元格中创建标题时把“姓名/日期”拆成两行，使用斜线分隔</li>
+<li>在报表中展示“是 / 否”或“红 / 绿”时用斜线做视觉区分</li>
+<li>制作表格的 <strong>分割线</strong>，让表格更加清晰</li>
+</ul>
+</blockquote><p>本教程从<strong>原因分析</strong>出发，给出三种实现斜线的分步骤方案，并提供常见问题解答，帮助你在任何版本的 Excel（2010+）里都能轻松完成。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>需求</th>
+          <th>原因</th>
+          <th>关键点 …</th></tr></thead></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E7%9B%B4%E4%B9%A6/">excel如何直书</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-直书竖排文字教程">Excel 直书（竖排文字）教程<a class="anchor" href="#excel-%e7%9b%b4%e4%b9%a6%e7%ab%96%e6%8e%92%e6%96%87%e5%ad%97%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在 Excel 中，默认的文字排列方式是 <strong>横排</strong>（从左到右）。但在某些场景（例如中文竖排排版、表格标题、书籍目录等）中，需要把文字 <strong>竖直</strong>（从上到下）写在单元格里。本文将帮助你快速实现 “直书”——即 <strong>竖排文字</strong>，并给出三种常见的实现方法、原因分析以及常见问题解答。</p>
+<blockquote class='book-hint '>
+<p><strong>小提示</strong>：如果你只是想在单元格里直接键入内容而不进入编辑模式（双击/键盘 F2），请先按 <code>Ctrl + Enter</code> 或 <code>Alt + Enter</code>。但本文重点讨论的是文字竖排。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<ol>
+<li><strong>中文排版习惯</strong><br>
+传统 …</li></ol></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E7%9B%B4%E6%9B%B8/">excel如何直書</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何直書直接寫入單元格">Excel 如何直書（直接寫入單元格）<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e7%9b%b4%e6%9b%b8%e7%9b%b4%e6%8e%a5%e5%af%ab%e5%85%a5%e5%96%ae%e5%85%83%e6%a0%bc">#</a></h1>
+<p>在日常使用 Excel 的過程中，往往會遇到「直接寫入」或「直書」的需求：</p>
+<ul>
+<li>快速在單元格中輸入文字或數值，而不需經過公式編輯。</li>
+<li>在大量數據輸入時，避免每次都點開「公式欄」或「編輯」模式。</li>
+<li>需要在多個相鄰單元格一次性填入相同或類似的內容。</li>
+</ul>
+<p>本文將先分析「直書」的常見原因，接著提供 <strong>三種分步驟的解決方案</strong>，最後整理常見問題的解答，協助你快速、準確地完成直接輸入。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>可能的痛点 …</th></tr></thead></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A0%82/">excel如何置頂</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何置顶冻结窗口--详细教程">Excel 如何置顶（冻结窗口） | 详细教程<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e7%bd%ae%e9%a1%b6%e5%86%bb%e7%bb%93%e7%aa%97%e5%8f%a3--%e8%af%a6%e7%bb%86%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>置顶（<strong>freeze panes</strong>）是 Excel 中常用的功能之一，<br>
+它可以让你在滚动大型数据表时，始终保持标题行/列可见，从而更方便查看、编辑和对比数据。</p>
+</blockquote><p>本文将从<strong>原因分析</strong>开始，分别提供 <strong>三种分步骤的解决方案</strong>，并列出常见问题与答案，帮助你快速掌握这一功能。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要置顶的原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>大量数据</strong></td>
+          <td>当 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85/">excel如何自动填充</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-自动填充autofill完整教程">Excel 自动填充（AutoFill）完整教程<a class="anchor" href="#excel-%e8%87%aa%e5%8a%a8%e5%a1%ab%e5%85%85autofill%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>“自动填充”</strong> 是 Excel 在日常工作中最常用的功能之一。它可以帮助你快速完成数值、日期、文本、公式等连续序列。本文将从原因分析入手，提供三种不同场景的分步骤解决方案，并列出常见问题与解答，帮助你高效利用自动填充。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>可能导致手动填充耗时或出现错误的原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>数据序列</strong></td>
+          <td>你需要连续填充数字 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%87%AA%E5%8A%A8%E6%8D%A2%E5%88%97/">excel如何自动换列</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-自动换列转置完整教程">Excel 自动换列（转置）完整教程<a class="anchor" href="#excel-%e8%87%aa%e5%8a%a8%e6%8d%a2%e5%88%97%e8%bd%ac%e7%bd%ae%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p>在 Excel 中，“换列”往往指的是把 <strong>行变成列</strong> 或把 <strong>列变成行</strong>，即 <strong>转置（transpose）</strong>。<br>
+这在数据整理、报表生成、跨系统导入等场景里非常常见。下面将从原因分析、三种实用方案以及常见问题解答等角度，系统地帮你掌握如何在 Excel 中实现自动换列。</p>
+</blockquote><hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需求</th>
+          <th>典型痛点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>报表输出 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%A8%88%E7%AE%97/">excel如何計算</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何計算完整教程">Excel 如何計算：完整教程<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%a8%88%e7%ae%97%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在日常工作、数据分析、财务报表等场景中，Excel 的计算功能是核心。<br>
+本教程从<strong>原因分析</strong>出发，提供<strong>三种分步骤的解决方案</strong>（使用内置函数、手动刷新、VBA 自动化），并给出常见问题的解答，帮助你快速定位并解决计算相关的疑难。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>典型问题</th>
+          <th>可能原因</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>公式返回 <strong>#VALUE!</strong></td>
+          <td>单 …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+  <article class="book-post markdown">
+    <h2>
+      <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%A8%AD%E5%AE%9A%E5%88%97%E5%8D%B0%E7%AF%84%E5%9C%8D/">excel如何設定列印範圍</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+        <div class="book-post-content markdown-inner"><h1 id="excel-如何設定列印範圍">Excel 如何設定列印範圍<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%a8%ad%e5%ae%9a%e5%88%97%e5%8d%b0%e7%af%84%e5%9c%8d">#</a></h1>
+<p>在日常工作中，往往只需要列印工作表的一部分，而不是整個工作簿。若列印範圍設定不當，可能導致紙張浪費、列印內容錯亂，甚至列印出空白頁。下面將從原因分析、三種常用解決方案以及常見問題（FAQ）三個部分，為你詳細說明如何在 Excel 中正確設定列印範圍。</p>
+<hr>
+<h2 id="1-原因分析">1. 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>可能的問題</th>
+          <th>造成列印範圍錯誤的原因</th>
+          <th>影響</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>列印出多餘的空白行/ …</td></tr></tbody></table></div>
+      </div></div>
+  </article>
+  
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <span>
+    <a href="/posts/page/3/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+    </a>
+  
+  </span>
+  
+  <span class="flex gap"><a href="/posts/page/2/">2</a><a href="/posts/page/3/">3</a><a >4</a><a href="/posts/page/5/">5</a><a href="/posts/page/6/">6</a></span>
+  
+  <span>
+    <a href="/posts/page/5/" class="flex align-center">
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </span>
+</div>
+ 
+        
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <a>Categories</a>
+      <ul>
+      
+        <li class="flex align-center">
+          <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+          <span>160</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <a>Tags</a>
+      <ul>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </div>
+</aside>
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

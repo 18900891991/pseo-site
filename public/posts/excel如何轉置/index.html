@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何轉置 (Transpose) — 完整教學  在 Excel 裡進行「轉置」操作（把行列互換）往往是處理資料時最常見的需求之一。本文將深入探討轉置的原因、提供三種不同的分步解決方案（公式、剪貼簿、VBA），並整理常見問題解答，幫助你快速、靈活地完成轉置任務。  ---   為">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E8%BD%89%E7%BD%AE/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何轉置">
+  <meta property="og:description" content="Excel 如何轉置 (Transpose) — 完整教學  在 Excel 裡進行「轉置」操作（把行列互換）往往是處理資料時最常見的需求之一。本文將深入探討轉置的原因、提供三種不同的分步解決方案（公式、剪貼簿、VBA），並整理常見問題解答，幫助你快速、靈活地完成轉置任務。  ---   為">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel如何轉置">
+  <meta itemprop="description" content="Excel 如何轉置 (Transpose) — 完整教學  在 Excel 裡進行「轉置」操作（把行列互換）往往是處理資料時最常見的需求之一。本文將深入探討轉置的原因、提供三種不同的分步解決方案（公式、剪貼簿、VBA），並整理常見問題解答，幫助你快速、靈活地完成轉置任務。  ---   為">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="231">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何轉置 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E8%BD%89%E7%BD%AE/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何轉置</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#為什麼需要轉置">為什麼需要轉置？</a></li>
+    <li><a href="#方案一使用-paste-special--transpose最簡單">方案一：使用 <strong>Paste Special → Transpose</strong>（最簡單）</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-transpose-函數動態轉置">方案二：使用 <strong>TRANSPOSE 函數</strong>（動態轉置）</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-vba-宏批量處理">方案三：使用 <strong>VBA 宏</strong>（批量處理）</a>
+      <ul>
+        <li><a href="#步驟-2">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答-faq">常見問題解答 (FAQ)</a></li>
+    <li><a href="#小結">小結</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何轉置
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何轉置-transpose--完整教學">Excel 如何轉置 (Transpose) — 完整教學<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e8%bd%89%e7%bd%ae-transpose--%e5%ae%8c%e6%95%b4%e6%95%99%e5%ad%b8">#</a></h1>
+<p>在 Excel 裡進行「轉置」操作（把行列互換）往往是處理資料時最常見的需求之一。本文將深入探討轉置的原因、提供三種不同的分步解決方案（公式、剪貼簿、VBA），並整理常見問題解答，幫助你快速、靈活地完成轉置任務。</p>
+<hr>
+<h2 id="為什麼需要轉置">為什麼需要轉置？<a class="anchor" href="#%e7%82%ba%e4%bb%80%e9%ba%bc%e9%9c%80%e8%a6%81%e8%bd%89%e7%bd%ae">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>典型場景</th>
+          <th>轉置的好處</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>資料整理</strong></td>
+          <td>把行資料變成列，方便對比、統計或做圖表</td>
+      </tr>
+      <tr>
+          <td><strong>報表合併</strong></td>
+          <td>把多張表格的列合併成一張表，提升閱讀性</td>
+      </tr>
+      <tr>
+          <td><strong>資料遞交</strong></td>
+          <td>某些系統或第三方工具只接受列式輸入，必須轉置</td>
+      </tr>
+      <tr>
+          <td><strong>節省空間</strong></td>
+          <td>把寬列縮短，節省工作表空間</td>
+      </tr>
+      <tr>
+          <td><strong>自動化</strong></td>
+          <td>在宏或腳本中，動態切換行列位置</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>注意</strong>：轉置會改變資料結構，若要保留原始資料，請先複製一份。</p>
+</blockquote><hr>
+<h2 id="方案一使用-paste-special--transpose最簡單">方案一：使用 <strong>Paste Special → Transpose</strong>（最簡單）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-paste-special--transpose%e6%9c%80%e7%b0%a1%e5%96%ae">#</a></h2>
+<h3 id="步驟">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f">#</a></h3>
+<ol>
+<li>
+<p><strong>選擇要轉置的範圍</strong><br>
+例如 A1:C3（3 行 × 3 列）。</p>
+</li>
+<li>
+<p><strong>複製</strong><br>
+<code>Ctrl + C</code> 或右鍵 → <code>複製</code>。</p>
+</li>
+<li>
+<p><strong>選擇貼上位置</strong><br>
+例如 E1。</p>
+</li>
+<li>
+<p><strong>貼上特殊</strong><br>
+<code>Ctrl + Alt + V</code> → 選擇 <code>Transpose</code> → <code>確定</code>。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：若要保留公式，可選擇「保留公式」或「數值」；若要保留格式，請先在“貼上特殊”中勾選「格式」。</p>
+<p><strong>小技巧</strong>：若想一次性轉置多個區域，先在同一個工作表中把所有範圍連續選取，然後同樣操作即可。</p>
+</blockquote><hr>
+<h2 id="方案二使用-transpose-函數動態轉置">方案二：使用 <strong>TRANSPOSE 函數</strong>（動態轉置）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-transpose-%e5%87%bd%e6%95%b8%e5%8b%95%e6%85%8b%e8%bd%89%e7%bd%ae">#</a></h2>
+<h3 id="步驟-1">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1">#</a></h3>
+<ol>
+<li>
+<p><strong>選擇目標範圍</strong><br>
+假設原始數據在 <code>A1:C3</code>，你想把它轉置到 <code>E1:G3</code>，先選取 <code>E1:G3</code>（相同大小）。</p>
+</li>
+<li>
+<p><strong>輸入公式</strong><br>
+在 <code>E1</code> 輸入：</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=TRANSPOSE(A1:C3)</code></pre></li>
+<li>
+<p><strong>使用 Ctrl+Shift+Enter</strong>（舊版 Excel）或直接輸入（Office 365 / Excel 2021+）</p>
+<ul>
+<li><strong>舊版</strong>：按 <code>Ctrl+Shift+Enter</code>，公式會成為陣列公式，顯示 <code>{=TRANSPOSE(A1:C3)}</code>。</li>
+<li><strong>新版</strong>：直接按 <code>Enter</code>，Excel 會自動「動態陣列」。</li>
+</ul>
+</li>
+<li>
+<p><strong>確認結果</strong><br>
+<code>E1</code> 到 <code>G3</code> 現在顯示轉置後的資料。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：如果你只想轉置一行或一列，公式會自動縮放；若目標範圍大小不符，Excel 會報錯。</p>
+</blockquote><hr>
+<h2 id="方案三使用-vba-宏批量處理">方案三：使用 <strong>VBA 宏</strong>（批量處理）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-vba-%e5%ae%8f%e6%89%b9%e9%87%8f%e8%99%95%e7%90%86">#</a></h2>
+<h3 id="步驟-2">步驟<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2">#</a></h3>
+<ol>
+<li>
+<p><strong>打開 VBA 編輯器</strong><br>
+<code>Alt + F11</code>。</p>
+</li>
+<li>
+<p><strong>插入新模組</strong><br>
+右鍵 → <code>插入</code> → <code>模組</code>。</p>
+</li>
+<li>
+<p><strong>貼上以下程式碼</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">TransposeRange</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> src <span style="color:#f92672">As</span> Range, dest <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> r <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, c <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 設定來源範圍
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> src <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;選擇要轉置的範圍&#34;</span>, Type:<span style="color:#f92672">=</span>8)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 設定貼上起始位置
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> dest <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;選擇貼上起始位置&#34;</span>, Type:<span style="color:#f92672">=</span>8)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 轉置
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> src.Rows.Count
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> src.Columns.Count
+</span></span><span style="display:flex;"><span>            dest.Cells(c, r).Value <span style="color:#f92672">=</span> src.Cells(r, c).Value
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> c
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> r
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;轉置完成！&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span></span></span></code></pre></div></li>
+<li>
+<p><strong>執行宏</strong><br>
+<code>F5</code> 或 <code>Run</code> → 選擇來源範圍 → 選擇貼上位置。</p>
+</li>
+</ol>
+<blockquote class='book-hint '>
+<p><strong>小技巧</strong>：這個宏不會保留格式，只轉移數值。若需要保留格式，請把 <code>Value</code> 改成 <code>Value2</code> 或使用 <code>Copy</code>/<code>PasteSpecial</code>。</p>
+</blockquote><hr>
+<h2 id="常見問題解答-faq">常見問題解答 (FAQ)<a class="anchor" href="#%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94-faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>轉置後公式失效</strong></td>
+          <td><code>Paste Special → Transpose</code> 只會貼上公式的結果；若想保留公式，請使用 <code>TRANSPOSE</code> 函數或先複製公式再貼上。</td>
+      </tr>
+      <tr>
+          <td><strong>資料中含有公式，想保持相對引用</strong></td>
+          <td><code>TRANSPOSE</code> 函數會自動調整相對引用；手動轉置則不會。</td>
+      </tr>
+      <tr>
+          <td><strong>如何在工作表之間批量轉置</strong></td>
+          <td>可以使用 <code>VBA</code> 或寫一個公式 <code>=TRANSPOSE(Sheet1!A1:C3)</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>轉置後行列數量不對</strong></td>
+          <td>轉置後的行數 = 原列數，列數 = 原行數；請確保目標範圍大小匹配。</td>
+      </tr>
+      <tr>
+          <td><strong>轉置後數據顯示為錯誤值</strong></td>
+          <td>可能是因為公式引用了空單元格或錯誤數據，請先檢查來源。</td>
+      </tr>
+      <tr>
+          <td><strong>如何保持顏色和格式</strong></td>
+          <td><code>Paste Special</code> 時勾選「格式」；<code>TRANSPOSE</code> 函數不保留格式，需手動調整。</td>
+      </tr>
+      <tr>
+          <td><strong>轉置後的資料太大，導致 Excel 變慢</strong></td>
+          <td>建議先將數據複製到新工作簿，或使用 <code>VBA</code> 先將數據轉存到陣列再寫回。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小結">小結<a class="anchor" href="#%e5%b0%8f%e7%b5%90">#</a></h2>
+<ul>
+<li><strong>Paste Special → Transpose</strong>：最直觀，適用於一次性手動轉置。</li>
+<li><strong>TRANSPOSE 函數</strong>：動態、可自動更新，適合需要隨時同步的數據。</li>
+<li><strong>VBA 宏</strong>：批量、可自動化，適合大批量或重複性工作。</li>
+</ul>
+<p>根據自己的需求選擇合適的方法，掌握這三種技巧後，你就能在 Excel 中靈活處理任何行列轉換需求。祝你工作順利！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%BD%89%E6%88%90word/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何轉成word</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E8%BE%93%E5%85%A50/" class="flex align-center">
+      <span>excel如何输入0</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#為什麼需要轉置">為什麼需要轉置？</a></li>
+    <li><a href="#方案一使用-paste-special--transpose最簡單">方案一：使用 <strong>Paste Special → Transpose</strong>（最簡單）</a>
+      <ul>
+        <li><a href="#步驟">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-transpose-函數動態轉置">方案二：使用 <strong>TRANSPOSE 函數</strong>（動態轉置）</a>
+      <ul>
+        <li><a href="#步驟-1">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-vba-宏批量處理">方案三：使用 <strong>VBA 宏</strong>（批量處理）</a>
+      <ul>
+        <li><a href="#步驟-2">步驟</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答-faq">常見問題解答 (FAQ)</a></li>
+    <li><a href="#小結">小結</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

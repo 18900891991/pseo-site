@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何合并档案  在日常工作中，往往会遇到需要把多个 Excel 文件（或工作簿）中的数据合并成一个统一的表格。无论你是数据分析员、财务人员还是项目经理，掌握合并档案的方法都能大幅提升效率。  ---   原因分析  | 典型场景 | 需要合并的原因 | 可能的痛点 | |----">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E6%A1%A3%E6%A1%88/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何合并档案">
+  <meta property="og:description" content="Excel 如何合并档案  在日常工作中，往往会遇到需要把多个 Excel 文件（或工作簿）中的数据合并成一个统一的表格。无论你是数据分析员、财务人员还是项目经理，掌握合并档案的方法都能大幅提升效率。  ---   原因分析  | 典型场景 | 需要合并的原因 | 可能的痛点 | |----">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何合并档案">
+  <meta itemprop="description" content="Excel 如何合并档案  在日常工作中，往往会遇到需要把多个 Excel 文件（或工作簿）中的数据合并成一个统一的表格。无论你是数据分析员、财务人员还是项目经理，掌握合并档案的方法都能大幅提升效率。  ---   原因分析  | 典型场景 | 需要合并的原因 | 可能的痛点 | |----">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="369">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何合并档案 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E6%A1%A3%E6%A1%88/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何合并档案</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一手动粘贴--查找复制工具">方案一：手动粘贴 + “查找/复制”工具</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#小技巧">小技巧</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-power-queryexcel-内置数据合并工具">方案二：使用 Power Query（Excel 内置数据合并工具）</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+        <li><a href="#优点">优点</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三vba-宏自动化合并">方案三：VBA 宏自动化合并</a>
+      <ul>
+        <li><a href="#示例代码">示例代码</a></li>
+        <li><a href="#使用说明">使用说明</a></li>
+        <li><a href="#优点-1">优点</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何合并档案
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何合并档案">Excel 如何合并档案<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%90%88%e5%b9%b6%e6%a1%a3%e6%a1%88">#</a></h1>
+<p>在日常工作中，往往会遇到需要把多个 Excel 文件（或工作簿）中的数据合并成一个统一的表格。无论你是数据分析员、财务人员还是项目经理，掌握合并档案的方法都能大幅提升效率。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>典型场景</th>
+          <th>需要合并的原因</th>
+          <th>可能的痛点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>月度/季度报表</strong></td>
+          <td>每个月/季度生成单独文件，最终汇总</td>
+          <td>手动复制粘贴容易出错、耗时</td>
+      </tr>
+      <tr>
+          <td><strong>分部门/地区数据</strong></td>
+          <td>每个部门/地区维护自己的文件</td>
+          <td>统一字段、格式不一致</td>
+      </tr>
+      <tr>
+          <td><strong>历史记录归档</strong></td>
+          <td>旧数据散落在多份文件</td>
+          <td>文件数量庞大，管理困难</td>
+      </tr>
+      <tr>
+          <td><strong>自动化流程</strong></td>
+          <td>需要定期生成汇总报表</td>
+          <td>需要脚本或工具实现无人工干预</td>
+      </tr>
+  </tbody>
+</table>
+<p>常见的痛点包括：</p>
+<ul>
+<li><strong>格式不一致</strong>：列顺序、列名、数据类型不同。</li>
+<li><strong>数据量大</strong>：手动操作容易遗漏或重复。</li>
+<li><strong>维护成本</strong>：每次新增文件都要手动调整合并逻辑。</li>
+</ul>
+<hr>
+<h2 id="方案一手动粘贴--查找复制工具">方案一：手动粘贴 + “查找/复制”工具<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e6%89%8b%e5%8a%a8%e7%b2%98%e8%b4%b4--%e6%9f%a5%e6%89%be%e5%a4%8d%e5%88%b6%e5%b7%a5%e5%85%b7">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于<strong>少量文件</strong>、<strong>一键式操作</strong>，不需要编程。</p>
+</blockquote><h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>创建汇总工作簿</strong></p>
+<ul>
+<li>新建一个工作簿，命名为 <code>汇总.xlsx</code>。</li>
+<li>在第一个工作表中建立表头（与要合并文件的表头保持一致）。</li>
+</ul>
+</li>
+<li>
+<p><strong>打开源文件</strong></p>
+<ul>
+<li>逐个打开需要合并的文件，复制对应数据区域（<code>Ctrl+C</code>）。</li>
+</ul>
+</li>
+<li>
+<p><strong>粘贴到汇总表</strong></p>
+<ul>
+<li>在 <code>汇总.xlsx</code> 的下方空行粘贴（<code>Ctrl+V</code>）。</li>
+<li>若需要保留来源信息，可在粘贴前先插入一列“来源文件”。</li>
+</ul>
+</li>
+<li>
+<p><strong>清理与格式化</strong></p>
+<ul>
+<li>统一列宽、格式，删除空行。</li>
+<li>对重复数据使用 <code>数据 → 删除重复项</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>保存</strong></p>
+<ul>
+<li>另存为 <code>汇总_YYYYMMDD.xlsx</code>。</li>
+</ul>
+</li>
+</ol>
+<h3 id="小技巧">小技巧<a class="anchor" href="#%e5%b0%8f%e6%8a%80%e5%b7%a7">#</a></h3>
+<ul>
+<li>使用 <strong>“键入”模式</strong>（<code>Ctrl+Shift+V</code>）粘贴为纯文本，可避免格式冲突。</li>
+<li>如果所有文件均有相同列名，可使用 <code>查找/替换</code>（<code>Ctrl+H</code>）批量统一列名。</li>
+</ul>
+<hr>
+<h2 id="方案二使用-power-queryexcel-内置数据合并工具">方案二：使用 Power Query（Excel 内置数据合并工具）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-power-queryexcel-%e5%86%85%e7%bd%ae%e6%95%b0%e6%8d%ae%e5%90%88%e5%b9%b6%e5%b7%a5%e5%85%b7">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于<strong>中等规模文件</strong>、<strong>需要自动化</strong>的场景。Power Query 可一次性读取多个文件并合并。</p>
+</blockquote><h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li>
+<p><strong>准备文件夹</strong></p>
+<ul>
+<li>将所有需合并的 Excel 文件放到同一个文件夹中（例如 <code>C:\Data\MonthlyReports</code>）。</li>
+</ul>
+</li>
+<li>
+<p><strong>在汇总文件中打开 Power Query</strong></p>
+<ul>
+<li><code>数据 → 获取 &amp; 转换数据 → 从文件 → 从文件夹</code></li>
+<li>选择上述文件夹，点击“确定”。</li>
+</ul>
+</li>
+<li>
+<p><strong>编辑查询</strong></p>
+<ul>
+<li>Power Query 会列出文件列表。</li>
+<li>右侧点击 <strong>“组合 → 组合文件”</strong>。</li>
+<li>在弹窗中选择 <strong>“表格”</strong>（第一个表）并确认。</li>
+<li>Power Query 将自动合并所有文件中的同名表格。</li>
+</ul>
+</li>
+<li>
+<p><strong>清洗数据</strong></p>
+<ul>
+<li>在 Power Query 编辑器中可执行：
+<ul>
+<li>处理空值、转换数据类型。</li>
+<li>删除不需要的列。</li>
+<li>添加“来源文件”列（<code>File.Contents</code> 或 <code>Source.Name</code>）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>加载到工作表</strong></p>
+<ul>
+<li>点击 <strong>“关闭 &amp; 加载”</strong>，将结果导入新工作表。</li>
+</ul>
+</li>
+<li>
+<p><strong>刷新数据</strong></p>
+<ul>
+<li>当文件夹新增/修改文件时，只需右键点击结果表 → <code>刷新</code> 即可。</li>
+</ul>
+</li>
+</ol>
+<h3 id="优点">优点<a class="anchor" href="#%e4%bc%98%e7%82%b9">#</a></h3>
+<ul>
+<li><strong>一次性批量操作</strong>，不再手动复制。</li>
+<li><strong>自动化</strong>：每次刷新即更新。</li>
+<li><strong>可追踪</strong>：查询步骤可在 Power Query 编辑器中查看。</li>
+</ul>
+<hr>
+<h2 id="方案三vba-宏自动化合并">方案三：VBA 宏自动化合并<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89vba-%e5%ae%8f%e8%87%aa%e5%8a%a8%e5%8c%96%e5%90%88%e5%b9%b6">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于<strong>大量文件</strong>、<strong>自定义逻辑</strong>（如字段映射、数据过滤）或<strong>跨版本兼容</strong>。</p>
+</blockquote><h3 id="示例代码">示例代码<a class="anchor" href="#%e7%a4%ba%e4%be%8b%e4%bb%a3%e7%a0%81">#</a></h3>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub MergeWorkbooks()
+    Dim FolderPath As String
+    Dim Filename As String
+    Dim wbSource As Workbook, wbDest As Workbook
+    Dim wsSource As Worksheet, wsDest As Worksheet
+    Dim LastRow As Long, DestLastRow As Long
+    
+    &#39; 1. 指定文件夹路径
+    FolderPath = &#34;C:\Data\MonthlyReports\&#34;
+    
+    &#39; 2. 创建/打开汇总工作簿
+    Set wbDest = ThisWorkbook
+    Set wsDest = wbDest.Sheets(1)
+    
+    &#39; 3. 遍历文件夹内所有.xlsx文件
+    Filename = Dir(FolderPath &amp; &#34;*.xlsx&#34;)
+    Do While Filename &lt;&gt; &#34;&#34;
+        Set wbSource = Workbooks.Open(FolderPath &amp; Filename)
+        Set wsSource = wbSource.Sheets(1) &#39; 假设需要的表在第一个工作表
+        
+        &#39; 4. 拷贝数据
+        LastRow = wsSource.Cells(wsSource.Rows.Count, &#34;A&#34;).End(xlUp).Row
+        DestLastRow = wsDest.Cells(wsDest.Rows.Count, &#34;A&#34;).End(xlUp).Row + 1
+        wsSource.Range(&#34;A2:D&#34; &amp; LastRow).Copy wsDest.Range(&#34;A&#34; &amp; DestLastRow)
+        
+        &#39; 5. 记录来源文件名
+        wsDest.Range(&#34;E&#34; &amp; DestLastRow).Resize(LastRow - 1, 1).Value = Filename
+        
+        wbSource.Close False
+        Filename = Dir
+    Loop
+    
+    MsgBox &#34;合并完成！&#34;
+End Sub</code></pre><h3 id="使用说明">使用说明<a class="anchor" href="#%e4%bd%bf%e7%94%a8%e8%af%b4%e6%98%8e">#</a></h3>
+<ol>
+<li>按 <strong><code>Alt+F11</code></strong> 打开 VBA 编辑器。</li>
+<li>在 <code>Insert → Module</code> 新建模块，将代码粘贴进去。</li>
+<li>根据实际情况修改：
+<ul>
+<li><code>FolderPath</code>：源文件所在文件夹。</li>
+<li><code>wsSource.Range(...)</code>：需要拷贝的列范围。</li>
+<li><code>E</code> 列：可自行添加来源列。</li>
+</ul>
+</li>
+<li>运行 <code>MergeWorkbooks</code>。</li>
+</ol>
+<h3 id="优点-1">优点<a class="anchor" href="#%e4%bc%98%e7%82%b9-1">#</a></h3>
+<ul>
+<li><strong>高度自定义</strong>：可添加条件过滤、字段映射等。</li>
+<li><strong>一次性执行</strong>：不需要手动操作。</li>
+<li><strong>兼容性</strong>：适用于旧版 Excel（不支持 Power Query）。</li>
+</ul>
+<hr>
+<h2 id="常见问题解答">常见问题解答<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>1. 合并后出现空行或重复行</strong></td>
+          <td>① 清理时使用 <code>数据 → 删除重复项</code>。<!-- raw HTML omitted -->② 在 Power Query 中勾选 <code>删除异常行</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>2. 列顺序不一致导致合并错位</strong></td>
+          <td>① 在 Power Query 里使用 <code>选择列 → 调整顺序</code>。<!-- raw HTML omitted -->② 在 VBA 里手动指定列映射。</td>
+      </tr>
+      <tr>
+          <td><strong>3. 合并后数据类型混乱（日期、数值被识别为文本）</strong></td>
+          <td>① 在 Power Query 的“转换类型”中统一。<!-- raw HTML omitted -->② 在 VBA 里使用 <code>Range.Value</code> 或 <code>TextToColumns</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>4. 文件数量太大，手动合并内存占用过高</strong></td>
+          <td>① 分批合并（如按月份划分文件夹）。<!-- raw HTML omitted -->② 使用 Power Query 或 VBA，内存占用更低。</td>
+      </tr>
+      <tr>
+          <td><strong>5. 合并后出现错误 <code>#REF!</code> 或 <code>#VALUE!</code></strong></td>
+          <td>① 检查源文件是否有空列/行。<!-- raw HTML omitted -->② 在 Power Query 的“合并”步骤中确保表头一致。</td>
+      </tr>
+      <tr>
+          <td><strong>6. 如何在合并时保留原始列名</strong></td>
+          <td>① 在 Power Query 设置“合并列”时保留原列名。<!-- raw HTML omitted -->② 在 VBA 中使用 <code>wsSource.Rows(1).Copy</code> 复制表头。</td>
+      </tr>
+      <tr>
+          <td><strong>7. 需要按某列排序后再合并</strong></td>
+          <td>① 在 Power Query 中使用 <code>排序</code>。<!-- raw HTML omitted -->② 在 VBA 中使用 <code>wsDest.Sort</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>8. 合并后想自动保存为新文件</strong></td>
+          <td>① 在 VBA 里添加 <code>wbDest.SaveAs</code>。<!-- raw HTML omitted -->② 在 Power Query 里使用 <code>文件 → 另存为</code>。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>手动粘贴</strong>：最直观，适合文件数少。</li>
+<li><strong>Power Query</strong>：一次性批量、自动化，功能强大。</li>
+<li><strong>VBA 宏</strong>：完全自定义，适用于特殊需求或旧版 Excel。</li>
+</ul>
+<p>根据你自己的文件量、技术水平和维护成本，选择最合适的方法即可。祝你合并顺利，提高工作效率！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E4%BD%B5%E6%AC%84%E4%BD%8D/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何合併欄位</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E8%B5%84%E6%96%99/" class="flex align-center">
+      <span>excel如何合并资料</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一手动粘贴--查找复制工具">方案一：手动粘贴 + “查找/复制”工具</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#小技巧">小技巧</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-power-queryexcel-内置数据合并工具">方案二：使用 Power Query（Excel 内置数据合并工具）</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+        <li><a href="#优点">优点</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三vba-宏自动化合并">方案三：VBA 宏自动化合并</a>
+      <ul>
+        <li><a href="#示例代码">示例代码</a></li>
+        <li><a href="#使用说明">使用说明</a></li>
+        <li><a href="#优点-1">优点</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

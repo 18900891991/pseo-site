@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 樞紐分析（Pivot Table）完整教程   樞紐分析表（Pivot Table）是 Excel 最強大的資料彙總與分析工具之一。它能讓你在數秒內將大量資料轉化為結構化的報表，快速發現趨勢、對比，甚至生成圖表。以下將從「為什麼要用樞紐分析表」說起，給出三種不同的實作流程，">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E6%A8%9E%E7%B4%90/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何樞紐">
+  <meta property="og:description" content="Excel 樞紐分析（Pivot Table）完整教程   樞紐分析表（Pivot Table）是 Excel 最強大的資料彙總與分析工具之一。它能讓你在數秒內將大量資料轉化為結構化的報表，快速發現趨勢、對比，甚至生成圖表。以下將從「為什麼要用樞紐分析表」說起，給出三種不同的實作流程，">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何樞紐">
+  <meta itemprop="description" content="Excel 樞紐分析（Pivot Table）完整教程   樞紐分析表（Pivot Table）是 Excel 最強大的資料彙總與分析工具之一。它能讓你在數秒內將大量資料轉化為結構化的報表，快速發現趨勢、對比，甚至生成圖表。以下將從「為什麼要用樞紐分析表」說起，給出三種不同的實作流程，">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="313">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何樞紐 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E6%A8%9E%E7%B4%90/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何樞紐</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-excel-標準功能ui-方式">方案一：使用 Excel 標準功能（UI 方式）</a>
+      <ul>
+        <li><a href="#步驟-1準備資料">步驟 1：準備資料</a></li>
+        <li><a href="#步驟-2插入樞紐表">步驟 2：插入樞紐表</a></li>
+        <li><a href="#步驟-3設計樞紐表">步驟 3：設計樞紐表</a></li>
+        <li><a href="#步驟-4美化--互動">步驟 4：美化 &amp; 互動</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-power-pivot--power-query進階大數據">方案二：使用 Power Pivot + Power Query（進階大數據）</a>
+      <ul>
+        <li><a href="#步驟-1載入資料">步驟 1：載入資料</a></li>
+        <li><a href="#步驟-2建立資料模型">步驟 2：建立資料模型</a></li>
+        <li><a href="#步驟-3創建樞紐表">步驟 3：創建樞紐表</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-vba-自動化">方案三：使用 VBA 自動化</a>
+      <ul>
+        <li><a href="#步驟-1撰寫-vba-程式">步驟 1：撰寫 VBA 程式</a></li>
+        <li><a href="#步驟-2執行">步驟 2：執行</a></li>
+        <li><a href="#步驟-3進一步優化">步驟 3：進一步優化</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答-faq">常見問題解答 (FAQ)</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何樞紐
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-樞紐分析pivot-table完整教程">Excel 樞紐分析（Pivot Table）完整教程<a class="anchor" href="#excel-%e6%a8%9e%e7%b4%90%e5%88%86%e6%9e%90pivot-table%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">#</a></h1>
+<blockquote class='book-hint '>
+<p><strong>樞紐分析表</strong>（Pivot Table）是 Excel 最強大的資料彙總與分析工具之一。它能讓你在數秒內將大量資料轉化為結構化的報表，快速發現趨勢、對比，甚至生成圖表。以下將從「為什麼要用樞紐分析表」說起，給出三種不同的實作流程，並整理常見問題。</p>
+</blockquote><hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>為什麼需要樞紐分析表</th>
+          <th>典型場景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>快速聚合</strong></td>
+          <td>計算總和、平均值、最大/最小值、計數等</td>
+      </tr>
+      <tr>
+          <td><strong>動態重組</strong></td>
+          <td>只需拖拉字段即可改變行/列結構，切換視角</td>
+      </tr>
+      <tr>
+          <td><strong>資料可視化</strong></td>
+          <td>直接生成樞紐圖表，呈現趨勢</td>
+      </tr>
+      <tr>
+          <td><strong>多維度切片</strong></td>
+          <td>使用切片器（Slicer）、時間線（Timeline）進行交互過濾</td>
+      </tr>
+      <tr>
+          <td><strong>自動更新</strong></td>
+          <td>只要資料源變動，刷新一次即可更新整個報表</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>總結</strong>：當你需要從千行百列的原始資料中提取關鍵指標、製作多角度報表，樞紐分析表是最適合的工具。</p>
+</blockquote><hr>
+<h2 id="方案一使用-excel-標準功能ui-方式">方案一：使用 Excel 標準功能（UI 方式）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-excel-%e6%a8%99%e6%ba%96%e5%8a%9f%e8%83%bdui-%e6%96%b9%e5%bc%8f">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用版本</strong>：Excel 2010 以上（含 Office 365、Excel 2021 等）。</p>
+</blockquote><h3 id="步驟-1準備資料">步驟 1：準備資料<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1%e6%ba%96%e5%82%99%e8%b3%87%e6%96%99">#</a></h3>
+<ol>
+<li>確保資料表格格式正確：第一行作為欄位標題，無空白行/列。</li>
+<li>如有需要，將資料轉成表格（<code>Ctrl+T</code>），能自動擴充範圍。</li>
+</ol>
+<h3 id="步驟-2插入樞紐表">步驟 2：插入樞紐表<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2%e6%8f%92%e5%85%a5%e6%a8%9e%e7%b4%90%e8%a1%a8">#</a></h3>
+<ol>
+<li>選中資料範圍（或點擊表格中的任意單元格）。</li>
+<li>轉到 <strong>插入</strong> → <strong>樞紐分析表</strong>。</li>
+<li>在彈出的對話框中：
+<ul>
+<li><strong>選擇資料來源</strong>：若已轉成表格，直接顯示表格名稱；否則輸入範圍。</li>
+<li><strong>選擇放置位置</strong>：新工作表或現有工作表。</li>
+</ul>
+</li>
+<li>點擊 <strong>確定</strong>。</li>
+</ol>
+<h3 id="步驟-3設計樞紐表">步驟 3：設計樞紐表<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-3%e8%a8%ad%e8%a8%88%e6%a8%9e%e7%b4%90%e8%a1%a8">#</a></h3>
+<ol>
+<li><strong>字段列表</strong>（右側）出現所有列名稱。</li>
+<li>拖曳字段到：
+<ul>
+<li><strong>行</strong>：行標籤。</li>
+<li><strong>列</strong>：列標籤。</li>
+<li><strong>值</strong>：聚合欄位（默認為「求和」）。</li>
+<li><strong>篩選</strong>：整體篩選器。</li>
+</ul>
+</li>
+<li>如需更改聚合方式，點擊值字段 → <strong>值字段設定</strong> → 選擇「平均值」/「最大值」等。</li>
+<li>右鍵點擊樞紐表 → <strong>刷新</strong> 以同步資料源。</li>
+</ol>
+<h3 id="步驟-4美化--互動">步驟 4：美化 &amp; 互動<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-4%e7%be%8e%e5%8c%96--%e4%ba%92%e5%8b%95">#</a></h3>
+<ul>
+<li><strong>排序/篩選</strong>：點擊行/列標籤旁的下拉箭頭。</li>
+<li><strong>切片器</strong>：選中樞紐表 → <strong>分析</strong> → <strong>插入切片器</strong> → 選擇字段。</li>
+<li><strong>時間線</strong>：若有日期字段，選擇 <strong>插入時間線</strong>。</li>
+<li><strong>樞紐圖表</strong>：選中樞紐表 → <strong>分析</strong> → <strong>樞紐圖表</strong>。</li>
+</ul>
+<hr>
+<h2 id="方案二使用-power-pivot--power-query進階大數據">方案二：使用 Power Pivot + Power Query（進階大數據）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8-power-pivot--power-query%e9%80%b2%e9%9a%8e%e5%a4%a7%e6%95%b8%e6%93%9a">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用版本</strong>：Excel 2016+（含 Office 365）且已安裝 Power Pivot。<br>
+<strong>優勢</strong>：支援更大資料量、複雜關聯、DAX 計算。</p>
+</blockquote><h3 id="步驟-1載入資料">步驟 1：載入資料<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1%e8%bc%89%e5%85%a5%e8%b3%87%e6%96%99">#</a></h3>
+<ol>
+<li><code>資料</code> → <code>取得資料</code> → 選擇來源（Excel、CSV、SQL、Web 等）。</li>
+<li>在 <strong>Power Query</strong> 編輯器中，進行資料清洗（刪除重複、轉換類型等）。</li>
+<li>點擊 <strong>關閉並載入</strong> → <strong>只創建連結</strong>，不載入工作表。</li>
+</ol>
+<h3 id="步驟-2建立資料模型">步驟 2：建立資料模型<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2%e5%bb%ba%e7%ab%8b%e8%b3%87%e6%96%99%e6%a8%a1%e5%9e%8b">#</a></h3>
+<ol>
+<li><code>資料</code> → <code>管理資料模型</code> → 進入 Power Pivot 視窗。</li>
+<li>在 Power Pivot 中：
+<ul>
+<li><strong>關聯</strong>：若有多個表，建立關聯。</li>
+<li><strong>計算欄／度量值</strong>：使用 DAX 公式創建自訂計算。</li>
+</ul>
+</li>
+</ol>
+<h3 id="步驟-3創建樞紐表">步驟 3：創建樞紐表<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-3%e5%89%b5%e5%bb%ba%e6%a8%9e%e7%b4%90%e8%a1%a8">#</a></h3>
+<ol>
+<li>在工作表中插入 <strong>樞紐分析表</strong>，選擇 <strong>資料模型</strong> 作為來源。</li>
+<li>與方案一相同，拖曳字段設計報表。</li>
+<li>你也可以在 Power Pivot 中直接使用 <strong>視覺化工具</strong>（如 Power Pivot 圖表、Power BI）進行更進階的可視化。</li>
+</ol>
+<hr>
+<h2 id="方案三使用-vba-自動化">方案三：使用 VBA 自動化<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-vba-%e8%87%aa%e5%8b%95%e5%8c%96">#</a></h2>
+<blockquote class='book-hint '>
+<p><strong>適用場景</strong>：需要批量生成多個樞紐表、定期更新或自動化報表。</p>
+</blockquote><h3 id="步驟-1撰寫-vba-程式">步驟 1：撰寫 VBA 程式<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-1%e6%92%b0%e5%af%ab-vba-%e7%a8%8b%e5%bc%8f">#</a></h3>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub CreatePivot()
+    Dim wsData As Worksheet, wsPivot As Worksheet
+    Dim pc As PivotCache, pt As PivotTable
+    Dim rng As Range
+
+    Set wsData = ThisWorkbook.Sheets(&#34;SalesData&#34;)
+    Set wsPivot = ThisWorkbook.Sheets.Add
+    wsPivot.Name = &#34;PivotReport&#34;
+
+    &#39; 定義資料範圍
+    Set rng = wsData.Range(&#34;A1&#34;).CurrentRegion
+
+    &#39; 建立 PivotCache
+    Set pc = ThisWorkbook.PivotCaches.Create( _
+        SourceType:=xlDatabase, _
+        SourceData:=rng.Address(ReferenceStyle:=xlR1C1, _
+        External:=False))
+
+    &#39; 建立 PivotTable
+    Set pt = pc.CreatePivotTable( _
+        TableDestination:=wsPivot.Range(&#34;A3&#34;), _
+        TableName:=&#34;SalesPivot&#34;)
+
+    &#39; 設定行列值
+    With pt
+        .PivotFields(&#34;Region&#34;).Orientation = xlRowField
+        .PivotFields(&#34;Product&#34;).Orientation = xlColumnField
+        .AddDataField .PivotFields(&#34;Amount&#34;), &#34;Total Sales&#34;, xlSum
+    End With
+End Sub</code></pre><h3 id="步驟-2執行">步驟 2：執行<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-2%e5%9f%b7%e8%a1%8c">#</a></h3>
+<ol>
+<li>打開 VBA 編輯器 (<code>Alt+F11</code>) → 插入模組 → 粘貼程式碼。</li>
+<li>執行 <code>CreatePivot</code>。</li>
+</ol>
+<h3 id="步驟-3進一步優化">步驟 3：進一步優化<a class="anchor" href="#%e6%ad%a5%e9%a9%9f-3%e9%80%b2%e4%b8%80%e6%ad%a5%e5%84%aa%e5%8c%96">#</a></h3>
+<ul>
+<li><strong>參數化</strong>：把資料表名稱、字段列表、聚合方式做成變數，方便重用。</li>
+<li><strong>自動刷新</strong>：在工作簿開啟時自動刷新樞紐表 (<code>Workbook_Open</code>)。</li>
+</ul>
+<hr>
+<h2 id="常見問題解答-faq">常見問題解答 (FAQ)<a class="anchor" href="#%e5%b8%b8%e8%a6%8b%e5%95%8f%e9%a1%8c%e8%a7%a3%e7%ad%94-faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>問題</th>
+          <th>解答</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1</strong>：樞紐表顯示「#REF!」或「#VALUE!」？</td>
+          <td>檢查資料來源是否包含空值或非數值。若是文字列，可使用「資料」→「資料驗證」或「IFERROR」處理。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2</strong>：如何將樞紐表與其他工作表的表格連結，資料更新後自動刷新？</td>
+          <td>在樞紐表上點 <code>分析</code> → <code>刷新</code> 或設定 <code>工作簿計算設置</code> → <code>自動計算</code>。若使用 Power Pivot，需在 Power Query 中設為「只創建連結」並定期刷新。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3</strong>：為何樞紐表只顯示部分欄位？</td>
+          <td>可能是資料表中有重複標題或空列。請先將資料轉成表格 (<code>Ctrl+T</code>)，確保每列都有標題。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4</strong>：如何在樞紐表中添加自訂計算欄位？</td>
+          <td>選中樞紐表 → <code>分析</code> → <code>字段、項目和集</code> → <code>計算欄位</code>，輸入公式。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5</strong>：樞紐表的切片器不工作？</td>
+          <td>確認切片器與樞紐表屬於同一資料模型；若多個樞紐表使用同一資料源，切片器會共用。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6</strong>：如何把樞紐表轉成靜態表格？</td>
+          <td>選中樞紐表 → <code>複製</code> → 右鍵貼上 → <code>粘貼特殊</code> → <code>值</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7</strong>：資料源很大，樞紐表生成慢。</td>
+          <td>可使用 Power Pivot 或將資料分成多個表再做關聯；亦可將資料先匯出到 Access 或 Power BI。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<blockquote class='book-hint '>
+<p><strong>小結</strong>：樞紐分析表是 Excel 中最具彈性與效能的資料分析工具。從簡易 UI 方式到 Power Pivot、VBA 自動化，每一種方法都可根據需求選擇。掌握上述步驟，你就能快速把海量資料轉化為洞察力十足的報表。祝你分析順利 🚀！</p>
+</blockquote></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E6%9E%A2%E7%BA%BD/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何枢纽</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E7%94%A8/" class="flex align-center">
+      <span>excel如何用</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-excel-標準功能ui-方式">方案一：使用 Excel 標準功能（UI 方式）</a>
+      <ul>
+        <li><a href="#步驟-1準備資料">步驟 1：準備資料</a></li>
+        <li><a href="#步驟-2插入樞紐表">步驟 2：插入樞紐表</a></li>
+        <li><a href="#步驟-3設計樞紐表">步驟 3：設計樞紐表</a></li>
+        <li><a href="#步驟-4美化--互動">步驟 4：美化 &amp; 互動</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用-power-pivot--power-query進階大數據">方案二：使用 Power Pivot + Power Query（進階大數據）</a>
+      <ul>
+        <li><a href="#步驟-1載入資料">步驟 1：載入資料</a></li>
+        <li><a href="#步驟-2建立資料模型">步驟 2：建立資料模型</a></li>
+        <li><a href="#步驟-3創建樞紐表">步驟 3：創建樞紐表</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-vba-自動化">方案三：使用 VBA 自動化</a>
+      <ul>
+        <li><a href="#步驟-1撰寫-vba-程式">步驟 1：撰寫 VBA 程式</a></li>
+        <li><a href="#步驟-2執行">步驟 2：執行</a></li>
+        <li><a href="#步驟-3進一步優化">步驟 3：進一步優化</a></li>
+      </ul>
+    </li>
+    <li><a href="#常見問題解答-faq">常見問題解答 (FAQ)</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

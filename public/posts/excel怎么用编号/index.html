@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 里如何使用编号（编号序列）全面教程  在日常工作、数据整理、报表制作等场景中，经常需要给数据添加编号。编号既能帮助我们快速定位记录，也能让表格更规范。本文将从原因分析出发，给出三种常用分步骤解决方案，并提供常见问题解答，帮助你在Excel中灵活、精准地使用编号">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E7%BC%96%E5%8F%B7/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么用编号">
+  <meta property="og:description" content="Excel 里如何使用编号（编号序列）全面教程  在日常工作、数据整理、报表制作等场景中，经常需要给数据添加编号。编号既能帮助我们快速定位记录，也能让表格更规范。本文将从原因分析出发，给出三种常用分步骤解决方案，并提供常见问题解答，帮助你在Excel中灵活、精准地使用编号">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel怎么用编号">
+  <meta itemprop="description" content="Excel 里如何使用编号（编号序列）全面教程  在日常工作、数据整理、报表制作等场景中，经常需要给数据添加编号。编号既能帮助我们快速定位记录，也能让表格更规范。本文将从原因分析出发，给出三种常用分步骤解决方案，并提供常见问题解答，帮助你在Excel中灵活、精准地使用编号">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="300">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么用编号 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E7%BC%96%E5%8F%B7/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么用编号</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用填充序列快速简易">方案一：使用填充序列（快速简易）</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#优点">优点</a></li>
+        <li><a href="#局限">局限</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用公式自动编号灵活可控">方案二：使用公式自动编号（灵活可控）</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+        <li><a href="#优点-1">优点</a></li>
+        <li><a href="#局限-1">局限</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用自定义列表或-vba高级自动化">方案三：使用自定义列表或 VBA（高级自动化）</a>
+      <ul>
+        <li><a href="#方案三a自定义列表">方案三A：自定义列表</a></li>
+        <li><a href="#方案三bvba-自动编号">方案三B：VBA 自动编号</a></li>
+        <li><a href="#优点-2">优点</a></li>
+        <li><a href="#局限-2">局限</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么用编号
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-里如何使用编号编号序列全面教程">Excel 里如何使用编号（编号序列）全面教程<a class="anchor" href="#excel-%e9%87%8c%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8%e7%bc%96%e5%8f%b7%e7%bc%96%e5%8f%b7%e5%ba%8f%e5%88%97%e5%85%a8%e9%9d%a2%e6%95%99%e7%a8%8b">#</a></h1>
+<p>在日常工作、数据整理、报表制作等场景中，经常需要给数据添加编号。编号既能帮助我们快速定位记录，也能让表格更规范。本文将从<strong>原因分析</strong>出发，给出<strong>三种常用分步骤解决方案</strong>，并提供<strong>常见问题解答</strong>，帮助你在Excel中灵活、精准地使用编号。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>为什么需要编号</th>
+          <th>可能遇到的问题</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>列表、表格</td>
+          <td>统一标识每一行记录</td>
+          <td>① 手动输入容易出错<!-- raw HTML omitted -->② 复制粘贴后编号中断<!-- raw HTML omitted -->③ 需要在插入/删除行时自动更新</td>
+      </tr>
+      <tr>
+          <td>报表</td>
+          <td>方便引用、排版</td>
+          <td>① 需要在不同工作表间同步编号<!-- raw HTML omitted -->② 编号格式（前导零、后缀等）多样</td>
+      </tr>
+      <tr>
+          <td>项目管理</td>
+          <td>追踪进度、版本</td>
+          <td>① 需要按不同类别或层级编号<!-- raw HTML omitted -->② 编号需要与其他系统对接</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>核心痛点</strong>：手动编号既耗时又易错；自动化方案需要在“填充序列”“公式”“VBA”与“自定义列表”等方式中找到平衡点。</p>
+</blockquote><hr>
+<h2 id="方案一使用填充序列快速简易">方案一：使用填充序列（快速简易）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8%e5%a1%ab%e5%85%85%e5%ba%8f%e5%88%97%e5%bf%ab%e9%80%9f%e7%ae%80%e6%98%93">#</a></h2>
+<h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>输入起始编号</strong><br>
+在 A1 单元格输入起始数值，例如 <code>1</code> 或 <code>001</code>（按需设置前导零）。</p>
+</li>
+<li>
+<p><strong>选中序列起点</strong><br>
+选中 A1，鼠标移到右下角的小方块（填充柄），光标变为十字箭头。</p>
+</li>
+<li>
+<p><strong>拖拽或双击</strong></p>
+<ul>
+<li><strong>拖拽</strong>：将填充柄向下拖到需要的行数，Excel 自动填充递增序列。</li>
+<li><strong>双击</strong>：若旁边列有数据，双击填充柄可快速填充到与相邻列数据相同的行数。</li>
+</ul>
+</li>
+<li>
+<p><strong>设置步长或格式</strong></p>
+<ul>
+<li>右键 → “设置单元格格式” → “数字” → 选择需要的数字格式（如 000、#,##0）。</li>
+<li>若想自定义步长（如 5、25 等），可在起始单元格输入两行内容（1、6），再选中两行，按上面方式填充。</li>
+</ul>
+</li>
+<li>
+<p><strong>插入/删除行后更新</strong></p>
+<ul>
+<li>选中编号列 → “查找和选择” → “定位条件” → “常规” → 选中整个列 → “编辑” → “填充” → “序列”。</li>
+<li>或使用快捷键 <code>Ctrl + Shift + L</code> 打开筛选后重排。</li>
+</ul>
+</li>
+</ol>
+<h3 id="优点">优点<a class="anchor" href="#%e4%bc%98%e7%82%b9">#</a></h3>
+<ul>
+<li><strong>零学习成本</strong>：直接使用Excel自带功能。</li>
+<li><strong>快速</strong>：一次性完成大量编号。</li>
+</ul>
+<h3 id="局限">局限<a class="anchor" href="#%e5%b1%80%e9%99%90">#</a></h3>
+<ul>
+<li>仅支持线性递增，无法按特定规则（如分组 + 递增）自动更新。</li>
+<li>插入/删除行时需要手动调整。</li>
+</ul>
+<hr>
+<h2 id="方案二使用公式自动编号灵活可控">方案二：使用公式自动编号（灵活可控）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e4%bd%bf%e7%94%a8%e5%85%ac%e5%bc%8f%e8%87%aa%e5%8a%a8%e7%bc%96%e5%8f%b7%e7%81%b5%e6%b4%bb%e5%8f%af%e6%8e%a7">#</a></h2>
+<h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li>
+<p><strong>准备工作</strong><br>
+假设你要在列 A 生成编号，列 B 是数据列（可任意列）。</p>
+</li>
+<li>
+<p><strong>输入公式</strong><br>
+在 A2 单元格输入以下公式（假设 A1 为表头）：</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=IF(B2=&#34;&#34;,&#34;&#34;,ROW()-1)</code></pre><ul>
+<li><code>ROW()-1</code>：将行号减 1 作为编号；如果表格有多余行头可调整减数。</li>
+<li><code>IF(B2=&quot;&quot;,&quot;&quot;,...)</code>：如果 B 列为空，则 A 列也为空，避免出现空行编号。</li>
+</ul>
+</li>
+<li>
+<p><strong>拖拽或复制</strong><br>
+将 A2 的公式拖到需要的行数，Excel 会自动更新。</p>
+</li>
+<li>
+<p><strong>自定义格式</strong></p>
+<ul>
+<li>选中 A 列 → “设置单元格格式” → “自定义” → 输入 <code>000</code> 或 <code>000-#&quot;等</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>分组/层级编号</strong>（可选）<br>
+例如每隔 5 行编号重置，可以使用：</p>
+<pre tabindex="0"><code class="language-excel" data-lang="excel">=IF(B2=&#34;&#34;,&#34;&#34;,MOD(ROW()-1,5)+1)</code></pre><p>或使用 <code>INT((ROW()-2)/5)+1</code> 进行分组。</p>
+</li>
+</ol>
+<h3 id="优点-1">优点<a class="anchor" href="#%e4%bc%98%e7%82%b9-1">#</a></h3>
+<ul>
+<li><strong>自动更新</strong>：插入、删除行后公式自动重新计算。</li>
+<li><strong>高度可定制</strong>：可结合 <code>IF</code>、<code>TEXT</code>、<code>RANK</code> 等函数实现复杂规则。</li>
+</ul>
+<h3 id="局限-1">局限<a class="anchor" href="#%e5%b1%80%e9%99%90-1">#</a></h3>
+<ul>
+<li>对于大量数据，公式可能略微影响性能。</li>
+<li>需要一定的公式基础。</li>
+</ul>
+<hr>
+<h2 id="方案三使用自定义列表或-vba高级自动化">方案三：使用自定义列表或 VBA（高级自动化）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%97%e8%a1%a8%e6%88%96-vba%e9%ab%98%e7%ba%a7%e8%87%aa%e5%8a%a8%e5%8c%96">#</a></h2>
+<h3 id="方案三a自定义列表">方案三A：自定义列表<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89a%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%97%e8%a1%a8">#</a></h3>
+<ol>
+<li>
+<p><strong>创建自定义列表</strong></p>
+<ul>
+<li><code>文件</code> → <code>选项</code> → <code>高级</code> → <code>编辑自定义列表</code>。</li>
+<li>在“列表条目”框中输入想要的编号序列，例如 <code>001,002,003,...</code>。</li>
+<li>点击 <code>添加</code> → <code>确定</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用填充序列</strong></p>
+<ul>
+<li>在起始单元格输入第一个编号（如 <code>001</code>），选中该单元格。</li>
+<li>拖拽或双击填充柄，Excel 会按自定义列表循环填充。</li>
+</ul>
+</li>
+<li>
+<p><strong>设置为“无增量”</strong></p>
+<ul>
+<li>通过 <code>编辑自定义列表</code> 可以设置为“无增量”，即每次填充都重复出现同一编号，适合需要固定编号的情况。</li>
+</ul>
+</li>
+</ol>
+<h3 id="方案三bvba-自动编号">方案三B：VBA 自动编号<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89bvba-%e8%87%aa%e5%8a%a8%e7%bc%96%e5%8f%b7">#</a></h3>
+<blockquote class='book-hint '>
+<p><strong>前提</strong>：你已启用宏，并了解基本 VBA 语法。</p>
+</blockquote><pre tabindex="0"><code class="language-vba" data-lang="vba">Sub AutoNumber()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets(&#34;Sheet1&#34;) &#39; 根据实际工作表名修改
+
+    Dim lastRow As Long
+    lastRow = ws.Cells(ws.Rows.Count, &#34;B&#34;).End(xlUp).Row &#39; 以 B 列数据为准
+
+    Dim i As Long
+    For i = 2 To lastRow
+        If ws.Cells(i, &#34;B&#34;).Value &lt;&gt; &#34;&#34; Then
+            ws.Cells(i, &#34;A&#34;).Value = i - 1 &#39; 或者使用其他规则
+        Else
+            ws.Cells(i, &#34;A&#34;).ClearContents
+        End If
+    Next i
+End Sub</code></pre><ol>
+<li><strong>按 <code>Alt + F11</code> 打开 VBA 编辑器</strong></li>
+<li><strong>插入模块</strong> → 粘贴上述代码。</li>
+<li><strong>运行 <code>AutoNumber</code></strong> 或将其绑定到按钮。</li>
+</ol>
+<h3 id="优点-2">优点<a class="anchor" href="#%e4%bc%98%e7%82%b9-2">#</a></h3>
+<ul>
+<li><strong>完全自动化</strong>：无需手动拖拽或复制。</li>
+<li><strong>可处理复杂规则</strong>：如多级编号、条件编号等。</li>
+</ul>
+<h3 id="局限-2">局限<a class="anchor" href="#%e5%b1%80%e9%99%90-2">#</a></h3>
+<ul>
+<li><strong>需要宏启用</strong>：在某些机构/文件中可能被禁用。</li>
+<li><strong>维护成本</strong>：VBA 代码需要维护，若不熟悉会有学习曲线。</li>
+</ul>
+<hr>
+<h2 id="常见问题解答">常见问题解答<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>1. 为什么用填充序列时编号会出现空缺？</strong></td>
+          <td>可能是因为起始单元格后面有空行。先删除空行，再重新填充；或使用公式自动编号。</td>
+      </tr>
+      <tr>
+          <td><strong>2. 如何在插入/删除行后让编号自动更新？</strong></td>
+          <td>① 方案二的公式会自动更新。② 方案三的VBA可在插入后手动运行。③ 方案一可在“查找和选择”→“定位条件”→“常规”后手动刷新。</td>
+      </tr>
+      <tr>
+          <td><strong>3. 如何给编号添加前导零（如 001、002）？</strong></td>
+          <td>① 使用“设置单元格格式”→“自定义”→输入 <code>000</code>。② 方案二中公式可改为 <code>TEXT(ROW()-1,&quot;000&quot;)</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>4. 编号需要根据另一列数据的变化自动重新排序，怎么办？</strong></td>
+          <td>使用 <code>SORT</code>、<code>SORTBY</code>（Excel 365）或 <code>INDEX</code>+<code>MATCH</code> 结合 <code>ROW()</code> 进行动态编号。</td>
+      </tr>
+      <tr>
+          <td><strong>5. 需要在不同工作簿间共享同一编号序列，怎么做？</strong></td>
+          <td>在主工作簿中创建自定义列表或 VBA 模块，另存为模板；或使用 <code>XLOOKUP</code> 通过外部表查找编号。</td>
+      </tr>
+      <tr>
+          <td><strong>6. 编号出现“#NUM!”错误怎么办？</strong></td>
+          <td>检查公式中是否出现了负数或非法运算；确保起始行号和减数设置正确。</td>
+      </tr>
+      <tr>
+          <td><strong>7. 如何让编号在合并单元格时保持一致？</strong></td>
+          <td>合并单元格后，使用 <code>=ROW(A1)-ROW($A$1)+1</code> 等公式；若使用填充序列，先取消合并再填充。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小结">小结<a class="anchor" href="#%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>填充序列</strong>：适合一次性、简单递增编号。</li>
+<li><strong>公式</strong>：灵活、可实时更新，适合需要自定义规则或数据量大时。</li>
+<li><strong>自定义列表 / VBA</strong>：适用于更高级的需求，如统一前导零、分组编号、自动化脚本等。</li>
+</ul>
+<p>根据自己的工作场景和技术水平，选择合适的方法即可让 Excel 编号工作变得高效、准确。祝你使用愉快！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%94%A8%E6%89%93%E5%8B%BE/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么用打勾</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E7%AE%97-%E6%95%B0/" class="flex align-center">
+      <span>excel怎么算 数</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用填充序列快速简易">方案一：使用填充序列（快速简易）</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#优点">优点</a></li>
+        <li><a href="#局限">局限</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二使用公式自动编号灵活可控">方案二：使用公式自动编号（灵活可控）</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+        <li><a href="#优点-1">优点</a></li>
+        <li><a href="#局限-1">局限</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用自定义列表或-vba高级自动化">方案三：使用自定义列表或 VBA（高级自动化）</a>
+      <ul>
+        <li><a href="#方案三a自定义列表">方案三A：自定义列表</a></li>
+        <li><a href="#方案三bvba-自动编号">方案三B：VBA 自动编号</a></li>
+        <li><a href="#优点-2">优点</a></li>
+        <li><a href="#局限-2">局限</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

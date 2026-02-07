@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何导出 PDF？  在日常工作中，往往需要把 Excel 工作表或整个工作簿以 PDF 格式保存，方便共享、打印或归档。Excel 原生支持直接导出 PDF，但在实际使用时也会遇到排版、大小、页面设置等问题。本文将从原因分析入手，给出三种常见的分步骤解决方案，并列出">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%AD%98pdf/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel怎么存pdf">
+  <meta property="og:description" content="Excel 如何导出 PDF？  在日常工作中，往往需要把 Excel 工作表或整个工作簿以 PDF 格式保存，方便共享、打印或归档。Excel 原生支持直接导出 PDF，但在实际使用时也会遇到排版、大小、页面设置等问题。本文将从原因分析入手，给出三种常见的分步骤解决方案，并列出">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel怎么存pdf">
+  <meta itemprop="description" content="Excel 如何导出 PDF？  在日常工作中，往往需要把 Excel 工作表或整个工作簿以 PDF 格式保存，方便共享、打印或归档。Excel 原生支持直接导出 PDF，但在实际使用时也会遇到排版、大小、页面设置等问题。本文将从原因分析入手，给出三种常见的分步骤解决方案，并列出">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="343">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel怎么存pdf | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E6%80%8E%E4%B9%88%E5%AD%98pdf/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel怎么存pdf</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-excel-自带的导出为-pdf">方案一：使用 Excel 自带的“导出为 PDF”</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#小技巧">小技巧</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二通过打印为-pdf">方案二：通过“打印为 PDF”</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+        <li><a href="#小技巧-1">小技巧</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-vba-或第三方插件自动化导出">方案三：使用 VBA 或第三方插件自动化导出</a>
+      <ul>
+        <li><a href="#方案三1vba-脚本">方案三.1：VBA 脚本</a></li>
+        <li><a href="#方案三2第三方插件">方案三.2：第三方插件</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答-faq">常见问题解答 (FAQ)</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel怎么存pdf
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何导出-pdf">Excel 如何导出 PDF？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%af%bc%e5%87%ba-pdf">#</a></h1>
+<p>在日常工作中，往往需要把 Excel 工作表或整个工作簿以 <strong>PDF</strong> 格式保存，方便共享、打印或归档。Excel 原生支持直接导出 PDF，但在实际使用时也会遇到排版、大小、页面设置等问题。本文将从<strong>原因分析</strong>入手，给出三种常见的分步骤解决方案，并列出常见问题的解答，帮助你轻松完成 Excel 到 PDF 的转换。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要导出 PDF 的原因</th>
+          <th>常见痛点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>共享给不具备 Excel 的同事</strong></td>
+          <td>PDF 兼容性好，格式固定</td>
+          <td>可能出现单元格溢出、图片裁切</td>
+      </tr>
+      <tr>
+          <td><strong>正式报告或合同</strong></td>
+          <td>PDF 具有更高的安全性与不可篡改性</td>
+          <td>需要保持多页表格的分页与标题</td>
+      </tr>
+      <tr>
+          <td><strong>需要打印</strong></td>
+          <td>PDF 直接可打印，避免 Excel 打印格式不一致</td>
+          <td>需要手动调整纸张大小、边距、缩放</td>
+      </tr>
+      <tr>
+          <td><strong>归档</strong></td>
+          <td>PDF 便于长期存储</td>
+          <td>需要压缩文件大小、保留公式与图表</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>核心痛点</strong>：Excel 的页面布局与 PDF 的页面布局不完全对应，默认导出往往会出现<strong>页边距不一致、分页错误、图表失真</strong>等问题。下面的方案将帮助你解决这些问题。</p>
+</blockquote><hr>
+<h2 id="方案一使用-excel-自带的导出为-pdf">方案一：使用 Excel 自带的“导出为 PDF”<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e4%bd%bf%e7%94%a8-excel-%e8%87%aa%e5%b8%a6%e7%9a%84%e5%af%bc%e5%87%ba%e4%b8%ba-pdf">#</a></h2>
+<h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>打开文件</strong><br>
+① 打开你想导出的工作簿。<br>
+② 确认当前工作表或整个工作簿已完成排版。</p>
+</li>
+<li>
+<p><strong>调整页面设置</strong></p>
+<ul>
+<li><code>页面布局</code> → <code>方向</code>、<code>纸张大小</code>、<code>边距</code>、<code>缩放比例</code>。</li>
+<li>对于多页表格，使用 <code>分页预览</code> 检查分页位置。</li>
+<li>若单元格内容过长，可在 <code>页面布局</code> → <code>打印标题</code> 设置行/列标题在每页重复。</li>
+</ul>
+</li>
+<li>
+<p><strong>导出</strong></p>
+<ul>
+<li><code>文件</code> → <code>导出</code> → <code>更改文件类型</code> → <code>PDF/XPS</code>。</li>
+<li>或 <code>文件</code> → <code>另存为</code> → 选择 <code>PDF</code>。</li>
+<li>选择导出范围：<code>工作表</code> / <code>工作簿</code> / <code>自定义区块</code>。</li>
+<li>选中 <code>选项</code>，确保 <code>仅此工作表/工作簿</code>、<code>标准</code> 或 <code>最小文件大小</code> 等适合你的需求。</li>
+</ul>
+</li>
+<li>
+<p><strong>预览 &amp; 保存</strong></p>
+<ul>
+<li>预览 PDF，检查分页与格式。</li>
+<li>确认无误后点击 <code>发布</code> 或 <code>保存</code>。</li>
+</ul>
+</li>
+</ol>
+<h3 id="小技巧">小技巧<a class="anchor" href="#%e5%b0%8f%e6%8a%80%e5%b7%a7">#</a></h3>
+<ul>
+<li><strong>使用“选项”</strong>：勾选“在打印前保留图表原始大小”，可避免图表被拉伸。</li>
+<li><strong>压缩</strong>：在 <code>选项</code> → <code>PDF/A-1b</code> 或 <code>最小文件大小</code>，可减小文件体积。</li>
+<li><strong>保留链接</strong>：如果你需要保留单元格超链接，确保在导出时勾选“保留超链接”。</li>
+</ul>
+<hr>
+<h2 id="方案二通过打印为-pdf">方案二：通过“打印为 PDF”<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e9%80%9a%e8%bf%87%e6%89%93%e5%8d%b0%e4%b8%ba-pdf">#</a></h2>
+<blockquote class='book-hint '>
+<p>有些系统没有直接的“导出为 PDF”按钮，但可以使用 Windows / macOS 内置的 PDF 打印功能。</p>
+</blockquote><h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li>
+<p><strong>打开 <code>打印</code></strong><br>
+<code>文件</code> → <code>打印</code>，或直接按 <code>Ctrl+P</code>。</p>
+</li>
+<li>
+<p><strong>选择 PDF 打印机</strong></p>
+<ul>
+<li>Windows 10/11：<code>Microsoft Print to PDF</code>。</li>
+<li>macOS：<code>保存为 PDF</code>（在打印窗口左下角）。</li>
+</ul>
+</li>
+<li>
+<p><strong>设置页面</strong></p>
+<ul>
+<li>在打印设置中选择页面范围、纸张大小、方向。</li>
+<li>在“页眉/页脚”中取消或自定义。</li>
+<li>调整 <code>缩放比例</code> (如 <code>适合纸张</code>)。</li>
+</ul>
+</li>
+<li>
+<p><strong>预览 &amp; 打印</strong></p>
+<ul>
+<li>预览页面，确保分页与排版正确。</li>
+<li>点击 <code>打印</code>，随后系统会弹出保存 PDF 的对话框。</li>
+</ul>
+</li>
+</ol>
+<h3 id="小技巧-1">小技巧<a class="anchor" href="#%e5%b0%8f%e6%8a%80%e5%b7%a7-1">#</a></h3>
+<ul>
+<li><strong>双面打印</strong>（如果需要）：在打印机设置中勾选 <code>双面</code>。</li>
+<li><strong>批量导出</strong>：使用 <code>Print to PDF</code> 时，文件名会自动编号。</li>
+<li><strong>图像质量</strong>：若导出的 PDF 中图片失真，可在打印机设置里选择 <code>高质量打印</code>。</li>
+</ul>
+<hr>
+<h2 id="方案三使用-vba-或第三方插件自动化导出">方案三：使用 VBA 或第三方插件自动化导出<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e4%bd%bf%e7%94%a8-vba-%e6%88%96%e7%ac%ac%e4%b8%89%e6%96%b9%e6%8f%92%e4%bb%b6%e8%87%aa%e5%8a%a8%e5%8c%96%e5%af%bc%e5%87%ba">#</a></h2>
+<p>当你需要 <strong>批量导出多工作表或多工作簿</strong>，或想在导出前执行自定义排版时，VBA 或插件是最灵活的选择。</p>
+<h3 id="方案三1vba-脚本">方案三.1：VBA 脚本<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%891vba-%e8%84%9a%e6%9c%ac">#</a></h3>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub ExportSheetAsPDF()
+    Dim ws As Worksheet
+    Dim pdfPath As String
+    
+    &#39; 设定导出路径
+    pdfPath = &#34;C:\Users\Public\Documents\&#34;
+    
+    For Each ws In ThisWorkbook.Worksheets
+        &#39; 设定每个工作表的文件名
+        ws.ExportAsFixedFormat Type:=xlTypePDF, _
+            Filename:=pdfPath &amp; ws.Name &amp; &#34;.pdf&#34;, _
+            Quality:=xlQualityStandard, _
+            IncludeDocProperties:=True, _
+            IgnorePrintAreas:=False, _
+            OpenAfterPublish:=False
+    Next ws
+End Sub</code></pre><ul>
+<li><strong>说明</strong>
+<ul>
+<li><code>IncludeDocProperties</code> 允许将工作簿属性写入 PDF。</li>
+<li><code>IgnorePrintAreas</code> 若为 <code>True</code>，所有单元格都将被导出；若为 <code>False</code>，仅导出打印区域。</li>
+<li><code>OpenAfterPublish</code> 为 <code>True</code> 时，导出后会自动打开 PDF。</li>
+</ul>
+</li>
+</ul>
+<h3 id="方案三2第三方插件">方案三.2：第三方插件<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%892%e7%ac%ac%e4%b8%89%e6%96%b9%e6%8f%92%e4%bb%b6">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>插件</th>
+          <th>特色</th>
+          <th>适用场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Adobe Acrobat Pro DC</strong></td>
+          <td>可以直接在 Excel 里点“创建 PDF”按钮，支持批量操作、合并、加密</td>
+          <td>需要高级 PDF 功能（加密、表单、OCR）</td>
+      </tr>
+      <tr>
+          <td><strong>Nitro Pro</strong></td>
+          <td>支持批量导出、压缩、合并</td>
+          <td>需要快速批量操作</td>
+      </tr>
+      <tr>
+          <td><strong>Kutools for Excel</strong></td>
+          <td>提供“批量导出为 PDF”工具</td>
+          <td>需要在 Excel 里一次性导出多张工作表</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：无论使用哪种插件，先确认它们已正确安装，并在 Excel 的 <code>文件</code> → <code>选项</code> → <code>加载项</code> 中启用。</p>
+</blockquote><hr>
+<h2 id="常见问题解答-faq">常见问题解答 (FAQ)<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94-faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>解决办法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1：导出的 PDF 页面过多，内容被拆分到多页</strong></td>
+          <td>调整 <code>页面布局</code> → <code>缩放比例</code> 或 <code>适合纸张</code>；在 <code>选项</code> 中勾选 <code>分页符后仅保留首行/首列</code>。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2：图表在 PDF 中失真或被裁切</strong></td>
+          <td>在 <code>页面布局</code> → <code>打印标题</code> 中取消 <code>自动缩放</code>；在 <code>选项</code> → <code>图形保留原始尺寸</code> 勾选。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3：公式被导成结果而不是公式</strong></td>
+          <td>PDF 为最终输出，公式无法直接保留，只能以文本形式出现。若需要可在导出前将公式转为文本。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4：导出时出现 “无法访问文件” 错误</strong></td>
+          <td>确认文件未被其他程序占用，且保存路径具有写入权限。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5：需要在 PDF 中保留超链接</strong></td>
+          <td>在导出时勾选 <code>保留超链接</code>；若使用 <code>打印为 PDF</code>，超链接会被保留为可点击链接。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6：PDF 文件体积过大</strong></td>
+          <td>在 <code>选项</code> → <code>最小文件大小</code> 或 <code>压缩图像</code>；使用 PNG/高质量图片时可先使用 Photoshop 压缩。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7：导出的 PDF 需要加密或水印</strong></td>
+          <td>使用 Adobe Acrobat 或 Nitro Pro 等专业工具；Excel 原生不支持。</td>
+      </tr>
+      <tr>
+          <td><strong>Q8：如何在导出前自动添加页码</strong></td>
+          <td>在 <code>页面布局</code> → <code>页眉/页脚</code> 中插入页码代码 <code>&amp;P</code>；在导出后 PDF 会保留该页码。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="结语">结语<a class="anchor" href="#%e7%bb%93%e8%af%ad">#</a></h2>
+<p>无论你是单次导出还是批量处理，Excel 都能通过内置功能、系统打印、VBA 或第三方插件完成高质量的 PDF 导出。只需根据自己的需求、文件量以及对排版的要求，选择最合适的方案。祝你工作顺利、文件美观！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%90%88%E5%B9%B6%E6%A1%A3%E6%A1%88/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel怎么合并档案</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E6%80%8E%E4%B9%88%E5%AD%98%E6%A1%A3/" class="flex align-center">
+      <span>excel怎么存档</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一使用-excel-自带的导出为-pdf">方案一：使用 Excel 自带的“导出为 PDF”</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#小技巧">小技巧</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二通过打印为-pdf">方案二：通过“打印为 PDF”</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+        <li><a href="#小技巧-1">小技巧</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三使用-vba-或第三方插件自动化导出">方案三：使用 VBA 或第三方插件自动化导出</a>
+      <ul>
+        <li><a href="#方案三1vba-脚本">方案三.1：VBA 脚本</a></li>
+        <li><a href="#方案三2第三方插件">方案三.2：第三方插件</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答-faq">常见问题解答 (FAQ)</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

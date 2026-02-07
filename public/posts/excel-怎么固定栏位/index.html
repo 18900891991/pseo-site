@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何固定栏位（冻结窗格）？  在处理大型表格时，常常需要把列标题、行索引或关键列保持可见，方便滚动查看其它内容。Excel 提供了 冻结窗格（Freeze Panes）功能，能够让你把指定的行或列固定住，随时保持在视图中。下面的教程从原因分析、三种常用方案、以及常见问题解答，">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel-%E6%80%8E%E4%B9%88%E5%9B%BA%E5%AE%9A%E6%A0%8F%E4%BD%8D/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel 怎么固定栏位">
+  <meta property="og:description" content="Excel 如何固定栏位（冻结窗格）？  在处理大型表格时，常常需要把列标题、行索引或关键列保持可见，方便滚动查看其它内容。Excel 提供了 冻结窗格（Freeze Panes）功能，能够让你把指定的行或列固定住，随时保持在视图中。下面的教程从原因分析、三种常用方案、以及常见问题解答，">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:24+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:24+08:00">
+
+
+  <meta itemprop="name" content="excel 怎么固定栏位">
+  <meta itemprop="description" content="Excel 如何固定栏位（冻结窗格）？  在处理大型表格时，常常需要把列标题、行索引或关键列保持可见，方便滚动查看其它内容。Excel 提供了 冻结窗格（Freeze Panes）功能，能够让你把指定的行或列固定住，随时保持在视图中。下面的教程从原因分析、三种常用方案、以及常见问题解答，">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:24+08:00">
+  <meta itemprop="wordCount" content="188">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel 怎么固定栏位 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel-%E6%80%8E%E4%B9%88%E5%9B%BA%E5%AE%9A%E6%A0%8F%E4%BD%8D/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel 怎么固定栏位</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一冻结首行">方案一：冻结首行</a>
+      <ul>
+        <li><a href="#取消冻结">取消冻结</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二冻结首列">方案二：冻结首列</a></li>
+    <li><a href="#方案三自定义冻结行列冻结窗格">方案三：自定义冻结行列（冻结窗格）</a>
+      <ul>
+        <li><a href="#关键点">关键点</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小技巧">小技巧</a>
+      <ul>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel 怎么固定栏位
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何固定栏位冻结窗格">Excel 如何固定栏位（冻结窗格）？<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e5%9b%ba%e5%ae%9a%e6%a0%8f%e4%bd%8d%e5%86%bb%e7%bb%93%e7%aa%97%e6%a0%bc">#</a></h1>
+<p>在处理大型表格时，常常需要把列标题、行索引或关键列保持可见，方便滚动查看其它内容。Excel 提供了 <strong>冻结窗格</strong>（Freeze Panes）功能，能够让你把指定的行或列固定住，随时保持在视图中。下面的教程从原因分析、三种常用方案、以及常见问题解答，帮助你快速掌握。</p>
+<hr>
+<h2 id="原因分析">原因分析<a class="anchor" href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要冻结的内容</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>表格列标题</td>
+          <td>第一行</td>
+          <td>让标题在滚动时始终可见</td>
+      </tr>
+      <tr>
+          <td>关键列</td>
+          <td>第一列</td>
+          <td>让列索引或分类列始终可见</td>
+      </tr>
+      <tr>
+          <td>组合</td>
+          <td>多行多列</td>
+          <td>让表头及关键列同时保持可见</td>
+      </tr>
+  </tbody>
+</table>
+<p>如果不冻结，滚动表格时会丢失这些重要信息，导致查找、比较数据困难。冻结窗格可以大幅提升数据分析效率。</p>
+<hr>
+<h2 id="方案一冻结首行">方案一：冻结首行<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%80%e5%86%bb%e7%bb%93%e9%a6%96%e8%a1%8c">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于：表格列标题在第一行，想让标题在滚动时不动。</p>
+</blockquote><ol>
+<li>打开工作表，确保你已经选中<strong>第一行</strong>（或者没有选中任何单元格，默认选中第1行）。</li>
+<li>依次点击 <strong>视图</strong> → <strong>冻结窗格</strong> → <strong>冻结首行</strong>。</li>
+<li>现在向下滚动，第一行会始终可见。</li>
+</ol>
+<h3 id="取消冻结">取消冻结<a class="anchor" href="#%e5%8f%96%e6%b6%88%e5%86%bb%e7%bb%93">#</a></h3>
+<ul>
+<li>再次进入 <strong>视图</strong> → <strong>冻结窗格</strong> → <strong>取消冻结窗格</strong>。</li>
+</ul>
+<hr>
+<h2 id="方案二冻结首列">方案二：冻结首列<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%ba%8c%e5%86%bb%e7%bb%93%e9%a6%96%e5%88%97">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于：表格关键列在第一列，想让列索引或分类列不动。</p>
+</blockquote><ol>
+<li>把光标放在 <strong>B1</strong>（第二列的第1行），或任意单元格右侧第一列的上方。</li>
+<li>依次点击 <strong>视图</strong> → <strong>冻结窗格</strong> → <strong>冻结首列</strong>。</li>
+<li>向右滚动，第一列会始终可见。</li>
+</ol>
+<blockquote class='book-hint '>
+<p>说明：如果你想冻结<strong>第1列</strong>而不是<strong>第2列</strong>，就把光标放在 <strong>B1</strong>；如果你想冻结<strong>第2列</strong>，则把光标放在 <strong>C1</strong>。</p>
+</blockquote><hr>
+<h2 id="方案三自定义冻结行列冻结窗格">方案三：自定义冻结行列（冻结窗格）<a class="anchor" href="#%e6%96%b9%e6%a1%88%e4%b8%89%e8%87%aa%e5%ae%9a%e4%b9%89%e5%86%bb%e7%bb%93%e8%a1%8c%e5%88%97%e5%86%bb%e7%bb%93%e7%aa%97%e6%a0%bc">#</a></h2>
+<blockquote class='book-hint '>
+<p>适用于：想同时冻结多行和/或多列，或冻结表头与关键列。</p>
+</blockquote><ol>
+<li>选中你想 <strong>冻结</strong> 的行和列的<strong>右下角</strong>一个单元格。
+<ul>
+<li>例如，你想冻结1行和2列：选中 <strong>C2</strong>（第3列第2行）。</li>
+<li>你想冻结2行、3列：选中 <strong>D3</strong>（第4列第3行）。</li>
+</ul>
+</li>
+<li>依次点击 <strong>视图</strong> → <strong>冻结窗格</strong> → <strong>冻结窗格</strong>（默认选项）。</li>
+<li>现在向左/向上滚动，所选行列将保持可见。</li>
+</ol>
+<h3 id="关键点">关键点<a class="anchor" href="#%e5%85%b3%e9%94%ae%e7%82%b9">#</a></h3>
+<ul>
+<li>选中的单元格左上角的行列<strong>不</strong>会被冻结。</li>
+<li>选中 <strong>A1</strong> 时，什么都不冻结，因为左上角没有行列。</li>
+<li>选中 <strong>A2</strong> 只会冻结第1行。</li>
+<li>选中 <strong>B1</strong> 只会冻结第1列。</li>
+</ul>
+<hr>
+<h2 id="常见问题解答">常见问题解答<a class="anchor" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>问题</th>
+          <th>解决方案</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td><strong>为什么冻结后看不到任何效果？</strong></td>
+          <td>确认你在 <strong>视图</strong> → <strong>冻结窗格</strong> 下选择了正确的子菜单（如“冻结首行”或“冻结首列”）。如果已经冻结，再次选择 <strong>取消冻结窗格</strong> 后再尝试。</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td><strong>我想冻结表格中间的某几列怎么办？</strong></td>
+          <td>选中<strong>右侧第一列的上方</strong>的单元格并执行“冻结窗格”。例如要冻结第3列到第5列，选中 <strong>F1</strong>（第6列），然后冻结。</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td><strong>冻结后滚动后列标题消失了怎么办？</strong></td>
+          <td>可能是因为你没有正确冻结首行。请再次执行“冻结首行”，或检查是否在同一工作表中有多个冻结窗格叠加。</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td><strong>怎么在同一工作簿的不同工作表里设置不同的冻结窗格？</strong></td>
+          <td>冻结窗格是按工作表独立设置的。先切换到目标工作表，再设置冻结即可。</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td><strong>在Excel 365里如何快速切换冻结/取消冻结？</strong></td>
+          <td>按 <code>Alt + W + F</code>（Windows）或 <code>⌘ + Option + W</code>（Mac）即可打开冻结窗格菜单，快速选择。</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td><strong>冻结后打印时标题行会被打印吗？</strong></td>
+          <td>是的，冻结的行列会在打印预览中显示。若想隐藏，需在打印设置中取消 <strong>打印标题行</strong> 选项。</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td><strong>冻结后如何取消所有冻结？</strong></td>
+          <td>在 <strong>视图</strong> → <strong>冻结窗格</strong> → <strong>取消冻结窗格</strong>。若有多层冻结，只需一次即可。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="小技巧">小技巧<a class="anchor" href="#%e5%b0%8f%e6%8a%80%e5%b7%a7">#</a></h2>
+<ul>
+<li>
+<p><strong>键盘快捷键</strong></p>
+<ul>
+<li>冻结首行：<code>Alt + W + F + R</code></li>
+<li>冻结首列：<code>Alt + W + F + C</code></li>
+<li>冻结窗格：<code>Alt + W + F + F</code></li>
+<li>取消冻结：<code>Alt + W + F + D</code></li>
+</ul>
+</li>
+<li>
+<p><strong>多窗口同步滚动</strong><br>
+如果你用 Excel 2013+ 打开 <strong>拆分窗口</strong>，可以让多个窗口同时滚动并共享同一冻结设置。</p>
+</li>
+<li>
+<p><strong>使用 VBA 自动化</strong></p>
+<pre tabindex="0"><code class="language-vba" data-lang="vba">Sub FreezeExample()
+    &#39; 冻结第一行和第一列
+    ActiveWindow.SplitColumn = 1
+    ActiveWindow.SplitRow = 1
+    ActiveWindow.FreezePanes = True
+End Sub</code></pre></li>
+</ul>
+<hr>
+<h3 id="结语">结语<a class="anchor" href="#%e7%bb%93%e8%af%ad">#</a></h3>
+<p>冻结窗格是 Excel 中最常用的“视图管理”功能之一。掌握这三种冻结方法，你可以轻松保持标题、索引或关键列始终可见，从而大幅提升数据处理效率。遇到问题时，先检查冻结位置、取消后重新设置，或使用快捷键快速操作。祝你在 Excel 的世界里游刃有余！</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel-%E5%A6%82%E4%BD%95%E9%96%8B%E5%95%9Fvba/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel 如何開啟vba</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95/" class="flex align-center">
+      <span>excel如何</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#原因分析">原因分析</a></li>
+    <li><a href="#方案一冻结首行">方案一：冻结首行</a>
+      <ul>
+        <li><a href="#取消冻结">取消冻结</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二冻结首列">方案二：冻结首列</a></li>
+    <li><a href="#方案三自定义冻结行列冻结窗格">方案三：自定义冻结行列（冻结窗格）</a>
+      <ul>
+        <li><a href="#关键点">关键点</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见问题解答">常见问题解答</a></li>
+    <li><a href="#小技巧">小技巧</a>
+      <ul>
+        <li><a href="#结语">结语</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

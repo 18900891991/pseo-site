@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Excel 如何保护单元格  在团队协作、财务报表、预算模型等场景中，往往需要让某些单元格保持不变，防止误操作导致数据错误。Excel 提供了多种保护机制，下面将从原因分析到三种常见实现方案，并给出常见问题解答，帮助你快速掌握单元格保护技巧。  ---   1️⃣ 原">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8A%A4%E5%82%A8%E5%AD%98%E6%A0%BC/">
+  <meta property="og:site_name" content="Cloudata AI">
+  <meta property="og:title" content="excel如何保护储存格">
+  <meta property="og:description" content="Excel 如何保护单元格  在团队协作、财务报表、预算模型等场景中，往往需要让某些单元格保持不变，防止误操作导致数据错误。Excel 提供了多种保护机制，下面将从原因分析到三种常见实现方案，并给出常见问题解答，帮助你快速掌握单元格保护技巧。  ---   1️⃣ 原">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-07T08:17:23+08:00">
+    <meta property="article:modified_time" content="2026-02-07T08:17:23+08:00">
+
+
+  <meta itemprop="name" content="excel如何保护储存格">
+  <meta itemprop="description" content="Excel 如何保护单元格  在团队协作、财务报表、预算模型等场景中，往往需要让某些单元格保持不变，防止误操作导致数据错误。Excel 提供了多种保护机制，下面将从原因分析到三种常见实现方案，并给出常见问题解答，帮助你快速掌握单元格保护技巧。  ---   1️⃣ 原">
+  <meta itemprop="datePublished" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="dateModified" content="2026-02-07T08:17:23+08:00">
+  <meta itemprop="wordCount" content="260">
+  <meta itemprop="keywords" content="AI教程">
+
+<title>excel如何保护储存格 | Cloudata AI</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/excel%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8A%A4%E5%82%A8%E5%AD%98%E6%A0%BC/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.53c68272e97ca5f38ecdd99dc51cf34dce2e317df2089f5b479e228ab87f90a5.js" integrity="sha256-U8aCcul8pfOOzdmdxRzzTc4uMX3yCJ9bR54iirh/kKU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Cloudata AI</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>excel如何保护储存格</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1️⃣ 原因分析</a></li>
+    <li><a href="#2-方案一工作表保护--选定单元格解锁">2️⃣ 方案一：工作表保护 + 选定单元格解锁</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#注意事项">注意事项</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二共享工作簿--单元格级别权限">3️⃣ 方案二：共享工作簿 + 单元格级别权限</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+        <li><a href="#特点">特点</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三vba-宏自动保护解锁">4️⃣ 方案三：VBA 宏自动保护/解锁</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+        <li><a href="#优点">优点</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答faq">5️⃣ 常见问题解答（FAQ）</a></li>
+    <li><a href="#6-小结">6️⃣ 小结</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    excel如何保护储存格
+  </h1>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/icons/calendar.svg" class="book-icon" alt="Calendar" />
+    <span>February 7, 2026</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/categories/ai%E6%95%99%E7%A8%8B/">AI教程</a>
+  </div>
+  
+
+  
+
+
+  <div class="book-post-content markdown-inner"><h1 id="excel-如何保护单元格">Excel 如何保护单元格<a class="anchor" href="#excel-%e5%a6%82%e4%bd%95%e4%bf%9d%e6%8a%a4%e5%8d%95%e5%85%83%e6%a0%bc">#</a></h1>
+<p>在团队协作、财务报表、预算模型等场景中，往往需要让某些单元格保持不变，防止误操作导致数据错误。Excel 提供了多种保护机制，下面将从<strong>原因分析</strong>到<strong>三种常见实现方案</strong>，并给出<strong>常见问题解答</strong>，帮助你快速掌握单元格保护技巧。</p>
+<hr>
+<h2 id="1-原因分析">1️⃣ 原因分析<a class="anchor" href="#1-%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>需要保护的原因</th>
+          <th>可能导致的问题</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>财务报表</strong></td>
+          <td>防止公式被误改或数据被篡改</td>
+          <td>预算错误、报表不可信</td>
+      </tr>
+      <tr>
+          <td><strong>共享工作簿</strong></td>
+          <td>多人编辑时只能修改指定区域</td>
+          <td>版本冲突、数据不一致</td>
+      </tr>
+      <tr>
+          <td><strong>模板</strong></td>
+          <td>只允许填写输入框，其他部分保持不变</td>
+          <td>用户误操作导致格式破坏</td>
+      </tr>
+      <tr>
+          <td><strong>数据分析</strong></td>
+          <td>公式或图表依赖固定数据</td>
+          <td>结果失真、错误的结论</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>要点</strong>：保护单元格并不是“锁住”整个工作表，而是“锁住/解锁”单元格，然后对工作表施加保护。这样既能让用户自由编辑需要的区域，又能保证关键数据不被改变。</p>
+</blockquote><hr>
+<h2 id="2-方案一工作表保护--选定单元格解锁">2️⃣ 方案一：工作表保护 + 选定单元格解锁<a class="anchor" href="#2-%e6%96%b9%e6%a1%88%e4%b8%80%e5%b7%a5%e4%bd%9c%e8%a1%a8%e4%bf%9d%e6%8a%a4--%e9%80%89%e5%ae%9a%e5%8d%95%e5%85%83%e6%a0%bc%e8%a7%a3%e9%94%81">#</a></h2>
+<p>这是最常用、最直观的方法，适合普通用户。</p>
+<h3 id="步骤">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4">#</a></h3>
+<ol>
+<li>
+<p><strong>选中所有需要编辑的单元格</strong></p>
+<ul>
+<li>按 <code>Ctrl+A</code> 选中全部，按 <code>Ctrl+Shift+1</code> 取消全选，再按 <code>Ctrl+Space</code> 选中列，<code>Shift+Space</code> 选中行等组合方式快速定位。</li>
+<li>也可以直接用鼠标拖选需要解锁的单元格。</li>
+</ul>
+</li>
+<li>
+<p><strong>设置单元格为“未锁定”</strong></p>
+<ul>
+<li>右键 → <strong>单元格格式</strong> → <strong>保护</strong> → 取消勾选 <strong>锁定</strong> → <strong>确定</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>保护工作表</strong></p>
+<ul>
+<li>选项卡 → <strong>审阅</strong> → <strong>保护工作表</strong>。</li>
+<li>输入密码（可选），勾选你希望用户能够执行的操作，例如 <code>Format cells</code>、<code>Insert rows</code> 等。</li>
+<li>确认密码后，工作表即被保护。</li>
+</ul>
+</li>
+</ol>
+<h3 id="注意事项">注意事项<a class="anchor" href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9">#</a></h3>
+<ul>
+<li><strong>默认所有单元格都是锁定</strong>，所以只需要解锁你想让用户修改的区域即可。</li>
+<li>若忘记密码，Excel 只会提示“请输入密码”，需要第三方工具恢复。</li>
+<li>仅对单元格内容起作用，格式（如字体、边框）仍可被修改，除非在保护时勾选“格式单元格”。</li>
+</ul>
+<hr>
+<h2 id="3-方案二共享工作簿--单元格级别权限">3️⃣ 方案二：共享工作簿 + 单元格级别权限<a class="anchor" href="#3-%e6%96%b9%e6%a1%88%e4%ba%8c%e5%85%b1%e4%ba%ab%e5%b7%a5%e4%bd%9c%e7%b0%bf--%e5%8d%95%e5%85%83%e6%a0%bc%e7%ba%a7%e5%88%ab%e6%9d%83%e9%99%90">#</a></h2>
+<p>适用于需要多人同时编辑的场景，Excel 365 也支持共享工作簿功能。</p>
+<h3 id="步骤-1">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-1">#</a></h3>
+<ol>
+<li>
+<p><strong>打开共享工作簿</strong></p>
+<ul>
+<li>选项卡 → <strong>共享</strong> → <strong>启用共享</strong>。</li>
+<li>在弹窗中勾选 <strong>允许多人同时编辑</strong>，并设置 <strong>工作簿历史记录</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>设置单元格权限</strong></p>
+<ul>
+<li>选中需要限制的单元格，右键 → <strong>单元格权限</strong> → 选择 <strong>仅可读取</strong> 或 <strong>仅可编辑</strong>。</li>
+<li>你可以为不同列/行设置不同的权限。</li>
+</ul>
+</li>
+<li>
+<p><strong>保存并共享</strong></p>
+<ul>
+<li>保存文件到 OneDrive、SharePoint 或本地共享文件夹。</li>
+<li>通过“文件”→“共享”向团队成员发送链接。</li>
+</ul>
+</li>
+</ol>
+<h3 id="特点">特点<a class="anchor" href="#%e7%89%b9%e7%82%b9">#</a></h3>
+<ul>
+<li><strong>无需密码</strong>，共享用户只能在被授权的单元格内编辑。</li>
+<li>支持 <strong>实时协作</strong>，多个用户可以同时查看和编辑。</li>
+<li>兼容 <strong>移动端</strong> 与 <strong>桌面端</strong>。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>提示</strong>：共享工作簿在 Excel 2016 之后已被 <strong>共享工作簿（实时协作）</strong> 替代，建议使用新版本的 <strong>Office 365</strong> 或 <strong>Excel Online</strong> 进行协作。</p>
+</blockquote><hr>
+<h2 id="4-方案三vba-宏自动保护解锁">4️⃣ 方案三：VBA 宏自动保护/解锁<a class="anchor" href="#4-%e6%96%b9%e6%a1%88%e4%b8%89vba-%e5%ae%8f%e8%87%aa%e5%8a%a8%e4%bf%9d%e6%8a%a4%e8%a7%a3%e9%94%81">#</a></h2>
+<p>适合需要动态保护/解除保护的高级用户，或者想在工作簿打开时自动执行保护。</p>
+<h3 id="步骤-2">步骤<a class="anchor" href="#%e6%ad%a5%e9%aa%a4-2">#</a></h3>
+<ol>
+<li>
+<p><strong>按 <code>Alt+F11</code> 打开 VBA 编辑器</strong>。</p>
+</li>
+<li>
+<p><strong>插入代码</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">ProtectSheet</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> ws <span style="color:#f92672">As</span> Worksheet
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> ws <span style="color:#f92672">=</span> ThisWorkbook.Sheets(<span style="color:#e6db74">&#34;Sheet1&#34;</span>) <span style="color:#75715e">&#39; 替换为你的工作表名
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 先取消所有保护
+</span></span></span><span style="display:flex;"><span>    ws.Unprotect Password:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mypassword&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 只解锁特定范围
+</span></span></span><span style="display:flex;"><span>    ws.Range(<span style="color:#e6db74">&#34;A1:C10&#34;</span>).Locked <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 保护工作表
+</span></span></span><span style="display:flex;"><span>    ws.Protect Password:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mypassword&#34;</span>, DrawingObjects:<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, Contents:<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, Scenarios:<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span></span></span></code></pre></div></li>
+<li>
+<p><strong>运行宏</strong></p>
+<ul>
+<li>在 VBA 窗口按 <code>F5</code> 或在 Excel 中创建按钮绑定此宏。</li>
+</ul>
+</li>
+<li>
+<p><strong>自动触发</strong></p>
+<ul>
+<li>在 <code>ThisWorkbook</code> 中添加 <code>Workbook_Open()</code> 事件：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">Workbook_Open</span>()
+</span></span><span style="display:flex;"><span>    ProtectSheet
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span></span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="优点">优点<a class="anchor" href="#%e4%bc%98%e7%82%b9">#</a></h3>
+<ul>
+<li><strong>一次性设置</strong>，不需要手动每次保护。</li>
+<li>可以通过宏动态修改被保护的区域，例如根据用户角色或时间段。</li>
+<li>适合 <strong>模板</strong>，每次打开时自动刷新保护。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>安全提示</strong>：VBA 代码中的密码会以明文存储，建议在重要场景下使用更安全的加密或分离密码管理。</p>
+</blockquote><hr>
+<h2 id="5-常见问题解答faq">5️⃣ 常见问题解答（FAQ）<a class="anchor" href="#5-%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98%e8%a7%a3%e7%ad%94faq">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>说明</th>
+          <th>解决办法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Q1. 保护后仍能编辑单元格</strong></td>
+          <td>可能是因为这些单元格未设置为锁定。</td>
+          <td>重新选中单元格 → 单元格格式 → 保护 → 勾选 “锁定”。</td>
+      </tr>
+      <tr>
+          <td><strong>Q2. 如何恢复忘记的保护密码</strong></td>
+          <td>Excel 本身不支持恢复密码。</td>
+          <td>使用专业密码恢复工具或从备份恢复。</td>
+      </tr>
+      <tr>
+          <td><strong>Q3. 保护后公式会失效</strong></td>
+          <td>保护会锁定公式单元格，但不影响计算。</td>
+          <td>确保公式单元格已解锁或在保护时勾选 “保护单元格” 选项。</td>
+      </tr>
+      <tr>
+          <td><strong>Q4. 在保护后想让其他人编辑</strong></td>
+          <td>需要先解除保护，修改后再重新保护。</td>
+          <td>在 “审阅” → “撤销工作表保护” 输入密码后进行编辑。</td>
+      </tr>
+      <tr>
+          <td><strong>Q5. 共享工作簿中的保护不生效</strong></td>
+          <td>可能是未开启 <strong>单元格级别权限</strong> 或使用旧版 Excel。</td>
+          <td>在新版本 Excel 中使用 “共享工作簿（实时协作）” 并设置单元格权限。</td>
+      </tr>
+      <tr>
+          <td><strong>Q6. 如何让不同用户拥有不同的编辑范围</strong></td>
+          <td>通过 VBA 或手工设置不同工作表的密码实现。</td>
+          <td>在 VBA 中根据 <code>Application.UserName</code> 判断并设置不同的 <code>Locked</code> 属性。</td>
+      </tr>
+      <tr>
+          <td><strong>Q7. 保护后还能更改行高/列宽</strong></td>
+          <td>默认情况下是允许的。</td>
+          <td>在保护时取消勾选 “更改行高/列宽” 选项。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="6-小结">6️⃣ 小结<a class="anchor" href="#6-%e5%b0%8f%e7%bb%93">#</a></h2>
+<ul>
+<li><strong>核心思想</strong>：先解锁需要编辑的单元格，然后对工作表施加保护。</li>
+<li><strong>三种方案</strong>：
+<ol>
+<li><strong>手动工作表保护</strong>（适合单一文件、单用户）</li>
+<li><strong>共享工作簿</strong>（适合多人协作）</li>
+<li><strong>VBA 自动保护</strong>（适合模板、动态需求）</li>
+</ol>
+</li>
+<li><strong>常见坑</strong>：密码遗失、未锁定单元格、共享功能兼容性问题。</li>
+</ul>
+<blockquote class='book-hint '>
+<p><strong>温馨提示</strong>：在进行任何保护操作前，最好先保存一份原始文件，以防止不可逆的错误。祝你使用愉快，数据安全无忧！</p>
+</blockquote></div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E4%BD%9C%E5%B8%90/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>excel如何作帐</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/excel%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE/" class="flex align-center">
+      <span>excel如何做下拉式選單</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-原因分析">1️⃣ 原因分析</a></li>
+    <li><a href="#2-方案一工作表保护--选定单元格解锁">2️⃣ 方案一：工作表保护 + 选定单元格解锁</a>
+      <ul>
+        <li><a href="#步骤">步骤</a></li>
+        <li><a href="#注意事项">注意事项</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-方案二共享工作簿--单元格级别权限">3️⃣ 方案二：共享工作簿 + 单元格级别权限</a>
+      <ul>
+        <li><a href="#步骤-1">步骤</a></li>
+        <li><a href="#特点">特点</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-方案三vba-宏自动保护解锁">4️⃣ 方案三：VBA 宏自动保护/解锁</a>
+      <ul>
+        <li><a href="#步骤-2">步骤</a></li>
+        <li><a href="#优点">优点</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-常见问题解答faq">5️⃣ 常见问题解答（FAQ）</a></li>
+    <li><a href="#6-小结">6️⃣ 小结</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
